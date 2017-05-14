@@ -1,5 +1,5 @@
 +++
-banner = ""
+banner = "https://upload.wikimedia.org/wikipedia/commons/6/69/Raspberries05.jpg"
 categories = ["linux"]
 date = "2017-01-09T16:02:00+01:00"
 description = ""

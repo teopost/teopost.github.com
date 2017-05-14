@@ -1,5 +1,5 @@
 +++
-banner = ""
+banner = "http://www.magix.com/fileadmin/user_upload/Produkte/Musik/Audio_Cleaning_Lab_2017/Detail/grafik-455-audio-restauration-int.png"
 categories = ["linux"]
 date = "2017-02-17T21:46:48+01:00"
 description = ""

@@ -1,5 +1,5 @@
 +++
-banner = ""
+banner = "https://cdn2.tnwcdn.com/wp-content/blogs.dir/1/files/2015/08/shutterstock_126360905.jpg"
 categories = ["database"]
 date = "2017-02-16T21:36:13+01:00"
 description = ""

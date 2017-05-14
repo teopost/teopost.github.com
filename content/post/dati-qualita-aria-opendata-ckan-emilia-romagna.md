@@ -1,5 +1,5 @@
 +++
-banner = "https://www.i-siena.it/wp-content/uploads/2015/01/dbf56a72-14d2-4b98-b8fd-ff3cd4ef8169.jpg"
+banner = "http://www.bitmat.it/wp-content/uploads/2016/10/OPEN_DATA.jpg"
 categories = ["opendata"]
 date = "2017-03-24T18:42:26+01:00"
 description = ""

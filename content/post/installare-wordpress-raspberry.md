@@ -1,5 +1,5 @@
 +++
-banner = ""
+banner = "https://s.w.org/images/backgrounds/wordpress-bg-medblue.png"
 categories = ["linux"]
 date = "2017-01-08T16:15:00+01:00"
 description = ""
