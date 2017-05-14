@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Raspberry on Icarus</title>
+    <link>https://example.org/tags/raspberry/</link>
+    <description>Recent content in Raspberry on Icarus</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>it-it</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <lastBuildDate>Mon, 09 Jan 2017 16:02:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://example.org/tags/raspberry/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IP Statico su Raspberry</title>
+      <link>https://example.org/2017/01/09/ip-statico-su-raspberry/</link>
+      <pubDate>Mon, 09 Jan 2017 16:02:00 +0100</pubDate>
+      
+      <guid>https://example.org/2017/01/09/ip-statico-su-raspberry/</guid>
+      <description>Se si vuole utilizzare una raspberry come un server, la prima cosa da fare è evitare che l&amp;rsquo;indirizzo IP cambi ad ogni reboot. Insomma va disabilitato il dhcp. Per farlo agire come segue:
+Editare il file /etc/network/interfaces
+sudo vi /etc/network/interfaces  Commentare iface eth0 inet manual e aggiungere in fondo al file i dati dell&amp;rsquo;ip:
+# iface eth0 inet manual auto eth0 iface eth0 inet static address 192.168.10.32 gateway 192.168.10.254 netmask 255.</description>
+    </item>
+    
+    <item>
+      <title>Wordpress su Raspberry</title>
+      <link>https://example.org/2017/01/08/wordpress-su-raspberry/</link>
+      <pubDate>Sun, 08 Jan 2017 16:15:00 +0100</pubDate>
+      
+      <guid>https://example.org/2017/01/08/wordpress-su-raspberry/</guid>
+      <description>Voglio installare un blog sulla raspberry. Per farlo, dopo aver installato un LAMP server, procedo come segue:
+Ecco cosa ho fatto:
+Preparare lo schema di DATABASE mysql -uroot -p&amp;lt;password&amp;gt; CREATE DATABASE wordpress; CREATE USER wordpressuser@localhost IDENTIFIED BY &#39;wppassword&#39; GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost;  dove  è la password di mysql che ho impostato durante l&amp;rsquo;installazione del LAMP server e wppassword è un esempio di password per l&amp;rsquo;utente wordpress che ho appenta creato su mysql</description>
+    </item>
+    
+    <item>
+      <title>LAMP sulla Raspberry</title>
+      <link>https://example.org/2017/01/07/lamp-sulla-raspberry/</link>
+      <pubDate>Sat, 07 Jan 2017 16:10:00 +0100</pubDate>
+      
+      <guid>https://example.org/2017/01/07/lamp-sulla-raspberry/</guid>
+      <description>Voglio installare un blog sulla raspberry. Per farlo, dopo aver configurato un ip statico, devo installare i pacchetti software necessari per far girare il sito.
+Ecco cosa ho fatto:
+Installazione di Apache sudo apt-get update sudo apt-get install apache2  Se tutto ha funzionato vai su http://your_server_IP_address e vedi il web server attivo
+Installazione di MySql sudo apt-get install mysql-server php5-mysql  Inserire una password
+Configurazione di MySql # Creare la struttura di directory del database dove sarà memorizzare le informazioni sudo mysql_install_db # Rimuoviamo alcuni valori di default pericolosi e limitiamo l&#39;accesso al db sudo mysql_secure_installation  Installazione di PHP sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt  Riferimenti Questa documentazione è l&amp;rsquo;estratto di questo articolo molto più completo</description>
+    </item>
+    
+  </channel>
+</rss>

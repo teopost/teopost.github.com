@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Database on Icarus</title>
+    <link>https://example.org/categories/database/</link>
+    <description>Recent content in Database on Icarus</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>it-it</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <lastBuildDate>Thu, 16 Feb 2017 21:36:13 +0100</lastBuildDate>
+    
+	<atom:link href="https://example.org/categories/database/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Client Oracle sul Mac</title>
+      <link>https://example.org/2017/02/16/client-oracle-sul-mac/</link>
+      <pubDate>Thu, 16 Feb 2017 21:36:13 +0100</pubDate>
+      
+      <guid>https://example.org/2017/02/16/client-oracle-sul-mac/</guid>
+      <description>Per installare il client Oracle sul Mac, utilizzare questa procedura:
+Creare la cartella /Users/[utente]/oracle e metterci dentro:
+instantclient-basic-macos.x64-11.2.0.4.0.zip instantclient-sdk-macos.x64-11.2.0.4.0.zip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip  scompattarli
+unzip instantclient-basic-macos.x64-11.2.0.4.0.zip unzip instantclient-sdk-macos.x64-11.2.0.4.0.zip unzip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip  Andare nella cartella che lo scompattamento crea
+cd /Users/[utente]/instantclient11_2  Creare i 2 seguenti link simbolici (controllare la versione delle dll)
+ln -s libclntsh.dylib.11.1 libclntsh.dylib ln -s libocci.dylib.11.1 libocci.dylib  Eseguire la seguente fix
+curl -O https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fix_oralib.rb ruby fix_oralib.rb --absolute-path  Aggiungere nel .</description>
+    </item>
+    
+  </channel>
+</rss>

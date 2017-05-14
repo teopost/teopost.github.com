@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github Pages on Icarus</title>
+    <link>https://example.org/tags/github-pages/</link>
+    <description>Recent content in Github Pages on Icarus</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>it-it</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <lastBuildDate>Wed, 28 Dec 2016 22:45:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://example.org/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Configurare GoDaddy per le Github Pages</title>
+      <link>https://example.org/2016/12/28/configurare-godaddy-per-le-github-pages/</link>
+      <pubDate>Wed, 28 Dec 2016 22:45:00 +0100</pubDate>
+      
+      <guid>https://example.org/2016/12/28/configurare-godaddy-per-le-github-pages/</guid>
+      <description>Possiedo il dominio www.stefanoteodorani.it su GoDaddy.com. Per far funzionare tale dominio con questo blog ho seguito i seguenti passi:
+Creazione sito teopost.github.io Ho creato sul mio profilo github un repository chiamato teopost.github.com. Ho committato il sorgente del mio sito sul master di tale repository. Github è così gentile da accorgersi che il sorgente committato sul master è un sorgente di jekyll, quindi provvede ad eseguirne la build e a pubblicarne il risultato.</description>
+    </item>
+    
+  </channel>
+</rss>
