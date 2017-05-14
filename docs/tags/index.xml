@@ -1,68 +1,68 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Icarus</title>
-    <link>https://example.org/tags/</link>
-    <description>Recent content in Tags on Icarus</description>
+    <title>Tags on Teopost</title>
+    <link>http://www.stefanoteodorani.it/tags/</link>
+    <description>Recent content in Tags on Teopost</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-it</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
     <lastBuildDate>Fri, 20 Jan 2017 21:46:00 +0100</lastBuildDate>
     
-	<atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.stefanoteodorani.it/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Android</title>
-      <link>https://example.org/tags/android/</link>
+      <link>http://www.stefanoteodorani.it/tags/android/</link>
       <pubDate>Fri, 20 Jan 2017 21:46:00 +0100</pubDate>
       
-      <guid>https://example.org/tags/android/</guid>
+      <guid>http://www.stefanoteodorani.it/tags/android/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ckan</title>
-      <link>https://example.org/tags/ckan/</link>
+      <link>http://www.stefanoteodorani.it/tags/ckan/</link>
       <pubDate>Fri, 24 Mar 2017 18:42:26 +0100</pubDate>
       
-      <guid>https://example.org/tags/ckan/</guid>
+      <guid>http://www.stefanoteodorani.it/tags/ckan/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Github Pages</title>
-      <link>https://example.org/tags/github-pages/</link>
+      <link>http://www.stefanoteodorani.it/tags/github-pages/</link>
       <pubDate>Wed, 28 Dec 2016 22:45:00 +0100</pubDate>
       
-      <guid>https://example.org/tags/github-pages/</guid>
+      <guid>http://www.stefanoteodorani.it/tags/github-pages/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Oracle</title>
-      <link>https://example.org/tags/oracle/</link>
+      <link>http://www.stefanoteodorani.it/tags/oracle/</link>
       <pubDate>Thu, 16 Feb 2017 21:36:13 +0100</pubDate>
       
-      <guid>https://example.org/tags/oracle/</guid>
+      <guid>http://www.stefanoteodorani.it/tags/oracle/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Raspberry</title>
-      <link>https://example.org/tags/raspberry/</link>
+      <link>http://www.stefanoteodorani.it/tags/raspberry/</link>
       <pubDate>Mon, 09 Jan 2017 16:02:00 +0100</pubDate>
       
-      <guid>https://example.org/tags/raspberry/</guid>
+      <guid>http://www.stefanoteodorani.it/tags/raspberry/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ubuntu</title>
-      <link>https://example.org/tags/ubuntu/</link>
+      <link>http://www.stefanoteodorani.it/tags/ubuntu/</link>
       <pubDate>Fri, 17 Feb 2017 21:46:48 +0100</pubDate>
       
-      <guid>https://example.org/tags/ubuntu/</guid>
+      <guid>http://www.stefanoteodorani.it/tags/ubuntu/</guid>
       <description></description>
     </item>
     

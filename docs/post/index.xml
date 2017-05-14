@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Icarus</title>
-    <link>https://example.org/post/</link>
-    <description>Recent content in Posts on Icarus</description>
+    <title>Posts on Teopost</title>
+    <link>http://www.stefanoteodorani.it/post/</link>
+    <description>Recent content in Posts on Teopost</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-it</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
     <lastBuildDate>Fri, 24 Mar 2017 18:42:26 +0100</lastBuildDate>
     
-	<atom:link href="https://example.org/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.stefanoteodorani.it/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Recuperare i dati sull&#39;inquinamento della mia città da CKAN</title>
-      <link>https://example.org/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/</link>
+      <link>http://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/</link>
       <pubDate>Fri, 24 Mar 2017 18:42:26 +0100</pubDate>
       
-      <guid>https://example.org/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/</guid>
+      <guid>http://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/</guid>
       <description>Ho intenzione di scrivere un piccolo bot di telegram che mi dia indicazioni sulla qualità dell&amp;rsquo;aria che ogni giorno respiro nella mia città.
 Sono partito, nella mia indagine, da qui:
 https://www.arpae.it/liberiamo/statistiche_riepilogative.asp?idlivello=822  Questo sito è pieno zeppo di dati utili e fra questi ci sono anche quelli che servono a me; ma come recuperarli ?
@@ -26,10 +26,10 @@ Per fortuna la regione Emilia Romagna espone tutte queste informazioni sotto for
     
     <item>
       <title>Usare mkvextract</title>
-      <link>https://example.org/2017/02/17/usare-mkvextract/</link>
+      <link>http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/</link>
       <pubDate>Fri, 17 Feb 2017 21:46:48 +0100</pubDate>
       
-      <guid>https://example.org/2017/02/17/usare-mkvextract/</guid>
+      <guid>http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/</guid>
       <description>mkvextract è un tool per manipolare file mkv da linea di comando.
 sudo apt-get install -y mkvtoolnix mkvtoolnix-gui sudo apt-get install -y libdca-utils aften wget https://github.com/JakeWharton/mkvdts2ac3/raw/master/mkvdts2ac3.sh chmod 777 mkvdts2ac3.sh &amp;amp;&amp;amp; sudo mv mkvdts2ac3.sh /usr/bin/  Alcuni esempi Creare la traccia AC3 nuova ed eliminare la DTS:
 mkvdts2ac3.sh -n Some.Random.Movie.mkv  Note:
@@ -39,10 +39,10 @@ mkvpropedit Che\ bella\ giornata\ \(copia\).mkv --edit track:2 --set flag-defaul
     
     <item>
       <title>Client Oracle sul Mac</title>
-      <link>https://example.org/2017/02/16/client-oracle-sul-mac/</link>
+      <link>http://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/</link>
       <pubDate>Thu, 16 Feb 2017 21:36:13 +0100</pubDate>
       
-      <guid>https://example.org/2017/02/16/client-oracle-sul-mac/</guid>
+      <guid>http://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/</guid>
       <description>Per installare il client Oracle sul Mac, utilizzare questa procedura:
 Creare la cartella /Users/[utente]/oracle e metterci dentro:
 instantclient-basic-macos.x64-11.2.0.4.0.zip instantclient-sdk-macos.x64-11.2.0.4.0.zip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip  scompattarli
@@ -54,10 +54,10 @@ curl -O https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fix_oralib.
     
     <item>
       <title>Testare applicazioni Android</title>
-      <link>https://example.org/2017/01/20/testare-applicazioni-android/</link>
+      <link>http://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/</link>
       <pubDate>Fri, 20 Jan 2017 21:46:00 +0100</pubDate>
       
-      <guid>https://example.org/2017/01/20/testare-applicazioni-android/</guid>
+      <guid>http://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/</guid>
       <description>Per poter testare le app mobile su piattaforma Android, Google mette a disposizione un servizio di aggiornamento automatico basato sul Play Store. Istriversi a questo servizio è un po macchinoso, ma garantisce gli aggiornamenti automatici delle app quando lo sviluppatore pubblica una nuova versione.
 Il servizio di cui parliamo è basato sulle Community di Google e funziona in questo modo:
  Lo sviluppatore crea una Community specifica per l&amp;rsquo;app (es: app-unixx-test) Lo sviluppatore invia una mail di invito al tester per consentirgli di entrare nella Community Nella mail ricevuta, il tester clicca il pulsante Anteprima community   Si viene reindirizzati nella pagina della community di google, in cui il tester deve cliccare il pulsante Accetta invito Ora sulla parte destra della pagina cliccare sul link App di test   Nella pagina successiva cliccare sul pulsante DIVENTA UN TESTER Nella pagina successiva, in basso cliccare nel link Scarica UniXX dal Play Store   A questo punto si e&amp;rsquo; indirizzati nella pagina del play store.</description>
@@ -65,10 +65,10 @@ Il servizio di cui parliamo è basato sulle Community di Google e funziona in qu
     
     <item>
       <title>IP Statico su Raspberry</title>
-      <link>https://example.org/2017/01/09/ip-statico-su-raspberry/</link>
+      <link>http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/</link>
       <pubDate>Mon, 09 Jan 2017 16:02:00 +0100</pubDate>
       
-      <guid>https://example.org/2017/01/09/ip-statico-su-raspberry/</guid>
+      <guid>http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/</guid>
       <description>Se si vuole utilizzare una raspberry come un server, la prima cosa da fare è evitare che l&amp;rsquo;indirizzo IP cambi ad ogni reboot. Insomma va disabilitato il dhcp. Per farlo agire come segue:
 Editare il file /etc/network/interfaces
 sudo vi /etc/network/interfaces  Commentare iface eth0 inet manual e aggiungere in fondo al file i dati dell&amp;rsquo;ip:
@@ -77,10 +77,10 @@ sudo vi /etc/network/interfaces  Commentare iface eth0 inet manual e aggiungere 
     
     <item>
       <title>Wordpress su Raspberry</title>
-      <link>https://example.org/2017/01/08/wordpress-su-raspberry/</link>
+      <link>http://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/</link>
       <pubDate>Sun, 08 Jan 2017 16:15:00 +0100</pubDate>
       
-      <guid>https://example.org/2017/01/08/wordpress-su-raspberry/</guid>
+      <guid>http://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/</guid>
       <description>Voglio installare un blog sulla raspberry. Per farlo, dopo aver installato un LAMP server, procedo come segue:
 Ecco cosa ho fatto:
 Preparare lo schema di DATABASE mysql -uroot -p&amp;lt;password&amp;gt; CREATE DATABASE wordpress; CREATE USER wordpressuser@localhost IDENTIFIED BY &#39;wppassword&#39; GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost;  dove  è la password di mysql che ho impostato durante l&amp;rsquo;installazione del LAMP server e wppassword è un esempio di password per l&amp;rsquo;utente wordpress che ho appenta creato su mysql</description>
@@ -88,10 +88,10 @@ Preparare lo schema di DATABASE mysql -uroot -p&amp;lt;password&amp;gt; CREATE D
     
     <item>
       <title>LAMP sulla Raspberry</title>
-      <link>https://example.org/2017/01/07/lamp-sulla-raspberry/</link>
+      <link>http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/</link>
       <pubDate>Sat, 07 Jan 2017 16:10:00 +0100</pubDate>
       
-      <guid>https://example.org/2017/01/07/lamp-sulla-raspberry/</guid>
+      <guid>http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/</guid>
       <description>Voglio installare un blog sulla raspberry. Per farlo, dopo aver configurato un ip statico, devo installare i pacchetti software necessari per far girare il sito.
 Ecco cosa ho fatto:
 Installazione di Apache sudo apt-get update sudo apt-get install apache2  Se tutto ha funzionato vai su http://your_server_IP_address e vedi il web server attivo
@@ -101,20 +101,20 @@ Configurazione di MySql # Creare la struttura di directory del database dove sar
     
     <item>
       <title>Configurare GoDaddy per le Github Pages</title>
-      <link>https://example.org/2016/12/28/configurare-godaddy-per-le-github-pages/</link>
+      <link>http://www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/</link>
       <pubDate>Wed, 28 Dec 2016 22:45:00 +0100</pubDate>
       
-      <guid>https://example.org/2016/12/28/configurare-godaddy-per-le-github-pages/</guid>
+      <guid>http://www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/</guid>
       <description>Possiedo il dominio www.stefanoteodorani.it su GoDaddy.com. Per far funzionare tale dominio con questo blog ho seguito i seguenti passi:
 Creazione sito teopost.github.io Ho creato sul mio profilo github un repository chiamato teopost.github.com. Ho committato il sorgente del mio sito sul master di tale repository. Github è così gentile da accorgersi che il sorgente committato sul master è un sorgente di jekyll, quindi provvede ad eseguirne la build e a pubblicarne il risultato.</description>
     </item>
     
     <item>
       <title>Disabilitare l&#39;autenticazione in Ubuntu Software Center</title>
-      <link>https://example.org/2016/12/27/disabilitare-lautenticazione-in-ubuntu-software-center/</link>
+      <link>http://www.stefanoteodorani.it/2016/12/27/disabilitare-lautenticazione-in-ubuntu-software-center/</link>
       <pubDate>Tue, 27 Dec 2016 18:45:00 +0100</pubDate>
       
-      <guid>https://example.org/2016/12/27/disabilitare-lautenticazione-in-ubuntu-software-center/</guid>
+      <guid>http://www.stefanoteodorani.it/2016/12/27/disabilitare-lautenticazione-in-ubuntu-software-center/</guid>
       <description>E&amp;rsquo; una rottura di scatole dover digitare sempre la password per installare gli aggiornamenti su Ubuntu. Quindi, ecco cosa si può fare:
  Aprire una finestra terminale
  Incollare questo comando
