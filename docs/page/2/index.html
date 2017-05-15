@@ -30,7 +30,7 @@
 
 
 
-<meta property="og:updated_time" content="2017-03-24T18:42:26&#43;01:00"/>
+<meta property="og:updated_time" content="2017-01-08T16:15:00&#43;01:00"/>
 
 
 
@@ -255,15 +255,15 @@
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
             
-            <a href="http://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/" itemprop="url">
-                <img src="http://www.bitmat.it/wp-content/uploads/2016/10/OPEN_DATA.jpg" class="article-banner">
+            <a href="http://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/" itemprop="url">
+                <img src="https://s.w.org/images/backgrounds/wordpress-bg-medblue.png" class="article-banner">
             
             </a>
 
             <header class="article-header">
-    <a href="http://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/">
+    <a href="http://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/">
     <h1 class="article-title" itemprop="name">
-        Recuperare i dati sull&#39;inquinamento della mia città da CKAN
+        Wordpress su Raspberry
     </h1>
     </a>
     <div class="article-meta">
@@ -271,161 +271,9 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2017-03-24 18:42:26 &#43;0100 CET" itemprop="datePublished">2017-03-24</time>
+            <time datetime="2017-01-08 16:15:00 &#43;0100 CET" itemprop="datePublished">2017-01-08</time>
             &middot;
-            555
-            words
-            &middot;
-            3
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/opendata">opendata</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/ckan">ckan</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    Ho intenzione di scrivere un piccolo bot di telegram che mi dia indicazioni sulla qualità dell&rsquo;aria che ogni giorno respiro nella mia città.
-Sono partito, nella mia indagine, da qui:
-<a href="https://www.arpae.it/liberiamo/statistiche_riepilogative.asp?idlivello=822">https://www.arpae.it/liberiamo/statistiche_riepilogative.asp?idlivello=822</a>  Questo sito è pieno zeppo di dati utili e fra questi ci sono anche quelli che servono a me; ma come recuperarli ?
-Per fortuna la regione Emilia Romagna espone tutte queste informazioni sotto forma di Open Data utilizzando un software open source chiamato CKAN.
-                    <br>
-                </p>
-                <p class="article-more-link">
-                    <a href="http://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/">
-                        Read more
-                    </a>
-                </p>
-            </div>
-            <footer class="article-footer">
-    <a data-url="http://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/" data-id="761bb0ffaa4edc399ae432e0c98ef906" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="http://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-        </div>
-    </article>
-    
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-            <a href="http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/" itemprop="url">
-                <img src="http://www.magix.com/fileadmin/user_upload/Produkte/Musik/Audio_Cleaning_Lab_2017/Detail/grafik-455-audio-restauration-int.png" class="article-banner">
-            
-            </a>
-
-            <header class="article-header">
-    <a href="http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/">
-    <h1 class="article-title" itemprop="name">
-        Usare mkvextract
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2017-02-17 21:46:48 &#43;0100 CET" itemprop="datePublished">2017-02-17</time>
-            &middot;
-            177
+            173
             words
             &middot;
             1
@@ -453,7 +301,7 @@ Per fortuna la regione Emilia Romagna espone tutte queste informazioni sotto for
                 <i class="fa fa-tags"></i>
                 
                 
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/ubuntu">ubuntu</a>
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/raspberry">raspberry</a>
                 
                 
             </div>
@@ -464,26 +312,24 @@ Per fortuna la regione Emilia Romagna espone tutte queste informazioni sotto for
 
             <div class="article-entry" itemprop="articleBody">
                 <p>
-                    mkvextract è un tool per manipolare file mkv da linea di comando.
-sudo apt-get install -y mkvtoolnix mkvtoolnix-gui sudo apt-get install -y libdca-utils aften wget <a href="https://github.com/JakeWharton/mkvdts2ac3/raw/master/mkvdts2ac3.sh">https://github.com/JakeWharton/mkvdts2ac3/raw/master/mkvdts2ac3.sh</a> chmod 777 mkvdts2ac3.sh &amp;&amp; sudo mv mkvdts2ac3.sh /usr/bin/  Alcuni esempi Creare la traccia AC3 nuova ed eliminare la DTS:
-mkvdts2ac3.sh -n Some.Random.Movie.mkv  Note:
- <a href="http://www.bunkus.org/videotools/mkvtoolnix/doc/mkvpropedit.html">http://www.bunkus.org/videotools/mkvtoolnix/doc/mkvpropedit.html</a> <a href="http://linux.die.net/man/1/mkvextract">http://linux.die.net/man/1/mkvextract</a>  Cambiare il flag default dalla prima alla seconda traccia
-mkvpropedit Che\ bella\ giornata\ (copia).mkv &ndash;edit track:2 &ndash;set flag-default=0 &ndash;edit track:3 &ndash;set flag-default=1  Cambiare il flag forced a true nella seconda traccia audio
+                    Voglio installare un blog sulla raspberry. Per farlo, dopo aver installato un LAMP server, procedo come segue:
+Ecco cosa ho fatto:
+Preparare lo schema di DATABASE mysql -uroot -p&lt;password&gt; CREATE DATABASE wordpress; CREATE USER wordpressuser@localhost IDENTIFIED BY &lsquo;wppassword&rsquo; GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost;  dove  è la password di mysql che ho impostato durante l&rsquo;installazione del LAMP server e wppassword è un esempio di password per l&rsquo;utente wordpress che ho appenta creato su mysql
                     <br>
                 </p>
                 <p class="article-more-link">
-                    <a href="http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/">
+                    <a href="http://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/">
                         Read more
                     </a>
                 </p>
             </div>
             <footer class="article-footer">
-    <a data-url="http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/" data-id="b5b42b4ba2240a5edbae327e9cbd74bc" class="article-share-link">
+    <a data-url="http://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/" data-id="58c7c8ec5a487e3185ad8d5fa9f11adb" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
-    <a href="http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/#disqus_thread" class="article-comment-link">
+    <a href="http://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -560,15 +406,15 @@ mkvpropedit Che\ bella\ giornata\ (copia).mkv &ndash;edit track:2 &ndash;set fla
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
             
-            <a href="http://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/" itemprop="url">
-                <img src="https://cdn2.tnwcdn.com/wp-content/blogs.dir/1/files/2015/08/shutterstock_126360905.jpg" class="article-banner">
+            <a href="http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/" itemprop="url">
+                <img src="https://www.apache.org/img/asf_logo.png" class="article-banner">
             
             </a>
 
             <header class="article-header">
-    <a href="http://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/">
+    <a href="http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/">
     <h1 class="article-title" itemprop="name">
-        Client Oracle sul Mac
+        LAMP sulla Raspberry
     </h1>
     </a>
     <div class="article-meta">
@@ -576,313 +422,7 @@ mkvpropedit Che\ bella\ giornata\ (copia).mkv &ndash;edit track:2 &ndash;set fla
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2017-02-16 21:36:13 &#43;0100 CET" itemprop="datePublished">2017-02-16</time>
-            &middot;
-            86
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">database</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/oracle">oracle</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    Per installare il client Oracle sul Mac, utilizzare questa procedura:
-Creare la cartella /Users/[utente]/oracle e metterci dentro:
-instantclient-basic-macos.x64-11.2.0.4.0.zip instantclient-sdk-macos.x64-11.2.0.4.0.zip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip  scompattarli
-unzip instantclient-basic-macos.x64-11.2.0.4.0.zip unzip instantclient-sdk-macos.x64-11.2.0.4.0.zip unzip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip  Andare nella cartella che lo scompattamento crea
-cd /Users/[utente]/instantclient11_2  Creare i 2 seguenti link simbolici (controllare la versione delle dll)
-ln -s libclntsh.dylib.11.1 libclntsh.dylib ln -s libocci.dylib.11.1 libocci.dylib  Eseguire la seguente fix
-curl -O <a href="https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fix_oralib.rb">https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fix_oralib.rb</a> ruby fix_oralib.rb &ndash;absolute-path  Aggiungere nel .
-                    <br>
-                </p>
-                <p class="article-more-link">
-                    <a href="http://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/">
-                        Read more
-                    </a>
-                </p>
-            </div>
-            <footer class="article-footer">
-    <a data-url="http://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/" data-id="d6ebf0d8f6a4c621198fcbbd35470b8a" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="http://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-        </div>
-    </article>
-    
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-            <a href="http://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/" itemprop="url">
-                <img src="https://cdn1.pcadvisor.co.uk/cmsdata/features/3613985/android_800_thumb800.jpg" class="article-banner">
-            
-            </a>
-
-            <header class="article-header">
-    <a href="http://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/">
-    <h1 class="article-title" itemprop="name">
-        Testare applicazioni Android
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2017-01-20 21:46:00 &#43;0100 CET" itemprop="datePublished">2017-01-20</time>
-            &middot;
-            173
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/mobile">mobile</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/android">android</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    Per poter testare le app mobile su piattaforma Android, Google mette a disposizione un servizio di aggiornamento automatico basato sul Play Store. Istriversi a questo servizio è un po macchinoso, ma garantisce gli aggiornamenti automatici delle app quando lo sviluppatore pubblica una nuova versione.
-Il servizio di cui parliamo è basato sulle Community di Google e funziona in questo modo:
- Lo sviluppatore crea una Community specifica per l&rsquo;app (es: app-unixx-test) Lo sviluppatore invia una mail di invito al tester per consentirgli di entrare nella Community Nella mail ricevuta, il tester clicca il pulsante Anteprima community   Si viene reindirizzati nella pagina della community di google, in cui il tester deve cliccare il pulsante Accetta invito Ora sulla parte destra della pagina cliccare sul link App di test   Nella pagina successiva cliccare sul pulsante DIVENTA UN TESTER Nella pagina successiva, in basso cliccare nel link Scarica UniXX dal Play Store   A questo punto si e&rsquo; indirizzati nella pagina del play store.
-                    <br>
-                </p>
-                <p class="article-more-link">
-                    <a href="http://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/">
-                        Read more
-                    </a>
-                </p>
-            </div>
-            <footer class="article-footer">
-    <a data-url="http://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/" data-id="70b9005b4ffbeedae4b1a99be06ce1e0" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="http://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-        </div>
-    </article>
-    
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-            <a href="http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/" itemprop="url">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Raspberries05.jpg" class="article-banner">
-            
-            </a>
-
-            <header class="article-header">
-    <a href="http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/">
-    <h1 class="article-title" itemprop="name">
-        IP Statico su Raspberry
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2017-01-09 16:02:00 &#43;0100 CET" itemprop="datePublished">2017-01-09</time>
+            <time datetime="2017-01-07 16:10:00 &#43;0100 CET" itemprop="datePublished">2017-01-07</time>
             &middot;
             116
             words
@@ -923,27 +463,320 @@ Il servizio di cui parliamo è basato sulle Community di Google e funziona in qu
 
             <div class="article-entry" itemprop="articleBody">
                 <p>
-                    Se si vuole utilizzare una raspberry come un server, la prima cosa da fare è evitare che l&rsquo;indirizzo IP cambi ad ogni reboot. Insomma va disabilitato il dhcp. Per farlo agire come segue:
-Editare il file /etc/network/interfaces
-sudo vi /etc/network/interfaces  Commentare iface eth0 inet manual e aggiungere in fondo al file i dati dell&rsquo;ip:</p>
-
-<h1 id="iface-eth0-inet-manual-auto-eth0-iface-eth0-inet-static-address-192-168-10-32-gateway-192-168-10-254-netmask-255">iface eth0 inet manual auto eth0 iface eth0 inet static address 192.168.10.32 gateway 192.168.10.254 netmask 255.</h1>
-
+                    Voglio installare un blog sulla raspberry. Per farlo, dopo aver configurato un ip statico, devo installare i pacchetti software necessari per far girare il sito.
+Ecco cosa ho fatto:
+Installazione di Apache sudo apt-get update sudo apt-get install apache2  Se tutto ha funzionato vai su <a href="http://your_server_IP_address">http://your_server_IP_address</a> e vedi il web server attivo
+Installazione di MySql sudo apt-get install mysql-server php5-mysql  Inserire una password
+Configurazione di MySql # Creare la struttura di directory del database dove sarà memorizzare le informazioni sudo mysql_install_db # Rimuoviamo alcuni valori di default pericolosi e limitiamo l&rsquo;accesso al db sudo mysql_secure_installation  Installazione di PHP sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt  Riferimenti Questa documentazione è l&rsquo;estratto di questo articolo molto più completo
                     <br>
                 </p>
                 <p class="article-more-link">
-                    <a href="http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/">
+                    <a href="http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/">
                         Read more
                     </a>
                 </p>
             </div>
             <footer class="article-footer">
-    <a data-url="http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/" data-id="7451de91796909c36e0cdec9eb83068f" class="article-share-link">
+    <a data-url="http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/" data-id="d24dad52869f92ec0e1da8bd8711fbab" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
-    <a href="http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/#disqus_thread" class="article-comment-link">
+    <a href="http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+            <a href="http://www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/" itemprop="url">
+                <img src="https://partnernoc.cpanel.net/logo/436-5141-logo.jpg" class="article-banner">
+            
+            </a>
+
+            <header class="article-header">
+    <a href="http://www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/">
+    <h1 class="article-title" itemprop="name">
+        Configurare GoDaddy per le Github Pages
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2016-12-28 22:45:00 &#43;0100 CET" itemprop="datePublished">2016-12-28</time>
+            &middot;
+            187
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/system">system</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/github-pages">github pages</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    Possiedo il dominio www.stefanoteodorani.it su GoDaddy.com. Per far funzionare tale dominio con questo blog ho seguito i seguenti passi:
+Creazione sito teopost.github.io Ho creato sul mio profilo github un repository chiamato teopost.github.com. Ho committato il sorgente del mio sito sul master di tale repository. Github è così gentile da accorgersi che il sorgente committato sul master è un sorgente di jekyll, quindi provvede ad eseguirne la build e a pubblicarne il risultato.
+                    <br>
+                </p>
+                <p class="article-more-link">
+                    <a href="http://www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/">
+                        Read more
+                    </a>
+                </p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/" data-id="37bcd23831b6ca5d0aceab70be8750cb" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+            <a href="http://www.stefanoteodorani.it/2016/12/27/disabilitare-lautenticazione-in-ubuntu-software-center/" itemprop="url">
+                <img src="http://core0.staticworld.net/images/article/2015/08/ubuntu-software-center-whats-new-100609202-orig.png" class="article-banner">
+            
+            </a>
+
+            <header class="article-header">
+    <a href="http://www.stefanoteodorani.it/2016/12/27/disabilitare-lautenticazione-in-ubuntu-software-center/">
+    <h1 class="article-title" itemprop="name">
+        Disabilitare l&#39;autenticazione in Ubuntu Software Center
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2016-12-27 18:45:00 &#43;0100 CET" itemprop="datePublished">2016-12-27</time>
+            &middot;
+            111
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/ubuntu">ubuntu</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    E&rsquo; una rottura di scatole dover digitare sempre la password per installare gli aggiornamenti su Ubuntu. Quindi, ecco cosa si può fare:
+ Aprire una finestra terminale
+ Incollare questo comando
+  # (do not put .xml at the end&hellip;) sudo gedit /usr/share/polkit-1/actions/org.debian.apt.policy  Si aprirà gedit già posizionato per la modifica dell&rsquo;impostazione desiderata (che è di proprietà di root)
+ Tenere premuto CTRL e premere F, quindi nel box di ricerca incollare il seguente testo:   org.
+                    <br>
+                </p>
+                <p class="article-more-link">
+                    <a href="http://www.stefanoteodorani.it/2016/12/27/disabilitare-lautenticazione-in-ubuntu-software-center/">
+                        Read more
+                    </a>
+                </p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://www.stefanoteodorani.it/2016/12/27/disabilitare-lautenticazione-in-ubuntu-software-center/" data-id="79c3ae15be4fccd239b27bb33c46e2c2" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://www.stefanoteodorani.it/2016/12/27/disabilitare-lautenticazione-in-ubuntu-software-center/#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -1021,10 +854,10 @@ sudo vi /etc/network/interfaces  Commentare iface eth0 inet manual e aggiungere 
     <nav id="page-nav">
 
     
-    
-        <a class="extend next" rel="next" href="http://www.stefanoteodorani.it/page/2/">
-            Next »
+        <a class="extend prev" rel="prev" href="http://www.stefanoteodorani.it/">
+            « Prev
         </a>
+    
     
 
 </nav>
