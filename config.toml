@@ -52,6 +52,11 @@ publishDir = "docs"
 
 [[params.menu]]
     before = false
+    label  = "My Dog"
+    link   = "http://teopost.github.io/ulisse"
+
+[[params.menu]]
+    before = false
     label  = "Tags"
     link   = "tags/"
 
