@@ -30,7 +30,7 @@
 
 
 
-<meta property="og:updated_time" content="2017-03-24T18:42:26&#43;01:00"/>
+<meta property="og:updated_time" content="2017-05-17T21:39:51&#43;02:00"/>
 
 
 
@@ -77,10 +77,16 @@
           
           
           
-
+          
           
 
           
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="http://www.stefanoteodorani.it/aboutme/">About me</a>
           
           
           
@@ -120,10 +126,16 @@
           
           
           
-
+          
           
 
           
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="http://www.stefanoteodorani.it/aboutme/">About me</a></td>
           
           
           
@@ -163,12 +175,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        9
+        10
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          6
+          7
         
         <span>
             Tags
@@ -251,6 +263,158 @@
 
     <section id="main">
     
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+            <a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/" itemprop="url">
+                <img src="https://www.hextra.it/wp-content/uploads/2016/09/Steal_password.jpg" class="article-banner">
+            
+            </a>
+
+            <header class="article-header">
+    <a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/">
+    <h1 class="article-title" itemprop="name">
+        SSH senza password
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-05-17 21:39:51 &#43;0200 CEST" itemprop="datePublished">2017-05-17</time>
+            &middot;
+            301
+            words
+            &middot;
+            2
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">linux</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/bash">bash</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    Uso spesso ssh per collegarmi sui server linux dei clienti. Per evitare di dover digitare sempre la password del server, è possibile configurare il vostro client per effettuare un collegamento senza dover digitare la password.
+Creare sul vostro computer la chiave pubblica e privata La prima cosa da fare è creare, sul client che deve collegarsi al server, le chiavi
+Digitare quindi il comando ssh-keygen
+teopost@local-host$ ssh-keygen Generating public/private rsa key pair.
+                    <br>
+                </p>
+                <p class="article-more-link">
+                    <a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/">
+                        Read more
+                    </a>
+                </p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/" data-id="2691a994ca8c6013724084897ff27f29" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
     
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
@@ -863,160 +1027,6 @@ Il servizio di cui parliamo è basato sulle Community di Google e funziona in qu
         </div>
     </article>
     
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-            <a href="http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/" itemprop="url">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Raspberries05.jpg" class="article-banner">
-            
-            </a>
-
-            <header class="article-header">
-    <a href="http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/">
-    <h1 class="article-title" itemprop="name">
-        IP Statico su Raspberry
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2017-01-09 16:02:00 &#43;0100 CET" itemprop="datePublished">2017-01-09</time>
-            &middot;
-            116
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">linux</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/raspberry">raspberry</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    Se si vuole utilizzare una raspberry come un server, la prima cosa da fare è evitare che l&rsquo;indirizzo IP cambi ad ogni reboot. Insomma va disabilitato il dhcp. Per farlo agire come segue:
-Editare il file /etc/network/interfaces
-sudo vi /etc/network/interfaces  Commentare iface eth0 inet manual e aggiungere in fondo al file i dati dell&rsquo;ip:</p>
-
-<h1 id="iface-eth0-inet-manual-auto-eth0-iface-eth0-inet-static-address-192-168-10-32-gateway-192-168-10-254-netmask-255">iface eth0 inet manual auto eth0 iface eth0 inet static address 192.168.10.32 gateway 192.168.10.254 netmask 255.</h1>
-
-                    <br>
-                </p>
-                <p class="article-more-link">
-                    <a href="http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/">
-                        Read more
-                    </a>
-                </p>
-            </div>
-            <footer class="article-footer">
-    <a data-url="http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/" data-id="7451de91796909c36e0cdec9eb83068f" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-        </div>
-    </article>
-    
 
     <nav id="page-nav">
 
@@ -1040,6 +1050,32 @@ sudo vi /etc/network/interfaces  Commentare iface eth0 inet manual e aggiungere 
     </h3>
     <div class="widget">
         <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.hextra.it/wp-content/uploads/2016/09/Steal_password.jpg)" alt="Teopost" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/" class="title">SSH senza password</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-05-17 21:39:51 &#43;0200 CEST" itemprop="datePublished">2017-05-17</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1145,32 +1181,6 @@ sudo vi /etc/network/interfaces  Commentare iface eth0 inet manual e aggiungere 
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://upload.wikimedia.org/wikipedia/commons/6/69/Raspberries05.jpg)" alt="Teopost" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">
-                        linux
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/" class="title">IP Statico su Raspberry</a></p>
-                    <p class="item-date">
-                        <time datetime="2017-01-09 16:02:00 &#43;0100 CET" itemprop="datePublished">2017-01-09</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -1197,7 +1207,7 @@ sudo vi /etc/network/interfaces  Commentare iface eth0 inet manual e aggiungere 
                 <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/linux">
                     linux
                 </a>
-                <span class="category-list-count">4</span>
+                <span class="category-list-count">5</span>
             </li>
             
             <li class="category-list-item">
@@ -1245,6 +1255,14 @@ sudo vi /etc/network/interfaces  Commentare iface eth0 inet manual e aggiungere 
                 
                 <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/android">
                     android
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/bash">
+                    bash
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -1307,6 +1325,9 @@ sudo vi /etc/network/interfaces  Commentare iface eth0 inet manual e aggiungere 
         
         
         <a href="http://www.stefanoteodorani.it/tags/android" style="font-size: 12px;">android</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/bash" style="font-size: 12px;">bash</a>
         
         
         <a href="http://www.stefanoteodorani.it/tags/ckan" style="font-size: 12px;">ckan</a>

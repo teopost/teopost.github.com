@@ -47,6 +47,11 @@ publishDir = "docs"
 
 [[params.menu]]
     before = false
+    label  = "About me"
+    link   = "aboutme/"
+
+[[params.menu]]
+    before = false
     label  = "Tags"
     link   = "tags/"
 

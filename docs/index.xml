@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>it-it</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <lastBuildDate>Fri, 24 Mar 2017 18:42:26 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 17 May 2017 21:39:51 +0200</lastBuildDate>
     
 	<atom:link href="http://www.stefanoteodorani.it/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SSH senza password</title>
+      <link>http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/</link>
+      <pubDate>Wed, 17 May 2017 21:39:51 +0200</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/</guid>
+      <description>Uso spesso ssh per collegarmi sui server linux dei clienti. Per evitare di dover digitare sempre la password del server, è possibile configurare il vostro client per effettuare un collegamento senza dover digitare la password.
+Creare sul vostro computer la chiave pubblica e privata La prima cosa da fare è creare, sul client che deve collegarsi al server, le chiavi
+Digitare quindi il comando ssh-keygen
+teopost@local-host$ ssh-keygen Generating public/private rsa key pair.</description>
+    </item>
     
     <item>
       <title>Recuperare i dati sull&#39;inquinamento della mia città da CKAN</title>
@@ -120,6 +132,25 @@ Creazione sito teopost.github.io Ho creato sul mio profilo github un repository 
  Incollare questo comando
   # (do not put .xml at the end...) sudo gedit /usr/share/polkit-1/actions/org.debian.apt.policy  Si aprirà gedit già posizionato per la modifica dell&amp;rsquo;impostazione desiderata (che è di proprietà di root)
  Tenere premuto CTRL e premere F, quindi nel box di ricerca incollare il seguente testo:   org.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://www.stefanoteodorani.it/aboutme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/aboutme/</guid>
+      <description>Chi sono io ? E&amp;rsquo; semplice. Io sono io</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://www.stefanoteodorani.it/page/sandbox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/page/sandbox/</guid>
+      <description>Voglio installare un blog sulla raspberry.
+devo installare i pacchetti software necessari per far girare il sito.</description>
     </item>
     
   </channel>

@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/</loc>
+    <lastmod>2017-05-17T21:39:51+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/</loc>
     <lastmod>2017-03-24T18:42:26+01:00</lastmod>
   </url>
@@ -47,8 +52,22 @@
   </url>
   
   <url>
+    <loc>http://www.stefanoteodorani.it/aboutme/</loc>
+  </url>
+  
+  <url>
+    <loc>http://www.stefanoteodorani.it/page/sandbox/</loc>
+  </url>
+  
+  <url>
     <loc>http://www.stefanoteodorani.it/tags/android/</loc>
     <lastmod>2017-01-20T21:46:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.stefanoteodorani.it/tags/bash/</loc>
+    <lastmod>2017-05-17T21:39:51+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -77,7 +96,7 @@
   
   <url>
     <loc>http://www.stefanoteodorani.it/categories/linux/</loc>
-    <lastmod>2017-02-17T21:46:48+01:00</lastmod>
+    <lastmod>2017-05-17T21:39:51+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -100,8 +119,13 @@
   </url>
   
   <url>
+    <loc>http://www.stefanoteodorani.it/page/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.stefanoteodorani.it/post/</loc>
-    <lastmod>2017-03-24T18:42:26+01:00</lastmod>
+    <lastmod>2017-05-17T21:39:51+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -125,7 +149,7 @@
   
   <url>
     <loc>http://www.stefanoteodorani.it/</loc>
-    <lastmod>2017-03-24T18:42:26+01:00</lastmod>
+    <lastmod>2017-05-17T21:39:51+02:00</lastmod>
     <priority>0</priority>
   </url>
   
