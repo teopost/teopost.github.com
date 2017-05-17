@@ -143,7 +143,7 @@ CKAN è una figata pazzesca. Peccato che uno strumento così utile e oltretutto 
 
 Riferimenti
 -----------
-* [https://www.arpae.it/liberiamo/statistiche_riepilogative.asp?idlivello=822]()
-* [https://www.arpae.it/v2_aria.asp?idlivello=134&tema=valutazioni#]()
-* [http://service.arpa.emr.it/qualita-aria/bollettino.aspx?prov=FC]()
-* [https://www.arpae.it/liberiamo/dati_giornalieri_14gg.asp?idlivello=821]()
+* https://www.arpae.it/liberiamo/statistiche_riepilogative.asp?idlivello=822
+* https://www.arpae.it/v2_aria.asp?idlivello=134&tema=valutazioni#
+* http://service.arpa.emr.it/qualita-aria/bollettino.aspx?prov=FC
+* https://www.arpae.it/liberiamo/dati_giornalieri_14gg.asp?idlivello=821
