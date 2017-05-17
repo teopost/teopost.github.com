@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>it-it</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <lastBuildDate>Wed, 17 May 2017 21:39:51 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 17 May 2017 22:17:06 +0200</lastBuildDate>
     
 	<atom:link href="http://www.stefanoteodorani.it/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Oracle Grants Remapper</title>
+      <link>http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/</link>
+      <pubDate>Wed, 17 May 2017 22:17:06 +0200</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/</guid>
+      <description>&lt;p&gt;&lt;code&gt;Oracle Grants Remmaper&lt;/code&gt; si collega ad una istanza oracle sorgente e crea un file &lt;code&gt;.sql&lt;/code&gt; per la rigenerazione di grants i sinonimi da applicare su una istanza oracle di destinazione.
+In base al file di configurazione passato come argomento, Oracle Grants Remmaper sostituisce i nomi degli schemi con quelli definiti nel file.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>SSH senza password</title>
