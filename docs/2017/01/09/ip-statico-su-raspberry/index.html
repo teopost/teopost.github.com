@@ -21,10 +21,10 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <meta property="og:title" content="IP Statico su Raspberry" />
-<meta property="og:description" content="Se si vuole utilizzare una raspberry come un server, la prima cosa da fare è evitare che l&rsquo;indirizzo IP cambi ad ogni reboot. Insomma va disabilitato il dhcp. Per farlo agire come segue:
-Editare il file /etc/network/interfaces
-sudo vi /etc/network/interfaces  Commentare iface eth0 inet manual e aggiungere in fondo al file i dati dell&rsquo;ip:
-# iface eth0 inet manual auto eth0 iface eth0 inet static address 192.168.10.32 gateway 192.168.10.254 netmask 255." />
+<meta property="og:description" content="Se si vuole utilizzare una raspberry come un server, la prima cosa da fare è evitare che l&rsquo;indirizzo IP cambi ad ogni reboot. Insomma va disabilitato il dhcp.
+Per farlo agire come segue:
+
+" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/" />
 
@@ -46,10 +46,10 @@ sudo vi /etc/network/interfaces  Commentare iface eth0 inet manual e aggiungere 
     
     
 <meta itemprop="name" content="IP Statico su Raspberry">
-<meta itemprop="description" content="Se si vuole utilizzare una raspberry come un server, la prima cosa da fare è evitare che l&rsquo;indirizzo IP cambi ad ogni reboot. Insomma va disabilitato il dhcp. Per farlo agire come segue:
-Editare il file /etc/network/interfaces
-sudo vi /etc/network/interfaces  Commentare iface eth0 inet manual e aggiungere in fondo al file i dati dell&rsquo;ip:
-# iface eth0 inet manual auto eth0 iface eth0 inet static address 192.168.10.32 gateway 192.168.10.254 netmask 255.">
+<meta itemprop="description" content="Se si vuole utilizzare una raspberry come un server, la prima cosa da fare è evitare che l&rsquo;indirizzo IP cambi ad ogni reboot. Insomma va disabilitato il dhcp.
+Per farlo agire come segue:
+
+">
 
 
 <meta itemprop="dateModified" content="2017-01-09T16:02:00&#43;01:00" />
@@ -67,10 +67,10 @@ sudo vi /etc/network/interfaces  Commentare iface eth0 inet manual e aggiungere 
 
 <meta name="twitter:text:title" content="IP Statico su Raspberry"/>
 <meta name="twitter:title" content="IP Statico su Raspberry"/>
-<meta name="twitter:description" content="Se si vuole utilizzare una raspberry come un server, la prima cosa da fare è evitare che l&rsquo;indirizzo IP cambi ad ogni reboot. Insomma va disabilitato il dhcp. Per farlo agire come segue:
-Editare il file /etc/network/interfaces
-sudo vi /etc/network/interfaces  Commentare iface eth0 inet manual e aggiungere in fondo al file i dati dell&rsquo;ip:
-# iface eth0 inet manual auto eth0 iface eth0 inet static address 192.168.10.32 gateway 192.168.10.254 netmask 255."/>
+<meta name="twitter:description" content="Se si vuole utilizzare una raspberry come un server, la prima cosa da fare è evitare che l&rsquo;indirizzo IP cambi ad ogni reboot. Insomma va disabilitato il dhcp.
+Per farlo agire come segue:
+
+"/>
 <meta name="twitter:site" content="@teopost"/>
 
     
@@ -364,6 +364,8 @@ sudo vi /etc/network/interfaces  Commentare iface eth0 inet manual e aggiungere 
                 <p>Se si vuole utilizzare una raspberry come un server, la prima cosa da fare è evitare che l&rsquo;indirizzo IP cambi ad ogni reboot. Insomma va disabilitato il dhcp.
 Per farlo agire come segue:</p>
 
+<p></p>
+
 <p>Editare il file <code>/etc/network/interfaces</code></p>
 
 <pre><code class="language-bash">sudo vi /etc/network/interfaces
@@ -394,7 +396,6 @@ Lo si può verificare digitando:</p>
 
 <pre><code class="language-bash">ip addr show
 </code></pre>
-
             </div>
             <footer class="article-footer">
     <a data-url="http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/" data-id="7451de91796909c36e0cdec9eb83068f" class="article-share-link">

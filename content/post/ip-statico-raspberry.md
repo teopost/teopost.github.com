@@ -13,6 +13,8 @@ title = "IP Statico su Raspberry"
 Se si vuole utilizzare una raspberry come un server, la prima cosa da fare è evitare che l'indirizzo IP cambi ad ogni reboot. Insomma va disabilitato il dhcp.
 Per farlo agire come segue:
 
+<!--more-->
+
 Editare il file `/etc/network/interfaces`
 
 ```bash
