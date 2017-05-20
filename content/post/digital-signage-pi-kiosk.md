@@ -40,11 +40,10 @@ Pi-Kiosk spegne il televisore la sera e lo riaccende la mattina utilizzando lo s
 
 ## Materiale occorrente
 
-* n.1 [Raspberry Pi](http://goo.gl/MybLy9)
-* n.1 [Case](http://goo.gl/Znz5zb)
+* n.1 [Raspberry Pi](https://www.amazon.it/Raspberry-PI-Model-Scheda-madre/dp/B01CD5VC92/ref=sr_1_4?s=pc&ie=UTF8&qid=1495318603&sr=1-4&keywords=raspberry+pi+3)
+* n.1 [Case](https://www.amazon.it/Raspberry-Pi-3-Case-BLACK/dp/B00W7S1BFG/ref=sr_1_4?s=pc&ie=UTF8&qid=1495318648&sr=1-4&keywords=case+raspberry+pi)
 * n.1 [Scheda di memoria](http://goo.gl/3OPHrh)
-* n.1 [Adattatore USB WiFi nano](http://goo.gl/O1TmFa)
-* n.1 [Alimentatore 2A per Raspberry](http://goo.gl/jWQpXN)
+* n.1 [Alimentatore 3A per Raspberry](https://www.amazon.it/Aukru-Caricabatterie-3000mA-Alimentatore-Raspberry/dp/B01566WOAG/ref=sr_1_4?s=pc&ie=UTF8&qid=1495318694&sr=1-4&keywords=alimentatore+raspberry+pi+3)
 * n.1 Cavo HDMI
 * n.1 Televisore con HDMI cec
 
