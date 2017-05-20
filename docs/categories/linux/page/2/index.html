@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="it-it">
 <head>
-    <title>LAMP sulla Raspberry &middot; Teopost</title>
+    <title>Linux &middot; Teopost</title>
     <meta name="generator" content="Hugo 0.20.7" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +10,10 @@
       <meta name="description" content="">
     
     
-    <link rel="canonical" href="http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/"/>
+      <link href="http://www.stefanoteodorani.it/categories/linux/index.xml" rel="alternate" type="application/rss+xml" title="Teopost" />
+      <link href="http://www.stefanoteodorani.it/categories/linux/index.xml" rel="feed" type="application/rss+xml" title="Teopost" />
+    
+    <link rel="canonical" href="http://www.stefanoteodorani.it/categories/linux/"/>
     <link rel="icon" href="http://www.stefanoteodorani.it/favicon.ico">
     <link rel="apple-touch-icon" href="http://www.stefanoteodorani.it/apple-touch-icon.png"/>
     <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/style.css">
@@ -20,20 +23,14 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="LAMP sulla Raspberry" />
-<meta property="og:description" content="Voglio installare un blog sulla raspberry. Per farlo, dopo aver configurato un ip statico, devo installare i pacchetti software necessari per far girare il sito.
-Ecco cosa ho fatto:
-Installazione di Apache sudo apt-get update sudo apt-get install apache2  Se tutto ha funzionato vai su http://your_server_IP_address e vedi il web server attivo
-Installazione di MySql sudo apt-get install mysql-server php5-mysql  Inserire una password
-Configurazione di MySql # Creare la struttura di directory del database dove sarà memorizzare le informazioni sudo mysql_install_db # Rimuoviamo alcuni valori di default pericolosi e limitiamo l&#39;accesso al db sudo mysql_secure_installation  Installazione di PHP sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt  Riferimenti Questa documentazione è l&rsquo;estratto di questo articolo molto più completo" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/" />
+    <meta property="og:title" content="Linux" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://www.stefanoteodorani.it/categories/linux/" />
 
 
 
-<meta property="article:published_time" content="2017-01-07T16:10:00&#43;01:00"/>
-<meta property="article:modified_time" content="2017-01-07T16:10:00&#43;01:00"/>
-
+<meta property="og:updated_time" content="2017-01-07T16:10:00&#43;01:00"/>
 
 
 
@@ -46,36 +43,11 @@ Configurazione di MySql # Creare la struttura di directory del database dove sar
 
     
     
-<meta itemprop="name" content="LAMP sulla Raspberry">
-<meta itemprop="description" content="Voglio installare un blog sulla raspberry. Per farlo, dopo aver configurato un ip statico, devo installare i pacchetti software necessari per far girare il sito.
-Ecco cosa ho fatto:
-Installazione di Apache sudo apt-get update sudo apt-get install apache2  Se tutto ha funzionato vai su http://your_server_IP_address e vedi il web server attivo
-Installazione di MySql sudo apt-get install mysql-server php5-mysql  Inserire una password
-Configurazione di MySql # Creare la struttura di directory del database dove sarà memorizzare le informazioni sudo mysql_install_db # Rimuoviamo alcuni valori di default pericolosi e limitiamo l&#39;accesso al db sudo mysql_secure_installation  Installazione di PHP sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt  Riferimenti Questa documentazione è l&rsquo;estratto di questo articolo molto più completo">
+<meta itemprop="name" content="Linux">
+<meta itemprop="description" content="">
 
-
-<meta itemprop="dateModified" content="2017-01-07T16:10:00&#43;01:00" />
-<meta itemprop="wordCount" content="116">
-
-
-
-<meta itemprop="keywords" content="database,linux,mobile,opendata,system,android,bash,ckan,github-pages,oracle,raspberry,ubuntu," />
 
     
-
-  <meta name="twitter:card" content="summary"/>
-
-
-
-<meta name="twitter:text:title" content="LAMP sulla Raspberry"/>
-<meta name="twitter:title" content="LAMP sulla Raspberry"/>
-<meta name="twitter:description" content="Voglio installare un blog sulla raspberry. Per farlo, dopo aver configurato un ip statico, devo installare i pacchetti software necessari per far girare il sito.
-Ecco cosa ho fatto:
-Installazione di Apache sudo apt-get update sudo apt-get install apache2  Se tutto ha funzionato vai su http://your_server_IP_address e vedi il web server attivo
-Installazione di MySql sudo apt-get install mysql-server php5-mysql  Inserire una password
-Configurazione di MySql # Creare la struttura di directory del database dove sarà memorizzare le informazioni sudo mysql_install_db # Rimuoviamo alcuni valori di default pericolosi e limitiamo l&#39;accesso al db sudo mysql_secure_installation  Installazione di PHP sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt  Riferimenti Questa documentazione è l&rsquo;estratto di questo articolo molto più completo"/>
-<meta name="twitter:site" content="@teopost"/>
-
     
 
     
@@ -88,7 +60,7 @@ Configurazione di MySql # Creare la struttura di directory del database dove sar
 
 
 <div id="container">
-	<header id="header">
+    <header id="header">
   <div id="header-main" class="header-inner">
     <div class="outer">
       <a href="http://www.stefanoteodorani.it/" id="logo">
@@ -186,10 +158,8 @@ Configurazione di MySql # Creare la struttura di directory del database dove sar
   </div>
 </header>
 
-   	
-   	<div class="outer">
-   		
-	    <aside id="profile">
+    <div class="outer">
+        <aside id="profile">
   <div class="inner profile-inner">
     <div class="base-info profile-block">
       <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
@@ -290,241 +260,51 @@ Configurazione di MySql # Creare la struttura di directory del database dove sar
   </div>
 </aside>
 
-	    
-
-	    
-<section id="main">
-
-    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
+        <section id="main">
+            <section class="archives-wrap">
+                <div class="archive-category-wrap">
+                    <span class="archive-category">Linux</span>
+                </div>
+                <div class="archives">
+                    
+                    
+                        <article class="archive-article archive-type-post">
+    <div class="archive-article-inner">
+        <div class="archive-article-thumbnail">
             
-                <img src="https://www.apache.org/img/asf_logo.png" class="article-banner">
+            <a href="http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/" class="thumbnail">
+                <span style="background-image:url(https://www.apache.org/img/asf_logo.png)" alt="LAMP sulla Raspberry" class="thumbnail-image"></span>
+            </a>
             
-
-            <header class="article-header">
-    <a href="http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/">
-    <h1 class="article-title" itemprop="name">
-        LAMP sulla Raspberry
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2017-01-07 16:10:00 &#43;0100 CET" itemprop="datePublished">2017-01-07</time>
-            &middot;
-            116
-            words
-            &middot;
-            1
-            minute read
         </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">linux</a>
-                
-                
+        <header class="archive-article-header">
+            <h1 itemprop="name">
+            <a class="archive-article-title" href="http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/">LAMP sulla Raspberry</a>
+            </h1>
+            <div class="archive-article-date">
+                <i class="fa fa-calendar"></i>
+                <time datetime="2017-01-07 16:10:00 &#43;0100 CET" itemprop="datePublished">2017-01-07</time>
             </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/raspberry">raspberry</a>
-                
-                
-            </div>
-            
-        
+        </header>
     </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                
-
-<p>Voglio installare un blog sulla raspberry.
-Per farlo, dopo aver <a href="{% post_url 2017-01-09-ip-statico-raspberry %}">configurato un ip statico</a>, devo installare i pacchetti software necessari per far girare il <a href="http://www.wedoit.io">sito</a>.</p>
-
-<p>Ecco cosa ho fatto:</p>
-
-<h3 id="installazione-di-apache">Installazione di Apache</h3>
-
-<pre><code class="language-bash">sudo apt-get update
-sudo apt-get install apache2
-</code></pre>
-
-<p>Se tutto ha funzionato vai su <a href="http://your_server_IP_address">http://your_server_IP_address</a> e vedi il web server attivo</p>
-
-<h3 id="installazione-di-mysql">Installazione di MySql</h3>
-
-<pre><code class="language-bash">sudo apt-get install mysql-server php5-mysql
-</code></pre>
-
-<p>Inserire una password</p>
-
-<h3 id="configurazione-di-mysql">Configurazione di MySql</h3>
-
-<pre><code class="language-bash"># Creare la struttura di directory del database dove sarà memorizzare le informazioni
-sudo mysql_install_db
-# Rimuoviamo alcuni valori di default pericolosi e limitiamo l'accesso al db
-sudo mysql_secure_installation
-</code></pre>
-
-<h3 id="installazione-di-php">Installazione di PHP</h3>
-
-<pre><code class="language-bash">sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt
-</code></pre>
-
-<h3 id="riferimenti">Riferimenti</h3>
-
-<p>Questa documentazione è l&rsquo;estratto di questo articolo molto più completo</p>
-
-<ul>
-<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-14-04">https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-14-04</a></li>
-</ul>
-
-            </div>
-            <footer class="article-footer">
-    <a data-url="http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/" data-id="d24dad52869f92ec0e1da8bd8711fbab" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-        </div>
-
-        
-<nav id="article-nav">
-    
-    <a href="http://www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">
-          Older
-      </strong>
-      <div class="article-nav-title">Configurare GoDaddy per le Github Pages</div>
-    </a>
-    
+</article>
+ 
+                    
+                </div>
+            </section>
+            <nav id="page-nav">
 
     
-    <a href="http://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">
-          Newer
-      </strong>
-      <div class="article-nav-title">Wordpress su Raspberry</div>
-    </a>
+        <a class="extend prev" rel="prev" href="http://www.stefanoteodorani.it/categories/linux/">
+            « Prev
+        </a>
     
+    
+
 </nav>
 
-
-    </article>
-
-    
-    <section id="comments">
-        <div id="disqus_thread">
-            <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'stefanoteodorani';
-    var disqus_identifier = 'http:\/\/www.stefanoteodorani.it\/2017\/01\/07\/lamp-sulla-raspberry\/';
-    var disqus_title = 'LAMP sulla Raspberry';
-    var disqus_url = 'http:\/\/www.stefanoteodorani.it\/2017\/01\/07\/lamp-sulla-raspberry\/';
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        </div>
-    </section>
-    
-</section>
-
-
-	    
-	    <aside id="sidebar">
+        </section>
+        <aside id="sidebar">
     
 <div class="widget-wrap">
     <h3 class="widget-title">
@@ -537,7 +317,7 @@ sudo mysql_secure_installation
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" class="thumbnail">
                     
-                        <span style="background-image:url(https://i.ytimg.com/vi/wiSdPZDkg50/maxresdefault.jpg)" alt="LAMP sulla Raspberry" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://i.ytimg.com/vi/wiSdPZDkg50/maxresdefault.jpg)" alt="Linux" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -563,7 +343,7 @@ sudo mysql_secure_installation
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.investors.com/wp-content/uploads/2016/03/IT90-orcl-031116-shutterstock.jpg)" alt="LAMP sulla Raspberry" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.investors.com/wp-content/uploads/2016/03/IT90-orcl-031116-shutterstock.jpg)" alt="Linux" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -589,7 +369,7 @@ sudo mysql_secure_installation
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.hextra.it/wp-content/uploads/2016/09/Steal_password.jpg)" alt="LAMP sulla Raspberry" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.hextra.it/wp-content/uploads/2016/09/Steal_password.jpg)" alt="Linux" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -615,7 +395,7 @@ sudo mysql_secure_installation
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.bitmat.it/wp-content/uploads/2016/10/OPEN_DATA.jpg)" alt="LAMP sulla Raspberry" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.bitmat.it/wp-content/uploads/2016/10/OPEN_DATA.jpg)" alt="Linux" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -641,7 +421,7 @@ sudo mysql_secure_installation
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.magix.com/fileadmin/user_upload/Produkte/Musik/Audio_Cleaning_Lab_2017/Detail/grafik-455-audio-restauration-int.png)" alt="LAMP sulla Raspberry" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.magix.com/fileadmin/user_upload/Produkte/Musik/Audio_Cleaning_Lab_2017/Detail/grafik-455-audio-restauration-int.png)" alt="Linux" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -836,8 +616,7 @@ sudo mysql_secure_installation
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
 
-	    
-	</div>
+    </div>
 </div>
 
 <footer id="footer">

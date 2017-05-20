@@ -45,10 +45,10 @@ publishDir = "docs"
     label  = "Home"
     link   = "/"
 
-[[params.menu]]
-    before = false
-    label  = "About me"
-    link   = "aboutme/"
+#[[params.menu]]
+#    before = false
+#    label  = "About me"
+#    link   = "aboutme/"
 
 [[params.menu]]
     before = false

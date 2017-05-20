@@ -64,6 +64,6 @@ Attivarle
 source /Users/[utente]/.bash_profile
 ```
 
-Riferimenti
----
+## Riferimenti
+
 * https://github.com/kubo/fix_oralib_osx

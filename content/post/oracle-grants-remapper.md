@@ -15,8 +15,8 @@ In base al file di configurazione passato come argomento, Oracle Grants Remmaper
 
 <!--more-->
 
-Configurazione
----
+## Configurazione
+
 
 Il file di configurazione ha un formato simile a questo:
 

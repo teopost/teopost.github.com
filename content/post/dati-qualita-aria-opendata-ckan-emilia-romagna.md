@@ -26,8 +26,7 @@ A Savignano sul Rubicone, luogo in cui vivo, purtroppo nessuno dell'amministrazi
 
 Scopriamo il perchè.
 
-Leggere i dati da CKAN
-----------------------
+## Leggere i dati da CKAN
 
 Come dicevo, la regione espone i dati con CKAN. Lo fa con questo sito:
 
@@ -137,12 +136,12 @@ print data["result"]["records"][0]["value"]
 e cioè, il giorno 23 Marzo 2017, a Savignano sul Rubicone, i livello di PM10 rilevato era 54 µg/m3 (il limite consentito per legge è 50 µg/m3).
 Forse era meglio non saperlo !
 
-Conclusioni
------------
+## Conclusioni
+
 CKAN è una figata pazzesca. Peccato che uno strumento così utile e oltretutto opensource non sia usato da tutte le pubbliche amministrazioni (come quella in cui abito).
 
-Riferimenti
------------
+## Riferimenti
+
 * https://www.arpae.it/liberiamo/statistiche_riepilogative.asp?idlivello=822
 * https://www.arpae.it/v2_aria.asp?idlivello=134&tema=valutazioni#
 * http://service.arpa.emr.it/qualita-aria/bollettino.aspx?prov=FC
