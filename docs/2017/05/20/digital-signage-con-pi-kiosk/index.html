@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-419">
 <head>
-    <title>Linux &middot; Teopost</title>
+    <title>Digital signage con Pi-Kiosk &middot; Teopost</title>
     <meta name="generator" content="Hugo 0.20.7" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,10 +10,7 @@
       <meta name="description" content="">
     
     
-      <link href="http://www.stefanoteodorani.it/categories/linux/index.xml" rel="alternate" type="application/rss+xml" title="Teopost" />
-      <link href="http://www.stefanoteodorani.it/categories/linux/index.xml" rel="feed" type="application/rss+xml" title="Teopost" />
-    
-    <link rel="canonical" href="http://www.stefanoteodorani.it/categories/linux/"/>
+    <link rel="canonical" href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/"/>
     <link rel="icon" href="http://www.stefanoteodorani.it/favicon.ico">
     <link rel="apple-touch-icon" href="http://www.stefanoteodorani.it/apple-touch-icon.png"/>
     <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/style.css">
@@ -27,14 +24,20 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Linux" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://www.stefanoteodorani.it/categories/linux/" />
+    <meta property="og:title" content="Digital signage con Pi-Kiosk" />
+<meta property="og:description" content="Conosco Luca. Ha una agenzia di viaggi a Rimini, e un&rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.
+
+E&rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico Sergio gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" />
 
 
 
-<meta property="og:updated_time" content="2017-01-08T16:15:00&#43;01:00"/>
+<meta property="article:published_time" content="2017-05-20T20:50:06&#43;02:00"/>
+<meta property="article:modified_time" content="2017-05-20T20:50:06&#43;02:00"/>
+
 
 
 
@@ -47,11 +50,36 @@
 
     
     
-<meta itemprop="name" content="Linux">
-<meta itemprop="description" content="">
+<meta itemprop="name" content="Digital signage con Pi-Kiosk">
+<meta itemprop="description" content="Conosco Luca. Ha una agenzia di viaggi a Rimini, e un&rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.
 
+E&rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico Sergio gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.
+
+">
+
+
+<meta itemprop="dateModified" content="2017-05-20T20:50:06&#43;02:00" />
+<meta itemprop="wordCount" content="731">
+
+
+
+<meta itemprop="keywords" content="database,linux,mobile,opendata,system,android,bash,ckan,github-pages,oracle,raspberry,ubuntu," />
 
     
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="Digital signage con Pi-Kiosk"/>
+<meta name="twitter:title" content="Digital signage con Pi-Kiosk"/>
+<meta name="twitter:description" content="Conosco Luca. Ha una agenzia di viaggi a Rimini, e un&rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.
+
+E&rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico Sergio gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.
+
+"/>
+<meta name="twitter:site" content="@teopost"/>
+
     
 
     
@@ -64,7 +92,7 @@
 
 
 <div id="container">
-    <header id="header">
+	<header id="header">
   <div id="header-main" class="header-inner">
     <div class="outer">
       <a href="http://www.stefanoteodorani.it/" id="logo">
@@ -162,8 +190,10 @@
   </div>
 </header>
 
-    <div class="outer">
-        <aside id="profile">
+   	
+   	<div class="outer">
+   		
+	    <aside id="profile">
   <div class="inner profile-inner">
     <div class="base-info profile-block">
       <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
@@ -264,73 +294,373 @@
   </div>
 </aside>
 
-        <section id="main">
-            <section class="archives-wrap">
-                <div class="archive-category-wrap">
-                    <span class="archive-category">Linux</span>
-                </div>
-                <div class="archives">
-                    
-                    
-                        <article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
-        <div class="archive-article-thumbnail">
+	    
+
+	    
+<section id="main">
+
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
             
-            <a href="http://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/" class="thumbnail">
-                <span style="background-image:url(https://s.w.org/images/backgrounds/wordpress-bg-medblue.png)" alt="Wordpress su Raspberry" class="thumbnail-image"></span>
-            </a>
+                <img src="http://www.yachtandtravel.eu/wp-content/uploads/2014/03/travel2.jpg" class="article-banner">
             
+
+            <header class="article-header">
+    <a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/">
+    <h1 class="article-title" itemprop="name">
+        Digital signage con Pi-Kiosk
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-05-20 20:50:06 &#43;0200 CEST" itemprop="datePublished">20-05-2017</time>
+            &middot;
+            731
+            words
+            &middot;
+            4
+            minute read
         </div>
-        <header class="archive-article-header">
-            <h1 itemprop="name">
-            <a class="archive-article-title" href="http://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/">Wordpress su Raspberry</a>
-            </h1>
-            <div class="archive-article-date">
-                <i class="fa fa-calendar"></i>
-                <time datetime="2017-01-08 16:15:00 &#43;0100 CET" itemprop="datePublished">08-01-2017</time>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">linux</a>
+                
+                
             </div>
-        </header>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/raspberry">raspberry</a>
+                
+                
+            </div>
+            
+        
     </div>
-</article>
- 
-                    
-                        <article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
-        <div class="archive-article-thumbnail">
-            
-            <a href="http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/" class="thumbnail">
-                <span style="background-image:url(https://www.apache.org/img/asf_logo.png)" alt="LAMP sulla Raspberry" class="thumbnail-image"></span>
-            </a>
-            
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>Conosco Luca. Ha una agenzia di viaggi a Rimini, e un&rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.</p>
+
+<p>E&rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico <a href="https://www.sergiogridelli.it/">Sergio</a> gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.</p>
+
+<p></p>
+
+<p>Purtroppo però, dopo aver provato per un po questa soluzione, sono venuto fuori alcuni problemi.</p>
+
+<ul>
+<li><p><strong>Non era possibile copiare le immagini da remoto.</strong> Per farlo bisognava essere fisicamente sul posto, scaricare le immagini che Sergio gli mandava per posta, copiare le immagini sulla chiavetta, mettere la chiavetta nel televisore. Inoltre durante questa operazione il televisore non proiettava niente.</p></li>
+
+<li><p><strong>Non tutte le immagini venivano mostrate correttamente.</strong> Alcune formati non erano supportati.</p></li>
+
+<li><p><strong>Il televisore rimaneva inutilmente accesso anche la notte.</strong> Luca vuole risparmiare sulla bolletta della luce</p></li>
+
+<li><p><strong>Il caricamento delle immagini era lento.</strong> Le immagini venivano caricate lentamente e l&rsquo;effetto in effetti non era grachè.</p></li>
+</ul>
+
+<p>Luca ha quindi pensato di chiedere al sottoscritto se, con tutti i progetti e smanettamenti inutili che faccio, ce ne era uno che poteva risolvergli tutti questi problemi.</p>
+
+<p>Così è nato Pi-Kiosk.</p>
+
+<h2 id="pi-kiosk">Pi-Kiosk</h2>
+
+<p>Pi-Kiosk è una soluzione basata su raspberry pi, che consente di eseguire lo slideshow di una cartella di immagini su un televisore.</p>
+
+<p>Prevede l&rsquo;utilizzo di btsync per l&rsquo;aggiornamento delle immagini. Grazie a btsync è possibile utilizzare un computer desktop o uno smartphone per tenere aggiornata la presentazione.</p>
+
+<p>Pi-Kiosk spegne il televisore la sera e lo riaccende la mattina utilizzando lo standard cec dell&rsquo;HDMI presente ormai in quasi tutti i televisori di ultima generazione.</p>
+
+<h2 id="materiale-occorrente">Materiale occorrente</h2>
+
+<ul>
+<li>n.1 <a href="http://goo.gl/MybLy9">Raspberry Pi</a></li>
+<li>n.1 <a href="http://goo.gl/Znz5zb">Case</a></li>
+<li>n.1 <a href="http://goo.gl/3OPHrh">Scheda di memoria</a></li>
+<li>n.1 <a href="http://goo.gl/O1TmFa">Adattatore USB WiFi nano</a></li>
+<li>n.1 <a href="http://goo.gl/jWQpXN">Alimentatore 2A per Raspberry</a></li>
+<li>n.1 Cavo HDMI</li>
+<li>n.1 Televisore con HDMI cec</li>
+</ul>
+
+<h2 id="preparare-la-raspberry">Preparare la Raspberry</h2>
+
+<p>Installate l&rsquo;ultima versione del sistema operativo raspbian. Ci sono centinaia di guide su internet su come farlo. Se hai linux, ecco la centunesima:</p>
+
+<p>Aprire una finestra terminal e da root inserire l&rsquo;SD nel card reader del computer. Eseguire questo comando:</p>
+
+<pre><code># df -h
+</code></pre>
+
+<p>Eseguire l&rsquo;umount della scheda: (sdb1 è solo un esempio, il nome potrebbe essere diverso)</p>
+
+<pre><code># umount /dev/sdb1
+</code></pre>
+
+<p>Scrivere l&rsquo;immagine nella SD</p>
+
+<pre><code># dd if=./immagine.img of=/dev/sdX bs=4k
+</code></pre>
+
+<p>Eseguire questo comando per essere sicuri che tutta la cache sia scritta nell&rsquo;SD</p>
+
+<pre><code># sync
+</code></pre>
+
+<h2 id="installare-pi-kiosk">Installare pi-kiosk</h2>
+
+<p>Installare il programma di visualizzazione immagini</p>
+
+<pre><code>$ sudo apt-get install feh unclutter
+</code></pre>
+
+<p>Collegarsi in ssh sulla rasp e posizionarsi nell home</p>
+
+<pre><code>$ cd
+</code></pre>
+
+<p>Scaricare il software</p>
+
+<pre><code>$ git clone https://github.com/teopost/pi-kiosk
+</code></pre>
+
+<p>Aggiornare il software</p>
+
+<pre><code>$ sudo apt-get dist-upgrade
+$ sudo rpi-update
+$ sudo apt-get remove mathematica* sonic-pi wolfram*
+$ rm python_games
+</code></pre>
+
+<h2 id="configurare-il-software">Configurare il software</h2>
+
+<p>Rendere eseguibili gli script:</p>
+
+<pre><code>chmod 777 ./pi-kiosk/bin/*.sh
+</code></pre>
+
+<p>Per disabilitare lo screensaver editare il file autostart situato sotto /etc/xdg/lxsession/LXDE-pi. Quindi:</p>
+
+<pre><code>sudo vi /etc/xdg/lxsession/LXDE-pi/autostart
+</code></pre>
+
+<p>quindi</p>
+
+<pre><code>@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+# @xscreensaver -no-splash           # &lt;-- COMMENTARE
+@xset s off
+@xset -dpms
+@xset s noblank
+@/home/pi/pi-kiosk/bin/slideshow.sh      # &lt;-- AGGIUNGERE
+</code></pre>
+
+<p>Nel file, commentare la riga che contiene xscreensaver e aggiungere la riga in fondo per l&rsquo;esecuzione automatica di pi-kiosk.</p>
+
+<h2 id="installazione-di-btsync">Installazione di btsync</h2>
+
+<p>Per sincronizzare le immagini installare <a href="http://getsync.com">btsync</a>. Ovviamente la versione per ARM.</p>
+
+<h2 id="spegnimento-automatico">Spegnimento automatico</h2>
+
+<p>Per spegnere e riaccendere automaticamente il televisore occorre installare la libreria cec per raspberry. Operazione da fare come root.</p>
+
+<pre><code># apt-get instal cec-utils
+# apt-get instal cec-client		+# apt-get instal cec-utils
+
+# apt-get -y install udev libudev-dev autoconf automake libtool gcc liblockdev1
+# Invece del git clone prendere questa versione : https://github.com/Pulse-Eight/libcec/tree/2a80b46be78e9d849de223ab73b6f3e7b4d9fc46
+# cd libcec/
+# ./bootstrap
+# ./configure --with-rpi-include-path=/opt/vc/include --with-rpi-lib-path=/opt/vc/lib --enable-rpi
+# cec-client
+# make
+# make install
+# ldconfig
+</code></pre>
+
+<h2 id="pianificare-lo-spegnimento-e-la-riaccensione-del-tv">Pianificare lo spegnimento e la riaccensione del TV</h2>
+
+<p>Nel crontab dell&rsquo;utente pi, incollare le seguenti righe:</p>
+
+<pre><code class="language-bash"># .---------------- [m]inute: minuto (0 - 59)
+# |  .------------- [h]our: ora (0 - 23)
+# |  |  .---------- [d]ay [o]f [m]onth: giorno del mese (1 - 31)
+# |  |  |  .------- [mon]th: mese (1 - 12) OPPURE jan,feb,mar,apr...
+# |  |  |  |  .---- [d]ay [o]f [w]eek: giorno della settimana (0 - 6) (domenica=0 o 7)  OPPURE sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+
+54 23 * * * /mnt/pi-kiosk/bin/turntv.sh off
+30  7 * * * /mnt/pi-kiosk/bin/turntv.sh on &amp;&amp; sleep 3 &amp;&amp; /mnt/pi-kiosk/bin/turntv.sh input
+</code></pre>
+
+<h2 id="riferimenti">Riferimenti</h2>
+
+<ul>
+<li><a href="http://raspberry-at-home.com/control-rpi-with-tv-remote/">http://raspberry-at-home.com/control-rpi-with-tv-remote/</a></li>
+<li><a href="http://raspberrypi.stackexchange.com/questions/8698/how-can-my-raspberry-pi-turn-on-off-my-samsung-tv">http://raspberrypi.stackexchange.com/questions/8698/how-can-my-raspberry-pi-turn-on-off-my-samsung-tv</a></li>
+</ul>
+
+<h2 id="aggiornamento-del-20-maggio-2017">Aggiornamento del 20 maggio 2017</h2>
+
+<p>Btsync è morto. Poco male. Sostituitelo con <a href="https://syncthing.net">https://syncthing.net</a></p>
+
+<h2 id="download">Download</h2>
+
+<p>Pi-Kiosk lo potete scaricare da qui: <a href="https://github.com/teopost/pi-kiosk">https://github.com/teopost/pi-kiosk</a></p>
+
+<!--
+
+Alcuni appunti:
+
+* https://info-beamer.com/blog/raspberry-pi-hardware-video-scaler
+* http://www.whizzy.org/wp-content/uploads/2012/11/cecsimple.sh_.txt
+
+# lista comandi
+echo h | cec-client -s -d 1
+
+# Attiva la porta cec come attiva
+echo "as" | cec-client -s
+
+-->
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" data-id="cd47f510fcce96e77bf972b13d2f628c" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
         </div>
-        <header class="archive-article-header">
-            <h1 itemprop="name">
-            <a class="archive-article-title" href="http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/">LAMP sulla Raspberry</a>
-            </h1>
-            <div class="archive-article-date">
-                <i class="fa fa-calendar"></i>
-                <time datetime="2017-01-07 16:10:00 &#43;0100 CET" itemprop="datePublished">07-01-2017</time>
-            </div>
-        </header>
-    </div>
-</article>
- 
-                    
-                </div>
-            </section>
-            <nav id="page-nav">
+
+        
+<nav id="article-nav">
+    
+    <a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Hotspot wifi con Raspberry PI 3</div>
+    </a>
+    
 
     
-        <a class="extend prev" rel="prev" href="http://www.stefanoteodorani.it/categories/linux/">
-            « Prev
-        </a>
-    
-    
-
 </nav>
 
-        </section>
-        <aside id="sidebar">
+
+    </article>
+
+    
+    <section id="comments">
+        <div id="disqus_thread">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'stefanoteodorani';
+    var disqus_identifier = 'http:\/\/www.stefanoteodorani.it\/2017\/05\/20\/digital-signage-con-pi-kiosk\/';
+    var disqus_title = 'Digital signage con Pi-Kiosk';
+    var disqus_url = 'http:\/\/www.stefanoteodorani.it\/2017\/05\/20\/digital-signage-con-pi-kiosk\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </section>
+    
+</section>
+
+
+	    
+	    <aside id="sidebar">
     
 <div class="widget-wrap">
     <h3 class="widget-title">
@@ -343,7 +673,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.yachtandtravel.eu/wp-content/uploads/2014/03/travel2.jpg)" alt="Linux" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.yachtandtravel.eu/wp-content/uploads/2014/03/travel2.jpg)" alt="Digital signage con Pi-Kiosk" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -369,7 +699,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" class="thumbnail">
                     
-                        <span style="background-image:url(https://i.ytimg.com/vi/wiSdPZDkg50/maxresdefault.jpg)" alt="Linux" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://i.ytimg.com/vi/wiSdPZDkg50/maxresdefault.jpg)" alt="Digital signage con Pi-Kiosk" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -395,7 +725,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.investors.com/wp-content/uploads/2016/03/IT90-orcl-031116-shutterstock.jpg)" alt="Linux" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.investors.com/wp-content/uploads/2016/03/IT90-orcl-031116-shutterstock.jpg)" alt="Digital signage con Pi-Kiosk" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -421,7 +751,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.hextra.it/wp-content/uploads/2016/09/Steal_password.jpg)" alt="Linux" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.hextra.it/wp-content/uploads/2016/09/Steal_password.jpg)" alt="Digital signage con Pi-Kiosk" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -447,7 +777,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.bitmat.it/wp-content/uploads/2016/10/OPEN_DATA.jpg)" alt="Linux" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.bitmat.it/wp-content/uploads/2016/10/OPEN_DATA.jpg)" alt="Digital signage con Pi-Kiosk" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -642,7 +972,8 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
 
-    </div>
+	    
+	</div>
 </div>
 
 <footer id="footer">

@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/</loc>
+    <lastmod>2017-05-20T20:50:06+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/</loc>
     <lastmod>2017-05-20T18:03:03+02:00</lastmod>
   </url>
@@ -66,7 +71,7 @@
   </url>
   
   <url>
-    <loc>http://www.stefanoteodorani.it/page/sandbox/</loc>
+    <loc>http://www.stefanoteodorani.it/sandbox/</loc>
   </url>
   
   <url>
@@ -106,7 +111,7 @@
   
   <url>
     <loc>http://www.stefanoteodorani.it/categories/linux/</loc>
-    <lastmod>2017-05-20T18:03:03+02:00</lastmod>
+    <lastmod>2017-05-20T20:50:06+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -129,19 +134,14 @@
   </url>
   
   <url>
-    <loc>http://www.stefanoteodorani.it/page/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://www.stefanoteodorani.it/post/</loc>
-    <lastmod>2017-05-20T18:03:03+02:00</lastmod>
+    <lastmod>2017-05-20T20:50:06+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.stefanoteodorani.it/tags/raspberry/</loc>
-    <lastmod>2017-05-20T18:03:03+02:00</lastmod>
+    <lastmod>2017-05-20T20:50:06+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -159,7 +159,7 @@
   
   <url>
     <loc>http://www.stefanoteodorani.it/</loc>
-    <lastmod>2017-05-20T18:03:03+02:00</lastmod>
+    <lastmod>2017-05-20T20:50:06+02:00</lastmod>
     <priority>0</priority>
   </url>
   

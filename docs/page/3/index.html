@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it-it">
+<html lang="es-419">
 <head>
     <title>Teopost</title>
     <meta name="generator" content="Hugo 0.20.7" />
@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/monokai.css">
     <link rel="stylesheet" href="http://www.stefanoteodorani.it/fancybox/jquery.fancybox.css">
     
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/button.css">
+    
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/notice.css">
+    
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <meta property="og:title" content="Teopost" />
@@ -30,7 +34,7 @@
 
 
 
-<meta property="og:updated_time" content="2016-12-28T22:45:00&#43;01:00"/>
+<meta property="og:updated_time" content="2017-01-07T16:10:00&#43;01:00"/>
 
 
 
@@ -175,7 +179,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        12
+        13
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -267,6 +271,159 @@
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
             
+            <a href="http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/" itemprop="url">
+                <img src="https://www.apache.org/img/asf_logo.png" class="article-banner">
+            
+            </a>
+
+            <header class="article-header">
+    <a href="http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/">
+    <h1 class="article-title" itemprop="name">
+        LAMP sulla Raspberry
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-01-07 16:10:00 &#43;0100 CET" itemprop="datePublished">07-01-2017</time>
+            &middot;
+            116
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">linux</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/raspberry">raspberry</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    Voglio installare un blog sulla raspberry. Per farlo, dopo aver configurato un ip statico, devo installare i pacchetti software necessari per far girare il sito.
+Ecco cosa ho fatto:
+Installazione di Apache sudo apt-get update sudo apt-get install apache2  Se tutto ha funzionato vai su <a href="http://your_server_IP_address">http://your_server_IP_address</a> e vedi il web server attivo
+Installazione di MySql sudo apt-get install mysql-server php5-mysql  Inserire una password
+Configurazione di MySql # Creare la struttura di directory del database dove sarà memorizzare le informazioni sudo mysql_install_db # Rimuoviamo alcuni valori di default pericolosi e limitiamo l&rsquo;accesso al db sudo mysql_secure_installation  Installazione di PHP sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt  Riferimenti Questa documentazione è l&rsquo;estratto di questo articolo molto più completo
+                    <br>
+                </p>
+                <p class="article-more-link">
+                    <a href="http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/">
+                        Read more
+                    </a>
+                </p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/" data-id="d24dad52869f92ec0e1da8bd8711fbab" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
             <a href="http://www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/" itemprop="url">
                 <img src="https://partnernoc.cpanel.net/logo/436-5141-logo.jpg" class="article-banner">
             
@@ -283,7 +440,7 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2016-12-28 22:45:00 &#43;0100 CET" itemprop="datePublished">2016-12-28</time>
+            <time datetime="2016-12-28 22:45:00 &#43;0100 CET" itemprop="datePublished">28-12-2016</time>
             &middot;
             187
             words
@@ -433,7 +590,7 @@ Creazione sito teopost.github.io Ho creato sul mio profilo github un repository 
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2016-12-27 18:45:00 &#43;0100 CET" itemprop="datePublished">2016-12-27</time>
+            <time datetime="2016-12-27 18:45:00 &#43;0100 CET" itemprop="datePublished">27-12-2016</time>
             &middot;
             111
             words
@@ -584,6 +741,32 @@ Creazione sito teopost.github.io Ho creato sul mio profilo github un repository 
             
             <li>
                 <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.yachtandtravel.eu/wp-content/uploads/2014/03/travel2.jpg)" alt="Teopost" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" class="title">Digital signage con Pi-Kiosk</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-05-20 20:50:06 &#43;0200 CEST" itemprop="datePublished">20-05-2017</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" class="thumbnail">
                     
                         <span style="background-image:url(https://i.ytimg.com/vi/wiSdPZDkg50/maxresdefault.jpg)" alt="Teopost" class="thumbnail-image"></span>
@@ -603,7 +786,7 @@ Creazione sito teopost.github.io Ho creato sul mio profilo github un repository 
                     
                     <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" class="title">Hotspot wifi con Raspberry PI 3</a></p>
                     <p class="item-date">
-                        <time datetime="2017-05-20 18:03:03 &#43;0200 CEST" itemprop="datePublished">2017-05-20</time>
+                        <time datetime="2017-05-20 18:03:03 &#43;0200 CEST" itemprop="datePublished">20-05-2017</time>
                     </p>
                 </div>
             </li>
@@ -629,7 +812,7 @@ Creazione sito teopost.github.io Ho creato sul mio profilo github un repository 
                     
                     <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/" class="title">Oracle grants remapper</a></p>
                     <p class="item-date">
-                        <time datetime="2017-05-17 22:17:06 &#43;0200 CEST" itemprop="datePublished">2017-05-17</time>
+                        <time datetime="2017-05-17 22:17:06 &#43;0200 CEST" itemprop="datePublished">17-05-2017</time>
                     </p>
                 </div>
             </li>
@@ -655,7 +838,7 @@ Creazione sito teopost.github.io Ho creato sul mio profilo github un repository 
                     
                     <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/" class="title">SSH senza password</a></p>
                     <p class="item-date">
-                        <time datetime="2017-05-17 21:39:51 &#43;0200 CEST" itemprop="datePublished">2017-05-17</time>
+                        <time datetime="2017-05-17 21:39:51 &#43;0200 CEST" itemprop="datePublished">17-05-2017</time>
                     </p>
                 </div>
             </li>
@@ -681,33 +864,7 @@ Creazione sito teopost.github.io Ho creato sul mio profilo github un repository 
                     
                     <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/" class="title">Recuperare i dati sull&#39;inquinamento della mia città da CKAN</a></p>
                     <p class="item-date">
-                        <time datetime="2017-03-24 18:42:26 &#43;0100 CET" itemprop="datePublished">2017-03-24</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/" class="thumbnail">
-                    
-                        <span style="background-image:url(http://www.magix.com/fileadmin/user_upload/Produkte/Musik/Audio_Cleaning_Lab_2017/Detail/grafik-455-audio-restauration-int.png)" alt="Teopost" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">
-                        linux
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/" class="title">Usare mkvextract</a></p>
-                    <p class="item-date">
-                        <time datetime="2017-02-17 21:46:48 &#43;0100 CET" itemprop="datePublished">2017-02-17</time>
+                        <time datetime="2017-03-24 18:42:26 &#43;0100 CET" itemprop="datePublished">24-03-2017</time>
                     </p>
                 </div>
             </li>
@@ -738,7 +895,7 @@ Creazione sito teopost.github.io Ho creato sul mio profilo github un repository 
                 <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/linux">
                     linux
                 </a>
-                <span class="category-list-count">6</span>
+                <span class="category-list-count">7</span>
             </li>
             
             <li class="category-list-item">
@@ -827,7 +984,7 @@ Creazione sito teopost.github.io Ho creato sul mio profilo github un repository 
                 <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/raspberry">
                     raspberry
                 </a>
-                <span class="category-list-count">4</span>
+                <span class="category-list-count">5</span>
             </li>
             
             <li class="category-list-item">
@@ -892,7 +1049,7 @@ Creazione sito teopost.github.io Ho creato sul mio profilo github un repository 
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017
-      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
+      Powered by <a href="//gohugo.io">Hugo</a>
     </div>
   </div>
 </footer>
@@ -905,14 +1062,6 @@ Creazione sito teopost.github.io Ho creato sul mio profilo github un repository 
 
 <script>hljs.initHighlightingOnLoad();</script>
 
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']]}
-  });
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
 

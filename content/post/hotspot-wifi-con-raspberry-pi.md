@@ -180,4 +180,12 @@ Ora dovresti essere in grado di connettersi a Internet attraverso la Pi passando
 
 Riavvia la raspberry e vedi se tutto continua a funzionare.
 
-Ah! Dimentivavo. Se qualcosa è andato storto, GOTO 10!.
+Ah! Dimentiavo. Se qualcosa è andato storto, GOTO 10!.
+
+<!--
+
+Riferimenti:
+
+https://frillip.com/using-your-raspberry-pi-3-as-a-wifi-access-point-with-hostapd
+
+-->

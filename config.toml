@@ -1,5 +1,6 @@
 baseurl = "http://www.stefanoteodorani.it/"
-languageCode = "it-it"
+# https://www.fincher.org/Utilities/CountryLanguageList.shtml
+languageCode = "es-419"
 title = "Teopost"
 # Enable comments by entering your Disqus shortname
 disqusShortname = "stefanoteodorani"
@@ -22,16 +23,19 @@ publishDir = "docs"
     bio = "Oracle DBA, Programmer, Linux Administrator and Opensource lover"
     location = "Savignano sul Rubicone"
     site_description = ""
-    copyright  = "Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice)."
+    copyright  = "Powered by [Hugo](//gohugo.io)"
     avatar = "https://avatars0.githubusercontent.com/u/2573389?v=3&s=460"
+    # https://github.com/digitalcraftsman/hugo-icarus-theme
     # logo = "css/images/logo.png"
-    disable_mathjax = false # set to true to disable MathJax
+    disable_mathjax = true # set to true to disable MathJax
 
     # Format dates with Go's time formatting
-    date_format = "2006-01-02"
+    # https://golang.org/src/time/format.go
+    #date_format = "2006-01-02"
+    date_format = "02-01-2006"
 
     # Add custom assets with their paths relative to the static folder
-	custom_css = []
+	custom_css = ["css/button.css", "css/notice.css"]
 	custom_js  = []
 
 # Create custom menu entries by defining a label and a link for
