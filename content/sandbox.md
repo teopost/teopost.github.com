@@ -2,6 +2,19 @@
 sample = "fake.pdf"
 +++
 
+## Note
+
+This is a footnote.[^1]
+
+[^1]: the footnote text.
+
+## Tabelle
+
+Name    | Age
+--------|------
+Bob     | 27
+Alice   | 23
+
 ## Task list
 
 - [ ] a task list item
