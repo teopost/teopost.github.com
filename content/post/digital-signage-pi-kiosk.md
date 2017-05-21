@@ -1,5 +1,5 @@
 +++
-banner = "https://www.dropbox.com/s/0wudj9pwp5b285b/digital-signage-con-pi-kiosk.jpg?dl=1"
+banner = "banner/digital-signage-con-pi-kiosk.jpg"
 categories = ["linux"]
 date = "2017-05-20T20:50:06+02:00"
 description = ""
