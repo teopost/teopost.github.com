@@ -1,7 +1,7 @@
 baseurl = "http://www.stefanoteodorani.it/"
 # https://www.fincher.org/Utilities/CountryLanguageList.shtml
 languageCode = "es-419"
-title = "Teopost"
+title = "stefanoteodorani.it"
 # Enable comments by entering your Disqus shortname
 disqusShortname = "stefanoteodorani"
 # Enable Google Analytics by entering your tracking code
@@ -26,7 +26,7 @@ publishDir = "docs"
     copyright  = "Powered by [Hugo](//gohugo.io)"
     avatar = "https://avatars0.githubusercontent.com/u/2573389?v=3&s=460"
     # https://github.com/digitalcraftsman/hugo-icarus-theme
-    # logo = "css/images/logo.png"
+    #logo = "css/images/logo.png"
     disable_mathjax = true # set to true to disable MathJax
 
     # Format dates with Go's time formatting

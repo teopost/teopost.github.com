@@ -69,4 +69,5 @@ CREATE OR REPLACE SYNONYM "SCHEMA_UNIBOCCONI_PREPROD_READ"."SYN_TABELLA_01" FOR 
 
 A questo punto, basta eseguire lo script sullo schema di destinazione per rigenerare i grants e i sinonimi giusti.
 
-A proposito. Il sorgente è qui. https://github.com/teopost/oracle-grants-remapper
+{{% button href="https://github.com/teopost/oracle-grants-remapper" icon="fa fa-github" %}}Get source code from Git-Hub{{% /button %}}
+<br/>

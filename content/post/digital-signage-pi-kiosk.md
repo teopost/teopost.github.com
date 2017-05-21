@@ -162,9 +162,8 @@ Riferimenti
 ## Aggiornamento del 20 maggio 2017
 Btsync è morto. Poco male. Sostituitelo con https://syncthing.net
 
-## Download
-
-Pi-Kiosk lo potete scaricare da qui: https://github.com/teopost/pi-kiosk
+{{% button href="https://github.com/teopost/pi-kiosk" icon="fa fa-github" %}}Get source code from Git-Hub{{% /button %}}
+<br/>
 
 <!--
 
