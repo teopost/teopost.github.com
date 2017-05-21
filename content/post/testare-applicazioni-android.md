@@ -1,5 +1,5 @@
 +++
-banner = "https://cdn1.pcadvisor.co.uk/cmsdata/features/3613985/android_800_thumb800.jpg"
+banner = "banner/testare-applicazioni-android.jpg"
 categories = ["mobile"]
 date = "2017-01-20T21:46:00+01:00"
 description = ""

@@ -1,5 +1,5 @@
 +++
-banner = "http://core0.staticworld.net/images/article/2015/08/ubuntu-software-center-whats-new-100609202-orig.png"
+banner = "banner/disabilitare-autenticazione-ubuntu-software-center.png"
 categories = []
 date = "2016-12-27T18:45:00+01:00"
 description = ""

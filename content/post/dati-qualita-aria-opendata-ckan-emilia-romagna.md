@@ -1,5 +1,5 @@
 +++
-banner = "http://www.techeconomy.it/wp-content/uploads/2016/07/16323834751_0b990c39a9_b.jpg"
+banner = "banner/dati-qualita-aria-opendata-ckan-emilia-romagna.jpg"
 categories = ["opendata"]
 date = "2017-03-24T18:42:26+01:00"
 description = ""

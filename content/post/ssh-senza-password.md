@@ -1,5 +1,5 @@
 +++
-banner = "https://www.hextra.it/wp-content/uploads/2016/09/Steal_password.jpg"
+banner = "banner/ssh-senza-password.jpg"
 categories = ["linux"]
 date = "2017-05-17T21:39:51+02:00"
 description = ""

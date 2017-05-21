@@ -1,5 +1,5 @@
 +++
-banner = "https://www.dropbox.com/s/wl3b09rkwx4ac6h/hotspot-wifi-con-raspberry-pi-3.jpg?dl=1"
+banner = "banner/hotspot-wifi-con-raspberry-pi.jpg"
 categories = ["linux"]
 date = "2017-05-20T18:03:03+02:00"
 description = ""

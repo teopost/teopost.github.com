@@ -1,5 +1,5 @@
 +++
-banner = "http://www.investors.com/wp-content/uploads/2016/03/IT90-orcl-031116-shutterstock.jpg"
+banner = "banner/oracle-grants-remapper.jpg"
 categories = ["database"]
 date = "2017-05-17T22:17:06+02:00"
 description = ""

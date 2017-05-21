@@ -1,5 +1,5 @@
 +++
-banner = "https://partnernoc.cpanel.net/logo/436-5141-logo.jpg"
+banner = "banner/configurare-godaddy-per-le-github-pages.jpg"
 categories = ["system"]
 date = "2016-12-28T22:45:00+01:00"
 description = ""

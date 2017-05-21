@@ -1,4 +1,14 @@
-# Sandbox
++++
+sample = "fake.pdf"
++++
+
+## Task list
+
+- [ ] a task list item
+- [ ] list syntax required
+- [ ] incomplete
+- [x] completed
+
 
 ## Esempi di shortcodes
 
@@ -17,6 +27,8 @@ A notice disclaimer
 {{% notice warning %}}
 A notice disclaimer
 {{% /notice %}}
+
+## Buttons
 
 {{% button href="https://github.com/teopost/pi-kiosk/" icon="fa fa-github" %}}Scarica Pi-Kiosk da Git-Hub{{% /button %}}
 

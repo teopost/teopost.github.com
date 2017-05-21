@@ -1,5 +1,5 @@
 +++
-banner = "https://www.apache.org/img/asf_logo.png"
+banner = "banner/installare-lamp-raspberry.png"
 categories = ["linux"]
 date = "2017-01-07T16:10:00+01:00"
 description = ""
