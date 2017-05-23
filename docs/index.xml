@@ -185,11 +185,12 @@ Creazione sito teopost.github.io Ho creato sul mio profilo github un repository 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.stefanoteodorani.it/sandbox/</guid>
-      <description> Task list a task list item list syntax required incomplete completed  Esempi di shortcodes A notice disclaimer
+      <description>Note This is a footnote.1
+Tabelle    Name Age     Bob 27   Alice 23    Task list a task list item list syntax required incomplete completed  Esempi di shortcodes A notice disclaimer
  A notice disclaimer
  A notice disclaimer
  A notice disclaimer
- Buttons  Scarica Pi-Kiosk da Git-Hub   Get Grav with icon  Get Grav with icon right   </description>
+ Buttons  Scarica Pi-Kiosk da Git-Hub   Get Grav with icon  Get Grav with icon right    the footnote text.</description>
     </item>
     
   </channel>
