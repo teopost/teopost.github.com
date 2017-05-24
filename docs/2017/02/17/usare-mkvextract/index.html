@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+    <title>Usare mkvextract &middot; stefanoteodorani.it</title>
+    <meta name="generator" content="Hugo 0.20.7" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Stefano Teodorani">
+    
+      <meta name="description" content="">
+    
+    
+    <link rel="canonical" href="http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/"/>
+    <link rel="icon" href="http://www.stefanoteodorani.it/favicon.ico">
+    <link rel="apple-touch-icon" href="http://www.stefanoteodorani.it/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/style.css">
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/monokai.css">
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/fancybox/jquery.fancybox.css">
+    
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/button.css">
+    
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/notice.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="Usare mkvextract" />
+<meta property="og:description" content="mkvextract è un tool per manipolare file mkv da linea di comando.
+sudo apt-get install -y mkvtoolnix mkvtoolnix-gui sudo apt-get install -y libdca-utils aften wget https://github.com/JakeWharton/mkvdts2ac3/raw/master/mkvdts2ac3.sh chmod 777 mkvdts2ac3.sh &amp;&amp; sudo mv mkvdts2ac3.sh /usr/bin/  Alcuni esempi Creare la traccia AC3 nuova ed eliminare la DTS:
+mkvdts2ac3.sh -n Some.Random.Movie.mkv  Note:
+ http://www.bunkus.org/videotools/mkvtoolnix/doc/mkvpropedit.html http://linux.die.net/man/1/mkvextract  Cambiare il flag default dalla prima alla seconda traccia
+mkvpropedit Che\ bella\ giornata\ \(copia\).mkv --edit track:2 --set flag-default=0 --edit track:3 --set flag-default=1  Cambiare il flag forced a true nella seconda traccia audio" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/" />
+
+  <meta property="og:image" content="http://riparazione-pc.it/wp-content/uploads/2016/11/multimediaaudio.jpg" />
+
+
+
+<meta property="article:published_time" content="2017-02-17T21:46:48&#43;01:00"/>
+<meta property="article:modified_time" content="2017-02-17T21:46:48&#43;01:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="Usare mkvextract">
+<meta itemprop="description" content="mkvextract è un tool per manipolare file mkv da linea di comando.
+sudo apt-get install -y mkvtoolnix mkvtoolnix-gui sudo apt-get install -y libdca-utils aften wget https://github.com/JakeWharton/mkvdts2ac3/raw/master/mkvdts2ac3.sh chmod 777 mkvdts2ac3.sh &amp;&amp; sudo mv mkvdts2ac3.sh /usr/bin/  Alcuni esempi Creare la traccia AC3 nuova ed eliminare la DTS:
+mkvdts2ac3.sh -n Some.Random.Movie.mkv  Note:
+ http://www.bunkus.org/videotools/mkvtoolnix/doc/mkvpropedit.html http://linux.die.net/man/1/mkvextract  Cambiare il flag default dalla prima alla seconda traccia
+mkvpropedit Che\ bella\ giornata\ \(copia\).mkv --edit track:2 --set flag-default=0 --edit track:3 --set flag-default=1  Cambiare il flag forced a true nella seconda traccia audio">
+
+
+<meta itemprop="dateModified" content="2017-02-17T21:46:48&#43;01:00" />
+<meta itemprop="wordCount" content="177">
+
+  <meta itemprop="image" content="http://riparazione-pc.it/wp-content/uploads/2016/11/multimediaaudio.jpg">
+
+
+
+<meta itemprop="keywords" content="database,linux,mobile,opendata,system,android,bash,ckan,github-pages,oracle,raspberry,ubuntu," />
+
+    
+
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image:src" content="http://riparazione-pc.it/wp-content/uploads/2016/11/multimediaaudio.jpg"/>
+
+
+
+<meta name="twitter:text:title" content="Usare mkvextract"/>
+<meta name="twitter:title" content="Usare mkvextract"/>
+<meta name="twitter:description" content="mkvextract è un tool per manipolare file mkv da linea di comando.
+sudo apt-get install -y mkvtoolnix mkvtoolnix-gui sudo apt-get install -y libdca-utils aften wget https://github.com/JakeWharton/mkvdts2ac3/raw/master/mkvdts2ac3.sh chmod 777 mkvdts2ac3.sh &amp;&amp; sudo mv mkvdts2ac3.sh /usr/bin/  Alcuni esempi Creare la traccia AC3 nuova ed eliminare la DTS:
+mkvdts2ac3.sh -n Some.Random.Movie.mkv  Note:
+ http://www.bunkus.org/videotools/mkvtoolnix/doc/mkvpropedit.html http://linux.die.net/man/1/mkvextract  Cambiare il flag default dalla prima alla seconda traccia
+mkvpropedit Che\ bella\ giornata\ \(copia\).mkv --edit track:2 --set flag-default=0 --edit track:3 --set flag-default=1  Cambiare il flag forced a true nella seconda traccia audio"/>
+<meta name="twitter:site" content="@teopost"/>
+
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="http://www.stefanoteodorani.it/" id="logo">
+          
+          <i class="logo" style="background-image: url('http://www.stefanoteodorani.it/css/images/logo.png')"></i>
+          
+          <span class="site-title">stefanoteodorani.it</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="http://www.stefanoteodorani.it/">Home</a>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="http://teopost.github.io/ulisse">My Dog</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://www.stefanoteodorani.it/tags/">Tags</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://www.stefanoteodorani.it/categories/">Categories</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="http://www.stefanoteodorani.it/" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="http://www.stefanoteodorani.it/">Home</a></td>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="http://teopost.github.io/ulisse">My Dog</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://www.stefanoteodorani.it/tags/">Tags</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://www.stefanoteodorani.it/categories/">Categories</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="http://www.stefanoteodorani.it/" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   		
+	    <aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
+      <h2 id="name">Stefano Teodorani</h2>
+      <h3 id="title">Oracle DBA, Programmer, Linux Administrator and Opensource lover</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Savignano sul Rubicone</span>
+      
+          <a id="follow" href="https://github.com/teopost">
+              Follow
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        14
+        <span>Posts</span>
+      </div>
+      <div class="article-info-block">
+        
+          7
+        
+        <span>
+            Tags
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/teopost" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//instagram.com/teopost" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//linkedin.com/in/stefano-teodorani-58722b70/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//plus.google.com/+StefanoTeodorani" target="_blank" title="Google+"><i class="fa fa-google-plus"></i></a></td>
+
+
+
+<td><a href="//facebook.com/steodorani" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></td>
+
+
+
+<td><a href="//twitter.com/teopost" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
+
+
+          <td><a href="http://www.stefanoteodorani.it/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+	    
+
+	    
+<section id="main">
+
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+                <img src="http://www.stefanoteodorani.it/banner/usare-mkvextract.png" class="article-banner">
+            
+
+            <header class="article-header">
+    <a href="http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/">
+    <h1 class="article-title" itemprop="name">
+        Usare mkvextract
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-02-17 21:46:48 &#43;0100 CET" itemprop="datePublished">17-02-2017</time>
+            &middot;
+            177
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">linux</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/ubuntu">ubuntu</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                
+
+<p>mkvextract è un tool per manipolare file mkv da linea di comando.</p>
+
+<pre><code class="language-bash">sudo apt-get install -y mkvtoolnix mkvtoolnix-gui
+sudo apt-get install -y libdca-utils aften
+wget https://github.com/JakeWharton/mkvdts2ac3/raw/master/mkvdts2ac3.sh
+chmod 777 mkvdts2ac3.sh &amp;&amp; sudo mv mkvdts2ac3.sh /usr/bin/
+</code></pre>
+
+<h2 id="alcuni-esempi">Alcuni esempi</h2>
+
+<p>Creare la traccia AC3 nuova ed eliminare la DTS:</p>
+
+<pre><code class="language-bash">mkvdts2ac3.sh -n Some.Random.Movie.mkv
+</code></pre>
+
+<p>Note:</p>
+
+<ul>
+<li><a href="http://www.bunkus.org/videotools/mkvtoolnix/doc/mkvpropedit.html">http://www.bunkus.org/videotools/mkvtoolnix/doc/mkvpropedit.html</a></li>
+<li><a href="http://linux.die.net/man/1/mkvextract">http://linux.die.net/man/1/mkvextract</a></li>
+</ul>
+
+<p>Cambiare il flag default dalla prima alla seconda traccia</p>
+
+<pre><code>mkvpropedit Che\ bella\ giornata\ \(copia\).mkv --edit track:2 --set flag-default=0 --edit track:3 --set flag-default=1
+</code></pre>
+
+<p>Cambiare il flag forced a true nella seconda traccia audio</p>
+
+<pre><code>mkvpropedit Che\ bella\ giornata\ \(copia\).mkv  --edit track:3 --set flag-forced=1
+</code></pre>
+
+<p>Disabilitare una traccia</p>
+
+<pre><code>mkvpropedit Che_bella_giornata.mkv --edit track:3 --set flag-enabled=0
+</code></pre>
+
+<p>Mettere il default flag a 1 (non devono essercene altri pero)</p>
+
+<pre><code>mkvpropedit Che_bella_giornata.mkv --edit track:3 --set flag-default=1
+</code></pre>
+
+<p>Mostra l&rsquo;elenco delle tracce</p>
+
+<pre><code>mkvmerge -i Che_bella_giornata.mkv
+
+Track ID 1: video (V_MPEG4/ISO/AVC)
+Track ID 2: audio (A_DTS)
+Track ID 3: audio (A_AC3)
+Track ID 4: subtitles (S_TEXT/UTF8)
+Track ID 5: subtitles (S_TEXT/UTF8)
+</code></pre>
+
+<p>Estrai la traccia 3 e mettila nel file audio.ogg</p>
+
+<pre><code>mkvextract tracks Che_bella_giornata.mkv  2:audio.ogg
+</code></pre>
+
+<p>Cambia l&rsquo;ordine delle traccia</p>
+
+<pre><code>mkvmerge -o &quot;/home/teopost/Video/ORIGINALI/Che_bella_giornata_OUT.mkv&quot; \
+&quot;/home/teopost/Video/ORIGINALI/Che_bella_giornata.mkv&quot; --track-order &quot;0:1,0:3,0:4,0:5&quot;
+</code></pre>
+
+<h2 id="thanks">Thanks</h2>
+
+<ul>
+<li><a href="http://www.setupswarm.com/main/media/ubuntu-dts-to-ac3">http://www.setupswarm.com/main/media/ubuntu-dts-to-ac3</a></li>
+<li><a href="https://github.com/JakeWharton/mkvdts2ac3">https://github.com/JakeWharton/mkvdts2ac3</a></li>
+</ul>
+
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/" data-id="b5b42b4ba2240a5edbae327e9cbd74bc" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+
+        
+<nav id="article-nav">
+    
+    <a href="http://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Client Oracle sul Mac</div>
+    </a>
+    
+
+    
+    <a href="http://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">Recuperare i dati sull&#39;inquinamento della mia città da CKAN</div>
+    </a>
+    
+</nav>
+
+
+    </article>
+
+    
+    <section id="comments">
+        <div id="disqus_thread">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'stefanoteodorani';
+    var disqus_identifier = 'http:\/\/www.stefanoteodorani.it\/2017\/02\/17\/usare-mkvextract\/';
+    var disqus_title = 'Usare mkvextract';
+    var disqus_url = 'http:\/\/www.stefanoteodorani.it\/2017\/02\/17\/usare-mkvextract\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </section>
+    
+</section>
+
+
+	    
+	    <aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Recents
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-char-vs-bytes.jpg)" alt="Usare mkvextract" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">
+                        database
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/" class="title">Oracle Char vs Bytes</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-05-24 22:23:55 &#43;0200 CEST" itemprop="datePublished">24-05-2017</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/digital-signage-con-pi-kiosk.jpg)" alt="Usare mkvextract" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" class="title">Digital signage con Pi-Kiosk</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-05-20 20:50:06 &#43;0200 CEST" itemprop="datePublished">20-05-2017</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/hotspot-wifi-con-raspberry-pi.jpg)" alt="Usare mkvextract" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" class="title">Hotspot wifi con Raspberry PI 3</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-05-20 18:03:03 &#43;0200 CEST" itemprop="datePublished">20-05-2017</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-grants-remapper.jpg)" alt="Usare mkvextract" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">
+                        database
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/" class="title">Oracle grants remapper</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-05-17 22:17:06 &#43;0200 CEST" itemprop="datePublished">17-05-2017</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/ssh-senza-password.jpg)" alt="Usare mkvextract" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/" class="title">SSH senza password</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-05-17 21:39:51 &#43;0200 CEST" itemprop="datePublished">17-05-2017</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/database">
+                    database
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/linux">
+                    linux
+                </a>
+                <span class="category-list-count">7</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/mobile">
+                    mobile
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/opendata">
+                    opendata
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/system">
+                    system
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tags
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/android">
+                    android
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/bash">
+                    bash
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/ckan">
+                    ckan
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/github-pages">
+                    github-pages
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/oracle">
+                    oracle
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/raspberry">
+                    raspberry
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/ubuntu">
+                    ubuntu
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/android" style="font-size: 12px;">android</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/bash" style="font-size: 12px;">bash</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/ckan" style="font-size: 12px;">ckan</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/github-pages" style="font-size: 12px;">github-pages</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/oracle" style="font-size: 12px;">oracle</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/raspberry" style="font-size: 12px;">raspberry</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/ubuntu" style="font-size: 12px;">ubuntu</a>
+        
+    </div>
+</div>
+
+
+
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+	    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017
+      Powered by <a href="//gohugo.io">Hugo</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="http://www.stefanoteodorani.it/fancybox/jquery.fancybox.pack.js"></script>
+<script src="http://www.stefanoteodorani.it/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on stefanoteodorani.it</title>
+    <link>http://www.stefanoteodorani.it/categories/linux/</link>
+    <description>Recent content in Linux on stefanoteodorani.it</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-419</language>
+    <copyright>Powered by [Hugo](//gohugo.io)</copyright>
+    <lastBuildDate>Sat, 20 May 2017 20:50:06 +0200</lastBuildDate>
+    
+	<atom:link href="http://www.stefanoteodorani.it/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Digital signage con Pi-Kiosk</title>
+      <link>http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/</link>
+      <pubDate>Sat, 20 May 2017 20:50:06 +0200</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/</guid>
+      <description>&lt;p&gt;Conosco Luca. Ha una agenzia di viaggi a Rimini, e un&amp;rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.&lt;/p&gt;
+
+&lt;p&gt;E&amp;rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico &lt;a href=&#34;https://www.sergiogridelli.it/&#34;&gt;Sergio&lt;/a&gt; gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hotspot wifi con Raspberry PI 3</title>
+      <link>http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/</link>
+      <pubDate>Sat, 20 May 2017 18:03:03 +0200</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/</guid>
+      <description>&lt;p&gt;La Raspberry PI 3 è stata finalmente dotata di una scheda wifi incorporata. Il chipset della scheda (Broadcom BCM2837) consente di configurare la scheda anche come access point. Non male !
+Vediamo come:
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SSH senza password</title>
+      <link>http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/</link>
+      <pubDate>Wed, 17 May 2017 21:39:51 +0200</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/</guid>
+      <description>Uso spesso ssh per collegarmi sui server linux dei clienti. Per evitare di dover digitare sempre la password del server, è possibile configurare il vostro client per effettuare un collegamento senza dover digitare la password.
+Creare sul vostro computer la chiave pubblica e privata La prima cosa da fare è creare, sul client che deve collegarsi al server, le chiavi
+Digitare quindi il comando ssh-keygen
+teopost@local-host$ ssh-keygen Generating public/private rsa key pair.</description>
+    </item>
+    
+    <item>
+      <title>Usare mkvextract</title>
+      <link>http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/</link>
+      <pubDate>Fri, 17 Feb 2017 21:46:48 +0100</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/</guid>
+      <description>mkvextract è un tool per manipolare file mkv da linea di comando.
+sudo apt-get install -y mkvtoolnix mkvtoolnix-gui sudo apt-get install -y libdca-utils aften wget https://github.com/JakeWharton/mkvdts2ac3/raw/master/mkvdts2ac3.sh chmod 777 mkvdts2ac3.sh &amp;amp;&amp;amp; sudo mv mkvdts2ac3.sh /usr/bin/  Alcuni esempi Creare la traccia AC3 nuova ed eliminare la DTS:
+mkvdts2ac3.sh -n Some.Random.Movie.mkv  Note:
+ http://www.bunkus.org/videotools/mkvtoolnix/doc/mkvpropedit.html http://linux.die.net/man/1/mkvextract  Cambiare il flag default dalla prima alla seconda traccia
+mkvpropedit Che\ bella\ giornata\ \(copia\).mkv --edit track:2 --set flag-default=0 --edit track:3 --set flag-default=1  Cambiare il flag forced a true nella seconda traccia audio</description>
+    </item>
+    
+    <item>
+      <title>IP Statico su Raspberry</title>
+      <link>http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/</link>
+      <pubDate>Mon, 09 Jan 2017 16:02:00 +0100</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/</guid>
+      <description>&lt;p&gt;Se si vuole utilizzare una raspberry come un server, la prima cosa da fare è evitare che l&amp;rsquo;indirizzo IP cambi ad ogni reboot. Insomma va disabilitato il dhcp.
+Per farlo agire come segue:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Wordpress su Raspberry</title>
+      <link>http://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/</link>
+      <pubDate>Sun, 08 Jan 2017 16:15:00 +0100</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/</guid>
+      <description>Voglio installare un blog sulla raspberry. Per farlo, dopo aver installato un LAMP server, procedo come segue:
+Ecco cosa ho fatto:
+Preparare lo schema di DATABASE mysql -uroot -p&amp;lt;password&amp;gt; CREATE DATABASE wordpress; CREATE USER wordpressuser@localhost IDENTIFIED BY &#39;wppassword&#39; GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost;  dove  è la password di mysql che ho impostato durante l&amp;rsquo;installazione del LAMP server e wppassword è un esempio di password per l&amp;rsquo;utente wordpress che ho appenta creato su mysql</description>
+    </item>
+    
+    <item>
+      <title>LAMP sulla Raspberry</title>
+      <link>http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/</link>
+      <pubDate>Sat, 07 Jan 2017 16:10:00 +0100</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/</guid>
+      <description>Voglio installare un blog sulla raspberry. Per farlo, dopo aver configurato un ip statico, devo installare i pacchetti software necessari per far girare il sito.
+Ecco cosa ho fatto:
+Installazione di Apache sudo apt-get update sudo apt-get install apache2  Se tutto ha funzionato vai su http://your_server_IP_address e vedi il web server attivo
+Installazione di MySql sudo apt-get install mysql-server php5-mysql  Inserire una password
+Configurazione di MySql # Creare la struttura di directory del database dove sarà memorizzare le informazioni sudo mysql_install_db # Rimuoviamo alcuni valori di default pericolosi e limitiamo l&#39;accesso al db sudo mysql_secure_installation  Installazione di PHP sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt  Riferimenti Questa documentazione è l&amp;rsquo;estratto di questo articolo molto più completo</description>
+    </item>
+    
+  </channel>
+</rss>

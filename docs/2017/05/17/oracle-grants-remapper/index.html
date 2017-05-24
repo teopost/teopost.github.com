@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+    <title>Oracle grants remapper &middot; stefanoteodorani.it</title>
+    <meta name="generator" content="Hugo 0.20.7" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Stefano Teodorani">
+    
+      <meta name="description" content="">
+    
+    
+    <link rel="canonical" href="http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/"/>
+    <link rel="icon" href="http://www.stefanoteodorani.it/favicon.ico">
+    <link rel="apple-touch-icon" href="http://www.stefanoteodorani.it/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/style.css">
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/monokai.css">
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/fancybox/jquery.fancybox.css">
+    
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/button.css">
+    
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/notice.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="Oracle grants remapper" />
+<meta property="og:description" content="Oracle Grants Remmaper si collega ad una istanza oracle sorgente e crea un file .sql per la rigenerazione di grants i sinonimi da applicare su una istanza oracle di destinazione.
+In base al file di configurazione passato come argomento, Oracle Grants Remmaper sostituisce i nomi degli schemi con quelli definiti nel file.
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/" />
+
+
+
+<meta property="article:published_time" content="2017-05-17T22:17:06&#43;02:00"/>
+<meta property="article:modified_time" content="2017-05-17T22:17:06&#43;02:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="Oracle grants remapper">
+<meta itemprop="description" content="Oracle Grants Remmaper si collega ad una istanza oracle sorgente e crea un file .sql per la rigenerazione di grants i sinonimi da applicare su una istanza oracle di destinazione.
+In base al file di configurazione passato come argomento, Oracle Grants Remmaper sostituisce i nomi degli schemi con quelli definiti nel file.
+
+">
+
+
+<meta itemprop="dateModified" content="2017-05-17T22:17:06&#43;02:00" />
+<meta itemprop="wordCount" content="269">
+
+
+
+<meta itemprop="keywords" content="database,linux,mobile,opendata,system,android,bash,ckan,github-pages,oracle,raspberry,ubuntu," />
+
+    
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="Oracle grants remapper"/>
+<meta name="twitter:title" content="Oracle grants remapper"/>
+<meta name="twitter:description" content="Oracle Grants Remmaper si collega ad una istanza oracle sorgente e crea un file .sql per la rigenerazione di grants i sinonimi da applicare su una istanza oracle di destinazione.
+In base al file di configurazione passato come argomento, Oracle Grants Remmaper sostituisce i nomi degli schemi con quelli definiti nel file.
+
+"/>
+<meta name="twitter:site" content="@teopost"/>
+
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="http://www.stefanoteodorani.it/" id="logo">
+          
+          <i class="logo" style="background-image: url('http://www.stefanoteodorani.it/css/images/logo.png')"></i>
+          
+          <span class="site-title">stefanoteodorani.it</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="http://www.stefanoteodorani.it/">Home</a>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="http://teopost.github.io/ulisse">My Dog</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://www.stefanoteodorani.it/tags/">Tags</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://www.stefanoteodorani.it/categories/">Categories</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="http://www.stefanoteodorani.it/" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="http://www.stefanoteodorani.it/">Home</a></td>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="http://teopost.github.io/ulisse">My Dog</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://www.stefanoteodorani.it/tags/">Tags</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://www.stefanoteodorani.it/categories/">Categories</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="http://www.stefanoteodorani.it/" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   		
+	    <aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
+      <h2 id="name">Stefano Teodorani</h2>
+      <h3 id="title">Oracle DBA, Programmer, Linux Administrator and Opensource lover</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Savignano sul Rubicone</span>
+      
+          <a id="follow" href="https://github.com/teopost">
+              Follow
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        14
+        <span>Posts</span>
+      </div>
+      <div class="article-info-block">
+        
+          7
+        
+        <span>
+            Tags
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/teopost" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//instagram.com/teopost" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//linkedin.com/in/stefano-teodorani-58722b70/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//plus.google.com/+StefanoTeodorani" target="_blank" title="Google+"><i class="fa fa-google-plus"></i></a></td>
+
+
+
+<td><a href="//facebook.com/steodorani" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></td>
+
+
+
+<td><a href="//twitter.com/teopost" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
+
+
+          <td><a href="http://www.stefanoteodorani.it/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+	    
+
+	    
+<section id="main">
+
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+                <img src="http://www.stefanoteodorani.it/banner/oracle-grants-remapper.jpg" class="article-banner">
+            
+
+            <header class="article-header">
+    <a href="http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/">
+    <h1 class="article-title" itemprop="name">
+        Oracle grants remapper
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-05-17 22:17:06 &#43;0200 CEST" itemprop="datePublished">17-05-2017</time>
+            &middot;
+            269
+            words
+            &middot;
+            2
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">database</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/oracle">oracle</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p><code>Oracle Grants Remmaper</code> si collega ad una istanza oracle sorgente e crea un file <code>.sql</code> per la rigenerazione di grants i sinonimi da applicare su una istanza oracle di destinazione.
+In base al file di configurazione passato come argomento, Oracle Grants Remmaper sostituisce i nomi degli schemi con quelli definiti nel file.</p>
+
+<p></p>
+
+<h2 id="configurazione">Configurazione</h2>
+
+<p>Il file di configurazione ha un formato simile a questo:</p>
+
+<pre><code class="language-bash"># Grants and Synonyms remapping
+# ==============================
+
+# Common settings
+SQL_FILE=grants_and_syns.sql
+
+# Oracle source data
+SRC_TNS_NAME=UNIBOCCONI-PROD
+SRC_SYSTEM_PWD=
+
+SRC_GRANTEE_LIST=QUICK_DOCUMENT,QUICK_SUPPORT,QUICK_TALKS
+
+# Oracle destination data - NOT IMPLEMENTED
+TAR_TNS_NAME=BOCCONI_TEST
+TAR_SYSTEM_PWD=
+
+# Schema remapping start here. Don't move or change this section
+# BEGIN
+UNIBOCCONI_AGE20_PROD=UNIBOCCONI_AGE20_TEST
+QUICK_DOCUMENT=QUICK_DOCUMENT
+QUICK_SUPPORT=QUICK_SUPPORT
+# END
+
+</code></pre>
+
+<ul>
+<li>SQL_FILE: Nome del file sql che viene generato</li>
+<li>SRC_TNS_NAME: Nome del TNS_NAMES definito nel tnsnames.ora del client oracle</li>
+<li>SRC_SYSTEM_PWD: Password dell&rsquo;utente SYSTEM (Se non valorizzata viene chiesta in fase di esecuzione dello script)</li>
+<li>SRC_GRANTEE_LIST: Lista degli schemi per i quali rigenerare i grant e i sinonimi. Vengono creati i grants verso questo schema e i sinonimi presenti in questo schema che referenziano oggetti verso schemi diversi</li>
+</ul>
+
+<p>In coda a questi parametri c&rsquo;e&rsquo; una sezione in cui si effettua il remapping vero e proprio degli schemi.</p>
+
+<p>Se ad esempio sull&rsquo;istanza di origine dovesse esistere un grant come questo:</p>
+
+<pre><code class="language-sql">GRANT EXECUTE ON &quot;SCHEMA_UNIBOCCONI_PROD&quot;.&quot;TABELLA_01&quot; TO &quot;SCHEMA_UNIBOCCONI_PROD_READ&quot;;
+CREATE OR REPLACE SYNONYM &quot;SCHEMA_UNIBOCCONI_PROD_READ&quot;.&quot;SYN_TABELLA_01&quot; FOR &quot;SCHEMA_UNIBOCCONI_PROD&quot;.&quot;TABELLA_01&quot;;
+</code></pre>
+
+<p>sulla base del file di configurazione riportato in esempio verra&rsquo; creato il seguente script</p>
+
+<pre><code class="language-sql">GRANT EXECUTE ON &quot;SCHEMA_UNIBOCCONI_PREPROD&quot;.&quot;TABELLA_01&quot; TO &quot;SCHEMA_UNIBOCCONI_PREPROD_READ&quot;;
+CREATE OR REPLACE SYNONYM &quot;SCHEMA_UNIBOCCONI_PREPROD_READ&quot;.&quot;SYN_TABELLA_01&quot; FOR &quot;SCHEMA_UNIBOCCONI_PREPROD&quot;.&quot;TABELLA_01&quot;;
+</code></pre>
+
+<p>A questo punto, basta eseguire lo script sullo schema di destinazione per rigenerare i grants e i sinonimi giusti.</p>
+
+<p><a  href="https://github.com/teopost/oracle-grants-remapper" target="_blank"  class="btn btn-default">
+  
+  
+  
+    
+  <i class="fa fa-github"></i>
+    
+  
+  Get source code from Git-Hub
+  
+</a>
+
+<br/></p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/" data-id="506c227b90e1031402c2cda2093a9937" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+
+        
+<nav id="article-nav">
+    
+    <a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">SSH senza password</div>
+    </a>
+    
+
+    
+    <a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">Hotspot wifi con Raspberry PI 3</div>
+    </a>
+    
+</nav>
+
+
+    </article>
+
+    
+    <section id="comments">
+        <div id="disqus_thread">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'stefanoteodorani';
+    var disqus_identifier = 'http:\/\/www.stefanoteodorani.it\/2017\/05\/17\/oracle-grants-remapper\/';
+    var disqus_title = 'Oracle grants remapper';
+    var disqus_url = 'http:\/\/www.stefanoteodorani.it\/2017\/05\/17\/oracle-grants-remapper\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </section>
+    
+</section>
+
+
+	    
+	    <aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Recents
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-char-vs-bytes.jpg)" alt="Oracle grants remapper" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">
+                        database
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/" class="title">Oracle Char vs Bytes</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-05-24 22:23:55 &#43;0200 CEST" itemprop="datePublished">24-05-2017</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/digital-signage-con-pi-kiosk.jpg)" alt="Oracle grants remapper" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" class="title">Digital signage con Pi-Kiosk</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-05-20 20:50:06 &#43;0200 CEST" itemprop="datePublished">20-05-2017</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/hotspot-wifi-con-raspberry-pi.jpg)" alt="Oracle grants remapper" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" class="title">Hotspot wifi con Raspberry PI 3</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-05-20 18:03:03 &#43;0200 CEST" itemprop="datePublished">20-05-2017</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-grants-remapper.jpg)" alt="Oracle grants remapper" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">
+                        database
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/" class="title">Oracle grants remapper</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-05-17 22:17:06 &#43;0200 CEST" itemprop="datePublished">17-05-2017</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/ssh-senza-password.jpg)" alt="Oracle grants remapper" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/" class="title">SSH senza password</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-05-17 21:39:51 &#43;0200 CEST" itemprop="datePublished">17-05-2017</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/database">
+                    database
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/linux">
+                    linux
+                </a>
+                <span class="category-list-count">7</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/mobile">
+                    mobile
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/opendata">
+                    opendata
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/system">
+                    system
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tags
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/android">
+                    android
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/bash">
+                    bash
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/ckan">
+                    ckan
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/github-pages">
+                    github-pages
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/oracle">
+                    oracle
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/raspberry">
+                    raspberry
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/ubuntu">
+                    ubuntu
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/android" style="font-size: 12px;">android</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/bash" style="font-size: 12px;">bash</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/ckan" style="font-size: 12px;">ckan</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/github-pages" style="font-size: 12px;">github-pages</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/oracle" style="font-size: 12px;">oracle</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/raspberry" style="font-size: 12px;">raspberry</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/ubuntu" style="font-size: 12px;">ubuntu</a>
+        
+    </div>
+</div>
+
+
+
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+	    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017
+      Powered by <a href="//gohugo.io">Hugo</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="http://www.stefanoteodorani.it/fancybox/jquery.fancybox.pack.js"></script>
+<script src="http://www.stefanoteodorani.it/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+</body>
+</html>

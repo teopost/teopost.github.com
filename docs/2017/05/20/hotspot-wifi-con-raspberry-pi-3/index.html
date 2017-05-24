@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+    <title>Hotspot wifi con Raspberry PI 3 &middot; stefanoteodorani.it</title>
+    <meta name="generator" content="Hugo 0.20.7" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Stefano Teodorani">
+    
+      <meta name="description" content="">
+    
+    
+    <link rel="canonical" href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/"/>
+    <link rel="icon" href="http://www.stefanoteodorani.it/favicon.ico">
+    <link rel="apple-touch-icon" href="http://www.stefanoteodorani.it/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/style.css">
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/monokai.css">
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/fancybox/jquery.fancybox.css">
+    
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/button.css">
+    
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/notice.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="Hotspot wifi con Raspberry PI 3" />
+<meta property="og:description" content="La Raspberry PI 3 è stata finalmente dotata di una scheda wifi incorporata. Il chipset della scheda (Broadcom BCM2837) consente di configurare la scheda anche come access point. Non male !
+Vediamo come:
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" />
+
+
+
+<meta property="article:published_time" content="2017-05-20T18:03:03&#43;02:00"/>
+<meta property="article:modified_time" content="2017-05-20T18:03:03&#43;02:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="Hotspot wifi con Raspberry PI 3">
+<meta itemprop="description" content="La Raspberry PI 3 è stata finalmente dotata di una scheda wifi incorporata. Il chipset della scheda (Broadcom BCM2837) consente di configurare la scheda anche come access point. Non male !
+Vediamo come:
+">
+
+
+<meta itemprop="dateModified" content="2017-05-20T18:03:03&#43;02:00" />
+<meta itemprop="wordCount" content="878">
+
+
+
+<meta itemprop="keywords" content="database,linux,mobile,opendata,system,android,bash,ckan,github-pages,oracle,raspberry,ubuntu," />
+
+    
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="Hotspot wifi con Raspberry PI 3"/>
+<meta name="twitter:title" content="Hotspot wifi con Raspberry PI 3"/>
+<meta name="twitter:description" content="La Raspberry PI 3 è stata finalmente dotata di una scheda wifi incorporata. Il chipset della scheda (Broadcom BCM2837) consente di configurare la scheda anche come access point. Non male !
+Vediamo come:
+"/>
+<meta name="twitter:site" content="@teopost"/>
+
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="http://www.stefanoteodorani.it/" id="logo">
+          
+          <i class="logo" style="background-image: url('http://www.stefanoteodorani.it/css/images/logo.png')"></i>
+          
+          <span class="site-title">stefanoteodorani.it</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="http://www.stefanoteodorani.it/">Home</a>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="http://teopost.github.io/ulisse">My Dog</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://www.stefanoteodorani.it/tags/">Tags</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://www.stefanoteodorani.it/categories/">Categories</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="http://www.stefanoteodorani.it/" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="http://www.stefanoteodorani.it/">Home</a></td>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="http://teopost.github.io/ulisse">My Dog</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://www.stefanoteodorani.it/tags/">Tags</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://www.stefanoteodorani.it/categories/">Categories</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="http://www.stefanoteodorani.it/" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   		
+	    <aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
+      <h2 id="name">Stefano Teodorani</h2>
+      <h3 id="title">Oracle DBA, Programmer, Linux Administrator and Opensource lover</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Savignano sul Rubicone</span>
+      
+          <a id="follow" href="https://github.com/teopost">
+              Follow
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        14
+        <span>Posts</span>
+      </div>
+      <div class="article-info-block">
+        
+          7
+        
+        <span>
+            Tags
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/teopost" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//instagram.com/teopost" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//linkedin.com/in/stefano-teodorani-58722b70/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//plus.google.com/+StefanoTeodorani" target="_blank" title="Google+"><i class="fa fa-google-plus"></i></a></td>
+
+
+
+<td><a href="//facebook.com/steodorani" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></td>
+
+
+
+<td><a href="//twitter.com/teopost" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
+
+
+          <td><a href="http://www.stefanoteodorani.it/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+	    
+
+	    
+<section id="main">
+
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+                <img src="http://www.stefanoteodorani.it/banner/hotspot-wifi-con-raspberry-pi.jpg" class="article-banner">
+            
+
+            <header class="article-header">
+    <a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/">
+    <h1 class="article-title" itemprop="name">
+        Hotspot wifi con Raspberry PI 3
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-05-20 18:03:03 &#43;0200 CEST" itemprop="datePublished">20-05-2017</time>
+            &middot;
+            878
+            words
+            &middot;
+            5
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">linux</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/raspberry">raspberry</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>La Raspberry PI 3 è stata finalmente dotata di una scheda wifi incorporata. Il chipset della scheda (Broadcom BCM2837) consente di configurare la scheda anche come access point. Non male !
+Vediamo come:
+</p>
+
+<h2 id="installazione-pacchetti">Installazione pacchetti</h2>
+
+<p>Il primo passo è quello di installare il software necessario. Lo facciamo con il comando:</p>
+
+<pre><code>sudo apt-get install dnsmasq hostapd
+</code></pre>
+
+<p>questo installerà:</p>
+
+<ul>
+<li>hostapd: Consente di utilizzare il WiFi della Raspberry come punto di accesso</li>
+<li>dnsmasq: Questo è un server DHCP e DNS. Semplice da configurare e sufficiente ai nostri scopi.</li>
+</ul>
+
+<h2 id="configurazione-interfacce-di-rete">Configurazione interfacce di rete</h2>
+
+<p>La prima cosa da fare è configurare l&rsquo; interfaccia wlan0 con un IP statico.
+Ovviamente, per farlo, deve connetterti via rete alla Raspberry.
+Usa SSH.</p>
+
+<p>Nelle versioni più recenti di Raspian, la configurazione dell&rsquo;interfaccia viene gestita da dhcpcd per impostazione predefinita. Dobbiamo dirle di ignorare wlan0 , poichè la configureremo con un indirizzo IP statico.</p>
+
+<p>Aprire quindi il file di configurazione dhcpcd con:</p>
+
+<pre><code>sudo vi /etc/dhcpcd.conf
+</code></pre>
+
+<p>aggiungere la seguente riga alla base del file:</p>
+
+<pre><code>denyinterfaces wlan0
+</code></pre>
+
+<p>Ora dobbiamo configurare l&rsquo; IP statico.
+Apri il file di configurazione dell&rsquo;interfaccia con <code>sudo vi /etc/network/interfaces</code> e modifica la sezione wlan0 modo che sia simile a questa:</p>
+
+<pre><code>allow-hotplug wlan0
+iface wlan0 inet static
+    address 172.24.1.1
+    netmask 255.255.255.0
+    network 172.24.1.0
+    broadcast 172.24.1.255
+#    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+</code></pre>
+
+<p>Riavviare dhcpcd con il comando <code>sudo service dhcpcd restart</code> e ricaricare la configurazione per wlan0 con <code>sudo ifdown wlan0</code> seguito da <code>sudo ifup wlan0</code>.</p>
+
+<h2 id="configurare-hostapd">Configurare hostapd</h2>
+
+<p>Ora dobbiamo configurare hostapd.
+Dobbiamo creare un nuovo file di configurazione con il comando <code>sudo vi  /etc/hostapd/hostapd.conf</code>.
+ALl&rsquo;interno dobbiam avere i seguenti contenuti:</p>
+
+<pre><code># This is the name of the WiFi interface we configured above
+interface=wlan0
+
+# Use the nl80211 driver with the brcmfmac driver
+driver=nl80211
+
+# This is the name of the network
+ssid=VoxPopuli-Hub
+
+# Use the 2.4GHz band
+hw_mode=g
+
+# Use channel 6
+channel=6
+
+# Enable 802.11n
+ieee80211n=1
+
+# Enable WMM
+wmm_enabled=1
+
+# Enable 40MHz channels with 20ns guard interval
+ht_capab=[HT40][SHORT-GI-20][DSSS_CCK-40]
+
+# Accept all MAC addresses
+macaddr_acl=0
+
+# Use WPA authentication
+auth_algs=1
+
+# Require clients to know the network name
+ignore_broadcast_ssid=0
+
+# Use WPA2
+wpa=2
+
+# Use a pre-shared key
+wpa_key_mgmt=WPA-PSK
+
+# The network passphrase
+wpa_passphrase=raspberry
+
+# Use AES, instead of TKIP
+rsn_pairwise=CCMP
+</code></pre>
+
+<p>Ora facciamo una verifica per capire se il lavoro fatto fino a qui funziona correttamente.
+Eseguiamo quindi:</p>
+
+<pre><code>sudo /usr/sbin/hostapd /etc/hostapd/hostapd.conf
+</code></pre>
+
+<p>A questo punto, se controlli fra le reti wifi disponibili sul tuo portatile,  dovresti essere in grado di vedere la anche rete  VoxPopuli-Hub.</p>
+
+<p>Se tentassimo di connetterci a questa rete però, non riusciremmo ad ottenere un IP. Questo perchè ancora non abbiamo configurato <code>dnsmasq</code>.
+Facciamolo. Fai un bel Control-C.</p>
+
+<p>Apri il file di configurazione di hostapd con <code>sudo vi /etc/default/hostapd</code> e cerca la riga <code>#DAEMON_CONF=&quot;&quot;</code>. Deve essere sostituita con <code>DAEMON_CONF=&quot;/etc/hostapd/hostapd.conf&quot;</code>.</p>
+
+<h2 id="configurare-dnsmasq">Configurare dnsmasq</h2>
+
+<p>Il file di configurazione dnsmasq fornito contiene una grande quantità di informazioni, ma la maggior parte di esse non ci serve.
+Facciamo quindi una copia del file (non si sa mai) e creiamone uno nuovo.</p>
+
+<pre><code>sudo mv /etc/dnsmasq.conf /etc/dnsmasq.conf.orig
+sudo vi /etc/dnsmasq.conf
+</code></pre>
+
+<p>Dentro al nuovo file copiamo quanto segue:</p>
+
+<pre><code>interface=wlan0      # Use interface wlan0
+listen-address=172.24.1.1 # Explicitly specify the address to listen on
+bind-interfaces      # Bind to the interface to make sure we aren't sending things elsewhere
+server=8.8.8.8       # Forward DNS requests to Google DNS
+domain-needed        # Don't forward short names
+bogus-priv           # Never forward addresses in the non-routed address spaces.
+dhcp-range=172.24.1.50,172.24.1.150,12h # Assign IP addresses between 172.24.1.50 and 172.24.1.150 with a 12 hour lease time
+</code></pre>
+
+<h2 id="impostare-l-ipv4-forwarding">Impostare l&rsquo; IPV4 forwarding.</h2>
+
+<p>Una delle ultime cose che dobbiamo fare è di abilitare l&rsquo;inoltro dei pacchetti.</p>
+
+<p>Per fare questo apriamo il file <code>sysctl.conf</code> con <code>sudo vi /etc/sysctl.con</code> e togliamo il commento dall&rsquo;inizio della riga che contiene <code>net.ipv4.ip_forward=1</code>.</p>
+
+<p>L&rsquo;operazione appena fatta diventa effettiva al prossimo riavvio della raspberry, ma è possibile attivare subito la modifica con:</p>
+
+<pre><code>sudo sh -c &quot;echo 1 &gt; /proc/sys/net/ipv4/ip_forward&quot;
+</code></pre>
+
+<h2 id="condividere-la-connessione-internet-su-eth0">Condividere la connessione internet su eth0</h2>
+
+<p>A questo punto facciamo un ultima operazione che ci consentirà di condividere la connessione internet della Raspberry Pi (attraverso la scheda di rete) con i dispositivi collegati tramite WiFi. Per farlo bisogna configurare un NAT tra l&rsquo;interfaccia wlan0 e l&rsquo;interfaccia eth0.
+Possiamo farlo utilizzando i seguenti comandi:</p>
+
+<pre><code>sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+sudo iptables -A FORWARD -i eth0 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+sudo iptables -A FORWARD -i wlan0 -o eth0 -j ACCEPT
+</code></pre>
+
+<p>Questa ultima configurazione deve essere applicata tutte le volte che la Raspberry viene riavviata, quindi procediamo in questo modo. Prima di tutto ci salviamo le regole in un file:</p>
+
+<pre><code>sudo sh -c &quot;iptables-save &gt; /etc/iptables.ipv4.nat
+</code></pre>
+
+<p>poi, per fare in modo che vengano applicate ad ogni reboot della Raspberry, ne aggiungiamo l&rsquo;esecuzione nel file <code>rc.local</code>. Tale file, situato sotto /etc, viene eseguito ogni volta che la Rasp parte.
+Quindi, riassumento:</p>
+
+<pre><code>sudo vi /etc/rc.local
+</code></pre>
+
+<p>al cui interno metteremo:</p>
+
+<pre><code>iptables-restore &lt; /etc/iptables.ipv4.nat
+</code></pre>
+
+<p><strong>IMPORTANTE</strong>: Se non vuoi che la Rasp si blocchi in fase di boot, ricorda di controllare che alla fine del file <code>/etc/rc.local</code> ci sia sempre l&rsquo;istruzione <code>exit 0</code> alla fine.</p>
+
+<h2 id="rush-finale">Rush finale</h2>
+
+<p>Ci siamo. Facciamo partire i servizi:</p>
+
+<pre><code>sudo service hostapd start
+sudo service dnsmasq start
+</code></pre>
+
+<p>Ora dovresti essere in grado di connettersi a Internet attraverso la Pi passando dal collegamento WiFi.</p>
+
+<p>Riavvia la raspberry e vedi se tutto continua a funzionare.</p>
+
+<p>Ah! Dimentiavo. Se qualcosa è andato storto, GOTO 10!.</p>
+
+<!--
+
+Riferimenti:
+
+https://frillip.com/using-your-raspberry-pi-3-as-a-wifi-access-point-with-hostapd
+
+-->
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" data-id="a1d3ece3fd4956fd4851fb3d9630d454" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+
+        
+<nav id="article-nav">
+    
+    <a href="http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Oracle grants remapper</div>
+    </a>
+    
+
+    
+    <a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">Digital signage con Pi-Kiosk</div>
+    </a>
+    
+</nav>
+
+
+    </article>
+
+    
+    <section id="comments">
+        <div id="disqus_thread">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'stefanoteodorani';
+    var disqus_identifier = 'http:\/\/www.stefanoteodorani.it\/2017\/05\/20\/hotspot-wifi-con-raspberry-pi-3\/';
+    var disqus_title = 'Hotspot wifi con Raspberry PI 3';
+    var disqus_url = 'http:\/\/www.stefanoteodorani.it\/2017\/05\/20\/hotspot-wifi-con-raspberry-pi-3\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </section>
+    
+</section>
+
+
+	    
+	    <aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Recents
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-char-vs-bytes.jpg)" alt="Hotspot wifi con Raspberry PI 3" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">
+                        database
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/" class="title">Oracle Char vs Bytes</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-05-24 22:23:55 &#43;0200 CEST" itemprop="datePublished">24-05-2017</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/digital-signage-con-pi-kiosk.jpg)" alt="Hotspot wifi con Raspberry PI 3" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" class="title">Digital signage con Pi-Kiosk</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-05-20 20:50:06 &#43;0200 CEST" itemprop="datePublished">20-05-2017</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/hotspot-wifi-con-raspberry-pi.jpg)" alt="Hotspot wifi con Raspberry PI 3" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" class="title">Hotspot wifi con Raspberry PI 3</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-05-20 18:03:03 &#43;0200 CEST" itemprop="datePublished">20-05-2017</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-grants-remapper.jpg)" alt="Hotspot wifi con Raspberry PI 3" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">
+                        database
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/" class="title">Oracle grants remapper</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-05-17 22:17:06 &#43;0200 CEST" itemprop="datePublished">17-05-2017</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/ssh-senza-password.jpg)" alt="Hotspot wifi con Raspberry PI 3" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/" class="title">SSH senza password</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-05-17 21:39:51 &#43;0200 CEST" itemprop="datePublished">17-05-2017</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/database">
+                    database
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/linux">
+                    linux
+                </a>
+                <span class="category-list-count">7</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/mobile">
+                    mobile
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/opendata">
+                    opendata
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/system">
+                    system
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tags
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/android">
+                    android
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/bash">
+                    bash
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/ckan">
+                    ckan
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/github-pages">
+                    github-pages
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/oracle">
+                    oracle
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/raspberry">
+                    raspberry
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/ubuntu">
+                    ubuntu
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/android" style="font-size: 12px;">android</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/bash" style="font-size: 12px;">bash</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/ckan" style="font-size: 12px;">ckan</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/github-pages" style="font-size: 12px;">github-pages</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/oracle" style="font-size: 12px;">oracle</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/raspberry" style="font-size: 12px;">raspberry</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/ubuntu" style="font-size: 12px;">ubuntu</a>
+        
+    </div>
+</div>
+
+
+
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+	    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017
+      Powered by <a href="//gohugo.io">Hugo</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="http://www.stefanoteodorani.it/fancybox/jquery.fancybox.pack.js"></script>
+<script src="http://www.stefanoteodorani.it/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+</body>
+</html>

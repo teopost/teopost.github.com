@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ckan on stefanoteodorani.it</title>
+    <link>http://www.stefanoteodorani.it/tags/ckan/</link>
+    <description>Recent content in Ckan on stefanoteodorani.it</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-419</language>
+    <copyright>Powered by [Hugo](//gohugo.io)</copyright>
+    <lastBuildDate>Fri, 24 Mar 2017 18:42:26 +0100</lastBuildDate>
+    
+	<atom:link href="http://www.stefanoteodorani.it/tags/ckan/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Recuperare i dati sull&#39;inquinamento della mia città da CKAN</title>
+      <link>http://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/</link>
+      <pubDate>Fri, 24 Mar 2017 18:42:26 +0100</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/</guid>
+      <description>Ho intenzione di scrivere un piccolo bot di telegram che mi dia indicazioni sulla qualità dell&amp;rsquo;aria che ogni giorno respiro nella mia città.
+Sono partito, nella mia indagine, da qui:
+https://www.arpae.it/liberiamo/statistiche_riepilogative.asp?idlivello=822  Questo sito è pieno zeppo di dati utili e fra questi ci sono anche quelli che servono a me; ma come recuperarli ?
+Per fortuna la regione Emilia Romagna espone tutte queste informazioni sotto forma di Open Data utilizzando un software open source chiamato CKAN.</description>
+    </item>
+    
+  </channel>
+</rss>

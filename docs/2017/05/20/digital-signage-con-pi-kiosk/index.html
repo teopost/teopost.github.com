@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+    <title>Digital signage con Pi-Kiosk &middot; stefanoteodorani.it</title>
+    <meta name="generator" content="Hugo 0.20.7" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Stefano Teodorani">
+    
+      <meta name="description" content="">
+    
+    
+    <link rel="canonical" href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/"/>
+    <link rel="icon" href="http://www.stefanoteodorani.it/favicon.ico">
+    <link rel="apple-touch-icon" href="http://www.stefanoteodorani.it/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/style.css">
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/monokai.css">
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/fancybox/jquery.fancybox.css">
+    
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/button.css">
+    
+    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/notice.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="Digital signage con Pi-Kiosk" />
+<meta property="og:description" content="Conosco Luca. Ha una agenzia di viaggi a Rimini, e un&rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.
+
+E&rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico Sergio gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" />
+
+
+
+<meta property="article:published_time" content="2017-05-20T20:50:06&#43;02:00"/>
+<meta property="article:modified_time" content="2017-05-20T20:50:06&#43;02:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="Digital signage con Pi-Kiosk">
+<meta itemprop="description" content="Conosco Luca. Ha una agenzia di viaggi a Rimini, e un&rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.
+
+E&rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico Sergio gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.
+
+">
+
+
+<meta itemprop="dateModified" content="2017-05-20T20:50:06&#43;02:00" />
+<meta itemprop="wordCount" content="723">
+
+
+
+<meta itemprop="keywords" content="database,linux,mobile,opendata,system,android,bash,ckan,github-pages,oracle,raspberry,ubuntu," />
+
+    
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="Digital signage con Pi-Kiosk"/>
+<meta name="twitter:title" content="Digital signage con Pi-Kiosk"/>
+<meta name="twitter:description" content="Conosco Luca. Ha una agenzia di viaggi a Rimini, e un&rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.
+
+E&rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico Sergio gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.
+
+"/>
+<meta name="twitter:site" content="@teopost"/>
+
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="http://www.stefanoteodorani.it/" id="logo">
+          
+          <i class="logo" style="background-image: url('http://www.stefanoteodorani.it/css/images/logo.png')"></i>
+          
+          <span class="site-title">stefanoteodorani.it</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="http://www.stefanoteodorani.it/">Home</a>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="http://teopost.github.io/ulisse">My Dog</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://www.stefanoteodorani.it/tags/">Tags</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://www.stefanoteodorani.it/categories/">Categories</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="http://www.stefanoteodorani.it/" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="http://www.stefanoteodorani.it/">Home</a></td>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="http://teopost.github.io/ulisse">My Dog</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://www.stefanoteodorani.it/tags/">Tags</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://www.stefanoteodorani.it/categories/">Categories</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="http://www.stefanoteodorani.it/" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   		
+	    <aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
+      <h2 id="name">Stefano Teodorani</h2>
+      <h3 id="title">Oracle DBA, Programmer, Linux Administrator and Opensource lover</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Savignano sul Rubicone</span>
+      
+          <a id="follow" href="https://github.com/teopost">
+              Follow
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        14
+        <span>Posts</span>
+      </div>
+      <div class="article-info-block">
+        
+          7
+        
+        <span>
+            Tags
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/teopost" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//instagram.com/teopost" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//linkedin.com/in/stefano-teodorani-58722b70/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//plus.google.com/+StefanoTeodorani" target="_blank" title="Google+"><i class="fa fa-google-plus"></i></a></td>
+
+
+
+<td><a href="//facebook.com/steodorani" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></td>
+
+
+
+<td><a href="//twitter.com/teopost" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
+
+
+          <td><a href="http://www.stefanoteodorani.it/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+	    
+
+	    
+<section id="main">
+
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+                <img src="http://www.stefanoteodorani.it/banner/digital-signage-con-pi-kiosk.jpg" class="article-banner">
+            
+
+            <header class="article-header">
+    <a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/">
+    <h1 class="article-title" itemprop="name">
+        Digital signage con Pi-Kiosk
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-05-20 20:50:06 &#43;0200 CEST" itemprop="datePublished">20-05-2017</time>
+            &middot;
+            723
+            words
+            &middot;
+            4
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">linux</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/raspberry">raspberry</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>Conosco Luca. Ha una agenzia di viaggi a Rimini, e un&rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.</p>
+
+<p>E&rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico <a href="https://www.sergiogridelli.it/">Sergio</a> gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.</p>
+
+<p></p>
+
+<p>Purtroppo però, dopo aver provato per un po questa soluzione, sono venuto fuori alcuni problemi.</p>
+
+<ul>
+<li><p><strong>Non era possibile copiare le immagini da remoto.</strong> Per farlo bisognava essere fisicamente sul posto, scaricare le immagini che Sergio gli mandava per posta, copiare le immagini sulla chiavetta, mettere la chiavetta nel televisore. Inoltre durante questa operazione il televisore non proiettava niente.</p></li>
+
+<li><p><strong>Non tutte le immagini venivano mostrate correttamente.</strong> Alcune formati non erano supportati.</p></li>
+
+<li><p><strong>Il televisore rimaneva inutilmente accesso anche la notte.</strong> Luca vuole risparmiare sulla bolletta della luce</p></li>
+
+<li><p><strong>Il caricamento delle immagini era lento.</strong> Le immagini venivano caricate lentamente e l&rsquo;effetto in effetti non era grachè.</p></li>
+</ul>
+
+<p>Luca ha quindi pensato di chiedere al sottoscritto se, con tutti i progetti e smanettamenti inutili che faccio, ce ne era uno che poteva risolvergli tutti questi problemi.</p>
+
+<p>Così è nato Pi-Kiosk.</p>
+
+<h2 id="pi-kiosk">Pi-Kiosk</h2>
+
+<p>Pi-Kiosk è una soluzione basata su raspberry pi, che consente di eseguire lo slideshow di una cartella di immagini su un televisore.</p>
+
+<p>Prevede l&rsquo;utilizzo di btsync per l&rsquo;aggiornamento delle immagini. Grazie a btsync è possibile utilizzare un computer desktop o uno smartphone per tenere aggiornata la presentazione.</p>
+
+<p>Pi-Kiosk spegne il televisore la sera e lo riaccende la mattina utilizzando lo standard cec dell&rsquo;HDMI presente ormai in quasi tutti i televisori di ultima generazione.</p>
+
+<h2 id="materiale-occorrente">Materiale occorrente</h2>
+
+<ul>
+<li>n.1 <a href="https://www.amazon.it/Raspberry-PI-Model-Scheda-madre/dp/B01CD5VC92/ref=sr_1_4?s=pc&amp;ie=UTF8&amp;qid=1495318603&amp;sr=1-4&amp;keywords=raspberry+pi+3">Raspberry Pi</a></li>
+<li>n.1 <a href="https://www.amazon.it/Raspberry-Pi-3-Case-BLACK/dp/B00W7S1BFG/ref=sr_1_4?s=pc&amp;ie=UTF8&amp;qid=1495318648&amp;sr=1-4&amp;keywords=case+raspberry+pi">Case</a></li>
+<li>n.1 <a href="http://goo.gl/3OPHrh">Scheda di memoria</a></li>
+<li>n.1 <a href="https://www.amazon.it/Aukru-Caricabatterie-3000mA-Alimentatore-Raspberry/dp/B01566WOAG/ref=sr_1_4?s=pc&amp;ie=UTF8&amp;qid=1495318694&amp;sr=1-4&amp;keywords=alimentatore+raspberry+pi+3">Alimentatore 3A per Raspberry</a></li>
+<li>n.1 Cavo HDMI</li>
+<li>n.1 Televisore con HDMI cec</li>
+</ul>
+
+<h2 id="preparare-la-raspberry">Preparare la Raspberry</h2>
+
+<p>Installate l&rsquo;ultima versione del sistema operativo raspbian. Ci sono centinaia di guide su internet su come farlo. Se hai linux, ecco la centunesima:</p>
+
+<p>Aprire una finestra terminal e da root inserire l&rsquo;SD nel card reader del computer. Eseguire questo comando:</p>
+
+<pre><code># df -h
+</code></pre>
+
+<p>Eseguire l&rsquo;umount della scheda: (sdb1 è solo un esempio, il nome potrebbe essere diverso)</p>
+
+<pre><code># umount /dev/sdb1
+</code></pre>
+
+<p>Scrivere l&rsquo;immagine nella SD</p>
+
+<pre><code># dd if=./immagine.img of=/dev/sdX bs=4k
+</code></pre>
+
+<p>Eseguire questo comando per essere sicuri che tutta la cache sia scritta nell&rsquo;SD</p>
+
+<pre><code># sync
+</code></pre>
+
+<h2 id="installare-pi-kiosk">Installare pi-kiosk</h2>
+
+<p>Installare il programma di visualizzazione immagini</p>
+
+<pre><code>$ sudo apt-get install feh unclutter
+</code></pre>
+
+<p>Collegarsi in ssh sulla rasp e posizionarsi nell home</p>
+
+<pre><code>$ cd
+</code></pre>
+
+<p>Scaricare il software</p>
+
+<pre><code>$ git clone https://github.com/teopost/pi-kiosk
+</code></pre>
+
+<p>Aggiornare il software</p>
+
+<pre><code>$ sudo apt-get dist-upgrade
+$ sudo rpi-update
+$ sudo apt-get remove mathematica* sonic-pi wolfram*
+$ rm python_games
+</code></pre>
+
+<h2 id="configurare-il-software">Configurare il software</h2>
+
+<p>Rendere eseguibili gli script:</p>
+
+<pre><code>chmod 777 ./pi-kiosk/bin/*.sh
+</code></pre>
+
+<p>Per disabilitare lo screensaver editare il file autostart situato sotto /etc/xdg/lxsession/LXDE-pi. Quindi:</p>
+
+<pre><code>sudo vi /etc/xdg/lxsession/LXDE-pi/autostart
+</code></pre>
+
+<p>quindi</p>
+
+<pre><code>@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+# @xscreensaver -no-splash           # &lt;-- COMMENTARE
+@xset s off
+@xset -dpms
+@xset s noblank
+@/home/pi/pi-kiosk/bin/slideshow.sh      # &lt;-- AGGIUNGERE
+</code></pre>
+
+<p>Nel file, commentare la riga che contiene xscreensaver e aggiungere la riga in fondo per l&rsquo;esecuzione automatica di pi-kiosk.</p>
+
+<h2 id="installazione-di-btsync">Installazione di btsync</h2>
+
+<p>Per sincronizzare le immagini installare <a href="http://getsync.com">btsync</a>. Ovviamente la versione per ARM.</p>
+
+<h2 id="spegnimento-automatico">Spegnimento automatico</h2>
+
+<p>Per spegnere e riaccendere automaticamente il televisore occorre installare la libreria cec per raspberry. Operazione da fare come root.</p>
+
+<pre><code># apt-get instal cec-utils
+# apt-get instal cec-client		+# apt-get instal cec-utils
+
+# apt-get -y install udev libudev-dev autoconf automake libtool gcc liblockdev1
+# Invece del git clone prendere questa versione : https://github.com/Pulse-Eight/libcec/tree/2a80b46be78e9d849de223ab73b6f3e7b4d9fc46
+# cd libcec/
+# ./bootstrap
+# ./configure --with-rpi-include-path=/opt/vc/include --with-rpi-lib-path=/opt/vc/lib --enable-rpi
+# cec-client
+# make
+# make install
+# ldconfig
+</code></pre>
+
+<h2 id="pianificare-lo-spegnimento-e-la-riaccensione-del-tv">Pianificare lo spegnimento e la riaccensione del TV</h2>
+
+<p>Nel crontab dell&rsquo;utente pi, incollare le seguenti righe:</p>
+
+<pre><code class="language-bash"># .---------------- [m]inute: minuto (0 - 59)
+# |  .------------- [h]our: ora (0 - 23)
+# |  |  .---------- [d]ay [o]f [m]onth: giorno del mese (1 - 31)
+# |  |  |  .------- [mon]th: mese (1 - 12) OPPURE jan,feb,mar,apr...
+# |  |  |  |  .---- [d]ay [o]f [w]eek: giorno della settimana (0 - 6) (domenica=0 o 7)  OPPURE sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+
+54 23 * * * /mnt/pi-kiosk/bin/turntv.sh off
+30  7 * * * /mnt/pi-kiosk/bin/turntv.sh on &amp;&amp; sleep 3 &amp;&amp; /mnt/pi-kiosk/bin/turntv.sh input
+</code></pre>
+
+<h2 id="riferimenti">Riferimenti</h2>
+
+<ul>
+<li><a href="http://raspberry-at-home.com/control-rpi-with-tv-remote/">http://raspberry-at-home.com/control-rpi-with-tv-remote/</a></li>
+<li><a href="http://raspberrypi.stackexchange.com/questions/8698/how-can-my-raspberry-pi-turn-on-off-my-samsung-tv">http://raspberrypi.stackexchange.com/questions/8698/how-can-my-raspberry-pi-turn-on-off-my-samsung-tv</a></li>
+</ul>
+
+<h2 id="aggiornamento-del-20-maggio-2017">Aggiornamento del 20 maggio 2017</h2>
+
+<p>Btsync è morto. Poco male. Sostituitelo con <a href="https://syncthing.net">https://syncthing.net</a></p>
+
+<p><a  href="https://github.com/teopost/pi-kiosk" target="_blank"  class="btn btn-default">
+  
+  
+  
+    
+  <i class="fa fa-github"></i>
+    
+  
+  Get source code from Git-Hub
+  
+</a>
+
+<br/></p>
+
+<!--
+
+Alcuni appunti:
+
+* https://info-beamer.com/blog/raspberry-pi-hardware-video-scaler
+* http://www.whizzy.org/wp-content/uploads/2012/11/cecsimple.sh_.txt
+
+# lista comandi
+echo h | cec-client -s -d 1
+
+# Attiva la porta cec come attiva
+echo "as" | cec-client -s
+
+-->
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" data-id="cd47f510fcce96e77bf972b13d2f628c" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+
+        
+<nav id="article-nav">
+    
+    <a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Hotspot wifi con Raspberry PI 3</div>
+    </a>
+    
+
+    
+    <a href="http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">Oracle Char vs Bytes</div>
+    </a>
+    
+</nav>
+
+
+    </article>
+
+    
+    <section id="comments">
+        <div id="disqus_thread">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'stefanoteodorani';
+    var disqus_identifier = 'http:\/\/www.stefanoteodorani.it\/2017\/05\/20\/digital-signage-con-pi-kiosk\/';
+    var disqus_title = 'Digital signage con Pi-Kiosk';
+    var disqus_url = 'http:\/\/www.stefanoteodorani.it\/2017\/05\/20\/digital-signage-con-pi-kiosk\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </section>
+    
+</section>
+
+
+	    
+	    <aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Recents
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-char-vs-bytes.jpg)" alt="Digital signage con Pi-Kiosk" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">
+                        database
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/" class="title">Oracle Char vs Bytes</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-05-24 22:23:55 &#43;0200 CEST" itemprop="datePublished">24-05-2017</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/digital-signage-con-pi-kiosk.jpg)" alt="Digital signage con Pi-Kiosk" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" class="title">Digital signage con Pi-Kiosk</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-05-20 20:50:06 &#43;0200 CEST" itemprop="datePublished">20-05-2017</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/hotspot-wifi-con-raspberry-pi.jpg)" alt="Digital signage con Pi-Kiosk" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" class="title">Hotspot wifi con Raspberry PI 3</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-05-20 18:03:03 &#43;0200 CEST" itemprop="datePublished">20-05-2017</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-grants-remapper.jpg)" alt="Digital signage con Pi-Kiosk" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">
+                        database
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/" class="title">Oracle grants remapper</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-05-17 22:17:06 &#43;0200 CEST" itemprop="datePublished">17-05-2017</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/ssh-senza-password.jpg)" alt="Digital signage con Pi-Kiosk" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/" class="title">SSH senza password</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-05-17 21:39:51 &#43;0200 CEST" itemprop="datePublished">17-05-2017</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/database">
+                    database
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/linux">
+                    linux
+                </a>
+                <span class="category-list-count">7</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/mobile">
+                    mobile
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/opendata">
+                    opendata
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/system">
+                    system
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tags
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/android">
+                    android
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/bash">
+                    bash
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/ckan">
+                    ckan
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/github-pages">
+                    github-pages
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/oracle">
+                    oracle
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/raspberry">
+                    raspberry
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/ubuntu">
+                    ubuntu
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/android" style="font-size: 12px;">android</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/bash" style="font-size: 12px;">bash</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/ckan" style="font-size: 12px;">ckan</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/github-pages" style="font-size: 12px;">github-pages</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/oracle" style="font-size: 12px;">oracle</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/raspberry" style="font-size: 12px;">raspberry</a>
+        
+        
+        <a href="http://www.stefanoteodorani.it/tags/ubuntu" style="font-size: 12px;">ubuntu</a>
+        
+    </div>
+</div>
+
+
+
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+	    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017
+      Powered by <a href="//gohugo.io">Hugo</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="http://www.stefanoteodorani.it/fancybox/jquery.fancybox.pack.js"></script>
+<script src="http://www.stefanoteodorani.it/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+</body>
+</html>
