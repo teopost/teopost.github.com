@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-419">
 <head>
-    <title>Mobile &middot; stefanoteodorani.it</title>
+    <title>Oracle Char vs Bytes &middot; stefanoteodorani.it</title>
     <meta name="generator" content="Hugo 0.20.7" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,10 +10,7 @@
       <meta name="description" content="">
     
     
-      <link href="http://www.stefanoteodorani.it/categories/mobile/index.xml" rel="alternate" type="application/rss+xml" title="stefanoteodorani.it" />
-      <link href="http://www.stefanoteodorani.it/categories/mobile/index.xml" rel="feed" type="application/rss+xml" title="stefanoteodorani.it" />
-    
-    <link rel="canonical" href="http://www.stefanoteodorani.it/categories/mobile/"/>
+    <link rel="canonical" href="http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/"/>
     <link rel="icon" href="http://www.stefanoteodorani.it/favicon.ico">
     <link rel="apple-touch-icon" href="http://www.stefanoteodorani.it/apple-touch-icon.png"/>
     <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/style.css">
@@ -27,14 +24,27 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Mobile" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://www.stefanoteodorani.it/categories/mobile/" />
+    <meta property="og:title" content="Oracle Char vs Bytes" />
+<meta property="og:description" content="Nei database Oracle, i campi che possono contenere dati stringa possono assumere datatype diversi
+
+
+NVARCHAR2
+VARCHAR2(n)
+VARCHAR2(n CHAR) (che e&rsquo; come il caso sopra)
+VARCHAR2(n BYTE)
+
+
+Ma che differenza c&rsquo;è ?
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/" />
 
 
 
-<meta property="og:updated_time" content="2017-01-20T21:46:00&#43;01:00"/>
+<meta property="article:published_time" content="2017-05-24T22:23:55&#43;02:00"/>
+<meta property="article:modified_time" content="2017-05-24T22:23:55&#43;02:00"/>
+
 
 
 
@@ -47,11 +57,50 @@
 
     
     
-<meta itemprop="name" content="Mobile">
-<meta itemprop="description" content="">
+<meta itemprop="name" content="Oracle Char vs Bytes">
+<meta itemprop="description" content="Nei database Oracle, i campi che possono contenere dati stringa possono assumere datatype diversi
 
+
+NVARCHAR2
+VARCHAR2(n)
+VARCHAR2(n CHAR) (che e&rsquo; come il caso sopra)
+VARCHAR2(n BYTE)
+
+
+Ma che differenza c&rsquo;è ?
+
+">
+
+
+<meta itemprop="dateModified" content="2017-05-24T22:23:55&#43;02:00" />
+<meta itemprop="wordCount" content="252">
+
+
+
+<meta itemprop="keywords" content="database,linux,mobile,opendata,system,android,bash,ckan,github-pages,oracle,raspberry,ubuntu," />
 
     
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="Oracle Char vs Bytes"/>
+<meta name="twitter:title" content="Oracle Char vs Bytes"/>
+<meta name="twitter:description" content="Nei database Oracle, i campi che possono contenere dati stringa possono assumere datatype diversi
+
+
+NVARCHAR2
+VARCHAR2(n)
+VARCHAR2(n CHAR) (che e&rsquo; come il caso sopra)
+VARCHAR2(n BYTE)
+
+
+Ma che differenza c&rsquo;è ?
+
+"/>
+<meta name="twitter:site" content="@teopost"/>
+
     
 
     
@@ -64,7 +113,7 @@
 
 
 <div id="container">
-    <header id="header">
+	<header id="header">
   <div id="header-main" class="header-inner">
     <div class="outer">
       <a href="http://www.stefanoteodorani.it/" id="logo">
@@ -164,8 +213,10 @@
   </div>
 </header>
 
-    <div class="outer">
-        <aside id="profile">
+   	
+   	<div class="outer">
+   		
+	    <aside id="profile">
   <div class="inner profile-inner">
     <div class="base-info profile-block">
       <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
@@ -266,44 +317,234 @@
   </div>
 </aside>
 
-        <section id="main">
-            <section class="archives-wrap">
-                <div class="archive-category-wrap">
-                    <span class="archive-category">Mobile</span>
-                </div>
-                <div class="archives">
-                    
-                    
-                        <article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
-        <div class="archive-article-thumbnail">
-            
-            <a href="http://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/" class="thumbnail">
-                <span style="background-image:url(http://www.stefanoteodorani.it/banner/testare-applicazioni-android.jpg)" alt="Testare applicazioni Android" class="thumbnail-image"></span>
-            </a>
-            
-        </div>
-        <header class="archive-article-header">
-            <h1 itemprop="name">
-            <a class="archive-article-title" href="http://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/">Testare applicazioni Android</a>
-            </h1>
-            <div class="archive-article-date">
-                <i class="fa fa-calendar"></i>
-                <time datetime="2017-01-20 21:46:00 &#43;0100 CET" itemprop="datePublished">20-01-2017</time>
-            </div>
-        </header>
-    </div>
-</article>
- 
-                    
-                </div>
-            </section>
-            <nav id="page-nav">
+	    
 
+	    
+<section id="main">
+
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+
+            <header class="article-header">
+    <a href="http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/">
+    <h1 class="article-title" itemprop="name">
+        Oracle Char vs Bytes
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-05-24 22:23:55 &#43;0200 CEST" itemprop="datePublished">24-05-2017</time>
+            &middot;
+            252
+            words
+            &middot;
+            2
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">database</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/oracle">oracle</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>Nei database Oracle, i campi che possono contenere dati stringa possono assumere datatype diversi</p>
+
+<ul>
+<li>NVARCHAR2</li>
+<li>VARCHAR2(n)</li>
+<li>VARCHAR2(n CHAR) (che e&rsquo; come il caso sopra)</li>
+<li>VARCHAR2(n BYTE)</li>
+</ul>
+
+<p>Ma che differenza c&rsquo;è ?</p>
+
+<p></p>
+
+<p>Se un campo viene definito <code>VARCHAR2(20 byte)</code>, questo vuol dire che Oracle può memorizzare al massimo 11 byte in quel campo.
+Ma 11 byte non corrispondono a 11 caratteri nel caso in cui il database debba memorizzare dati in formato UTF-8.</p>
+
+<p>Se invece si definisce un campo <code>VARCHAR2(20 char)</code>, oracle sa che deve essere in grado di memorizzare 20 caratteri. In questo caso non è importante quanti byte sono necessari per memorizzare un singolo carattere (un singolo carattere UTF-8 può occupare 4 byte).</p>
+
+<p>Quando si crea una colonna sul db usando il datatype <code>VARCHAR2(x)</code>, Oracle decide di creare il datatype <code>VARCHAR2(x char)</code> oppure <code>VARCHAR2(x byte)</code> in base alla configurazione di Oracle definita in fase di installazione.
+La modifica di questa configurazione predefinita purtroppo non è semplice e, in alcuni casi, occorre reinstallare l&rsquo;intero  db.</p>
+
+<p>Quindi. Quale usare ?</p>
+
+<p>Nelle fix di database usare sempre</p>
+
+<p><code>VARCHAR2(x CHAR)</code></p>
+
+<h2 id="nvarchar2">NVARCHAR2</h2>
+
+<p>Il datatype NVARCHAR2 memorizza dati in formato unicode e quindi, per certi versi, è come scrivere VARCHAR2(x CHAR).
+Tuttavia, Oracle ne sconsiglia l&rsquo;utilizzo.</p>
+
+<p><a href="http://docs.oracle.com/database/121/NLSPG/ch6unicode.htm#NLSPG318">http://docs.oracle.com/database/121/NLSPG/ch6unicode.htm#NLSPG318</a></p>
+
+<p>dove è scritto:</p>
+
+<blockquote>
+<p>Oracle recommends using SQL CHAR, VARCHAR2, and CLOB data types in AL32UTF8 database to store Unicode character data. SQL NCHAR, NVARCHAR2, and NCLOB data types are not supported by some database features. Most notably, Oracle Text and XML DB do not support these data types.</p>
+</blockquote>
+
+<h2 id="riferimenti">RIFERIMENTI</h2>
+
+<ul>
+<li><a href="http://docs.oracle.com/database/121/NLSPG/ch6unicode.htm#NLSPG318">http://docs.oracle.com/database/121/NLSPG/ch6unicode.htm#NLSPG318</a></li>
+</ul>
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/" data-id="e8b1bc1b63a45b1af2d4d1c636d6a55f" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+
+        
+<nav id="article-nav">
+    
+    <a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Digital signage con Pi-Kiosk</div>
+    </a>
+    
+
+    
 </nav>
 
-        </section>
-        <aside id="sidebar">
+
+    </article>
+
+    
+    <section id="comments">
+        <div id="disqus_thread">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'stefanoteodorani';
+    var disqus_identifier = 'http:\/\/www.stefanoteodorani.it\/2017\/05\/24\/oracle-char-vs-bytes\/';
+    var disqus_title = 'Oracle Char vs Bytes';
+    var disqus_url = 'http:\/\/www.stefanoteodorani.it\/2017\/05\/24\/oracle-char-vs-bytes\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </section>
+    
+</section>
+
+
+	    
+	    <aside id="sidebar">
     
 <div class="widget-wrap">
     <h3 class="widget-title">
@@ -342,7 +583,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/digital-signage-con-pi-kiosk.jpg)" alt="Mobile" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/digital-signage-con-pi-kiosk.jpg)" alt="Oracle Char vs Bytes" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -368,7 +609,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/hotspot-wifi-con-raspberry-pi.jpg)" alt="Mobile" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/hotspot-wifi-con-raspberry-pi.jpg)" alt="Oracle Char vs Bytes" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -394,7 +635,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-grants-remapper.jpg)" alt="Mobile" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-grants-remapper.jpg)" alt="Oracle Char vs Bytes" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -420,7 +661,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/ssh-senza-password.jpg)" alt="Mobile" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/ssh-senza-password.jpg)" alt="Oracle Char vs Bytes" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -615,7 +856,8 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
 
-    </div>
+	    
+	</div>
 </div>
 
 <footer id="footer">

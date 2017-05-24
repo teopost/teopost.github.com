@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/</loc>
+    <lastmod>2017-05-24T22:23:55+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/</loc>
     <lastmod>2017-05-20T20:50:06+02:00</lastmod>
   </url>
@@ -99,7 +104,7 @@
   
   <url>
     <loc>http://www.stefanoteodorani.it/categories/database/</loc>
-    <lastmod>2017-05-17T22:17:06+02:00</lastmod>
+    <lastmod>2017-05-24T22:23:55+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -129,13 +134,13 @@
   
   <url>
     <loc>http://www.stefanoteodorani.it/tags/oracle/</loc>
-    <lastmod>2017-05-17T22:17:06+02:00</lastmod>
+    <lastmod>2017-05-24T22:23:55+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.stefanoteodorani.it/post/</loc>
-    <lastmod>2017-05-20T20:50:06+02:00</lastmod>
+    <lastmod>2017-05-24T22:23:55+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -165,7 +170,7 @@
   
   <url>
     <loc>http://www.stefanoteodorani.it/</loc>
-    <lastmod>2017-05-20T20:50:06+02:00</lastmod>
+    <lastmod>2017-05-24T22:23:55+02:00</lastmod>
     <priority>0</priority>
   </url>
   

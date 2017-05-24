@@ -7,10 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-419</language>
     <copyright>Powered by [Hugo](//gohugo.io)</copyright>
-    <lastBuildDate>Sat, 20 May 2017 20:50:06 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 24 May 2017 22:23:55 +0200</lastBuildDate>
     
 	<atom:link href="http://www.stefanoteodorani.it/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Oracle Char vs Bytes</title>
+      <link>http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/</link>
+      <pubDate>Wed, 24 May 2017 22:23:55 +0200</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/</guid>
+      <description>&lt;p&gt;Nei database Oracle, i campi che possono contenere dati stringa possono assumere datatype diversi&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;NVARCHAR2&lt;/li&gt;
+&lt;li&gt;VARCHAR2(n)&lt;/li&gt;
+&lt;li&gt;VARCHAR2(n CHAR) (che e&amp;rsquo; come il caso sopra)&lt;/li&gt;
+&lt;li&gt;VARCHAR2(n BYTE)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ma che differenza c&amp;rsquo;è ?&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Digital signage con Pi-Kiosk</title>
