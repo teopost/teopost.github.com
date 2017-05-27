@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-419</language>
     <copyright>Powered by [Hugo](//gohugo.io)</copyright>
-    <lastBuildDate>Wed, 24 May 2017 22:23:55 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 27 May 2017 16:18:40 +0200</lastBuildDate>
     
 	<atom:link href="http://www.stefanoteodorani.it/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Installare ffmpeg sulla Raspberry Pi 3</title>
+      <link>http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/</link>
+      <pubDate>Sat, 27 May 2017 16:18:40 +0200</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/</guid>
+      <description>&lt;p&gt;Purtroppo installare ffmpeg sulla Raspberry non è mai una cosa semplice. Non si capisce per quale motivo non si decidono a mettere i compilati nel repository.
+Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Oracle Char vs Bytes</title>
@@ -205,11 +217,9 @@ Creazione sito teopost.github.io Ho creato sul mio profilo github un repository 
       
       <guid>http://www.stefanoteodorani.it/sandbox/</guid>
       <description>Note This is a footnote.1
-Tabelle    Name Age     Bob 27   Alice 23    Task list a task list item list syntax required incomplete completed  Esempi di shortcodes A notice disclaimer
+Tabelle    Name Age     Bob 27   Alice 23    Task list a task list item list syntax required incomplete completed  Esempi di link:  Link a una pagina esterna: Sergio Link a un articolo del blog: LAMP server  Esempi di shortcodes A notice disclaimer
  A notice disclaimer
- A notice disclaimer
- A notice disclaimer
- Buttons  Scarica Pi-Kiosk da Git-Hub   Get Grav with icon  Get Grav with icon right    the footnote text.</description>
+ A notice disclaimer</description>
     </item>
     
   </channel>

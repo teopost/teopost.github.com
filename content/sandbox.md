@@ -22,6 +22,10 @@ Alice   | 23
 - [ ] incomplete
 - [x] completed
 
+## Esempi di link:
+
+* Link a una pagina esterna: [Sergio](https://www.sergiogridelli.it/)
+* Link a un articolo del blog: [LAMP server]({{< ref "installare-lamp-raspberry.md" >}})
 
 ## Esempi di shortcodes
 

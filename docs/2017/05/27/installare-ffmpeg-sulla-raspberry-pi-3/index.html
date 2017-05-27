@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-419">
 <head>
-    <title>Tags &middot; stefanoteodorani.it</title>
+    <title>Installare ffmpeg sulla Raspberry Pi 3 &middot; stefanoteodorani.it</title>
     <meta name="generator" content="Hugo 0.20.7" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,10 +10,7 @@
       <meta name="description" content="">
     
     
-      <link href="http://www.stefanoteodorani.it/tags/index.xml" rel="alternate" type="application/rss+xml" title="stefanoteodorani.it" />
-      <link href="http://www.stefanoteodorani.it/tags/index.xml" rel="feed" type="application/rss+xml" title="stefanoteodorani.it" />
-    
-    <link rel="canonical" href="http://www.stefanoteodorani.it/tags/"/>
+    <link rel="canonical" href="http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/"/>
     <link rel="icon" href="http://www.stefanoteodorani.it/favicon.ico">
     <link rel="apple-touch-icon" href="http://www.stefanoteodorani.it/apple-touch-icon.png"/>
     <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/style.css">
@@ -27,14 +24,19 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Tags" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://www.stefanoteodorani.it/tags/" />
+    <meta property="og:title" content="Installare ffmpeg sulla Raspberry Pi 3" />
+<meta property="og:description" content="Purtroppo installare ffmpeg sulla Raspberry non è mai una cosa semplice. Non si capisce per quale motivo non si decidono a mettere i compilati nel repository.
+Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/" />
 
 
 
-<meta property="og:updated_time" content="2017-01-20T21:46:00&#43;01:00"/>
+<meta property="article:published_time" content="2017-05-27T16:18:40&#43;02:00"/>
+<meta property="article:modified_time" content="2017-05-27T16:18:40&#43;02:00"/>
+
 
 
 
@@ -47,11 +49,34 @@
 
     
     
-<meta itemprop="name" content="Tags">
-<meta itemprop="description" content="">
+<meta itemprop="name" content="Installare ffmpeg sulla Raspberry Pi 3">
+<meta itemprop="description" content="Purtroppo installare ffmpeg sulla Raspberry non è mai una cosa semplice. Non si capisce per quale motivo non si decidono a mettere i compilati nel repository.
+Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.
 
+">
+
+
+<meta itemprop="dateModified" content="2017-05-27T16:18:40&#43;02:00" />
+<meta itemprop="wordCount" content="205">
+
+
+
+<meta itemprop="keywords" content="database,linux,mobile,opendata,system,android,bash,ckan,github-pages,oracle,raspberry,ubuntu," />
 
     
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="Installare ffmpeg sulla Raspberry Pi 3"/>
+<meta name="twitter:title" content="Installare ffmpeg sulla Raspberry Pi 3"/>
+<meta name="twitter:description" content="Purtroppo installare ffmpeg sulla Raspberry non è mai una cosa semplice. Non si capisce per quale motivo non si decidono a mettere i compilati nel repository.
+Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.
+
+"/>
+<meta name="twitter:site" content="@teopost"/>
+
     
 
     
@@ -61,10 +86,10 @@
 </head>
 <body>
 <div class="container">
- 
+
 
 <div id="container">
-    <header id="header">
+	<header id="header">
   <div id="header-main" class="header-inner">
     <div class="outer">
       <a href="http://www.stefanoteodorani.it/" id="logo">
@@ -164,8 +189,10 @@
   </div>
 </header>
 
-    <div class="outer">
-        <aside id="profile">
+   	
+   	<div class="outer">
+   		
+	    <aside id="profile">
   <div class="inner profile-inner">
     <div class="base-info profile-block">
       <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
@@ -266,54 +293,238 @@
   </div>
 </aside>
 
-        <section id="main">
-            <section class="layout-wrap">
-                <div class="layout-title">
-                    <span>Tags</span>
-                </div>
-                <div class="layout-wrap-inner list-categories">
-                    <ul class="category-list">
-                         
-                        <li class="category-list-item">
-                            <a class="category-list-link" href="raspberry">raspberry</a>
-                            <span class="category-list-count">6</span>
-                        </li>
-                        
-                        <li class="category-list-item">
-                            <a class="category-list-link" href="oracle">oracle</a>
-                            <span class="category-list-count">3</span>
-                        </li>
-                        
-                        <li class="category-list-item">
-                            <a class="category-list-link" href="ubuntu">ubuntu</a>
-                            <span class="category-list-count">2</span>
-                        </li>
-                        
-                        <li class="category-list-item">
-                            <a class="category-list-link" href="android">android</a>
-                            <span class="category-list-count">1</span>
-                        </li>
-                        
-                        <li class="category-list-item">
-                            <a class="category-list-link" href="bash">bash</a>
-                            <span class="category-list-count">1</span>
-                        </li>
-                        
-                        <li class="category-list-item">
-                            <a class="category-list-link" href="ckan">ckan</a>
-                            <span class="category-list-count">1</span>
-                        </li>
-                        
-                        <li class="category-list-item">
-                            <a class="category-list-link" href="github-pages">github-pages</a>
-                            <span class="category-list-count">1</span>
-                        </li>
-                        
-                    </ul>
-                </div>
-            </section>
-        </section>
-        <aside id="sidebar">
+	    
+
+	    
+<section id="main">
+
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+                <img src="http://www.stefanoteodorani.it/banner/ffmpeg-su-raspberrypi.png" class="article-banner">
+            
+
+            <header class="article-header">
+    <a href="http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/">
+    <h1 class="article-title" itemprop="name">
+        Installare ffmpeg sulla Raspberry Pi 3
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-05-27 16:18:40 &#43;0200 CEST" itemprop="datePublished">27-05-2017</time>
+            &middot;
+            205
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">linux</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/raspberry">raspberry</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>Purtroppo installare ffmpeg sulla Raspberry non è mai una cosa semplice. Non si capisce per quale motivo non si decidono a mettere i compilati nel repository.
+Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.</p>
+
+<p></p>
+
+<p>Tutte le seguenti operazioni vanno fatte come utente root (<code>sudo -s</code>).</p>
+
+<p>Per prima cosa occorre installare git col solito comando:</p>
+
+<pre><code>apt-get install git
+</code></pre>
+
+<p>Dopo aver installato <code>git</code> procediamo con lo scaricamento dei sorgenti.</p>
+
+<h2 id="compilazione-e-installazione-libreria-video-x264">Compilazione e installazione libreria video x264</h2>
+
+<p>Visto che ci siamo installiamo le librerie video x264, quindi:</p>
+
+<pre><code>cd /usr/src
+git clone git://git.videolan.org/x264
+cd x264
+./configure --host=arm-unknown-linux-gnueabi --enable-static --disable-opencl
+make
+make install
+</code></pre>
+
+<p>Se dovesse essere necessario installare il supporto ffmpeg per altre librerie (mp3, aac, ecc..), bisogna farlo ora. Prima di compilare ffmpeg.</p>
+
+<h2 id="compilazione-e-installazione-ffmpeg">Compilazione e installazione ffmpeg:</h2>
+
+<pre><code>cd /usr/src
+git clone git://source.ffmpeg.org/ffmpeg.git
+cd ffmpeg/
+./configure --arch=armel --target-os=linux --enable-gpl --enable-libx264 --enable-nonfree
+make
+</code></pre>
+
+<p>Notate l&rsquo;opzione <code>--enable-libx264</code> che compila ffmpeg con il supporto alle suddette librerie</p>
+
+<p>Questa seconda fase è un po lunghina. Fatela mentre vi guardate un film. Sulla Raspberry 3 potete eseguire la compilazione parallela <code>make -j4</code>. Dovrebbe velocizzare un po la cosa.</p>
+
+<p>Per ultimo:</p>
+
+<pre><code>make install
+</code></pre>
+
+<p>L&rsquo;installazione di ffmpeg comprende anche il tool ffserver che permette di fare lo streaming di video e audio.</p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/" data-id="b25e4ebf7f59e5a77b0bc9a6440e9abf" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+
+        
+<nav id="article-nav">
+    
+    <a href="http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Oracle Char vs Bytes</div>
+    </a>
+    
+
+    
+</nav>
+
+
+    </article>
+
+    
+    <section id="comments">
+        <div id="disqus_thread">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'stefanoteodorani';
+    var disqus_identifier = 'http:\/\/www.stefanoteodorani.it\/2017\/05\/27\/installare-ffmpeg-sulla-raspberry-pi-3\/';
+    var disqus_title = 'Installare ffmpeg sulla Raspberry Pi 3';
+    var disqus_url = 'http:\/\/www.stefanoteodorani.it\/2017\/05\/27\/installare-ffmpeg-sulla-raspberry-pi-3\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </section>
+    
+</section>
+
+
+	    
+	    <aside id="sidebar">
     
 <div class="widget-wrap">
     <h3 class="widget-title">
@@ -326,7 +537,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/ffmpeg-su-raspberrypi.png)" alt="Tags" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/ffmpeg-su-raspberrypi.png)" alt="Installare ffmpeg sulla Raspberry Pi 3" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -352,7 +563,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-char-vs-bytes.jpg)" alt="Tags" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-char-vs-bytes.jpg)" alt="Installare ffmpeg sulla Raspberry Pi 3" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -378,7 +589,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/digital-signage-con-pi-kiosk.jpg)" alt="Tags" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/digital-signage-con-pi-kiosk.jpg)" alt="Installare ffmpeg sulla Raspberry Pi 3" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -404,7 +615,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/hotspot-wifi-con-raspberry-pi.jpg)" alt="Tags" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/hotspot-wifi-con-raspberry-pi.jpg)" alt="Installare ffmpeg sulla Raspberry Pi 3" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -430,7 +641,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-grants-remapper.jpg)" alt="Tags" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-grants-remapper.jpg)" alt="Installare ffmpeg sulla Raspberry Pi 3" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -625,7 +836,8 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
 
-    </div>
+	    
+	</div>
 </div>
 
 <footer id="footer">
@@ -649,5 +861,4 @@
 
 
 </body>
-
 </html>
