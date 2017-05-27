@@ -6,10 +6,10 @@ description = ""
 images = []
 menu = ""
 tags = ["raspberry"]
-title = "Installare ffmpeg sulla Raspberry Pi 3"
+title = "Installare FFmpeg sulla Raspberry Pi 3"
 
 +++
-Purtroppo installare ffmpeg sulla Raspberry non è mai una cosa semplice. Non si capisce per quale motivo non si decidono a mettere i compilati nel repository.
+Purtroppo installare FFmpeg sulla Raspberry non è mai una cosa semplice. Non si capisce per quale motivo non si decidono a mettere i compilati nel repository.
 Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.
 
 <!--more-->
@@ -33,9 +33,9 @@ Visto che ci siamo installiamo le librerie video x264, quindi:
     make
     make install
 
-Se dovesse essere necessario installare il supporto ffmpeg per altre librerie (mp3, aac, ecc..), bisogna farlo ora. Prima di compilare ffmpeg.
+Se dovesse essere necessario installare il supporto FFmpeg per altre librerie (mp3, aac, ecc..), bisogna farlo ora. Prima di compilare ffmpeg.
 
-## Compilazione e installazione ffmpeg:
+## Compilazione e installazione FFmpeg:
 
     cd /usr/src
     git clone git://source.ffmpeg.org/ffmpeg.git
@@ -51,4 +51,4 @@ Per ultimo:
 
     make install
 
-L'installazione di ffmpeg comprende anche il tool ffserver che permette di fare lo streaming di video e audio.
+L'installazione di FFmpeg comprende anche il tool ffserver che permette di fare lo streaming di video e audio.

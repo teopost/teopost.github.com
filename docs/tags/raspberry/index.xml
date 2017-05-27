@@ -7,18 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-419</language>
     <copyright>Powered by [Hugo](//gohugo.io)</copyright>
-    <lastBuildDate>Sat, 27 May 2017 16:18:40 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 27 May 2017 16:50:58 +0200</lastBuildDate>
     
 	<atom:link href="http://www.stefanoteodorani.it/tags/raspberry/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Installare ffmpeg sulla Raspberry Pi 3</title>
+      <title>Streaming video con ffserver su raspberrypi</title>
+      <link>http://www.stefanoteodorani.it/2017/05/27/streaming-video-con-ffserver-su-raspberrypi/</link>
+      <pubDate>Sat, 27 May 2017 16:50:58 +0200</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2017/05/27/streaming-video-con-ffserver-su-raspberrypi/</guid>
+      <description>&lt;p&gt;Recentemento ho scritto un paio di righe su come compilare e &lt;a href=&#34;http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/&#34;&gt;installare ffmpeg sulla Raspberry Pi&lt;/a&gt;.
+Quando si installa ffmpeg viene installato anche un tool fighissimo chiamato ffserver che permette di fare lo streming di contenuto audio e/o video su internet. Vediamo come:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installare FFmpeg sulla Raspberry Pi 3</title>
       <link>http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/</link>
       <pubDate>Sat, 27 May 2017 16:18:40 +0200</pubDate>
       
       <guid>http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/</guid>
-      <description>&lt;p&gt;Purtroppo installare ffmpeg sulla Raspberry non è mai una cosa semplice. Non si capisce per quale motivo non si decidono a mettere i compilati nel repository.
+      <description>&lt;p&gt;Purtroppo installare FFmpeg sulla Raspberry non è mai una cosa semplice. Non si capisce per quale motivo non si decidono a mettere i compilati nel repository.
 Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

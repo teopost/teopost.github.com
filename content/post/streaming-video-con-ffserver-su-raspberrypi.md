@@ -7,7 +7,6 @@ images = []
 menu = ""
 tags = ["raspberry"]
 title = "Streaming video con ffserver su raspberrypi"
-draft = true
 +++
 
 Recentemento ho scritto un paio di righe su come compilare e [installare ffmpeg sulla Raspberry Pi]({{< ref "ffmpeg-su-raspberrypi.md" >}}).

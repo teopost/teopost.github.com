@@ -27,6 +27,10 @@ Alice   | 23
 * Link a una pagina esterna: [Sergio](https://www.sergiogridelli.it/)
 * Link a un articolo del blog: [LAMP server]({{< ref "installare-lamp-raspberry.md" >}})
 
+## Esempio di quote
+
+> Nota quotata
+
 ## Esempi di shortcodes
 
 {{% notice note %}}

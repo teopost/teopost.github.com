@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-419">
 <head>
-    <title>Testare applicazioni Android &middot; stefanoteodorani.it</title>
+    <title>Streaming video con ffserver su raspberrypi &middot; stefanoteodorani.it</title>
     <meta name="generator" content="Hugo 0.20.7" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +10,7 @@
       <meta name="description" content="">
     
     
-    <link rel="canonical" href="http://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/"/>
+    <link rel="canonical" href="http://www.stefanoteodorani.it/2017/05/27/streaming-video-con-ffserver-su-raspberrypi/"/>
     <link rel="icon" href="http://www.stefanoteodorani.it/favicon.ico">
     <link rel="apple-touch-icon" href="http://www.stefanoteodorani.it/apple-touch-icon.png"/>
     <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/style.css">
@@ -24,17 +24,18 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Testare applicazioni Android" />
-<meta property="og:description" content="Per poter testare le app mobile su piattaforma Android, Google mette a disposizione un servizio di aggiornamento automatico basato sul Play Store. Istriversi a questo servizio è un po macchinoso, ma garantisce gli aggiornamenti automatici delle app quando lo sviluppatore pubblica una nuova versione.
-Il servizio di cui parliamo è basato sulle Community di Google e funziona in questo modo:
- Lo sviluppatore crea una Community specifica per l&rsquo;app (es: app-unixx-test) Lo sviluppatore invia una mail di invito al tester per consentirgli di entrare nella Community Nella mail ricevuta, il tester clicca il pulsante Anteprima community   Si viene reindirizzati nella pagina della community di google, in cui il tester deve cliccare il pulsante Accetta invito Ora sulla parte destra della pagina cliccare sul link App di test   Nella pagina successiva cliccare sul pulsante DIVENTA UN TESTER Nella pagina successiva, in basso cliccare nel link Scarica UniXX dal Play Store   A questo punto si e&rsquo; indirizzati nella pagina del play store." />
+    <meta property="og:title" content="Streaming video con ffserver su raspberrypi" />
+<meta property="og:description" content="Recentemento ho scritto un paio di righe su come compilare e installare ffmpeg sulla Raspberry Pi.
+Quando si installa ffmpeg viene installato anche un tool fighissimo chiamato ffserver che permette di fare lo streming di contenuto audio e/o video su internet. Vediamo come:
+
+" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/" />
+<meta property="og:url" content="http://www.stefanoteodorani.it/2017/05/27/streaming-video-con-ffserver-su-raspberrypi/" />
 
 
 
-<meta property="article:published_time" content="2017-01-20T21:46:00&#43;01:00"/>
-<meta property="article:modified_time" content="2017-01-20T21:46:00&#43;01:00"/>
+<meta property="article:published_time" content="2017-05-27T16:50:58&#43;02:00"/>
+<meta property="article:modified_time" content="2017-05-27T16:50:58&#43;02:00"/>
 
 
 
@@ -48,14 +49,15 @@ Il servizio di cui parliamo è basato sulle Community di Google e funziona in qu
 
     
     
-<meta itemprop="name" content="Testare applicazioni Android">
-<meta itemprop="description" content="Per poter testare le app mobile su piattaforma Android, Google mette a disposizione un servizio di aggiornamento automatico basato sul Play Store. Istriversi a questo servizio è un po macchinoso, ma garantisce gli aggiornamenti automatici delle app quando lo sviluppatore pubblica una nuova versione.
-Il servizio di cui parliamo è basato sulle Community di Google e funziona in questo modo:
- Lo sviluppatore crea una Community specifica per l&rsquo;app (es: app-unixx-test) Lo sviluppatore invia una mail di invito al tester per consentirgli di entrare nella Community Nella mail ricevuta, il tester clicca il pulsante Anteprima community   Si viene reindirizzati nella pagina della community di google, in cui il tester deve cliccare il pulsante Accetta invito Ora sulla parte destra della pagina cliccare sul link App di test   Nella pagina successiva cliccare sul pulsante DIVENTA UN TESTER Nella pagina successiva, in basso cliccare nel link Scarica UniXX dal Play Store   A questo punto si e&rsquo; indirizzati nella pagina del play store.">
+<meta itemprop="name" content="Streaming video con ffserver su raspberrypi">
+<meta itemprop="description" content="Recentemento ho scritto un paio di righe su come compilare e installare ffmpeg sulla Raspberry Pi.
+Quando si installa ffmpeg viene installato anche un tool fighissimo chiamato ffserver che permette di fare lo streming di contenuto audio e/o video su internet. Vediamo come:
+
+">
 
 
-<meta itemprop="dateModified" content="2017-01-20T21:46:00&#43;01:00" />
-<meta itemprop="wordCount" content="173">
+<meta itemprop="dateModified" content="2017-05-27T16:50:58&#43;02:00" />
+<meta itemprop="wordCount" content="222">
 
 
 
@@ -67,11 +69,12 @@ Il servizio di cui parliamo è basato sulle Community di Google e funziona in qu
 
 
 
-<meta name="twitter:text:title" content="Testare applicazioni Android"/>
-<meta name="twitter:title" content="Testare applicazioni Android"/>
-<meta name="twitter:description" content="Per poter testare le app mobile su piattaforma Android, Google mette a disposizione un servizio di aggiornamento automatico basato sul Play Store. Istriversi a questo servizio è un po macchinoso, ma garantisce gli aggiornamenti automatici delle app quando lo sviluppatore pubblica una nuova versione.
-Il servizio di cui parliamo è basato sulle Community di Google e funziona in questo modo:
- Lo sviluppatore crea una Community specifica per l&rsquo;app (es: app-unixx-test) Lo sviluppatore invia una mail di invito al tester per consentirgli di entrare nella Community Nella mail ricevuta, il tester clicca il pulsante Anteprima community   Si viene reindirizzati nella pagina della community di google, in cui il tester deve cliccare il pulsante Accetta invito Ora sulla parte destra della pagina cliccare sul link App di test   Nella pagina successiva cliccare sul pulsante DIVENTA UN TESTER Nella pagina successiva, in basso cliccare nel link Scarica UniXX dal Play Store   A questo punto si e&rsquo; indirizzati nella pagina del play store."/>
+<meta name="twitter:text:title" content="Streaming video con ffserver su raspberrypi"/>
+<meta name="twitter:title" content="Streaming video con ffserver su raspberrypi"/>
+<meta name="twitter:description" content="Recentemento ho scritto un paio di righe su come compilare e installare ffmpeg sulla Raspberry Pi.
+Quando si installa ffmpeg viene installato anche un tool fighissimo chiamato ffserver che permette di fare lo streming di contenuto audio e/o video su internet. Vediamo come:
+
+"/>
 <meta name="twitter:site" content="@teopost"/>
 
     
@@ -298,13 +301,13 @@ Il servizio di cui parliamo è basato sulle Community di Google e funziona in qu
     <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
         <div class="article-inner">
             
-                <img src="http://www.stefanoteodorani.it/banner/testare-applicazioni-android.jpg" class="article-banner">
+                <img src="http://www.stefanoteodorani.it/banner/streaming-video-con-ffserver-su-raspberrypi.jpg" class="article-banner">
             
 
             <header class="article-header">
-    <a href="http://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/">
+    <a href="http://www.stefanoteodorani.it/2017/05/27/streaming-video-con-ffserver-su-raspberrypi/">
     <h1 class="article-title" itemprop="name">
-        Testare applicazioni Android
+        Streaming video con ffserver su raspberrypi
     </h1>
     </a>
     <div class="article-meta">
@@ -312,12 +315,12 @@ Il servizio di cui parliamo è basato sulle Community di Google e funziona in qu
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2017-01-20 21:46:00 &#43;0100 CET" itemprop="datePublished">20-01-2017</time>
+            <time datetime="2017-05-27 16:50:58 &#43;0200 CEST" itemprop="datePublished">27-05-2017</time>
             &middot;
-            173
+            222
             words
             &middot;
-            1
+            2
             minute read
         </div>
         
@@ -328,7 +331,7 @@ Il servizio di cui parliamo è basato sulle Community di Google e funziona in qu
                 <i class="fa fa-folder"></i>
                 
                 
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/mobile">mobile</a>
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">linux</a>
                 
                 
             </div>
@@ -342,7 +345,7 @@ Il servizio di cui parliamo è basato sulle Community di Google e funziona in qu
                 <i class="fa fa-tags"></i>
                 
                 
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/android">android</a>
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/raspberry">raspberry</a>
                 
                 
             </div>
@@ -352,45 +355,85 @@ Il servizio di cui parliamo è basato sulle Community di Google e funziona in qu
 </header>
 
             <div class="article-entry" itemprop="articleBody">
-                <p>Per poter testare le app mobile su piattaforma Android, Google mette a disposizione un servizio di aggiornamento automatico basato sul Play Store.
-Istriversi a questo servizio è un po macchinoso, ma garantisce gli aggiornamenti automatici delle app quando lo sviluppatore pubblica una nuova versione.</p>
+                <p>Recentemento ho scritto un paio di righe su come compilare e <a href="http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/">installare ffmpeg sulla Raspberry Pi</a>.
+Quando si installa ffmpeg viene installato anche un tool fighissimo chiamato ffserver che permette di fare lo streming di contenuto audio e/o video su internet. Vediamo come:</p>
 
-<p>Il servizio di cui parliamo è basato sulle Community di Google e funziona in questo modo:</p>
+<p></p>
 
-<ul>
-<li>Lo sviluppatore crea una Community specifica per l&rsquo;app (es: app-unixx-test)</li>
-<li>Lo sviluppatore invia una mail di invito al tester per consentirgli di entrare nella Community</li>
-<li>Nella mail ricevuta, il tester clicca il pulsante <strong>Anteprima community</strong></li>
-</ul>
+<p>Diventate root con <code>sudo -s</code> e per prima cosa create il file di configurazione:</p>
 
-<p><img src="/post_images/how_test_android_app-1_anteprima_community.png" alt="" /></p>
+<pre><code>vi /etc/ffserver.conf
+</code></pre>
 
-<ul>
-<li>Si viene reindirizzati nella pagina della community di google, in cui il tester deve cliccare il pulsante <strong>Accetta invito</strong></li>
-<li>Ora sulla parte destra della pagina cliccare sul link <strong>App di test</strong></li>
-</ul>
+<p>Incollateci questa roba qui:</p>
 
-<p><img src="/post_images/how_test_android_app-2_app_di_test.png" alt="" /></p>
+<pre><code>Port 8090
+# bind to all IPs aliased or not
+BindAddress 0.0.0.0
+# max number of simultaneous clients
+MaxClients 10
+# max bandwidth per-client (kb/s)
+MaxBandwidth 1000
+# Suppress that if you want to launch ffserver as a daemon.
+NoDaemon
 
-<ul>
-<li>Nella pagina successiva cliccare sul pulsante <strong>DIVENTA UN TESTER</strong></li>
-<li>Nella pagina successiva, in basso cliccare nel link <strong>Scarica UniXX dal Play Store</strong></li>
-</ul>
+&lt;Feed feed1.ffm&gt;
+File /tmp/feed1.ffm
+FileMaxSize 10M
+&lt;/Feed&gt;
 
-<p><img src="/post_images/how_test_android_app-3_scarica_unixx.png" alt="" /></p>
+&lt;Stream test.mjpg&gt;
+Feed feed1.ffm
+Format mpjpeg
+VideoFrameRate 4
+VideoSize 600x480
+VideoBitRate 80
+# VideoQMin 1
+# VideoQMax 100
+VideoIntraOnly
+NoAudio
+Strict -1
+&lt;/Stream&gt;
+</code></pre>
 
-<ul>
-<li>A questo punto si e&rsquo; indirizzati nella pagina del play store. Cliccare su <strong>Installa</strong> e scegliere il dispositivo android su cui si desidera installare l&rsquo;app.</li>
-</ul>
+<p>Crete un file di lancio di ffserver:</p>
 
+<pre><code>vi /usr/sbin/webcam.sh
+</code></pre>
+
+<p>Dentro metteteci questo:</p>
+
+<pre><code>ffserver -f /etc/ffserver.conf &amp; ffmpeg -v verbose -r 5 -s 600x480 -f video4linux2 -i /dev/video0 http://localhost:8090/feed1.ffm
+</code></pre>
+
+<p>Rendete eseguibile il file:</p>
+
+<pre><code>chmod +x /usr/sbin/webcam.sh
+</code></pre>
+
+<p>Ed ora:</p>
+
+<pre><code>/usr/sbin/webcam.sh
+</code></pre>
+
+<p>Per vedere il risultato basta andare su:</p>
+
+<pre><code>http://&lt;ip-address:8090&gt;/test.mjpg
+</code></pre>
+
+<p>Per fermare il programma potete farlo con <code>pkill ffserver</code></p>
+
+<h2 id="esecuzione-automatica">Esecuzione automatica</h2>
+
+<p>Per far partire il programma automaticamente, potete sfruttare il file <code>/etc/rc.local</code>. Aprite il file e metteteci dentro <code>/usr/sbin/webcam.sh</code>. Ricordatevi che il comando <code>exit 0</code> deve sempre essere presente alla fine del file.</p>
             </div>
             <footer class="article-footer">
-    <a data-url="http://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/" data-id="70b9005b4ffbeedae4b1a99be06ce1e0" class="article-share-link">
+    <a data-url="http://www.stefanoteodorani.it/2017/05/27/streaming-video-con-ffserver-su-raspberrypi/" data-id="c4fe3b0eccd1ce96c909051edebe34f0" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
-    <a href="http://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/#disqus_thread" class="article-comment-link">
+    <a href="http://www.stefanoteodorani.it/2017/05/27/streaming-video-con-ffserver-su-raspberrypi/#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -466,21 +509,14 @@ Istriversi a questo servizio è un po macchinoso, ma garantisce gli aggiornament
         
 <nav id="article-nav">
     
-    <a href="http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           Older
       </strong>
-      <div class="article-nav-title">IP Statico su Raspberry</div>
+      <div class="article-nav-title">Installare FFmpeg sulla Raspberry Pi 3</div>
     </a>
     
 
-    
-    <a href="http://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">
-          Newer
-      </strong>
-      <div class="article-nav-title">Client Oracle sul Mac</div>
-    </a>
     
 </nav>
 
@@ -493,9 +529,9 @@ Istriversi a questo servizio è un po macchinoso, ma garantisce gli aggiornament
             <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'stefanoteodorani';
-    var disqus_identifier = 'http:\/\/www.stefanoteodorani.it\/2017\/01\/20\/testare-applicazioni-android\/';
-    var disqus_title = 'Testare applicazioni Android';
-    var disqus_url = 'http:\/\/www.stefanoteodorani.it\/2017\/01\/20\/testare-applicazioni-android\/';
+    var disqus_identifier = 'http:\/\/www.stefanoteodorani.it\/2017\/05\/27\/streaming-video-con-ffserver-su-raspberrypi\/';
+    var disqus_title = 'Streaming video con ffserver su raspberrypi';
+    var disqus_url = 'http:\/\/www.stefanoteodorani.it\/2017\/05\/27\/streaming-video-con-ffserver-su-raspberrypi\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -525,7 +561,7 @@ Istriversi a questo servizio è un po macchinoso, ma garantisce gli aggiornament
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/27/streaming-video-con-ffserver-su-raspberrypi/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/streaming-video-con-ffserver-su-raspberrypi.jpg)" alt="Testare applicazioni Android" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/streaming-video-con-ffserver-su-raspberrypi.jpg)" alt="Streaming video con ffserver su raspberrypi" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -551,7 +587,7 @@ Istriversi a questo servizio è un po macchinoso, ma garantisce gli aggiornament
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/ffmpeg-su-raspberrypi.png)" alt="Testare applicazioni Android" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/ffmpeg-su-raspberrypi.png)" alt="Streaming video con ffserver su raspberrypi" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -577,7 +613,7 @@ Istriversi a questo servizio è un po macchinoso, ma garantisce gli aggiornament
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-char-vs-bytes.jpg)" alt="Testare applicazioni Android" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-char-vs-bytes.jpg)" alt="Streaming video con ffserver su raspberrypi" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -603,7 +639,7 @@ Istriversi a questo servizio è un po macchinoso, ma garantisce gli aggiornament
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/digital-signage-con-pi-kiosk.jpg)" alt="Testare applicazioni Android" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/digital-signage-con-pi-kiosk.jpg)" alt="Streaming video con ffserver su raspberrypi" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -629,7 +665,7 @@ Istriversi a questo servizio è un po macchinoso, ma garantisce gli aggiornament
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/hotspot-wifi-con-raspberry-pi.jpg)" alt="Testare applicazioni Android" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/hotspot-wifi-con-raspberry-pi.jpg)" alt="Streaming video con ffserver su raspberrypi" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
