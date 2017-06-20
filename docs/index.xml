@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-419</language>
     <copyright>Powered by [Hugo](//gohugo.io)</copyright>
-    <lastBuildDate>Sat, 27 May 2017 23:35:16 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 20 Jun 2017 22:11:56 +0200</lastBuildDate>
     
 	<atom:link href="http://www.stefanoteodorani.it/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Syncthing su Raspberrypi</title>
+      <link>http://www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/</link>
+      <pubDate>Tue, 20 Jun 2017 22:11:56 +0200</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/</guid>
+      <description>&lt;p&gt;Btsync era veramente un bel programma, ma dopo aver fatto venire l&amp;rsquo;acquolina in bocca l&amp;rsquo;hanno messo a pagamento.
+La cosa peggiore tuttavia, restava il fatto che non fosse opensource.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Oracle mail spooler</title>

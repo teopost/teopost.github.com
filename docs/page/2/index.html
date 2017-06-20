@@ -34,7 +34,7 @@
 
 
 
-<meta property="og:updated_time" content="2017-05-20T18:03:03&#43;02:00"/>
+<meta property="og:updated_time" content="2017-05-20T20:50:06&#43;02:00"/>
 
 
 
@@ -181,7 +181,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        17
+        18
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -269,6 +269,159 @@
 
     <section id="main">
     
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+            <a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" itemprop="url">
+                <img src="http://www.stefanoteodorani.it/banner/digital-signage-con-pi-kiosk.jpg" class="article-banner">
+            
+            </a>
+
+            <header class="article-header">
+    <a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/">
+    <h1 class="article-title" itemprop="name">
+        Digital signage con Pi-Kiosk
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-05-20 20:50:06 &#43;0200 CEST" itemprop="datePublished">20-05-2017</time>
+            &middot;
+            723
+            words
+            &middot;
+            4
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">linux</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/raspberry">raspberry</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    Conosco Luigi. Ha una agenzia di viaggi a Rimini, e un&rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.</p>
+
+<p>E&rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico <a href="https://www.sergiogridelli.it/">Sergio</a> gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.</p>
+
+<p>
+                    <br>
+                </p>
+                <p class="article-more-link">
+                    <a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/">
+                        Read more
+                    </a>
+                </p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" data-id="cd47f510fcce96e77bf972b13d2f628c" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
     
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
@@ -877,159 +1030,6 @@ Per fortuna la regione Emilia Romagna espone tutte queste informazioni sotto for
         </div>
     </article>
     
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-            <a href="http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/" itemprop="url">
-                <img src="http://www.stefanoteodorani.it/banner/usare-mkvextract.png" class="article-banner">
-            
-            </a>
-
-            <header class="article-header">
-    <a href="http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/">
-    <h1 class="article-title" itemprop="name">
-        Usare mkvextract
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2017-02-17 21:46:48 &#43;0100 CET" itemprop="datePublished">17-02-2017</time>
-            &middot;
-            177
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">linux</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/ubuntu">ubuntu</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    mkvextract è un tool per manipolare file mkv da linea di comando.
-sudo apt-get install -y mkvtoolnix mkvtoolnix-gui sudo apt-get install -y libdca-utils aften wget <a href="https://github.com/JakeWharton/mkvdts2ac3/raw/master/mkvdts2ac3.sh">https://github.com/JakeWharton/mkvdts2ac3/raw/master/mkvdts2ac3.sh</a> chmod 777 mkvdts2ac3.sh &amp;&amp; sudo mv mkvdts2ac3.sh /usr/bin/  Alcuni esempi Creare la traccia AC3 nuova ed eliminare la DTS:
-mkvdts2ac3.sh -n Some.Random.Movie.mkv  Note:
- <a href="http://www.bunkus.org/videotools/mkvtoolnix/doc/mkvpropedit.html">http://www.bunkus.org/videotools/mkvtoolnix/doc/mkvpropedit.html</a> <a href="http://linux.die.net/man/1/mkvextract">http://linux.die.net/man/1/mkvextract</a>  Cambiare il flag default dalla prima alla seconda traccia
-mkvpropedit Che\ bella\ giornata\ (copia).mkv &ndash;edit track:2 &ndash;set flag-default=0 &ndash;edit track:3 &ndash;set flag-default=1  Cambiare il flag forced a true nella seconda traccia audio
-                    <br>
-                </p>
-                <p class="article-more-link">
-                    <a href="http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/">
-                        Read more
-                    </a>
-                </p>
-            </div>
-            <footer class="article-footer">
-    <a data-url="http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/" data-id="b5b42b4ba2240a5edbae327e9cbd74bc" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-        </div>
-    </article>
-    
 
     <nav id="page-nav">
 
@@ -1057,6 +1057,32 @@ mkvpropedit Che\ bella\ giornata\ (copia).mkv &ndash;edit track:2 &ndash;set fla
     </h3>
     <div class="widget">
         <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/syncthing-su-raspberrypi.png)" alt="stefanoteodorani.it" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/" class="title">Syncthing su Raspberrypi</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-06-20 22:11:56 &#43;0200 CEST" itemprop="datePublished">20-06-2017</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1162,32 +1188,6 @@ mkvpropedit Che\ bella\ giornata\ (copia).mkv &ndash;edit track:2 &ndash;set fla
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" class="thumbnail">
-                    
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/digital-signage-con-pi-kiosk.jpg)" alt="stefanoteodorani.it" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">
-                        linux
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" class="title">Digital signage con Pi-Kiosk</a></p>
-                    <p class="item-date">
-                        <time datetime="2017-05-20 20:50:06 &#43;0200 CEST" itemprop="datePublished">20-05-2017</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -1214,7 +1214,7 @@ mkvpropedit Che\ bella\ giornata\ (copia).mkv &ndash;edit track:2 &ndash;set fla
                 <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/linux">
                     linux
                 </a>
-                <span class="category-list-count">9</span>
+                <span class="category-list-count">10</span>
             </li>
             
             <li class="category-list-item">
@@ -1303,7 +1303,7 @@ mkvpropedit Che\ bella\ giornata\ (copia).mkv &ndash;edit track:2 &ndash;set fla
                 <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/raspberry">
                     raspberry
                 </a>
-                <span class="category-list-count">7</span>
+                <span class="category-list-count">8</span>
             </li>
             
             <li class="category-list-item">
