@@ -160,7 +160,8 @@ Riferimenti
 * http://raspberrypi.stackexchange.com/questions/8698/how-can-my-raspberry-pi-turn-on-off-my-samsung-tv
 
 ## Aggiornamento del 20 maggio 2017
-Btsync è morto. Poco male. Sostituitelo con https://syncthing.net
+Btsync è morto. Poco male. [Sostituitelo con syncthing]({{< ref "syncthing-su-raspberrypi.md" >}})
+
 
 {{% button href="https://github.com/teopost/pi-kiosk" icon="fa fa-github" %}}Get source code from Git-Hub{{% /button %}}
 <br/>
