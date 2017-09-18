@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on stefanoteodorani.it</title>
+    <link>http://www.stefanoteodorani.it/tags/git/</link>
+    <description>Recent content in Git on stefanoteodorani.it</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-419</language>
+    <copyright>Powered by [Hugo](//gohugo.io)</copyright>
+    <lastBuildDate>Sun, 17 Sep 2017 12:52:00 +0100</lastBuildDate>
+    
+	<atom:link href="http://www.stefanoteodorani.it/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git checkout di una specifica sottocartella</title>
+      <link>http://www.stefanoteodorani.it/2017/09/17/git-checkout-di-una-specifica-sottocartella/</link>
+      <pubDate>Sun, 17 Sep 2017 12:52:00 +0100</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2017/09/17/git-checkout-di-una-specifica-sottocartella/</guid>
+      <description>Esiste un comando di git chiamato sparse checkout che permette di popolare la propria cartella di lavoro con una specifica cartella del repository. Utile perché non si è costretti a scaricare il contenuto di tutto il repository git.
+Supponiamo di avere su github un repository al cui interno è contenuta la sottocartella database. Devo scaricare tutti i files SQL contenuti nella cartella. Come posso fare :
+Ecco come:
+mkdir databas cd database/ # Inizializzo il repo vuoto git init # Aggiungo il remote origin git remote add origin -f https://github.</description>
+    </item>
+    
+  </channel>
+</rss>
