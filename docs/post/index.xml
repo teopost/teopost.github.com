@@ -7,12 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-419</language>
     <copyright>Powered by [Hugo](//gohugo.io)</copyright>
+<<<<<<< HEAD
     <lastBuildDate>Sun, 17 Sep 2017 12:52:00 +0100</lastBuildDate>
+=======
+    <lastBuildDate>Tue, 20 Jun 2017 22:11:56 +0200</lastBuildDate>
+>>>>>>> 2c7933931c7f99a34862758ebe7304f4673946a4
     
 	<atom:link href="http://www.stefanoteodorani.it/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+<<<<<<< HEAD
       <title>Git checkout di una specifica sottocartella</title>
       <link>http://www.stefanoteodorani.it/2017/09/17/git-checkout-di-una-specifica-sottocartella/</link>
       <pubDate>Sun, 17 Sep 2017 12:52:00 +0100</pubDate>
@@ -22,6 +27,52 @@
 Supponiamo di avere su github un repository al cui interno è contenuta la sottocartella database. Devo scaricare tutti i files SQL contenuti nella cartella. Come posso fare :
 Ecco come:
 mkdir databas cd database/ # Inizializzo il repo vuoto git init # Aggiungo il remote origin git remote add origin -f https://github.</description>
+=======
+      <title>Syncthing su Raspberrypi</title>
+      <link>http://www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/</link>
+      <pubDate>Tue, 20 Jun 2017 22:11:56 +0200</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/</guid>
+      <description>&lt;p&gt;Btsync era veramente un bel programma, ma dopo aver fatto venire l&amp;rsquo;acquolina in bocca l&amp;rsquo;hanno messo a pagamento.
+La cosa peggiore tuttavia, restava il fatto che non fosse opensource.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Oracle mail spooler</title>
+      <link>http://www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/</link>
+      <pubDate>Sat, 27 May 2017 23:35:16 +0200</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/</guid>
+      <description>&lt;p&gt;Può capitare di dover mandare mail da Oracle ? Si. Ho fatto questo script per l&amp;rsquo;invio di mail da una istanza Oracle per risolvere un problema immediato, e siccome non c&amp;rsquo;è niente di più definitivo delle cose provvisorie, eccolo qui come se fosse un prodotto finito.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Streaming video con ffserver su raspberrypi</title>
+      <link>http://www.stefanoteodorani.it/2017/05/27/streaming-video-con-ffserver-su-raspberrypi/</link>
+      <pubDate>Sat, 27 May 2017 16:50:58 +0200</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2017/05/27/streaming-video-con-ffserver-su-raspberrypi/</guid>
+      <description>&lt;p&gt;Recentemento ho scritto un paio di righe su come compilare e &lt;a href=&#34;http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/&#34;&gt;installare ffmpeg sulla Raspberry Pi&lt;/a&gt;.
+Quando si installa ffmpeg viene installato anche un tool fighissimo chiamato ffserver che permette di fare lo streming di contenuto audio e/o video su internet. Vediamo come:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installare FFmpeg sulla Raspberry Pi 3</title>
+      <link>http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/</link>
+      <pubDate>Sat, 27 May 2017 16:18:40 +0200</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/</guid>
+      <description>&lt;p&gt;Purtroppo installare FFmpeg sulla Raspberry non è mai una cosa semplice. Non si capisce per quale motivo non si decidono a mettere i compilati nel repository.
+Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+>>>>>>> 2c7933931c7f99a34862758ebe7304f4673946a4
     </item>
     
     <item>
@@ -49,7 +100,7 @@ mkdir databas cd database/ # Inizializzo il repo vuoto git init # Aggiungo il re
       <pubDate>Sat, 20 May 2017 20:50:06 +0200</pubDate>
       
       <guid>http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/</guid>
-      <description>&lt;p&gt;Conosco Luca. Ha una agenzia di viaggi a Rimini, e un&amp;rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.&lt;/p&gt;
+      <description>&lt;p&gt;Conosco Luigi. Ha una agenzia di viaggi a Rimini, e un&amp;rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.&lt;/p&gt;
 
 &lt;p&gt;E&amp;rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico &lt;a href=&#34;https://www.sergiogridelli.it/&#34;&gt;Sergio&lt;/a&gt; gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.&lt;/p&gt;
 

@@ -10,7 +10,7 @@ title = "Digital signage con Pi-Kiosk"
 
 +++
 
-Conosco Luca. Ha una agenzia di viaggi a Rimini, e un'anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.
+Conosco Luigi. Ha una agenzia di viaggi a Rimini, e un'anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.
 
 E' fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico [Sergio](https://www.sergiogridelli.it/) gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.
 
@@ -160,7 +160,8 @@ Riferimenti
 * http://raspberrypi.stackexchange.com/questions/8698/how-can-my-raspberry-pi-turn-on-off-my-samsung-tv
 
 ## Aggiornamento del 20 maggio 2017
-Btsync è morto. Poco male. Sostituitelo con https://syncthing.net
+Btsync è morto. Poco male. [Sostituitelo con syncthing]({{< ref "syncthing-su-raspberrypi.md" >}})
+
 
 {{% button href="https://github.com/teopost/pi-kiosk" icon="fa fa-github" %}}Get source code from Git-Hub{{% /button %}}
 <br/>
