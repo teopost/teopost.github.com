@@ -7,17 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es-419</language>
     <copyright>Powered by [Hugo](//gohugo.io)</copyright>
-<<<<<<< HEAD
     <lastBuildDate>Sun, 17 Sep 2017 12:52:00 +0100</lastBuildDate>
-=======
-    <lastBuildDate>Tue, 20 Jun 2017 22:11:56 +0200</lastBuildDate>
->>>>>>> 2c7933931c7f99a34862758ebe7304f4673946a4
     
 	<atom:link href="http://www.stefanoteodorani.it/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-<<<<<<< HEAD
       <title>Git checkout di una specifica sottocartella</title>
       <link>http://www.stefanoteodorani.it/2017/09/17/git-checkout-di-una-specifica-sottocartella/</link>
       <pubDate>Sun, 17 Sep 2017 12:52:00 +0100</pubDate>
@@ -27,7 +22,9 @@
 Supponiamo di avere su github un repository al cui interno è contenuta la sottocartella database. Devo scaricare tutti i files SQL contenuti nella cartella. Come posso fare :
 Ecco come:
 mkdir databas cd database/ # Inizializzo il repo vuoto git init # Aggiungo il remote origin git remote add origin -f https://github.</description>
-=======
+    </item>
+    
+    <item>
       <title>Syncthing su Raspberrypi</title>
       <link>http://www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/</link>
       <pubDate>Tue, 20 Jun 2017 22:11:56 +0200</pubDate>
@@ -72,7 +69,6 @@ Quando si installa ffmpeg viene installato anche un tool fighissimo chiamato ffs
 Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
->>>>>>> 2c7933931c7f99a34862758ebe7304f4673946a4
     </item>
     
     <item>
