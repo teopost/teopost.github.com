@@ -10,7 +10,7 @@ title = "Digital signage con Pi-Kiosk"
 
 +++
 
-Conosco Luigi. Ha una agenzia di viaggi a Rimini, e un'anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.
+Conosco Luca. Ha una agenzia di viaggi a Rimini, e un'anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.
 
 E' fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico [Sergio](https://www.sergiogridelli.it/) gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.
 
