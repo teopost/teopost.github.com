@@ -16,7 +16,7 @@ E' fortunato. Il televisore che ha comprato, dispone di una funzione di slidesho
 
 <!--more-->
 
-Purtroppo però, dopo aver provato per un po questa soluzione, sono venuto fuori alcuni problemi.
+Purtroppo però, dopo aver provato per un po questa soluzione, sono venuti fuori alcuni problemi.
 
 * **Non era possibile copiare le immagini da remoto.** Per farlo bisognava essere fisicamente sul posto, scaricare le immagini che Sergio gli mandava per posta, copiare le immagini sulla chiavetta, mettere la chiavetta nel televisore. Inoltre durante questa operazione il televisore non proiettava niente.
 
