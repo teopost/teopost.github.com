@@ -19,8 +19,8 @@ Nei database Oracle, i campi che possono contenere dati stringa possono assumere
 Ma che differenza c'è ?
 <!--more-->
 
-Se un campo viene definito ```VARCHAR2(20 byte)```, questo vuol dire che Oracle può memorizzare al massimo 11 byte in quel campo.
-Ma 11 byte non corrispondono a 11 caratteri nel caso in cui il database debba memorizzare dati in formato UTF-8.
+Se un campo viene definito ```VARCHAR2(20 byte)```, questo vuol dire che Oracle può memorizzare al massimo 20 byte in quel campo.
+Ma 20 byte non corrispondono a 20 caratteri nel caso in cui il database debba memorizzare dati in formato UTF-8.
 
 Se invece si definisce un campo ```VARCHAR2(20 char)```, oracle sa che deve essere in grado di memorizzare 20 caratteri. In questo caso non è importante quanti byte sono necessari per memorizzare un singolo carattere (un singolo carattere UTF-8 può occupare 4 byte).
 
