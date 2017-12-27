@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Oracle Char vs Bytes &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.29" />
+    <meta name="generator" content="Hugo 0.31.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -42,6 +42,7 @@ Ma che differenza c&rsquo;è ?
 
 
 <meta property="article:published_time" content="2017-05-24T22:23:55&#43;02:00"/>
+
 <meta property="article:modified_time" content="2017-05-24T22:23:55&#43;02:00"/>
 
 
@@ -70,6 +71,7 @@ Ma che differenza c&rsquo;è ?
 ">
 
 
+<meta itemprop="datePublished" content="2017-05-24T22:23:55&#43;02:00" />
 <meta itemprop="dateModified" content="2017-05-24T22:23:55&#43;02:00" />
 <meta itemprop="wordCount" content="246">
 
@@ -381,8 +383,8 @@ Ma che differenza c&rsquo;è ?
 <p>Ma che differenza c&rsquo;è ?
 </p>
 
-<p>Se un campo viene definito <code>VARCHAR2(20 byte)</code>, questo vuol dire che Oracle può memorizzare al massimo 11 byte in quel campo.
-Ma 11 byte non corrispondono a 11 caratteri nel caso in cui il database debba memorizzare dati in formato UTF-8.</p>
+<p>Se un campo viene definito <code>VARCHAR2(20 byte)</code>, questo vuol dire che Oracle può memorizzare al massimo 20 byte in quel campo.
+Ma 20 byte non corrispondono a 20 caratteri nel caso in cui il database debba memorizzare dati in formato UTF-8.</p>
 
 <p>Se invece si definisce un campo <code>VARCHAR2(20 char)</code>, oracle sa che deve essere in grado di memorizzare 20 caratteri. In questo caso non è importante quanti byte sono necessari per memorizzare un singolo carattere (un singolo carattere UTF-8 può occupare 4 byte).</p>
 
