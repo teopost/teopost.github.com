@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-419">
 <head>
-    <title>Raspberry &middot; stefanoteodorani.it</title>
+    <title>Rete non funzionante con CentOS su VirtualBox &middot; stefanoteodorani.it</title>
     <meta name="generator" content="Hugo 0.31.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,10 +10,7 @@
       <meta name="description" content="">
     
     
-      <link href="http://www.stefanoteodorani.it/tags/raspberry/index.xml" rel="alternate" type="application/rss+xml" title="stefanoteodorani.it" />
-      <link href="http://www.stefanoteodorani.it/tags/raspberry/index.xml" rel="feed" type="application/rss+xml" title="stefanoteodorani.it" />
-    
-    <link rel="canonical" href="http://www.stefanoteodorani.it/tags/raspberry/"/>
+    <link rel="canonical" href="http://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/"/>
     <link rel="icon" href="http://www.stefanoteodorani.it/favicon.ico">
     <link rel="apple-touch-icon" href="http://www.stefanoteodorani.it/apple-touch-icon.png"/>
     <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/style.css">
@@ -27,14 +24,18 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Raspberry" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://www.stefanoteodorani.it/tags/raspberry/" />
+    <meta property="og:title" content="Rete non funzionante con CentOS su VirtualBox" />
+<meta property="og:description" content="Ho scaricato da osboxes.org una VM con dentro CentoOS (sono pigro e se posso uso cose già fatte). Ho avviato la macchina virtuale e ho provato a navigare su internet. Non funzionava. Eseguendo il comando ifconfig non appariva la scheda di rete. Eppure sembrava tutto configurato bene. Ecco come ho soluzionato, come direbbe il mio amico coniglio.
+[teopost@localhost ~]$ ifconfig ens32: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt; mtu 1500 ether 00:0c:29:68:22:e2 txqueuelen 1000 (Ethernet) RX packets 0 bytes 0 (0." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/" />
 
 
 
-<meta property="og:updated_time" content="2017-01-09T16:02:00&#43;01:00"/>
+<meta property="article:published_time" content="2017-12-28T21:36:13&#43;01:00"/>
+
+<meta property="article:modified_time" content="2017-12-28T21:36:13&#43;01:00"/>
+
 
 
 
@@ -47,12 +48,22 @@
 
     
     
-<meta itemprop="name" content="Raspberry">
-<meta itemprop="description" content="">
+<meta itemprop="name" content="Rete non funzionante con CentOS su VirtualBox">
+<meta itemprop="description" content="Ho scaricato da osboxes.org una VM con dentro CentoOS (sono pigro e se posso uso cose già fatte). Ho avviato la macchina virtuale e ho provato a navigare su internet. Non funzionava. Eseguendo il comando ifconfig non appariva la scheda di rete. Eppure sembrava tutto configurato bene. Ecco come ho soluzionato, come direbbe il mio amico coniglio.
+[teopost@localhost ~]$ ifconfig ens32: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt; mtu 1500 ether 00:0c:29:68:22:e2 txqueuelen 1000 (Ethernet) RX packets 0 bytes 0 (0.">
 
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Raspberry"/>
-<meta name="twitter:description" content=""/>
+<meta itemprop="datePublished" content="2017-12-28T21:36:13&#43;01:00" />
+<meta itemprop="dateModified" content="2017-12-28T21:36:13&#43;01:00" />
+<meta itemprop="wordCount" content="474">
+
+
+
+<meta itemprop="keywords" content="virtual-machines," />
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Rete non funzionante con CentOS su VirtualBox"/>
+<meta name="twitter:description" content="Ho scaricato da osboxes.org una VM con dentro CentoOS (sono pigro e se posso uso cose già fatte). Ho avviato la macchina virtuale e ho provato a navigare su internet. Non funzionava. Eseguendo il comando ifconfig non appariva la scheda di rete. Eppure sembrava tutto configurato bene. Ecco come ho soluzionato, come direbbe il mio amico coniglio.
+[teopost@localhost ~]$ ifconfig ens32: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt; mtu 1500 ether 00:0c:29:68:22:e2 txqueuelen 1000 (Ethernet) RX packets 0 bytes 0 (0."/>
 <meta name="twitter:site" content="@teopost"/>
 
     
@@ -67,7 +78,7 @@
 
 
 <div id="container">
-    <header id="header">
+	<header id="header">
   <div id="header-main" class="header-inner">
     <div class="outer">
       <a href="http://www.stefanoteodorani.it/" id="logo">
@@ -167,8 +178,10 @@
   </div>
 </header>
 
-    <div class="outer">
-        <aside id="profile">
+   	
+   	<div class="outer">
+   		
+	    <aside id="profile">
   <div class="inner profile-inner">
     <div class="base-info profile-block">
       <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
@@ -269,95 +282,296 @@
   </div>
 </aside>
 
-        <section id="main">
-            <section class="archives-wrap">
-                <div class="archive-category-wrap">
-                    <span class="archive-category">Raspberry</span>
-                </div>
-                <div class="archives">
-                    
-                    
-                        <article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
-        <div class="archive-article-thumbnail">
+	    
+
+	    
+<section id="main">
+
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
             
-            <a href="http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/" class="thumbnail">
-                <span style="background-image:url(http://www.stefanoteodorani.it/banner/ip-statico-su-raspberry.jpg)" alt="IP Statico su Raspberry" class="thumbnail-image"></span>
-            </a>
+                <img src="http://www.stefanoteodorani.it/banner/rete-non-funzionante-con-centos-su-virtual-box.png" class="article-banner">
             
+
+            <header class="article-header">
+    <a href="http://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/">
+    <h1 class="article-title" itemprop="name">
+        Rete non funzionante con CentOS su VirtualBox
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-12-28 21:36:13 &#43;0100 CET" itemprop="datePublished">28-12-2017</time>
+            &middot;
+            474
+            words
+            &middot;
+            3
+            minute read
         </div>
-        <header class="archive-article-header">
-            <h1 itemprop="name">
-            <a class="archive-article-title" href="http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/">IP Statico su Raspberry</a>
-            </h1>
-            <div class="archive-article-date">
-                <i class="fa fa-calendar"></i>
-                <time datetime="2017-01-09 16:02:00 &#43;0100 CET" itemprop="datePublished">09-01-2017</time>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">linux</a>
+                
+                
             </div>
-        </header>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/virtual-machines">virtual-machines</a>
+                
+                
+            </div>
+            
+        
     </div>
-</article>
- 
-                    
-                        <article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
-        <div class="archive-article-thumbnail">
-            
-            <a href="http://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/" class="thumbnail">
-                <span style="background-image:url(http://www.stefanoteodorani.it/banner/wordpress-su-raspberry.png)" alt="Wordpress su Raspberry" class="thumbnail-image"></span>
-            </a>
-            
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                
+
+<p>Ho scaricato da <a href="http://www.osboxes.org/">osboxes.org</a> una VM con dentro CentoOS (sono pigro e se posso uso cose già fatte). Ho avviato la macchina virtuale e ho provato a navigare su internet. Non funzionava.
+Eseguendo il comando ifconfig non appariva la scheda di rete. Eppure sembrava tutto configurato bene.
+Ecco come ho <a href="http://anonimoconiglio.blogspot.it/">soluzionato</a>, come direbbe il mio amico coniglio.</p>
+
+<pre><code class="language-bash">[teopost@localhost ~]$ ifconfig
+ens32: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+ether 00:0c:29:68:22:e2  txqueuelen 1000  (Ethernet)
+RX packets 0  bytes 0 (0.0 B)
+RX errors 0  dropped 0  overruns 0  frame 0
+TX packets 0  bytes 0 (0.0 B)
+TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536
+inet 127.0.0.1  netmask 255.0.0.0
+inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;
+loop  txqueuelen 0  (Local Loopback)
+RX packets 642  bytes 55820 (54.5 KiB)
+RX errors 0  dropped 0  overruns 0  frame 0
+TX packets 642  bytes 55820 (54.5 KiB)
+TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+[teopost@localhost ~]$
+</code></pre>
+
+<h2 id="soluzione">Soluzione</h2>
+
+<ul>
+<li>Aprire il terminale</li>
+<li>Diventare root (su - root)</li>
+<li>Eseguire <code>dhclient –v</code></li>
+</ul>
+
+<pre><code class="language-bash">[root@localhost network-scripts]# dhclient -v
+Internet Systems Consortium DHCP Client 4.2.5 Copyright 2004-2013
+Internet Systems Consortium. All rights reserved. For info, please visit https://www.isc.org/software/dhcp/ Listening on LPF/ens32/00:0c:29:68:22:e2
+Sending on   LPF/ens32/00:0c:29:68:22:e2
+Sending on   Socket/fallback DHCPDISCOVER on ens32 to 255.255.255.255 port 67 interval 4 (xid=0x433a9e33) DHCPREQUEST on ens32 to 255.255.255.255 port 67 (xid=0x433a9e33)
+DHCPOFFER from 172.16.179.254 DHCPACK from 172.16.179.254 (xid=0x433a9e33) bound to 172.16.179.136 -- renewal in 822 seconds.
+[root@localhost network-scripts]#
+</code></pre>
+
+<ul>
+<li>Funziona. Se ora eseguo <code>ifconfig</code></li>
+</ul>
+
+<pre><code class="language-bash">[root@localhost network-scripts]# ifconfig
+ens32: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+inet 172.16.179.136  netmask 255.255.255.0  broadcast 172.16.179.255
+ether 00:0c:29:68:22:e2  txqueuelen 1000  (Ethernet)
+RX packets 11  bytes 1255 (1.2 KiB)
+RX errors 0  dropped 0  overruns 0  frame 0
+TX packets 23  bytes 3536 (3.4 KiB)
+TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536
+inet 127.0.0.1  netmask 255.0.0.0
+inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;
+loop  txqueuelen 0  (Local Loopback)
+RX packets 770  bytes 66956 (65.3 KiB)
+RX errors 0  dropped 0  overruns 0  frame 0
+TX packets 770  bytes 66956 (65.3 KiB)
+TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+</code></pre>
+
+<h2 id="eseguire-il-comando-allo-startup">Eseguire il comando allo startup</h2>
+
+<p>Purtroppo se spegnete la macchina virtuale vi accorgerete che questa soluzione (se così la vogliamo chiamare) non è persistente.
+Se si vuole rendere definitiva seguire i seguenti passi:</p>
+
+<ul>
+<li>Andare in <code>/etc/init.d</code></li>
+<li>Creare un file chiamato <code>net-autostart</code></li>
+<li>Incollarci dentro sta roba:</li>
+</ul>
+
+<pre><code class="language-bash">#!/bin/bash
+# Fix for &quot;No Internet Connection&quot;
+#
+### BEGIN INIT INFO
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+### END INIT INFO
+dhclient -v
+</code></pre>
+
+<ol>
+<li>Salvare il file</li>
+<li>Cambiare i permessi del file (<code>chmod 755 net-autostart</code>)</li>
+<li>Aggiungere l&rsquo;esecuzione automatica dello script (<code>chkconfig --add net-autostart</code>)</li>
+<li>Fare un bel reboot</li>
+</ol>
+
+<h2 id="riferimenti">Riferimenti</h2>
+
+<p>Questo articolo non è farina del mio sacco.
+Ho avuto il problema, ho gugolato un po e ho trovato la soluzione che ho riportato qui come mio appunto.</p>
+
+<ul>
+<li><a href="https://geekflare.com/no-internet-connection-from-vmware-with-centos-7/">https://geekflare.com/no-internet-connection-from-vmware-with-centos-7/</a></li>
+</ul>
+
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/" data-id="c7d52413215745469ce9b506b200e4c1" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
         </div>
-        <header class="archive-article-header">
-            <h1 itemprop="name">
-            <a class="archive-article-title" href="http://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/">Wordpress su Raspberry</a>
-            </h1>
-            <div class="archive-article-date">
-                <i class="fa fa-calendar"></i>
-                <time datetime="2017-01-08 16:15:00 &#43;0100 CET" itemprop="datePublished">08-01-2017</time>
-            </div>
-        </header>
-    </div>
-</article>
- 
-                    
-                        <article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
-        <div class="archive-article-thumbnail">
-            
-            <a href="http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/" class="thumbnail">
-                <span style="background-image:url(http://www.stefanoteodorani.it/banner/installare-lamp-raspberry.png)" alt="LAMP sulla Raspberry" class="thumbnail-image"></span>
-            </a>
-            
-        </div>
-        <header class="archive-article-header">
-            <h1 itemprop="name">
-            <a class="archive-article-title" href="http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/">LAMP sulla Raspberry</a>
-            </h1>
-            <div class="archive-article-date">
-                <i class="fa fa-calendar"></i>
-                <time datetime="2017-01-07 16:10:00 &#43;0100 CET" itemprop="datePublished">07-01-2017</time>
-            </div>
-        </header>
-    </div>
-</article>
- 
-                    
-                </div>
-            </section>
-            <nav id="page-nav">
+
+        
+<nav id="article-nav">
+    
+    <a href="http://www.stefanoteodorani.it/2017/09/17/git-checkout-di-una-specifica-sottocartella/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Git checkout di una specifica sottocartella</div>
+    </a>
+    
 
     
-        <a class="extend prev" rel="prev" href="http://www.stefanoteodorani.it/tags/raspberry/">
-            « Prev
-        </a>
-    
-    
-
 </nav>
 
-        </section>
-        <aside id="sidebar">
+
+    </article>
+
+    
+    <section id="comments">
+        <div id="disqus_thread">
+            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "stefanoteodorani" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </section>
+    
+</section>
+
+
+	    
+	    <aside id="sidebar">
     
 <div class="widget-wrap">
     <h3 class="widget-title">
@@ -370,7 +584,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/rete-non-funzionante-con-centos-su-virtual-box.png)" alt="Raspberry" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/rete-non-funzionante-con-centos-su-virtual-box.png)" alt="Rete non funzionante con CentOS su VirtualBox" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -396,7 +610,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/09/17/git-checkout-di-una-specifica-sottocartella/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/git-checkout-for-specific-subfolder.png)" alt="Raspberry" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/git-checkout-for-specific-subfolder.png)" alt="Rete non funzionante con CentOS su VirtualBox" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -422,7 +636,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/syncthing-su-raspberrypi.png)" alt="Raspberry" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/syncthing-su-raspberrypi.png)" alt="Rete non funzionante con CentOS su VirtualBox" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -448,7 +662,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-mail-spooler.png)" alt="Raspberry" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-mail-spooler.png)" alt="Rete non funzionante con CentOS su VirtualBox" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -474,7 +688,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/05/27/streaming-video-con-ffserver-su-raspberrypi/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/streaming-video-con-ffserver-su-raspberrypi.jpg)" alt="Raspberry" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/streaming-video-con-ffserver-su-raspberrypi.jpg)" alt="Rete non funzionante con CentOS su VirtualBox" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -699,7 +913,8 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
 
-    </div>
+	    
+	</div>
 </div>
 
 <footer id="footer">
