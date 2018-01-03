@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://www.stefanoteodorani.it/2018/01/02/usare-file-ppk-con-ssh-sul-mac/</loc>
+    <lastmod>2018-01-02T22:45:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/</loc>
     <lastmod>2017-12-28T21:36:13+01:00</lastmod>
   </url>
@@ -182,8 +187,14 @@
   </url>
   
   <url>
+    <loc>http://www.stefanoteodorani.it/tags/osx/</loc>
+    <lastmod>2018-01-02T22:45:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.stefanoteodorani.it/post/</loc>
-    <lastmod>2017-12-28T21:36:13+01:00</lastmod>
+    <lastmod>2018-01-02T22:45:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -195,7 +206,7 @@
   
   <url>
     <loc>http://www.stefanoteodorani.it/categories/system/</loc>
-    <lastmod>2016-12-28T22:45:00+01:00</lastmod>
+    <lastmod>2018-01-02T22:45:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -219,7 +230,7 @@
   
   <url>
     <loc>http://www.stefanoteodorani.it/</loc>
-    <lastmod>2017-12-28T21:36:13+01:00</lastmod>
+    <lastmod>2018-01-02T22:45:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   

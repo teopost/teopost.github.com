@@ -1,0 +1,4 @@
+19:[1/2/18 9:16:25:472 CST] 00000038 CreditCardSer E com.luxottica.rayban.payment.services.CreditCardServiceImpl doAuthorize Not able to connect to Server Cybersource ClientExceptionRead timed out
+25:[1/2/18 9:16:55:901 CST] 00000038 CreditCardSer E com.luxottica.rayban.payment.services.CreditCardServiceImpl doAuthorize Not able to connect to Server Cybersource ClientExceptionRead timed out
+20:[1/2/18 9:16:25:472 CST] 00000038 CyberSourceFa E com.luxottica.rayban.payment.facade.CyberSourceFacadeImpl authorize 15444036Credit Card Auth: No Reply Received From CS
+26:[1/2/18 9:16:55:902 CST] 00000038 CyberSourceFa E com.luxottica.rayban.payment.facade.CyberSourceFacadeImpl authorize 15444036Credit Card Auth: No Reply Received From CS
