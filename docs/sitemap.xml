@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/</loc>
+    <lastmod>2018-03-30T09:18:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/</loc>
     <lastmod>2018-03-29T09:18:00+01:00</lastmod>
   </url>
@@ -145,7 +150,7 @@
   
   <url>
     <loc>http://www.stefanoteodorani.it/categories/database/</loc>
-    <lastmod>2018-03-29T09:18:00+01:00</lastmod>
+    <lastmod>2018-03-30T09:18:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -187,7 +192,7 @@
   
   <url>
     <loc>http://www.stefanoteodorani.it/tags/oracle/</loc>
-    <lastmod>2018-03-29T09:18:00+01:00</lastmod>
+    <lastmod>2018-03-30T09:18:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -199,7 +204,7 @@
   
   <url>
     <loc>http://www.stefanoteodorani.it/post/</loc>
-    <lastmod>2018-03-29T09:18:00+01:00</lastmod>
+    <lastmod>2018-03-30T09:18:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -235,7 +240,7 @@
   
   <url>
     <loc>http://www.stefanoteodorani.it/</loc>
-    <lastmod>2018-03-29T09:18:00+01:00</lastmod>
+    <lastmod>2018-03-30T09:18:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   

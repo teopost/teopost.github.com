@@ -6,10 +6,22 @@
     <description>Recent content on stefanoteodorani.it</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-419</language>
-    <lastBuildDate>Thu, 29 Mar 2018 09:18:00 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 30 Mar 2018 09:18:00 +0100</lastBuildDate>
     
 	<atom:link href="http://www.stefanoteodorani.it/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Installazione client Oracle 12.x su Red-Hat</title>
+      <link>http://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/</link>
+      <pubDate>Fri, 30 Mar 2018 09:18:00 +0100</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/</guid>
+      <description>Introduzione Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.
+Nell&amp;rsquo;Instant client non sono compresi una serie di tool tipicamente presenti in una installazione full (es: exp, imp, sqlldr, tnsping).
+Per installare Oracle Instant client su una macchina Red-Hat si possono usare 3 modi diversi.
+ Installazione dei pacchetti rpm Installazione manuale con lo zip del client Installazione del modulo client con il setup di Oracle Server Questo documento descrive l&amp;rsquo;installazione del client utilizzando i pacchetti rpm.</description>
+    </item>
     
     <item>
       <title>Oracle Transparent Data Encryption (TDE)</title>
