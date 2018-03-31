@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.31.1" />
+    <meta name="generator" content="Hugo 0.37.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -34,7 +34,7 @@
 
 
 
-<meta property="og:updated_time" content="2017-05-17T22:17:06&#43;02:00"/>
+<meta property="og:updated_time" content="2017-05-20T18:03:03&#43;02:00"/>
 
 
 
@@ -51,7 +51,8 @@
 <meta itemprop="description" content="">
 
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="stefanoteodorani.it"/>
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="stefanoteodorani.it"/>
 <meta name="twitter:description" content=""/>
 <meta name="twitter:site" content="@teopost"/>
 
@@ -184,7 +185,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        21
+        22
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -272,6 +273,157 @@
 
     <section id="main">
     
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+            <a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" itemprop="url">
+                <img src="http://www.stefanoteodorani.it/banner/hotspot-wifi-con-raspberry-pi.jpg" class="article-banner">
+            
+            </a>
+
+            <header class="article-header">
+    <a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/">
+    <h1 class="article-title" itemprop="name">
+        Hotspot wifi con Raspberry PI 3
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-05-20 18:03:03 &#43;0200 CEST" itemprop="datePublished">20-05-2017</time>
+            &middot;
+            878
+            words
+            &middot;
+            5
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">linux</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/raspberry">raspberry</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    La Raspberry PI 3 è stata finalmente dotata di una scheda wifi incorporata. Il chipset della scheda (Broadcom BCM2837) consente di configurare la scheda anche come access point. Non male !
+Vediamo come:
+
+                    <br>
+                </p>
+                <p class="article-more-link">
+                    <a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/">
+                        Read more
+                    </a>
+                </p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" data-id="a1d3ece3fd4956fd4851fb3d9630d454" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
     
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
@@ -883,161 +1035,6 @@ mkvpropedit Che\ bella\ giornata\ (copia).mkv &ndash;edit track:2 &ndash;set fla
         </div>
     </article>
     
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-            <a href="http://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/" itemprop="url">
-                <img src="http://www.stefanoteodorani.it/banner/client-oracle-sul-mac.jpg" class="article-banner">
-            
-            </a>
-
-            <header class="article-header">
-    <a href="http://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/">
-    <h1 class="article-title" itemprop="name">
-        Client Oracle sul Mac
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2017-02-16 21:36:13 &#43;0100 CET" itemprop="datePublished">16-02-2017</time>
-            &middot;
-            86
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">database</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/oracle">oracle</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    Per installare il client Oracle sul Mac, utilizzare questa procedura:
-Creare la cartella /Users/[utente]/oracle e metterci dentro:
-instantclient-basic-macos.x64-11.2.0.4.0.zip instantclient-sdk-macos.x64-11.2.0.4.0.zip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip  scompattarli
-unzip instantclient-basic-macos.x64-11.2.0.4.0.zip unzip instantclient-sdk-macos.x64-11.2.0.4.0.zip unzip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip  Andare nella cartella che lo scompattamento crea
-cd /Users/[utente]/instantclient11_2  Creare i 2 seguenti link simbolici (controllare la versione delle dll)
-ln -s libclntsh.dylib.11.1 libclntsh.dylib ln -s libocci.dylib.11.1 libocci.dylib  Eseguire la seguente fix
-curl -O <a href="https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fix_oralib.rb">https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fix_oralib.rb</a> ruby fix_oralib.rb &ndash;absolute-path  Aggiungere nel .
-                    <br>
-                </p>
-                <p class="article-more-link">
-                    <a href="http://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/">
-                        Read more
-                    </a>
-                </p>
-            </div>
-            <footer class="article-footer">
-    <a data-url="http://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/" data-id="d6ebf0d8f6a4c621198fcbbd35470b8a" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="http://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-        </div>
-    </article>
-    
 
     <nav id="page-nav">
 
@@ -1065,6 +1062,32 @@ curl -O <a href="https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fi
     </h3>
     <div class="widget">
         <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-tde-transparent-data-encryption.jpg)" alt="stefanoteodorani.it" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">
+                        database
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/" class="title">Oracle Transparent Data Encryption (TDE)</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-03-29 09:18:00 &#43;0100 &#43;0100" itemprop="datePublished">29-03-2018</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1170,32 +1193,6 @@ curl -O <a href="https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fi
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/" class="thumbnail">
-                    
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-mail-spooler.png)" alt="stefanoteodorani.it" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">
-                        database
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/" class="title">Oracle mail spooler</a></p>
-                    <p class="item-date">
-                        <time datetime="2017-05-27 23:35:16 &#43;0200 CEST" itemprop="datePublished">27-05-2017</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -1214,7 +1211,7 @@ curl -O <a href="https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fi
                 <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/database">
                     database
                 </a>
-                <span class="category-list-count">4</span>
+                <span class="category-list-count">5</span>
             </li>
             
             <li class="category-list-item">
@@ -1319,7 +1316,7 @@ curl -O <a href="https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fi
                 <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/oracle">
                     oracle
                 </a>
-                <span class="category-list-count">4</span>
+                <span class="category-list-count">5</span>
             </li>
             
             <li class="category-list-item">

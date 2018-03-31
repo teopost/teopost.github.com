@@ -6,11 +6,20 @@
     <description>Recent content in Database on stefanoteodorani.it</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-419</language>
-    <copyright>Powered by [Hugo](//gohugo.io)</copyright>
-    <lastBuildDate>Sat, 27 May 2017 23:35:16 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 29 Mar 2018 09:18:00 +0100</lastBuildDate>
     
 	<atom:link href="http://www.stefanoteodorani.it/categories/database/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Oracle Transparent Data Encryption (TDE)</title>
+      <link>http://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/</link>
+      <pubDate>Thu, 29 Mar 2018 09:18:00 +0100</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/</guid>
+      <description>Ultimamente sono tutti molto preoccupati per una cosa chiamata GDPR, una legge europea che riguarda la protezione dei dati degli utenti (era ora dico io) che descrive una serie di adempimenti, non esclusivamente tecnici, da adottare per la salvaguardia dei dati.
+Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dati, quindi se avete sui vostri server i databases dei vostri clienti, cominciate a tremare perchè le multe sono salatissime.</description>
+    </item>
     
     <item>
       <title>Oracle mail spooler</title>
