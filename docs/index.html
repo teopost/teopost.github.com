@@ -185,7 +185,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        24
+        25
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -433,6 +433,161 @@
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
             
+            <a href="http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" itemprop="url">
+                <img src="http://www.stefanoteodorani.it/banner/oracle-logo.png" class="article-banner">
+            
+            </a>
+
+            <header class="article-header">
+    <a href="http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/">
+    <h1 class="article-title" itemprop="name">
+        Spostare i redolog su Oracle 12.x
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2018-04-05 11:18:00 &#43;0100 &#43;0100" itemprop="datePublished">05-04-2018</time>
+            &middot;
+            296
+            words
+            &middot;
+            2
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">database</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/oracle">oracle</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    <h2 id="introduzione">Introduzione</h2>
+
+<p>Oggi mi è capitato di dover spostare alcuni redolog che erano stati creati in una cartella sbagliata.
+Ecco come ho fatto</p>
+
+<p></p>
+
+                    <br>
+                </p>
+                <p class="article-more-link">
+                    <a href="http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/">
+                        Read more
+                    </a>
+                </p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" data-id="d2339bbd923995259edb0eb38722ba31" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
             <a href="http://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/" itemprop="url">
                 <img src="http://www.stefanoteodorani.it/banner/oracle-logo.png" class="article-banner">
             
@@ -490,10 +645,23 @@
 
             <div class="article-entry" itemprop="articleBody">
                 <p>
-                    Introduzione Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.
-Nell&rsquo;Instant client non sono compresi una serie di tool tipicamente presenti in una installazione full (es: exp, imp, sqlldr, tnsping).
-Per installare Oracle Instant client su una macchina Red-Hat si possono usare 3 modi diversi.
- Installazione dei pacchetti rpm Installazione manuale con lo zip del client Installazione del modulo client con il setup di Oracle Server Questo documento descrive l&rsquo;installazione del client utilizzando i pacchetti rpm.
+                    <h2 id="introduzione">Introduzione</h2>
+
+<p>Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.</p>
+
+<p>Nell&rsquo;Instant client non sono compresi una serie di tool tipicamente presenti in una installazione full (es: exp, imp, sqlldr, tnsping).</p>
+
+<p>Per installare Oracle Instant client su una macchina Red-Hat si possono usare 3 modi diversi.</p>
+
+<ul>
+<li>Installazione dei pacchetti rpm</li>
+<li>Installazione manuale con lo zip del client</li>
+<li>Installazione del modulo client con il setup di Oracle Server</li>
+<li>Questo documento descrive l&rsquo;installazione del client utilizzando i pacchetti rpm.</li>
+</ul>
+
+<p></p>
+
                     <br>
                 </p>
                 <p class="article-more-link">
@@ -882,156 +1050,6 @@ Conversione dile .ppk in .pem Per prima cosa ho convertito il file.
         </div>
     </article>
     
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-            <a href="http://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/" itemprop="url">
-                <img src="http://www.stefanoteodorani.it/banner/rete-non-funzionante-con-centos-su-virtual-box.png" class="article-banner">
-            
-            </a>
-
-            <header class="article-header">
-    <a href="http://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/">
-    <h1 class="article-title" itemprop="name">
-        Rete non funzionante con CentOS su VirtualBox
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2017-12-28 21:36:13 &#43;0100 CET" itemprop="datePublished">28-12-2017</time>
-            &middot;
-            474
-            words
-            &middot;
-            3
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">linux</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/virtual-machines">virtual-machines</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    Ho scaricato da osboxes.org una VM con dentro CentoOS (sono pigro e se posso uso cose già fatte). Ho avviato la macchina virtuale e ho provato a navigare su internet. Non funzionava. Eseguendo il comando ifconfig non appariva la scheda di rete. Eppure sembrava tutto configurato bene. Ecco come ho soluzionato, come direbbe il mio amico coniglio.
-[teopost@localhost ~]$ ifconfig ens32: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt; mtu 1500 ether 00:0c:29:68:22:e2 txqueuelen 1000 (Ethernet) RX packets 0 bytes 0 (0.
-                    <br>
-                </p>
-                <p class="article-more-link">
-                    <a href="http://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/">
-                        Read more
-                    </a>
-                </p>
-            </div>
-            <footer class="article-footer">
-    <a data-url="http://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/" data-id="c7d52413215745469ce9b506b200e4c1" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="http://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-        </div>
-    </article>
-    
 
     <nav id="page-nav">
 
@@ -1076,6 +1094,32 @@ Conversione dile .ppk in .pem Per prima cosa ho convertito il file.
                     
                     
                     <p class="item-title"><a href="http://www.stefanoteodorani.it/2018/04/05/spostare-gli-oracle-controlfiles-su-oracle-12.x/" class="title">Spostare gli Oracle controlfiles su Oracle 12.x</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-04-05 11:18:00 &#43;0100 &#43;0100" itemprop="datePublished">05-04-2018</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-logo.png)" alt="stefanoteodorani.it" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">
+                        database
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" class="title">Spostare i redolog su Oracle 12.x</a></p>
                     <p class="item-date">
                         <time datetime="2018-04-05 11:18:00 &#43;0100 &#43;0100" itemprop="datePublished">05-04-2018</time>
                     </p>
@@ -1160,32 +1204,6 @@ Conversione dile .ppk in .pem Per prima cosa ho convertito il file.
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/" class="thumbnail">
-                    
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/rete-non-funzionante-con-centos-su-virtual-box.png)" alt="stefanoteodorani.it" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">
-                        linux
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/" class="title">Rete non funzionante con CentOS su VirtualBox</a></p>
-                    <p class="item-date">
-                        <time datetime="2017-12-28 21:36:13 &#43;0100 CET" itemprop="datePublished">28-12-2017</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -1204,7 +1222,7 @@ Conversione dile .ppk in .pem Per prima cosa ho convertito il file.
                 <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/database">
                     database
                 </a>
-                <span class="category-list-count">7</span>
+                <span class="category-list-count">8</span>
             </li>
             
             <li class="category-list-item">
@@ -1309,7 +1327,7 @@ Conversione dile .ppk in .pem Per prima cosa ho convertito il file.
                 <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/oracle">
                     oracle
                 </a>
-                <span class="category-list-count">7</span>
+                <span class="category-list-count">8</span>
             </li>
             
             <li class="category-list-item">

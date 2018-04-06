@@ -34,7 +34,7 @@
 
 
 
-<meta property="og:updated_time" content="2017-05-24T22:23:55&#43;02:00"/>
+<meta property="og:updated_time" content="2017-05-27T16:18:40&#43;02:00"/>
 
 
 
@@ -185,7 +185,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        24
+        25
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -273,6 +273,159 @@
 
     <section id="main">
     
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+            <a href="http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/" itemprop="url">
+                <img src="http://www.stefanoteodorani.it/banner/ffmpeg-su-raspberrypi.png" class="article-banner">
+            
+            </a>
+
+            <header class="article-header">
+    <a href="http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/">
+    <h1 class="article-title" itemprop="name">
+        Installare FFmpeg sulla Raspberry Pi 3
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-05-27 16:18:40 &#43;0200 CEST" itemprop="datePublished">27-05-2017</time>
+            &middot;
+            205
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">linux</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/raspberry">raspberry</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    <p>Purtroppo installare FFmpeg sulla Raspberry non è mai una cosa semplice. Non si capisce per quale motivo non si decidono a mettere i compilati nel repository.
+Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.</p>
+
+<p></p>
+
+                    <br>
+                </p>
+                <p class="article-more-link">
+                    <a href="http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/">
+                        Read more
+                    </a>
+                </p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/" data-id="b25e4ebf7f59e5a77b0bc9a6440e9abf" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
     
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
@@ -892,158 +1045,6 @@ In base al file di configurazione passato come argomento, Oracle Grants Remmaper
         </div>
     </article>
     
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-            <a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/" itemprop="url">
-                <img src="http://www.stefanoteodorani.it/banner/ssh-senza-password.jpg" class="article-banner">
-            
-            </a>
-
-            <header class="article-header">
-    <a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/">
-    <h1 class="article-title" itemprop="name">
-        SSH senza password
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2017-05-17 21:39:51 &#43;0200 CEST" itemprop="datePublished">17-05-2017</time>
-            &middot;
-            301
-            words
-            &middot;
-            2
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">linux</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/bash">bash</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    Uso spesso ssh per collegarmi sui server linux dei clienti. Per evitare di dover digitare sempre la password del server, è possibile configurare il vostro client per effettuare un collegamento senza dover digitare la password.
-Creare sul vostro computer la chiave pubblica e privata La prima cosa da fare è creare, sul client che deve collegarsi al server, le chiavi
-Digitare quindi il comando ssh-keygen
-teopost@local-host$ ssh-keygen Generating public/private rsa key pair.
-                    <br>
-                </p>
-                <p class="article-more-link">
-                    <a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/">
-                        Read more
-                    </a>
-                </p>
-            </div>
-            <footer class="article-footer">
-    <a data-url="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/" data-id="2691a994ca8c6013724084897ff27f29" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-        </div>
-    </article>
-    
 
     <nav id="page-nav">
 
@@ -1092,6 +1093,32 @@ teopost@local-host$ ssh-keygen Generating public/private rsa key pair.
                     
                     
                     <p class="item-title"><a href="http://www.stefanoteodorani.it/2018/04/05/spostare-gli-oracle-controlfiles-su-oracle-12.x/" class="title">Spostare gli Oracle controlfiles su Oracle 12.x</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-04-05 11:18:00 &#43;0100 &#43;0100" itemprop="datePublished">05-04-2018</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-logo.png)" alt="stefanoteodorani.it" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">
+                        database
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" class="title">Spostare i redolog su Oracle 12.x</a></p>
                     <p class="item-date">
                         <time datetime="2018-04-05 11:18:00 &#43;0100 &#43;0100" itemprop="datePublished">05-04-2018</time>
                     </p>
@@ -1176,32 +1203,6 @@ teopost@local-host$ ssh-keygen Generating public/private rsa key pair.
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/" class="thumbnail">
-                    
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/rete-non-funzionante-con-centos-su-virtual-box.png)" alt="stefanoteodorani.it" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">
-                        linux
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/" class="title">Rete non funzionante con CentOS su VirtualBox</a></p>
-                    <p class="item-date">
-                        <time datetime="2017-12-28 21:36:13 &#43;0100 CET" itemprop="datePublished">28-12-2017</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -1220,7 +1221,7 @@ teopost@local-host$ ssh-keygen Generating public/private rsa key pair.
                 <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/database">
                     database
                 </a>
-                <span class="category-list-count">7</span>
+                <span class="category-list-count">8</span>
             </li>
             
             <li class="category-list-item">
@@ -1325,7 +1326,7 @@ teopost@local-host$ ssh-keygen Generating public/private rsa key pair.
                 <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/oracle">
                     oracle
                 </a>
-                <span class="category-list-count">7</span>
+                <span class="category-list-count">8</span>
             </li>
             
             <li class="category-list-item">

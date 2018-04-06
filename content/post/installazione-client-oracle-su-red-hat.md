@@ -23,6 +23,8 @@ Per installare Oracle Instant client su una macchina Red-Hat si possono usare 3 
 * Installazione del modulo client con il setup di Oracle Server
 * Questo documento descrive l'installazione del client utilizzando i pacchetti rpm.
 
+<!--more-->
+
 ## Scaricare il software
 
 I pacchetti rpm del client si scaricano dal sito Oracle. Nella fattispecie la pagina per il download è:

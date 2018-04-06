@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-419">
 <head>
-    <title>Android &middot; stefanoteodorani.it</title>
+    <title>Spostare i redolog su Oracle 12.x &middot; stefanoteodorani.it</title>
     <meta name="generator" content="Hugo 0.37.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,10 +10,7 @@
       <meta name="description" content="">
     
     
-      <link href="http://www.stefanoteodorani.it/tags/android/index.xml" rel="alternate" type="application/rss+xml" title="stefanoteodorani.it" />
-      <link href="http://www.stefanoteodorani.it/tags/android/index.xml" rel="feed" type="application/rss+xml" title="stefanoteodorani.it" />
-    
-    <link rel="canonical" href="http://www.stefanoteodorani.it/tags/android/"/>
+    <link rel="canonical" href="http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/"/>
     <link rel="icon" href="http://www.stefanoteodorani.it/favicon.ico">
     <link rel="apple-touch-icon" href="http://www.stefanoteodorani.it/apple-touch-icon.png"/>
     <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/style.css">
@@ -27,14 +24,22 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Android" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://www.stefanoteodorani.it/tags/android/" />
+    <meta property="og:title" content="Spostare i redolog su Oracle 12.x" />
+<meta property="og:description" content="Introduzione
+
+Oggi mi è capitato di dover spostare alcuni redolog che erano stati creati in una cartella sbagliata.
+Ecco come ho fatto
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" />
 
 
 
-<meta property="og:updated_time" content="2017-01-20T21:46:00&#43;01:00"/>
+<meta property="article:published_time" content="2018-04-05T11:18:00&#43;01:00"/>
+
+<meta property="article:modified_time" content="2018-04-05T11:18:00&#43;01:00"/>
+
 
 
 
@@ -47,13 +52,31 @@
 
     
     
-<meta itemprop="name" content="Android">
-<meta itemprop="description" content="">
+<meta itemprop="name" content="Spostare i redolog su Oracle 12.x">
+<meta itemprop="description" content="Introduzione
 
+Oggi mi è capitato di dover spostare alcuni redolog che erano stati creati in una cartella sbagliata.
+Ecco come ho fatto
+
+">
+
+
+<meta itemprop="datePublished" content="2018-04-05T11:18:00&#43;01:00" />
+<meta itemprop="dateModified" content="2018-04-05T11:18:00&#43;01:00" />
+<meta itemprop="wordCount" content="296">
+
+
+
+<meta itemprop="keywords" content="oracle," />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Android"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Spostare i redolog su Oracle 12.x"/>
+<meta name="twitter:description" content="Introduzione
+
+Oggi mi è capitato di dover spostare alcuni redolog che erano stati creati in una cartella sbagliata.
+Ecco come ho fatto
+
+"/>
 <meta name="twitter:site" content="@teopost"/>
 
     
@@ -68,7 +91,7 @@
 
 
 <div id="container">
-    <header id="header">
+	<header id="header">
   <div id="header-main" class="header-inner">
     <div class="outer">
       <a href="http://www.stefanoteodorani.it/" id="logo">
@@ -168,8 +191,10 @@
   </div>
 </header>
 
-    <div class="outer">
-        <aside id="profile">
+   	
+   	<div class="outer">
+   		
+	    <aside id="profile">
   <div class="inner profile-inner">
     <div class="base-info profile-block">
       <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
@@ -270,44 +295,321 @@
   </div>
 </aside>
 
-        <section id="main">
-            <section class="archives-wrap">
-                <div class="archive-category-wrap">
-                    <span class="archive-category">Android</span>
-                </div>
-                <div class="archives">
-                    
-                    
-                        <article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
-        <div class="archive-article-thumbnail">
-            
-            <a href="http://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/" class="thumbnail">
-                <span style="background-image:url(http://www.stefanoteodorani.it/banner/testare-applicazioni-android.jpg)" alt="Testare applicazioni Android" class="thumbnail-image"></span>
-            </a>
-            
-        </div>
-        <header class="archive-article-header">
-            <h1 itemprop="name">
-            <a class="archive-article-title" href="http://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/">Testare applicazioni Android</a>
-            </h1>
-            <div class="archive-article-date">
-                <i class="fa fa-calendar"></i>
-                <time datetime="2017-01-20 21:46:00 &#43;0100 CET" itemprop="datePublished">20-01-2017</time>
-            </div>
-        </header>
-    </div>
-</article>
- 
-                    
-                </div>
-            </section>
-            <nav id="page-nav">
+	    
 
+	    
+<section id="main">
+
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+                <img src="http://www.stefanoteodorani.it/banner/oracle-logo.png" class="article-banner">
+            
+
+            <header class="article-header">
+    <a href="http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/">
+    <h1 class="article-title" itemprop="name">
+        Spostare i redolog su Oracle 12.x
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2018-04-05 11:18:00 &#43;0100 &#43;0100" itemprop="datePublished">05-04-2018</time>
+            &middot;
+            296
+            words
+            &middot;
+            2
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">database</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/oracle">oracle</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <h2 id="introduzione">Introduzione</h2>
+
+<p>Oggi mi è capitato di dover spostare alcuni redolog che erano stati creati in una cartella sbagliata.
+Ecco come ho fatto</p>
+
+<p></p>
+
+<h2 id="procedimento">Procedimento</h2>
+
+<p>Per prima cosa vediamo dove sono posizionati tali files:</p>
+
+<pre><code class="language-bash">SQL&gt;  select member from v$logfile;
+# sqlplus &quot;/ as sysdba&quot;
+
+MEMBER
+---------------------------------------
+/u02/oradata/INTDB01/controlfile/o1_mf_f3h3nxgs_.ctl
+/u03/oradata/INTDB01/controlfile/o1_mf_f3h3nxlh_.ctl
+/u04/oradate/INTDB01/controlfile/o1_mf_f3h3nxol_.ctl
+</code></pre>
+
+<p>Il problema è la cartella oradate (si deve chiamare oradata).
+I redo logs non possono essere rinominati (o spostati) mentre il database è online.
+Il database deve essere in stato mount.
+Per prima cosa faccio lo shutdown del DB.</p>
+
+<p>Quindi:</p>
+
+<pre><code class="language-bash">SQL&gt; shutdown immediate
+Database closed.
+Database dismounted.
+ORACLE instance shut down.
+</code></pre>
+
+<p>Ora posso spostare il file:</p>
+
+<pre><code class="language-bash">$ mv /u04/oradate/INTDB01/controlfile/o1_mf_f3h3nxol_.ctl /u04/oradata/INTDB01/controlfile/
+</code></pre>
+
+<p>Ora rimetto il DB in mount e aggiorno il dizionario dati di Oracle con la nuova posizione dei files.</p>
+
+<pre><code class="language-bash">SQL&gt; startup mount
+ORACLE instance started.
+ 
+Total System Global Area 1849530880 bytes
+Fixed Size                 31339824 bytes
+Variable Size            5528485968 bytes
+Database Buffers         5314572800 bytes
+Redo Buffers               55132288 bytes
+Database mounted.
+SQL&gt; alter database rename file '/u04/oradate/INTDB01/controlfile/o1_mf_f3h3nxol_.ctl' to '/u04/oradata/INTDB01/controlfile/o1_mf_f3h3nxol_.ctl';
+ 
+Database altered.
+ 
+SQL&gt; alter database open;
+ 
+Database altered.
+</code></pre>
+
+<p>Controlliamo che tutto sia andato ben</p>
+
+<pre><code class="language-bash">SQL&gt;  select member from v$logfile;
+# sqlplus &quot;/ as sysdba&quot;
+
+MEMBER
+---------------------------------------
+/u02/oradata/INTDB01/controlfile/o1_mf_f3h3nxgs_.ctl
+/u03/oradata/INTDB01/controlfile/o1_mf_f3h3nxlh_.ctl
+/u04/oradata/INTDB01/controlfile/o1_mf_f3h3nxol_.ctl
+</code></pre>
+
+<p>Controllo i parametri db_create_online_log_dest</p>
+
+<pre><code class="language-bash">SQL&gt; show parameter db_create_online_log_dest
+
+NAME				     TYPE	 VALUE
+------------------------------------ ----------- ------------------------------
+db_create_online_log_dest_1	     string	 /u02/oradata
+db_create_online_log_dest_2	     string	 /u03/oradata
+db_create_online_log_dest_3	     string	 /u04/oradate
+db_create_online_log_dest_4	     string
+db_create_online_log_dest_5	     string
+</code></pre>
+
+<p>Lo sistemo e controllo</p>
+
+<pre><code class="language-bash">SQL&gt; alter system set db_create_online_log_dest_3='/u04/oradata' scope=spfile;
+
+System altered.
+
+SQL&gt; show parameter db_create_online_log_dest
+
+NAME				     TYPE	 VALUE
+------------------------------------ ----------- ------------------------------
+db_create_online_log_dest_1	     string	 /u02/oradata
+db_create_online_log_dest_2	     string	 /u03/oradata
+db_create_online_log_dest_3	     string	 /u04/oradata
+db_create_online_log_dest_4	     string
+db_create_online_log_dest_5	     string
+
+SQL&gt; shutdown immediate
+Database closed.
+Database dismounted.
+ORACLE instance shut down.
+
+SQL&gt; startup
+ORACLE instance started.
+ 
+Total System Global Area 1849530880 bytes
+Fixed Size                 31339824 bytes
+Variable Size            5528485968 bytes
+Database Buffers         5314572800 bytes
+Redo Buffers               55132288 bytes
+Database mounted.
+
+</code></pre>
+
+<p>FATTO</p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" data-id="d2339bbd923995259edb0eb38722ba31" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+
+        
+<nav id="article-nav">
+    
+    <a href="http://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Installazione client Oracle 12.x su Red-Hat</div>
+    </a>
+    
+
+    
+    <a href="http://www.stefanoteodorani.it/2018/04/05/spostare-gli-oracle-controlfiles-su-oracle-12.x/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">Spostare gli Oracle controlfiles su Oracle 12.x</div>
+    </a>
+    
 </nav>
 
-        </section>
-        <aside id="sidebar">
+
+    </article>
+
+    
+    <section id="comments">
+        <div id="disqus_thread">
+            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "stefanoteodorani" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </section>
+    
+</section>
+
+
+	    
+	    <aside id="sidebar">
     
 <div class="widget-wrap">
     <h3 class="widget-title">
@@ -320,7 +622,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2018/04/05/spostare-gli-oracle-controlfiles-su-oracle-12.x/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-logo.png)" alt="Android" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-logo.png)" alt="Spostare i redolog su Oracle 12.x" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -346,7 +648,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-logo.png)" alt="Android" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-logo.png)" alt="Spostare i redolog su Oracle 12.x" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -372,7 +674,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-logo.png)" alt="Android" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-logo.png)" alt="Spostare i redolog su Oracle 12.x" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -398,7 +700,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-tde-transparent-data-encryption.jpg)" alt="Android" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-tde-transparent-data-encryption.jpg)" alt="Spostare i redolog su Oracle 12.x" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -424,7 +726,7 @@
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2018/01/02/usare-file-ppk-con-ssh-sul-mac/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/usare-file-ppk-con-ssh-sul-mac.png)" alt="Android" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/usare-file-ppk-con-ssh-sul-mac.png)" alt="Spostare i redolog su Oracle 12.x" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -660,7 +962,8 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
 
-    </div>
+	    
+	</div>
 </div>
 
 <footer id="footer">

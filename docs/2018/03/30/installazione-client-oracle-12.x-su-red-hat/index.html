@@ -25,10 +25,22 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <meta property="og:title" content="Installazione client Oracle 12.x su Red-Hat" />
-<meta property="og:description" content="Introduzione Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.
+<meta property="og:description" content="Introduzione
+
+Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.
+
 Nell&rsquo;Instant client non sono compresi una serie di tool tipicamente presenti in una installazione full (es: exp, imp, sqlldr, tnsping).
+
 Per installare Oracle Instant client su una macchina Red-Hat si possono usare 3 modi diversi.
- Installazione dei pacchetti rpm Installazione manuale con lo zip del client Installazione del modulo client con il setup di Oracle Server Questo documento descrive l&rsquo;installazione del client utilizzando i pacchetti rpm." />
+
+
+Installazione dei pacchetti rpm
+Installazione manuale con lo zip del client
+Installazione del modulo client con il setup di Oracle Server
+Questo documento descrive l&rsquo;installazione del client utilizzando i pacchetti rpm.
+
+
+" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/" />
 
@@ -51,10 +63,22 @@ Per installare Oracle Instant client su una macchina Red-Hat si possono usare 3 
     
     
 <meta itemprop="name" content="Installazione client Oracle 12.x su Red-Hat">
-<meta itemprop="description" content="Introduzione Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.
+<meta itemprop="description" content="Introduzione
+
+Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.
+
 Nell&rsquo;Instant client non sono compresi una serie di tool tipicamente presenti in una installazione full (es: exp, imp, sqlldr, tnsping).
+
 Per installare Oracle Instant client su una macchina Red-Hat si possono usare 3 modi diversi.
- Installazione dei pacchetti rpm Installazione manuale con lo zip del client Installazione del modulo client con il setup di Oracle Server Questo documento descrive l&rsquo;installazione del client utilizzando i pacchetti rpm.">
+
+
+Installazione dei pacchetti rpm
+Installazione manuale con lo zip del client
+Installazione del modulo client con il setup di Oracle Server
+Questo documento descrive l&rsquo;installazione del client utilizzando i pacchetti rpm.
+
+
+">
 
 
 <meta itemprop="datePublished" content="2018-03-30T09:18:00&#43;01:00" />
@@ -67,10 +91,22 @@ Per installare Oracle Instant client su una macchina Red-Hat si possono usare 3 
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Installazione client Oracle 12.x su Red-Hat"/>
-<meta name="twitter:description" content="Introduzione Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.
+<meta name="twitter:description" content="Introduzione
+
+Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.
+
 Nell&rsquo;Instant client non sono compresi una serie di tool tipicamente presenti in una installazione full (es: exp, imp, sqlldr, tnsping).
+
 Per installare Oracle Instant client su una macchina Red-Hat si possono usare 3 modi diversi.
- Installazione dei pacchetti rpm Installazione manuale con lo zip del client Installazione del modulo client con il setup di Oracle Server Questo documento descrive l&rsquo;installazione del client utilizzando i pacchetti rpm."/>
+
+
+Installazione dei pacchetti rpm
+Installazione manuale con lo zip del client
+Installazione del modulo client con il setup di Oracle Server
+Questo documento descrive l&rsquo;installazione del client utilizzando i pacchetti rpm.
+
+
+"/>
 <meta name="twitter:site" content="@teopost"/>
 
     
@@ -203,7 +239,7 @@ Per installare Oracle Instant client su una macchina Red-Hat si possono usare 3 
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        24
+        25
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -351,9 +387,7 @@ Per installare Oracle Instant client su una macchina Red-Hat si possono usare 3 
 </header>
 
             <div class="article-entry" itemprop="articleBody">
-                
-
-<h2 id="introduzione">Introduzione</h2>
+                <h2 id="introduzione">Introduzione</h2>
 
 <p>Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.</p>
 
@@ -367,6 +401,8 @@ Per installare Oracle Instant client su una macchina Red-Hat si possono usare 3 
 <li>Installazione del modulo client con il setup di Oracle Server</li>
 <li>Questo documento descrive l&rsquo;installazione del client utilizzando i pacchetti rpm.</li>
 </ul>
+
+<p></p>
 
 <h2 id="scaricare-il-software">Scaricare il software</h2>
 
@@ -442,7 +478,6 @@ export TNS_ADMIN=$ORACLE_HOME/network/admin/
 export LD_LIBRARY_PATH=$ORACLE_HOME/lib
 export PATH=/usr/lib/oracle/12.1/client64/bin:$PATH
 </code></pre>
-
             </div>
             <footer class="article-footer">
     <a data-url="http://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/" data-id="0529e942227e8bda355bf61577590acf" class="article-share-link">
@@ -535,11 +570,11 @@ export PATH=/usr/lib/oracle/12.1/client64/bin:$PATH
     
 
     
-    <a href="http://www.stefanoteodorani.it/2018/04/05/spostare-gli-oracle-controlfiles-su-oracle-12.x/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           Newer
       </strong>
-      <div class="article-nav-title">Spostare gli Oracle controlfiles su Oracle 12.x</div>
+      <div class="article-nav-title">Spostare i redolog su Oracle 12.x</div>
     </a>
     
 </nav>
@@ -606,6 +641,32 @@ export PATH=/usr/lib/oracle/12.1/client64/bin:$PATH
                     
                     
                     <p class="item-title"><a href="http://www.stefanoteodorani.it/2018/04/05/spostare-gli-oracle-controlfiles-su-oracle-12.x/" class="title">Spostare gli Oracle controlfiles su Oracle 12.x</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-04-05 11:18:00 &#43;0100 &#43;0100" itemprop="datePublished">05-04-2018</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-logo.png)" alt="Installazione client Oracle 12.x su Red-Hat" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">
+                        database
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" class="title">Spostare i redolog su Oracle 12.x</a></p>
                     <p class="item-date">
                         <time datetime="2018-04-05 11:18:00 &#43;0100 &#43;0100" itemprop="datePublished">05-04-2018</time>
                     </p>
@@ -690,32 +751,6 @@ export PATH=/usr/lib/oracle/12.1/client64/bin:$PATH
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/" class="thumbnail">
-                    
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/rete-non-funzionante-con-centos-su-virtual-box.png)" alt="Installazione client Oracle 12.x su Red-Hat" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">
-                        linux
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/" class="title">Rete non funzionante con CentOS su VirtualBox</a></p>
-                    <p class="item-date">
-                        <time datetime="2017-12-28 21:36:13 &#43;0100 CET" itemprop="datePublished">28-12-2017</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -734,7 +769,7 @@ export PATH=/usr/lib/oracle/12.1/client64/bin:$PATH
                 <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/database">
                     database
                 </a>
-                <span class="category-list-count">7</span>
+                <span class="category-list-count">8</span>
             </li>
             
             <li class="category-list-item">
@@ -839,7 +874,7 @@ export PATH=/usr/lib/oracle/12.1/client64/bin:$PATH
                 <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/oracle">
                     oracle
                 </a>
-                <span class="category-list-count">7</span>
+                <span class="category-list-count">8</span>
             </li>
             
             <li class="category-list-item">
