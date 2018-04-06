@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-419">
 <head>
-    <title>SSH senza password &middot; stefanoteodorani.it</title>
+    <title>Spostare gli Oracle controlfiles su Oracle 12.x &middot; stefanoteodorani.it</title>
     <meta name="generator" content="Hugo 0.37.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +10,7 @@
       <meta name="description" content="">
     
     
-    <link rel="canonical" href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/"/>
+    <link rel="canonical" href="http://www.stefanoteodorani.it/2018/04/05/spostare-gli-oracle-controlfiles-su-oracle-12.x/"/>
     <link rel="icon" href="http://www.stefanoteodorani.it/favicon.ico">
     <link rel="apple-touch-icon" href="http://www.stefanoteodorani.it/apple-touch-icon.png"/>
     <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/style.css">
@@ -24,19 +24,22 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="SSH senza password" />
-<meta property="og:description" content="Uso spesso ssh per collegarmi sui server linux dei clienti. Per evitare di dover digitare sempre la password del server, è possibile configurare il vostro client per effettuare un collegamento senza dover digitare la password.
-Creare sul vostro computer la chiave pubblica e privata La prima cosa da fare è creare, sul client che deve collegarsi al server, le chiavi
-Digitare quindi il comando ssh-keygen
-teopost@local-host$ ssh-keygen Generating public/private rsa key pair." />
+    <meta property="og:title" content="Spostare gli Oracle controlfiles su Oracle 12.x" />
+<meta property="og:description" content="Introduzione
+
+Oggi mi è capitato di dover spostare alcuni controlfile Oracle che erano stati creati in una cartella sbagliata. Spostare i controlfile non è difficile, ma essendo files molto critici per la sopravvivenza del DB, questa attività va fatta senza troppo casino nelle orecchie.
+
+Vi avviso però. Per spostare i controlfiles bisogna spegnere l&rsquo;istanza. Vediamo come fare.
+
+" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/" />
+<meta property="og:url" content="http://www.stefanoteodorani.it/2018/04/05/spostare-gli-oracle-controlfiles-su-oracle-12.x/" />
 
 
 
-<meta property="article:published_time" content="2017-05-17T21:39:51&#43;02:00"/>
+<meta property="article:published_time" content="2018-04-05T11:18:00&#43;01:00"/>
 
-<meta property="article:modified_time" content="2017-05-17T21:39:51&#43;02:00"/>
+<meta property="article:modified_time" content="2018-04-05T11:18:00&#43;01:00"/>
 
 
 
@@ -50,27 +53,33 @@ teopost@local-host$ ssh-keygen Generating public/private rsa key pair." />
 
     
     
-<meta itemprop="name" content="SSH senza password">
-<meta itemprop="description" content="Uso spesso ssh per collegarmi sui server linux dei clienti. Per evitare di dover digitare sempre la password del server, è possibile configurare il vostro client per effettuare un collegamento senza dover digitare la password.
-Creare sul vostro computer la chiave pubblica e privata La prima cosa da fare è creare, sul client che deve collegarsi al server, le chiavi
-Digitare quindi il comando ssh-keygen
-teopost@local-host$ ssh-keygen Generating public/private rsa key pair.">
+<meta itemprop="name" content="Spostare gli Oracle controlfiles su Oracle 12.x">
+<meta itemprop="description" content="Introduzione
+
+Oggi mi è capitato di dover spostare alcuni controlfile Oracle che erano stati creati in una cartella sbagliata. Spostare i controlfile non è difficile, ma essendo files molto critici per la sopravvivenza del DB, questa attività va fatta senza troppo casino nelle orecchie.
+
+Vi avviso però. Per spostare i controlfiles bisogna spegnere l&rsquo;istanza. Vediamo come fare.
+
+">
 
 
-<meta itemprop="datePublished" content="2017-05-17T21:39:51&#43;02:00" />
-<meta itemprop="dateModified" content="2017-05-17T21:39:51&#43;02:00" />
-<meta itemprop="wordCount" content="301">
+<meta itemprop="datePublished" content="2018-04-05T11:18:00&#43;01:00" />
+<meta itemprop="dateModified" content="2018-04-05T11:18:00&#43;01:00" />
+<meta itemprop="wordCount" content="306">
 
 
 
-<meta itemprop="keywords" content="bash," />
+<meta itemprop="keywords" content="oracle," />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="SSH senza password"/>
-<meta name="twitter:description" content="Uso spesso ssh per collegarmi sui server linux dei clienti. Per evitare di dover digitare sempre la password del server, è possibile configurare il vostro client per effettuare un collegamento senza dover digitare la password.
-Creare sul vostro computer la chiave pubblica e privata La prima cosa da fare è creare, sul client che deve collegarsi al server, le chiavi
-Digitare quindi il comando ssh-keygen
-teopost@local-host$ ssh-keygen Generating public/private rsa key pair."/>
+<meta name="twitter:title" content="Spostare gli Oracle controlfiles su Oracle 12.x"/>
+<meta name="twitter:description" content="Introduzione
+
+Oggi mi è capitato di dover spostare alcuni controlfile Oracle che erano stati creati in una cartella sbagliata. Spostare i controlfile non è difficile, ma essendo files molto critici per la sopravvivenza del DB, questa attività va fatta senza troppo casino nelle orecchie.
+
+Vi avviso però. Per spostare i controlfiles bisogna spegnere l&rsquo;istanza. Vediamo come fare.
+
+"/>
 <meta name="twitter:site" content="@teopost"/>
 
     
@@ -297,13 +306,13 @@ teopost@local-host$ ssh-keygen Generating public/private rsa key pair."/>
     <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
         <div class="article-inner">
             
-                <img src="http://www.stefanoteodorani.it/banner/ssh-senza-password.jpg" class="article-banner">
+                <img src="http://www.stefanoteodorani.it/banner/oracle-logo.png" class="article-banner">
             
 
             <header class="article-header">
-    <a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/">
+    <a href="http://www.stefanoteodorani.it/2018/04/05/spostare-gli-oracle-controlfiles-su-oracle-12.x/">
     <h1 class="article-title" itemprop="name">
-        SSH senza password
+        Spostare gli Oracle controlfiles su Oracle 12.x
     </h1>
     </a>
     <div class="article-meta">
@@ -311,9 +320,9 @@ teopost@local-host$ ssh-keygen Generating public/private rsa key pair."/>
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2017-05-17 21:39:51 &#43;0200 CEST" itemprop="datePublished">17-05-2017</time>
+            <time datetime="2018-04-05 11:18:00 &#43;0100 &#43;0100" itemprop="datePublished">05-04-2018</time>
             &middot;
-            301
+            306
             words
             &middot;
             2
@@ -327,7 +336,7 @@ teopost@local-host$ ssh-keygen Generating public/private rsa key pair."/>
                 <i class="fa fa-folder"></i>
                 
                 
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">linux</a>
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">database</a>
                 
                 
             </div>
@@ -341,7 +350,7 @@ teopost@local-host$ ssh-keygen Generating public/private rsa key pair."/>
                 <i class="fa fa-tags"></i>
                 
                 
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/bash">bash</a>
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/oracle">oracle</a>
                 
                 
             </div>
@@ -351,66 +360,117 @@ teopost@local-host$ ssh-keygen Generating public/private rsa key pair."/>
 </header>
 
             <div class="article-entry" itemprop="articleBody">
-                
+                <h2 id="introduzione">Introduzione</h2>
 
-<p>Uso spesso ssh per collegarmi sui server linux dei clienti.
-Per evitare di dover digitare sempre la password del server, è possibile configurare il vostro client per effettuare un collegamento senza dover digitare la password.</p>
+<p>Oggi mi è capitato di dover spostare alcuni controlfile Oracle che erano stati creati in una cartella sbagliata. Spostare i controlfile non è difficile, ma essendo files molto critici per la sopravvivenza del DB, questa attività va fatta senza troppo casino nelle orecchie.</p>
 
-<h2 id="creare-sul-vostro-computer-la-chiave-pubblica-e-privata">Creare sul vostro computer la chiave pubblica e privata</h2>
+<p>Vi avviso però. Per spostare i controlfiles bisogna spegnere l&rsquo;istanza. Vediamo come fare.</p>
 
-<p>La prima cosa da fare è creare, sul client che deve collegarsi al server, le chiavi</p>
+<p></p>
 
-<p>Digitare quindi il comando <code>ssh-keygen</code></p>
+<h2 id="procedimento">Procedimento</h2>
 
-<pre><code class="language-bash">    teopost@local-host$ ssh-keygen
-    Generating public/private rsa key pair.
-    Enter file in which to save the key (/home/jsmith/.ssh/id_rsa):[Enter key]
-    Enter passphrase (empty for no passphrase): [Press enter key]
-    Enter same passphrase again: [Press enter key]
-    Your identification has been saved in /home/teopost/.ssh/id_rsa.
-    Your public key has been saved in /home/teopost/.ssh/id_rsa.pub.
-    The key fingerprint is:
-    33:b3:fe:af:95:95:18:11:31:d5:de:96:2f:f2:35:f9 teopost@local-host
+<p>Per prima cosa vediamo dove sono posizionati tali files:</p>
+
+<pre><code class="language-bash"># sqlplus &quot;/ as sysdba&quot;
+
+SQL&gt; show parameter control_files
+
+NAME                 TYPE     VALUE
+-------------------- -------- ------------------------------
+control_files        string   /u02/oradata/TEST/control01.ctl,
+                              /u02/oradata/TEST/control02.ctl, 
+                              /u02/oradate/TEST/control03.ctl
+
 </code></pre>
 
-<p>Questa operazione crea nella cartella .ssh nella home del vostro computer 2 file. Una chiave privata (id_rsa) e una chiave pubblica (id_rsa.pub).</p>
+<p>In questo caso i control files sono posizionati in:</p>
 
-<h2 id="copiare-la-chiave-pubblica-sul-server">Copiare la chiave pubblica sul server</h2>
+<ul>
+<li>/u02/oradata/TEST/control01.ctl</li>
+<li>/u02/oradata/TEST/control02.ctl</li>
+<li>/u02/<strong>oradate</strong>/TEST/control03.ctl</li>
+</ul>
 
-<p>Ora dobbiamo far conoscere al server la nostra identità. Per farlo dobbiamo copiare la nostra chiave pubblica sul server. Si può fare anche a mano, ma c&rsquo;è un comando che lo fa per noi chiamato <code>ssh-copy-id</code>.</p>
+<p>Il problema è la cartella oradate (si deve chiamare oradata).</p>
 
-<pre><code>    teopost@local-host$ ssh-copy-id -i ~/.ssh/id_rsa.pub remote-host
-    teopost@remote-host's password:
-    Now try logging into the machine, with &quot;ssh 'remote-host'&quot;, and check in:
+<p>Quindi:</p>
 
-    .ssh/authorized_keys
+<pre><code>SQL&gt; shutdown immediate;
 
-    to make sure we haven't added extra keys that you weren't expecting.
+Database closed.
+Database dismounted.
+ORACLE instance shut down.
+
+SQL&gt; exit
 </code></pre>
 
-<p>In pratica questo comando non fa altro che accodare la vostra chiave pubblica (scritta nel file id_rsa.pub), nel file del server <code>authorized_key</code>situato sotto la cartella .ssh.</p>
+<p>A questo punto, col DB spento, creo la cartella /u02/oradata e ci sposto dento il controlfile.</p>
 
-<h2 id="effettuare-il-login-senza-password">Effettuare il login senza password</h2>
-
-<p>Il gioco è fatto. Proviamo a vedere se il nostro lavoro è andato a buon fine. Effettuiamo quindi da linea di comando il collegamento ssh al server.</p>
-
-<pre><code class="language-bash">    teopost@local-host$ ssh remote-host
-    Last login: Sun Nov 16 17:22:33 2008 from 192.168.1.2
-    [Note: SSH did not ask for password.]
-
-    teopost@remote-host$ [Note: You are on remote-host here]
+<pre><code class="language-bash">$ mkdir /u02/oradata/TEST
+$ mv /u02/oradate/TEST/control03.ctl /u02/oradata/TEST/control03.ctl
 </code></pre>
 
-<p>Et voilà.</p>
+<p>Dopo aver spostato il file, bisogna aggiornare il pfile di Oracle per configurare la nuova posizione.
+Aprire il pfile con un editor di testo (sotto $ORACLE_HOME/dbs) e cambiare il valore.</p>
 
+<p>Quasi sempre si utilizza l&rsquo;spfile. In questo caso, per cambiare il valore, bisogna aprire il DB con l&rsquo;opzione nomount e dare il comando per aggiornare l&rsquo;spfile.</p>
+
+<pre><code class="language-bash">$ sqlplus &quot;/ as sysdba&quot;
+
+Connected to an idle instance.
+
+SQL&gt; startup nomount;
+
+ORACLE instance started.
+
+SQL&gt; alter system set control_files='/u02/oradata/TEST/control01.ctl',
+'/u02/oradata/TEST/control02.ctl', '/u02/oradata/TEST/control03.ctl'
+scope=SPFILE;
+
+System altered.
+</code></pre>
+
+<p>A questo punto spengo l&rsquo;istanza e la faccio ripartire per vedere se riparte senza problemi.</p>
+
+<pre><code class="language-bash">SQL&gt; shutdown immediate;
+Database closed.
+Database dismounted.
+ORACLE instance shut down.
+SQL&gt; startup nomount
+</code></pre>
+
+<p>Prima di montare il DB cotrollo che i controlfile siano stati modificati correttamente</p>
+
+<pre><code class="language-bash">SQL&gt; show parameter control_files
+
+NAME                 TYPE     VALUE
+-------------------- -------- ------------------------------
+control_files        string   /u02/oradata/TEST/control01.ctl,
+                              /u02/oradata/TEST/control02.ctl, 
+                              /u02/oradata/TEST/control03.ctl
+</code></pre>
+
+<p>Visto che tutto è OK faccio partire l&rsquo;istanza</p>
+
+<pre><code class="language-bash">SQL&gt; alter database mount;
+
+Database altered.
+
+SQL&gt; alter database open;
+
+Database altered.
+</code></pre>
+
+<p>Finito</p>
             </div>
             <footer class="article-footer">
-    <a data-url="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/" data-id="2691a994ca8c6013724084897ff27f29" class="article-share-link">
+    <a data-url="http://www.stefanoteodorani.it/2018/04/05/spostare-gli-oracle-controlfiles-su-oracle-12.x/" data-id="c240b77a14a6badbe40863b2bea94865" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
-    <a href="http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/#disqus_thread" class="article-comment-link">
+    <a href="http://www.stefanoteodorani.it/2018/04/05/spostare-gli-oracle-controlfiles-su-oracle-12.x/#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -486,21 +546,14 @@ Per evitare di dover digitare sempre la password del server, è possibile config
         
 <nav id="article-nav">
     
-    <a href="http://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="http://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           Older
       </strong>
-      <div class="article-nav-title">Recuperare i dati sull&#39;inquinamento della mia città da CKAN</div>
+      <div class="article-nav-title">Installazione client Oracle 12.x su Red-Hat</div>
     </a>
     
 
-    
-    <a href="http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">
-          Newer
-      </strong>
-      <div class="article-nav-title">Oracle grants remapper</div>
-    </a>
     
 </nav>
 
@@ -550,7 +603,7 @@ Per evitare di dover digitare sempre la password del server, è possibile config
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2018/04/05/spostare-gli-oracle-controlfiles-su-oracle-12.x/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-logo.png)" alt="SSH senza password" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-logo.png)" alt="Spostare gli Oracle controlfiles su Oracle 12.x" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -576,7 +629,7 @@ Per evitare di dover digitare sempre la password del server, è possibile config
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-logo.png)" alt="SSH senza password" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-logo.png)" alt="Spostare gli Oracle controlfiles su Oracle 12.x" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -602,7 +655,7 @@ Per evitare di dover digitare sempre la password del server, è possibile config
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-tde-transparent-data-encryption.jpg)" alt="SSH senza password" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-tde-transparent-data-encryption.jpg)" alt="Spostare gli Oracle controlfiles su Oracle 12.x" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -628,7 +681,7 @@ Per evitare di dover digitare sempre la password del server, è possibile config
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2018/01/02/usare-file-ppk-con-ssh-sul-mac/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/usare-file-ppk-con-ssh-sul-mac.png)" alt="SSH senza password" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/usare-file-ppk-con-ssh-sul-mac.png)" alt="Spostare gli Oracle controlfiles su Oracle 12.x" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -654,7 +707,7 @@ Per evitare di dover digitare sempre la password del server, è possibile config
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/rete-non-funzionante-con-centos-su-virtual-box.png)" alt="SSH senza password" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/rete-non-funzionante-con-centos-su-virtual-box.png)" alt="Spostare gli Oracle controlfiles su Oracle 12.x" class="thumbnail-image"></span>
                     
                     </a>
                 </div>

@@ -34,7 +34,7 @@
 
 
 
-<meta property="og:updated_time" content="2017-02-17T21:46:48&#43;01:00"/>
+<meta property="og:updated_time" content="2017-03-24T18:42:26&#43;01:00"/>
 
 
 
@@ -185,7 +185,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        23
+        24
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -273,6 +273,158 @@
 
     <section id="main">
     
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+            <a href="http://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/" itemprop="url">
+                <img src="http://www.stefanoteodorani.it/banner/dati-qualita-aria-opendata-ckan-emilia-romagna.jpg" class="article-banner">
+            
+            </a>
+
+            <header class="article-header">
+    <a href="http://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/">
+    <h1 class="article-title" itemprop="name">
+        Recuperare i dati sull&#39;inquinamento della mia città da CKAN
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-03-24 18:42:26 &#43;0100 CET" itemprop="datePublished">24-03-2017</time>
+            &middot;
+            560
+            words
+            &middot;
+            3
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/opendata">opendata</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/ckan">ckan</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    Ho intenzione di scrivere un piccolo bot di telegram che mi dia indicazioni sulla qualità dell&rsquo;aria che ogni giorno respiro nella mia città.
+Sono partito, nella mia indagine, da qui:
+<a href="https://www.arpae.it/liberiamo/statistiche_riepilogative.asp?idlivello=822">https://www.arpae.it/liberiamo/statistiche_riepilogative.asp?idlivello=822</a>  Questo sito è pieno zeppo di dati utili e fra questi ci sono anche quelli che servono a me; ma come recuperarli ?
+Per fortuna la regione Emilia Romagna espone tutte queste informazioni sotto forma di Open Data utilizzando un software open source chiamato CKAN.
+                    <br>
+                </p>
+                <p class="article-more-link">
+                    <a href="http://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/">
+                        Read more
+                    </a>
+                </p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/" data-id="761bb0ffaa4edc399ae432e0c98ef906" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
     
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
@@ -886,157 +1038,6 @@ Per farlo agire come segue:</p>
         </div>
     </article>
     
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-            <a href="http://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/" itemprop="url">
-                <img src="http://www.stefanoteodorani.it/banner/wordpress-su-raspberry.png" class="article-banner">
-            
-            </a>
-
-            <header class="article-header">
-    <a href="http://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/">
-    <h1 class="article-title" itemprop="name">
-        Wordpress su Raspberry
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2017-01-08 16:15:00 &#43;0100 CET" itemprop="datePublished">08-01-2017</time>
-            &middot;
-            173
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">linux</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/raspberry">raspberry</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    Voglio installare un blog sulla raspberry. Per farlo, dopo aver installato un LAMP server, procedo come segue:
-Ecco cosa ho fatto:
-Preparare lo schema di DATABASE mysql -uroot -p&lt;password&gt; CREATE DATABASE wordpress; CREATE USER wordpressuser@localhost IDENTIFIED BY &lsquo;wppassword&rsquo; GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost;  dove  è la password di mysql che ho impostato durante l&rsquo;installazione del LAMP server e wppassword è un esempio di password per l&rsquo;utente wordpress che ho appenta creato su mysql
-                    <br>
-                </p>
-                <p class="article-more-link">
-                    <a href="http://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/">
-                        Read more
-                    </a>
-                </p>
-            </div>
-            <footer class="article-footer">
-    <a data-url="http://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/" data-id="58c7c8ec5a487e3185ad8d5fa9f11adb" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="http://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-        </div>
-    </article>
-    
 
     <nav id="page-nav">
 
@@ -1064,6 +1065,32 @@ Preparare lo schema di DATABASE mysql -uroot -p&lt;password&gt; CREATE DATABASE 
     </h3>
     <div class="widget">
         <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://www.stefanoteodorani.it/2018/04/05/spostare-gli-oracle-controlfiles-su-oracle-12.x/" class="thumbnail">
+                    
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-logo.png)" alt="stefanoteodorani.it" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">
+                        database
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2018/04/05/spostare-gli-oracle-controlfiles-su-oracle-12.x/" class="title">Spostare gli Oracle controlfiles su Oracle 12.x</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-04-05 11:18:00 &#43;0100 &#43;0100" itemprop="datePublished">05-04-2018</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1169,32 +1196,6 @@ Preparare lo schema di DATABASE mysql -uroot -p&lt;password&gt; CREATE DATABASE 
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://www.stefanoteodorani.it/2017/09/17/git-checkout-di-una-specifica-sottocartella/" class="thumbnail">
-                    
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/git-checkout-for-specific-subfolder.png)" alt="stefanoteodorani.it" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/developer">
-                        developer
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2017/09/17/git-checkout-di-una-specifica-sottocartella/" class="title">Git checkout di una specifica sottocartella</a></p>
-                    <p class="item-date">
-                        <time datetime="2017-09-17 12:52:00 &#43;0100 &#43;0100" itemprop="datePublished">17-09-2017</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -1213,7 +1214,7 @@ Preparare lo schema di DATABASE mysql -uroot -p&lt;password&gt; CREATE DATABASE 
                 <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/database">
                     database
                 </a>
-                <span class="category-list-count">6</span>
+                <span class="category-list-count">7</span>
             </li>
             
             <li class="category-list-item">
@@ -1318,7 +1319,7 @@ Preparare lo schema di DATABASE mysql -uroot -p&lt;password&gt; CREATE DATABASE 
                 <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/oracle">
                     oracle
                 </a>
-                <span class="category-list-count">6</span>
+                <span class="category-list-count">7</span>
             </li>
             
             <li class="category-list-item">
