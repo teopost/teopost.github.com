@@ -1,5 +1,5 @@
 +++
-banner = "banner/oracle-logo.png"
+banner = "banner/spostare-oracle-redolog.jpg"
 categories = ["database"]
 date = "2018-04-05T11:18:00+01:00"
 description = ""
