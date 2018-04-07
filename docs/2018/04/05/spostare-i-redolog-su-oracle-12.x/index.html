@@ -303,7 +303,7 @@ Ecco come ho fatto
     <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
         <div class="article-inner">
             
-                <img src="http://www.stefanoteodorani.it/banner/oracle-logo.png" class="article-banner">
+                <img src="http://www.stefanoteodorani.it/banner/spostare-oracle-redolog.jpg" class="article-banner">
             
 
             <header class="article-header">
@@ -368,8 +368,9 @@ Ecco come ho fatto</p>
 
 <p>Per prima cosa vediamo dove sono posizionati tali files:</p>
 
-<pre><code class="language-bash">SQL&gt;  select member from v$logfile;
-# sqlplus &quot;/ as sysdba&quot;
+<pre><code class="language-bash"># sqlplus &quot;/ as sysdba&quot;
+
+SQL&gt;  select member from v$logfile;
 
 MEMBER
 ---------------------------------------
@@ -418,8 +419,8 @@ Database altered.
 
 <p>Controlliamo che tutto sia andato ben</p>
 
-<pre><code class="language-bash">SQL&gt;  select member from v$logfile;
-# sqlplus &quot;/ as sysdba&quot;
+<pre><code class="language-bash"># sqlplus &quot;/ as sysdba&quot;
+SQL&gt;  select member from v$logfile;
 
 MEMBER
 ---------------------------------------
@@ -471,7 +472,6 @@ Variable Size            5528485968 bytes
 Database Buffers         5314572800 bytes
 Redo Buffers               55132288 bytes
 Database mounted.
-
 </code></pre>
 
 <p>FATTO</p>
@@ -622,7 +622,7 @@ Database mounted.
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2018/04/05/spostare-gli-oracle-controlfiles-su-oracle-12.x/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-logo.png)" alt="Spostare i redolog su Oracle 12.x" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/spostare-oracle-controlfile.jpg)" alt="Spostare i redolog su Oracle 12.x" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -648,7 +648,7 @@ Database mounted.
                 <div class="item-thumbnail">
                     <a href="http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-logo.png)" alt="Spostare i redolog su Oracle 12.x" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/spostare-oracle-redolog.jpg)" alt="Spostare i redolog su Oracle 12.x" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
