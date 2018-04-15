@@ -6,7 +6,7 @@ description = ""
 images = []
 menu = ""
 tags = ["oracle"]
-title = "Spostare gli Oracle controlfiles su Oracle 12.x"
+title = "Spostare i controlfiles su Oracle 12.x"
 
 +++
 
