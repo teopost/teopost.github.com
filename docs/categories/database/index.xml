@@ -6,10 +6,25 @@
     <description>Recent content in Database on stefanoteodorani.it</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-419</language>
-    <lastBuildDate>Thu, 05 Apr 2018 11:18:00 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 17 Apr 2018 12:00:00 +0100</lastBuildDate>
     
 	<atom:link href="http://www.stefanoteodorani.it/categories/database/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Riattivare un utente Oracle Expired</title>
+      <link>http://www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/</link>
+      <pubDate>Tue, 17 Apr 2018 12:00:00 +0100</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/</guid>
+      <description>&lt;h2 id=&#34;introduzione&#34;&gt;Introduzione&lt;/h2&gt;
+
+&lt;p&gt;Un utente Oracle può essere creato in modo che la password scada dopo un certo periodo di tempo definito nel profilo assegnato. Per riattivare l&amp;rsquo;utente esistente è necessario reimpostare la password.
+In alcuni casi questo può essere un problema.
+In questo articolo viene descritta una procedura un pò inconsueta per ripristinare un utente senza conoscere la sua password.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Spostare i controlfiles su Oracle 12.x</title>
