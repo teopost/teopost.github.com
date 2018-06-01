@@ -1,3 +1,3 @@
-# Chi sono io ?
+# Chi sono io?
 
-E' semplice. Io sono io
+È semplice: io sono io.
