@@ -1,4 +1,5 @@
 +++
+banner = "banner/sample.jpg"
 sample = "fake.pdf"
 +++
 
