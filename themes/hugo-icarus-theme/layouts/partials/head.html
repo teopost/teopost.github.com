@@ -30,7 +30,7 @@
 
 
 
-    <meta property="og:image" content="{{ .Params.banner }}">
+    <meta property="og:image" content="{{ .Site.BaseURL }}/{{ .Params.banner }}">
 
     {{ template "_internal/google_news.html" . }}
     {{ template "_internal/schema.html" . }}
