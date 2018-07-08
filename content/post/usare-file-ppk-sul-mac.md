@@ -45,7 +45,13 @@ Diamo i giusti permessi
 $ chmod 400 ~/.ssh/cert.pem
 ```
 
-Controlliamo che ssh funzioni senza che mi chieda la password
+Se devi rimuovere la passphrase puoi farlo con questo comando
+
+```bash
+openssl rsa -in .ssh/cert.pem -out .ssh/cert-no-pass.pem
+```
+
+Bene, Ora controlliamo che ssh funzioni senza che mi chieda la password
 
 ```bash
 $ ssh -i ~/.ssh/cert.pem user@host.com
