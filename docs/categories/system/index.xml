@@ -6,10 +6,28 @@
     <description>Recent content in System on stefanoteodorani.it</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-419</language>
-    <lastBuildDate>Tue, 02 Jan 2018 22:45:00 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 05 Aug 2018 18:00:00 +0100</lastBuildDate>
     
 	<atom:link href="http://www.stefanoteodorani.it/categories/system/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sincronizzare cartelle in SSH con UNISON</title>
+      <link>http://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/</link>
+      <pubDate>Sun, 05 Aug 2018 18:00:00 +0100</pubDate>
+      
+      <guid>http://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/</guid>
+      <description>&lt;p&gt;Recentemente, mi è capitato di dover risolvere questo problema.
+Su un server ftp, vengono copiati files in 3 separate cartelle.
+Tali file devono essere sincronizzati con 3 cartelle situate su 3 diverse macchine.
+Tale sincronizzazione deve essere bidirezionale e i files creati sul server ftp devono scomparire quanto sulle cartelle remote qualcuno li cancella.&lt;/p&gt;
+
+&lt;p&gt;Per risolvere questo problema ho utilizzato unison, un tool che consente di sincronizzare in maniera bidirezionale due cartelle anche via ssh.&lt;/p&gt;
+
+&lt;p&gt;Ecco quindi quello che ho fatto:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Usare file ppk con ssh sul Mac</title>

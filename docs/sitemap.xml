@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/</loc>
+    <lastmod>2018-08-05T18:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/</loc>
     <lastmod>2018-04-17T12:00:00+01:00</lastmod>
   </url>
@@ -188,6 +193,12 @@
   </url>
   
   <url>
+    <loc>http://www.stefanoteodorani.it/tags/linux/</loc>
+    <lastmod>2018-08-05T18:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.stefanoteodorani.it/categories/linux/</loc>
     <lastmod>2017-12-28T21:36:13+01:00</lastmod>
     <priority>0</priority>
@@ -219,7 +230,7 @@
   
   <url>
     <loc>http://www.stefanoteodorani.it/post/</loc>
-    <lastmod>2018-04-17T12:00:00+01:00</lastmod>
+    <lastmod>2018-08-05T18:00:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -231,7 +242,7 @@
   
   <url>
     <loc>http://www.stefanoteodorani.it/categories/system/</loc>
-    <lastmod>2018-01-02T22:45:00+01:00</lastmod>
+    <lastmod>2018-08-05T18:00:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -255,7 +266,7 @@
   
   <url>
     <loc>http://www.stefanoteodorani.it/</loc>
-    <lastmod>2018-04-17T12:00:00+01:00</lastmod>
+    <lastmod>2018-08-05T18:00:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
