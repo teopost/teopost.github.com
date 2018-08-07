@@ -10,30 +10,30 @@
       <meta name="description" content="">
     
     
-    <link rel="canonical" href="http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/"/>
-    <link rel="icon" href="http://www.stefanoteodorani.it/favicon.ico">
-    <link rel="apple-touch-icon" href="http://www.stefanoteodorani.it/apple-touch-icon.png"/>
-    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/style.css">
-    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/monokai.css">
-    <link rel="stylesheet" href="http://www.stefanoteodorani.it/fancybox/jquery.fancybox.css">
+    <link rel="canonical" href="https//www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/"/>
+    <link rel="icon" href="https/www.stefanoteodorani.it/favicon.ico">
+    <link rel="apple-touch-icon" href="https/www.stefanoteodorani.it/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="https/www.stefanoteodorani.it/css/style.css">
+    <link rel="stylesheet" href="https/www.stefanoteodorani.it/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https/www.stefanoteodorani.it/css/monokai.css">
+    <link rel="stylesheet" href="https/www.stefanoteodorani.it/fancybox/jquery.fancybox.css">
     
-    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/button.css">
+    <link rel="stylesheet" href="https/www.stefanoteodorani.it/css/button.css">
     
-    <link rel="stylesheet" href="http://www.stefanoteodorani.it/css/notice.css">
+    <link rel="stylesheet" href="https/www.stefanoteodorani.it/css/notice.css">
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
 
 
-    <meta property="og:image" content="http://www.stefanoteodorani.it/banner/ffmpeg-su-raspberrypi.png" />
+    <meta property="og:image" content="https//www.stefanoteodorani.it/banner/ffmpeg-su-raspberrypi.png" />
     <meta property="og:title" content="Installare FFmpeg sulla Raspberry Pi 3" />
 <meta property="og:description" content="Purtroppo installare FFmpeg sulla Raspberry non è mai una cosa semplice. Non si capisce per quale motivo non si decidono a mettere i compilati nel repository.
 Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.
 
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/" />
+<meta property="og:url" content="https//www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/" />
 
 
 
@@ -93,16 +93,16 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.
 	<header id="header">
   <div id="header-main" class="header-inner">
     <div class="outer">
-      <a href="http://www.stefanoteodorani.it/" id="logo">
+      <a href="https//www.stefanoteodorani.it/" id="logo">
           
-          <i class="logo" style="background-image: url('http://www.stefanoteodorani.it/css/images/logo.png')"></i>
+          <i class="logo" style="background-image: url('https/www.stefanoteodorani.it/css/images/logo.png')"></i>
           
           <span class="site-title">stefanoteodorani.it</span>
       </a>
       <nav id="main-nav">
           
           
-          <a class="main-nav-link" href="http://www.stefanoteodorani.it/">Home</a>
+          <a class="main-nav-link" href="/">Home</a>
           
           
           
@@ -122,11 +122,11 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.
           
           
           
-          <a class="main-nav-link" href="http://www.stefanoteodorani.it/tags/">Tags</a>
+          <a class="main-nav-link" href="https/www.stefanoteodorani.it/tags/">Tags</a>
           
           
           
-          <a class="main-nav-link" href="http://www.stefanoteodorani.it/categories/">Categories</a>
+          <a class="main-nav-link" href="https/www.stefanoteodorani.it/categories/">Categories</a>
           
           
       </nav>
@@ -140,7 +140,7 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.
               <input type="search" name="q" class="search-form-input" placeholder="Search">
               <button type="submit" class="search-form-submit">
               </button>
-              <input type="hidden" name="sitesearch" value="http://www.stefanoteodorani.it/" />
+              <input type="hidden" name="sitesearch" value="https//www.stefanoteodorani.it/" />
          </form>
         </div>
     </div>
@@ -151,7 +151,7 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.
           <tr>
           
           
-          <td><a class="main-nav-link" href="http://www.stefanoteodorani.it/">Home</a></td>
+          <td><a class="main-nav-link" href="/">Home</a></td>
           
           
           
@@ -171,17 +171,17 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.
           
           
           
-          <td><a class="main-nav-link" href="http://www.stefanoteodorani.it/tags/">Tags</a></td>
+          <td><a class="main-nav-link" href="https/www.stefanoteodorani.it/tags/">Tags</a></td>
           
           
           
-          <td><a class="main-nav-link" href="http://www.stefanoteodorani.it/categories/">Categories</a></td>
+          <td><a class="main-nav-link" href="https/www.stefanoteodorani.it/categories/">Categories</a></td>
           
           
           <td>
           <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
           <input type="search" name="q" class="search-form-input" placeholder="Search">
-          <input type="hidden" name="sitesearch" value="http://www.stefanoteodorani.it/" />
+          <input type="hidden" name="sitesearch" value="https//www.stefanoteodorani.it/" />
           </form>
         </td>
       </tr>
@@ -287,7 +287,7 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.
 <td><a href="//twitter.com/teopost" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
 
 
-          <td><a href="http://www.stefanoteodorani.it/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+          <td><a href="https//www.stefanoteodorani.it/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
         </tr>
       </table>
     </div>
@@ -302,11 +302,11 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.
     <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
         <div class="article-inner">
             
-                <img src="http://www.stefanoteodorani.it/banner/ffmpeg-su-raspberrypi.png" class="article-banner">
+                <img src="https/www.stefanoteodorani.it/banner/ffmpeg-su-raspberrypi.png" class="article-banner">
             
 
             <header class="article-header">
-    <a href="http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/">
+    <a href="https//www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/">
     <h1 class="article-title" itemprop="name">
         Installare FFmpeg sulla Raspberry Pi 3
     </h1>
@@ -332,7 +332,7 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.
                 <i class="fa fa-folder"></i>
                 
                 
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/linux">linux</a>
+                <a class="article-category-link" href="https/www.stefanoteodorani.it/categories/linux">linux</a>
                 
                 
             </div>
@@ -346,7 +346,7 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.
                 <i class="fa fa-tags"></i>
                 
                 
-                <a class="article-category-link" href="http://www.stefanoteodorani.it/tags/raspberry">raspberry</a>
+                <a class="article-category-link" href="https/www.stefanoteodorani.it/tags/raspberry">raspberry</a>
                 
                 
             </div>
@@ -405,12 +405,12 @@ make
 <p>L&rsquo;installazione di FFmpeg comprende anche il tool ffserver che permette di fare lo streaming di video e audio.</p>
             </div>
             <footer class="article-footer">
-    <a data-url="http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/" data-id="b25e4ebf7f59e5a77b0bc9a6440e9abf" class="article-share-link">
+    <a data-url="https//www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/" data-id="b25e4ebf7f59e5a77b0bc9a6440e9abf" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
-    <a href="http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/#disqus_thread" class="article-comment-link">
+    <a href="https//www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -486,7 +486,7 @@ make
         
 <nav id="article-nav">
     
-    <a href="http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="https//www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           Older
       </strong>
@@ -495,7 +495,7 @@ make
     
 
     
-    <a href="http://www.stefanoteodorani.it/2017/05/27/streaming-video-con-ffserver-su-raspberrypi/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="https//www.stefanoteodorani.it/2017/05/27/streaming-video-con-ffserver-su-raspberrypi/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           Newer
       </strong>
@@ -548,9 +548,9 @@ make
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="http://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" class="thumbnail">
+                    <a href="https//www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/unison-ssh.jpg)" alt="Installare FFmpeg sulla Raspberry Pi 3" class="thumbnail-image"></span>
+                        <span style="background-image:url(https/www.stefanoteodorani.it/banner/unison-ssh.jpg)" alt="Installare FFmpeg sulla Raspberry Pi 3" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -559,13 +559,13 @@ make
                     
                     <p class="item-category">
                         
-                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/system">
+                        <a class="article-category-link" href="https/www.stefanoteodorani.it/categories/system">
                         system
                         </a>
                     </p>
                     
                     
-                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" class="title">Sincronizzare cartelle in SSH con UNISON</a></p>
+                    <p class="item-title"><a href="https//www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" class="title">Sincronizzare cartelle in SSH con UNISON</a></p>
                     <p class="item-date">
                         <time datetime="2018-08-05 18:00:00 &#43;0100 &#43;0100" itemprop="datePublished">05-08-2018</time>
                     </p>
@@ -574,9 +574,9 @@ make
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="http://www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/" class="thumbnail">
+                    <a href="https//www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/riattivare-utente-oracle-expired.jpg)" alt="Installare FFmpeg sulla Raspberry Pi 3" class="thumbnail-image"></span>
+                        <span style="background-image:url(https/www.stefanoteodorani.it/banner/riattivare-utente-oracle-expired.jpg)" alt="Installare FFmpeg sulla Raspberry Pi 3" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -585,13 +585,13 @@ make
                     
                     <p class="item-category">
                         
-                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">
+                        <a class="article-category-link" href="https/www.stefanoteodorani.it/categories/database">
                         database
                         </a>
                     </p>
                     
                     
-                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/" class="title">Riattivare un utente Oracle Expired</a></p>
+                    <p class="item-title"><a href="https//www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/" class="title">Riattivare un utente Oracle Expired</a></p>
                     <p class="item-date">
                         <time datetime="2018-04-17 12:00:00 &#43;0100 &#43;0100" itemprop="datePublished">17-04-2018</time>
                     </p>
@@ -600,9 +600,9 @@ make
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="http://www.stefanoteodorani.it/2018/04/05/spostare-i-controlfiles-su-oracle-12.x/" class="thumbnail">
+                    <a href="https//www.stefanoteodorani.it/2018/04/05/spostare-i-controlfiles-su-oracle-12.x/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/spostare-oracle-controlfile.jpg)" alt="Installare FFmpeg sulla Raspberry Pi 3" class="thumbnail-image"></span>
+                        <span style="background-image:url(https/www.stefanoteodorani.it/banner/spostare-oracle-controlfile.jpg)" alt="Installare FFmpeg sulla Raspberry Pi 3" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -611,13 +611,13 @@ make
                     
                     <p class="item-category">
                         
-                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">
+                        <a class="article-category-link" href="https/www.stefanoteodorani.it/categories/database">
                         database
                         </a>
                     </p>
                     
                     
-                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2018/04/05/spostare-i-controlfiles-su-oracle-12.x/" class="title">Spostare i controlfiles su Oracle 12.x</a></p>
+                    <p class="item-title"><a href="https//www.stefanoteodorani.it/2018/04/05/spostare-i-controlfiles-su-oracle-12.x/" class="title">Spostare i controlfiles su Oracle 12.x</a></p>
                     <p class="item-date">
                         <time datetime="2018-04-05 11:18:00 &#43;0100 &#43;0100" itemprop="datePublished">05-04-2018</time>
                     </p>
@@ -626,9 +626,9 @@ make
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" class="thumbnail">
+                    <a href="https//www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/spostare-oracle-redolog.jpg)" alt="Installare FFmpeg sulla Raspberry Pi 3" class="thumbnail-image"></span>
+                        <span style="background-image:url(https/www.stefanoteodorani.it/banner/spostare-oracle-redolog.jpg)" alt="Installare FFmpeg sulla Raspberry Pi 3" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -637,13 +637,13 @@ make
                     
                     <p class="item-category">
                         
-                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">
+                        <a class="article-category-link" href="https/www.stefanoteodorani.it/categories/database">
                         database
                         </a>
                     </p>
                     
                     
-                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" class="title">Spostare i redolog su Oracle 12.x</a></p>
+                    <p class="item-title"><a href="https//www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" class="title">Spostare i redolog su Oracle 12.x</a></p>
                     <p class="item-date">
                         <time datetime="2018-04-05 11:18:00 &#43;0100 &#43;0100" itemprop="datePublished">05-04-2018</time>
                     </p>
@@ -652,9 +652,9 @@ make
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="http://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/" class="thumbnail">
+                    <a href="https//www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/" class="thumbnail">
                     
-                        <span style="background-image:url(http://www.stefanoteodorani.it/banner/oracle-logo.png)" alt="Installare FFmpeg sulla Raspberry Pi 3" class="thumbnail-image"></span>
+                        <span style="background-image:url(https/www.stefanoteodorani.it/banner/oracle-logo.png)" alt="Installare FFmpeg sulla Raspberry Pi 3" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -663,13 +663,13 @@ make
                     
                     <p class="item-category">
                         
-                        <a class="article-category-link" href="http://www.stefanoteodorani.it/categories/database">
+                        <a class="article-category-link" href="https/www.stefanoteodorani.it/categories/database">
                         database
                         </a>
                     </p>
                     
                     
-                    <p class="item-title"><a href="http://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/" class="title">Installazione client Oracle 12.x su Red-Hat</a></p>
+                    <p class="item-title"><a href="https//www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/" class="title">Installazione client Oracle 12.x su Red-Hat</a></p>
                     <p class="item-date">
                         <time datetime="2018-03-30 09:18:00 &#43;0100 &#43;0100" itemprop="datePublished">30-03-2018</time>
                     </p>
@@ -691,7 +691,7 @@ make
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/database">
+                <a class="category-list-link" href="https/www.stefanoteodorani.it/categories/database">
                     database
                 </a>
                 <span class="category-list-count">9</span>
@@ -699,7 +699,7 @@ make
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/developer">
+                <a class="category-list-link" href="https/www.stefanoteodorani.it/categories/developer">
                     developer
                 </a>
                 <span class="category-list-count">1</span>
@@ -707,7 +707,7 @@ make
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/linux">
+                <a class="category-list-link" href="https/www.stefanoteodorani.it/categories/linux">
                     linux
                 </a>
                 <span class="category-list-count">11</span>
@@ -715,7 +715,7 @@ make
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/mobile">
+                <a class="category-list-link" href="https/www.stefanoteodorani.it/categories/mobile">
                     mobile
                 </a>
                 <span class="category-list-count">1</span>
@@ -723,7 +723,7 @@ make
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/opendata">
+                <a class="category-list-link" href="https/www.stefanoteodorani.it/categories/opendata">
                     opendata
                 </a>
                 <span class="category-list-count">1</span>
@@ -731,7 +731,7 @@ make
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="http://www.stefanoteodorani.it/categories/system">
+                <a class="category-list-link" href="https/www.stefanoteodorani.it/categories/system">
                     system
                 </a>
                 <span class="category-list-count">3</span>
@@ -756,7 +756,7 @@ make
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/android">
+                <a class="category-list-link" href="https/www.stefanoteodorani.it/tags/android">
                     android
                 </a>
                 <span class="category-list-count">1</span>
@@ -764,7 +764,7 @@ make
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/bash">
+                <a class="category-list-link" href="https/www.stefanoteodorani.it/tags/bash">
                     bash
                 </a>
                 <span class="category-list-count">1</span>
@@ -772,7 +772,7 @@ make
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/ckan">
+                <a class="category-list-link" href="https/www.stefanoteodorani.it/tags/ckan">
                     ckan
                 </a>
                 <span class="category-list-count">1</span>
@@ -780,7 +780,7 @@ make
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/git">
+                <a class="category-list-link" href="https/www.stefanoteodorani.it/tags/git">
                     git
                 </a>
                 <span class="category-list-count">1</span>
@@ -788,7 +788,7 @@ make
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/github-pages">
+                <a class="category-list-link" href="https/www.stefanoteodorani.it/tags/github-pages">
                     github-pages
                 </a>
                 <span class="category-list-count">1</span>
@@ -796,7 +796,7 @@ make
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/linux">
+                <a class="category-list-link" href="https/www.stefanoteodorani.it/tags/linux">
                     linux
                 </a>
                 <span class="category-list-count">1</span>
@@ -804,7 +804,7 @@ make
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/oracle">
+                <a class="category-list-link" href="https/www.stefanoteodorani.it/tags/oracle">
                     oracle
                 </a>
                 <span class="category-list-count">9</span>
@@ -812,7 +812,7 @@ make
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/osx">
+                <a class="category-list-link" href="https/www.stefanoteodorani.it/tags/osx">
                     osx
                 </a>
                 <span class="category-list-count">1</span>
@@ -820,7 +820,7 @@ make
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/raspberry">
+                <a class="category-list-link" href="https/www.stefanoteodorani.it/tags/raspberry">
                     raspberry
                 </a>
                 <span class="category-list-count">8</span>
@@ -828,7 +828,7 @@ make
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/ubuntu">
+                <a class="category-list-link" href="https/www.stefanoteodorani.it/tags/ubuntu">
                     ubuntu
                 </a>
                 <span class="category-list-count">2</span>
@@ -836,7 +836,7 @@ make
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="http://www.stefanoteodorani.it/tags/virtual-machines">
+                <a class="category-list-link" href="https/www.stefanoteodorani.it/tags/virtual-machines">
                     virtual-machines
                 </a>
                 <span class="category-list-count">1</span>
@@ -859,37 +859,37 @@ make
     <div class="widget tagcloud">
         
         
-        <a href="http://www.stefanoteodorani.it/tags/android" style="font-size: 12px;">android</a>
+        <a href="https/www.stefanoteodorani.it/tags/android" style="font-size: 12px;">android</a>
         
         
-        <a href="http://www.stefanoteodorani.it/tags/bash" style="font-size: 12px;">bash</a>
+        <a href="https/www.stefanoteodorani.it/tags/bash" style="font-size: 12px;">bash</a>
         
         
-        <a href="http://www.stefanoteodorani.it/tags/ckan" style="font-size: 12px;">ckan</a>
+        <a href="https/www.stefanoteodorani.it/tags/ckan" style="font-size: 12px;">ckan</a>
         
         
-        <a href="http://www.stefanoteodorani.it/tags/git" style="font-size: 12px;">git</a>
+        <a href="https/www.stefanoteodorani.it/tags/git" style="font-size: 12px;">git</a>
         
         
-        <a href="http://www.stefanoteodorani.it/tags/github-pages" style="font-size: 12px;">github-pages</a>
+        <a href="https/www.stefanoteodorani.it/tags/github-pages" style="font-size: 12px;">github-pages</a>
         
         
-        <a href="http://www.stefanoteodorani.it/tags/linux" style="font-size: 12px;">linux</a>
+        <a href="https/www.stefanoteodorani.it/tags/linux" style="font-size: 12px;">linux</a>
         
         
-        <a href="http://www.stefanoteodorani.it/tags/oracle" style="font-size: 12px;">oracle</a>
+        <a href="https/www.stefanoteodorani.it/tags/oracle" style="font-size: 12px;">oracle</a>
         
         
-        <a href="http://www.stefanoteodorani.it/tags/osx" style="font-size: 12px;">osx</a>
+        <a href="https/www.stefanoteodorani.it/tags/osx" style="font-size: 12px;">osx</a>
         
         
-        <a href="http://www.stefanoteodorani.it/tags/raspberry" style="font-size: 12px;">raspberry</a>
+        <a href="https/www.stefanoteodorani.it/tags/raspberry" style="font-size: 12px;">raspberry</a>
         
         
-        <a href="http://www.stefanoteodorani.it/tags/ubuntu" style="font-size: 12px;">ubuntu</a>
+        <a href="https/www.stefanoteodorani.it/tags/ubuntu" style="font-size: 12px;">ubuntu</a>
         
         
-        <a href="http://www.stefanoteodorani.it/tags/virtual-machines" style="font-size: 12px;">virtual-machines</a>
+        <a href="https/www.stefanoteodorani.it/tags/virtual-machines" style="font-size: 12px;">virtual-machines</a>
         
     </div>
 </div>
@@ -915,8 +915,8 @@ make
 </footer>
 
 
-<script src="http://www.stefanoteodorani.it/fancybox/jquery.fancybox.pack.js"></script>
-<script src="http://www.stefanoteodorani.it/js/script.js"></script>
+<script src="https/www.stefanoteodorani.it/fancybox/jquery.fancybox.pack.js"></script>
+<script src="https/www.stefanoteodorani.it/js/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 
 

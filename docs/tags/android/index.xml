@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Android on stefanoteodorani.it</title>
-    <link>http://www.stefanoteodorani.it/tags/android/</link>
+    <link>https//www.stefanoteodorani.it/tags/android/</link>
     <description>Recent content in Android on stefanoteodorani.it</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-419</language>
     <lastBuildDate>Fri, 20 Jan 2017 21:46:00 +0100</lastBuildDate>
     
-	<atom:link href="http://www.stefanoteodorani.it/tags/android/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https//www.stefanoteodorani.it/tags/android/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Testare applicazioni Android</title>
-      <link>http://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/</link>
+      <link>https//www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/</link>
       <pubDate>Fri, 20 Jan 2017 21:46:00 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/</guid>
+      <guid>https//www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/</guid>
       <description>Per poter testare le app mobile su piattaforma Android, Google mette a disposizione un servizio di aggiornamento automatico basato sul Play Store. Istriversi a questo servizio è un po macchinoso, ma garantisce gli aggiornamenti automatici delle app quando lo sviluppatore pubblica una nuova versione.
 Il servizio di cui parliamo è basato sulle Community di Google e funziona in questo modo:
  Lo sviluppatore crea una Community specifica per l&amp;rsquo;app (es: app-unixx-test) Lo sviluppatore invia una mail di invito al tester per consentirgli di entrare nella Community Nella mail ricevuta, il tester clicca il pulsante Anteprima community   Si viene reindirizzati nella pagina della community di google, in cui il tester deve cliccare il pulsante Accetta invito Ora sulla parte destra della pagina cliccare sul link App di test   Nella pagina successiva cliccare sul pulsante DIVENTA UN TESTER Nella pagina successiva, in basso cliccare nel link Scarica UniXX dal Play Store   A questo punto si e&amp;rsquo; indirizzati nella pagina del play store.</description>

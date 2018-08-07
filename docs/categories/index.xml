@@ -2,65 +2,65 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on stefanoteodorani.it</title>
-    <link>http://www.stefanoteodorani.it/categories/</link>
+    <link>https//www.stefanoteodorani.it/categories/</link>
     <description>Recent content in Categories on stefanoteodorani.it</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-419</language>
     
-	<atom:link href="http://www.stefanoteodorani.it/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https//www.stefanoteodorani.it/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Database</title>
-      <link>http://www.stefanoteodorani.it/categories/database/</link>
+      <link>https//www.stefanoteodorani.it/categories/database/</link>
       <pubDate>Tue, 17 Apr 2018 12:00:00 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/categories/database/</guid>
+      <guid>https//www.stefanoteodorani.it/categories/database/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Developer</title>
-      <link>http://www.stefanoteodorani.it/categories/developer/</link>
+      <link>https//www.stefanoteodorani.it/categories/developer/</link>
       <pubDate>Sun, 17 Sep 2017 12:52:00 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/categories/developer/</guid>
+      <guid>https//www.stefanoteodorani.it/categories/developer/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>http://www.stefanoteodorani.it/categories/linux/</link>
+      <link>https//www.stefanoteodorani.it/categories/linux/</link>
       <pubDate>Thu, 28 Dec 2017 21:36:13 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/categories/linux/</guid>
+      <guid>https//www.stefanoteodorani.it/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mobile</title>
-      <link>http://www.stefanoteodorani.it/categories/mobile/</link>
+      <link>https//www.stefanoteodorani.it/categories/mobile/</link>
       <pubDate>Fri, 20 Jan 2017 21:46:00 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/categories/mobile/</guid>
+      <guid>https//www.stefanoteodorani.it/categories/mobile/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Opendata</title>
-      <link>http://www.stefanoteodorani.it/categories/opendata/</link>
+      <link>https//www.stefanoteodorani.it/categories/opendata/</link>
       <pubDate>Fri, 24 Mar 2017 18:42:26 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/categories/opendata/</guid>
+      <guid>https//www.stefanoteodorani.it/categories/opendata/</guid>
       <description></description>
     </item>
     
     <item>
       <title>System</title>
-      <link>http://www.stefanoteodorani.it/categories/system/</link>
+      <link>https//www.stefanoteodorani.it/categories/system/</link>
       <pubDate>Sun, 05 Aug 2018 18:00:00 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/categories/system/</guid>
+      <guid>https//www.stefanoteodorani.it/categories/system/</guid>
       <description></description>
     </item>
     

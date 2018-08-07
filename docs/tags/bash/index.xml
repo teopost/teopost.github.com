@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bash on stefanoteodorani.it</title>
-    <link>http://www.stefanoteodorani.it/tags/bash/</link>
+    <link>https//www.stefanoteodorani.it/tags/bash/</link>
     <description>Recent content in Bash on stefanoteodorani.it</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-419</language>
     <lastBuildDate>Wed, 17 May 2017 21:39:51 +0200</lastBuildDate>
     
-	<atom:link href="http://www.stefanoteodorani.it/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https//www.stefanoteodorani.it/tags/bash/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>SSH senza password</title>
-      <link>http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/</link>
+      <link>https//www.stefanoteodorani.it/2017/05/17/ssh-senza-password/</link>
       <pubDate>Wed, 17 May 2017 21:39:51 +0200</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/</guid>
+      <guid>https//www.stefanoteodorani.it/2017/05/17/ssh-senza-password/</guid>
       <description>Uso spesso ssh per collegarmi sui server linux dei clienti. Per evitare di dover digitare sempre la password del server, è possibile configurare il vostro client per effettuare un collegamento senza dover digitare la password.
 Creare sul vostro computer la chiave pubblica e privata La prima cosa da fare è creare, sul client che deve collegarsi al server, le chiavi
 Digitare quindi il comando ssh-keygen

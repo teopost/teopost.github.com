@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on stefanoteodorani.it</title>
-    <link>http://www.stefanoteodorani.it/post/</link>
+    <link>https//www.stefanoteodorani.it/post/</link>
     <description>Recent content in Posts on stefanoteodorani.it</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-419</language>
     <lastBuildDate>Sun, 05 Aug 2018 18:00:00 +0100</lastBuildDate>
     
-	<atom:link href="http://www.stefanoteodorani.it/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https//www.stefanoteodorani.it/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Sincronizzare cartelle in SSH con UNISON</title>
-      <link>http://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/</link>
+      <link>https//www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/</link>
       <pubDate>Sun, 05 Aug 2018 18:00:00 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/</guid>
+      <guid>https//www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/</guid>
       <description>&lt;p&gt;Recentemente, mi è capitato di dover risolvere questo problema.
 Su un server ftp, vengono copiati files in 3 separate cartelle.
 Tali file devono essere sincronizzati con 3 cartelle situate su 3 diverse macchine.
@@ -31,10 +31,10 @@ Tale sincronizzazione deve essere bidirezionale e i files creati sul server ftp 
     
     <item>
       <title>Riattivare un utente Oracle Expired</title>
-      <link>http://www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/</link>
+      <link>https//www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/</link>
       <pubDate>Tue, 17 Apr 2018 12:00:00 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/</guid>
+      <guid>https//www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/</guid>
       <description>&lt;h2 id=&#34;introduzione&#34;&gt;Introduzione&lt;/h2&gt;
 
 &lt;p&gt;Un utente Oracle può essere creato in modo che la password scada dopo un certo periodo di tempo definito nel profilo assegnato. Per riattivare l&amp;rsquo;utente esistente è necessario reimpostare la password.
@@ -46,10 +46,10 @@ In questo articolo viene descritta una procedura un pò inconsueta per ripristin
     
     <item>
       <title>Spostare i controlfiles su Oracle 12.x</title>
-      <link>http://www.stefanoteodorani.it/2018/04/05/spostare-i-controlfiles-su-oracle-12.x/</link>
+      <link>https//www.stefanoteodorani.it/2018/04/05/spostare-i-controlfiles-su-oracle-12.x/</link>
       <pubDate>Thu, 05 Apr 2018 11:18:00 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2018/04/05/spostare-i-controlfiles-su-oracle-12.x/</guid>
+      <guid>https//www.stefanoteodorani.it/2018/04/05/spostare-i-controlfiles-su-oracle-12.x/</guid>
       <description>&lt;h2 id=&#34;introduzione&#34;&gt;Introduzione&lt;/h2&gt;
 
 &lt;p&gt;Oggi mi è capitato di dover spostare alcuni controlfile Oracle che erano stati creati in una cartella sbagliata. Spostare i controlfile non è difficile, ma essendo files molto critici per la sopravvivenza del DB, questa attività va fatta senza troppo casino nelle orecchie.&lt;/p&gt;
@@ -61,10 +61,10 @@ In questo articolo viene descritta una procedura un pò inconsueta per ripristin
     
     <item>
       <title>Spostare i redolog su Oracle 12.x</title>
-      <link>http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/</link>
+      <link>https//www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/</link>
       <pubDate>Thu, 05 Apr 2018 11:18:00 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/</guid>
+      <guid>https//www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/</guid>
       <description>&lt;h2 id=&#34;introduzione&#34;&gt;Introduzione&lt;/h2&gt;
 
 &lt;p&gt;Oggi mi è capitato di dover spostare alcuni redolog che erano stati creati in una cartella sbagliata.
@@ -75,10 +75,10 @@ Ecco come ho fatto&lt;/p&gt;
     
     <item>
       <title>Installazione client Oracle 12.x su Red-Hat</title>
-      <link>http://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/</link>
+      <link>https//www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/</link>
       <pubDate>Fri, 30 Mar 2018 09:18:00 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/</guid>
+      <guid>https//www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/</guid>
       <description>&lt;h2 id=&#34;introduzione&#34;&gt;Introduzione&lt;/h2&gt;
 
 &lt;p&gt;Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.&lt;/p&gt;
@@ -99,40 +99,40 @@ Ecco come ho fatto&lt;/p&gt;
     
     <item>
       <title>Oracle Transparent Data Encryption (TDE)</title>
-      <link>http://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/</link>
+      <link>https//www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/</link>
       <pubDate>Thu, 29 Mar 2018 09:18:00 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/</guid>
+      <guid>https//www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/</guid>
       <description>Ultimamente sono tutti molto preoccupati per una cosa chiamata GDPR, una legge europea che riguarda la protezione dei dati degli utenti (era ora dico io) che descrive una serie di adempimenti, non esclusivamente tecnici, da adottare per la salvaguardia dei dati.
 Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dati, quindi se avete sui vostri server i databases dei vostri clienti, cominciate a tremare perchè le multe sono salatissime.</description>
     </item>
     
     <item>
       <title>Usare file ppk con ssh sul Mac</title>
-      <link>http://www.stefanoteodorani.it/2018/01/02/usare-file-ppk-con-ssh-sul-mac/</link>
+      <link>https//www.stefanoteodorani.it/2018/01/02/usare-file-ppk-con-ssh-sul-mac/</link>
       <pubDate>Tue, 02 Jan 2018 22:45:00 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2018/01/02/usare-file-ppk-con-ssh-sul-mac/</guid>
+      <guid>https//www.stefanoteodorani.it/2018/01/02/usare-file-ppk-con-ssh-sul-mac/</guid>
       <description>Amo Linux. Sembra una contraddizione ma è proprio per questo che amo anche i Mac, e ne possiedo uno. Recentemente mi è capitato di dovermi collegare ad un server remoto via ssh utilizzando una chiave privata diversa dalla mia. Mi è stata fornita una chiave privata ma, ahimè, in un formato proprietario di putty (con estensione .ppk). Ecco quello che ho fatto:
 Conversione dile .ppk in .pem Per prima cosa ho convertito il file.</description>
     </item>
     
     <item>
       <title>Rete non funzionante con CentOS su VirtualBox</title>
-      <link>http://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/</link>
+      <link>https//www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/</link>
       <pubDate>Thu, 28 Dec 2017 21:36:13 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/</guid>
+      <guid>https//www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/</guid>
       <description>Ho scaricato da osboxes.org una VM con dentro CentoOS (sono pigro e se posso uso cose già fatte). Ho avviato la macchina virtuale e ho provato a navigare su internet. Non funzionava. Eseguendo il comando ifconfig non appariva la scheda di rete. Eppure sembrava tutto configurato bene. Ecco come ho soluzionato, come direbbe il mio amico coniglio.
 [teopost@localhost ~]$ ifconfig ens32: flags=4163&amp;lt;UP,BROADCAST,RUNNING,MULTICAST&amp;gt; mtu 1500 ether 00:0c:29:68:22:e2 txqueuelen 1000 (Ethernet) RX packets 0 bytes 0 (0.</description>
     </item>
     
     <item>
       <title>Git checkout di una specifica sottocartella</title>
-      <link>http://www.stefanoteodorani.it/2017/09/17/git-checkout-di-una-specifica-sottocartella/</link>
+      <link>https//www.stefanoteodorani.it/2017/09/17/git-checkout-di-una-specifica-sottocartella/</link>
       <pubDate>Sun, 17 Sep 2017 12:52:00 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2017/09/17/git-checkout-di-una-specifica-sottocartella/</guid>
+      <guid>https//www.stefanoteodorani.it/2017/09/17/git-checkout-di-una-specifica-sottocartella/</guid>
       <description>Esiste un comando di git chiamato sparse checkout che permette di popolare la propria cartella di lavoro con una specifica cartella del repository. Utile perché non si è costretti a scaricare il contenuto di tutto il repository git.
 Supponiamo di avere su github un repository al cui interno è contenuta la sottocartella database. Devo scaricare tutti i files SQL contenuti nella cartella. Come posso fare :
 Ecco come:
@@ -141,10 +141,10 @@ mkdir databas cd database/ # Inizializzo il repo vuoto git init # Aggiungo il re
     
     <item>
       <title>Syncthing su Raspberrypi</title>
-      <link>http://www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/</link>
+      <link>https//www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/</link>
       <pubDate>Tue, 20 Jun 2017 22:11:56 +0200</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/</guid>
+      <guid>https//www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/</guid>
       <description>&lt;p&gt;Btsync era veramente un bel programma, ma dopo aver fatto venire l&amp;rsquo;acquolina in bocca l&amp;rsquo;hanno messo a pagamento.
 La cosa peggiore tuttavia, restava il fatto che non fosse opensource.&lt;/p&gt;
 
@@ -153,10 +153,10 @@ La cosa peggiore tuttavia, restava il fatto che non fosse opensource.&lt;/p&gt;
     
     <item>
       <title>Oracle mail spooler</title>
-      <link>http://www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/</link>
+      <link>https//www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/</link>
       <pubDate>Sat, 27 May 2017 23:35:16 +0200</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/</guid>
+      <guid>https//www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/</guid>
       <description>&lt;p&gt;Può capitare di dover mandare mail da Oracle ? Si. Ho fatto questo script per l&amp;rsquo;invio di mail da una istanza Oracle per risolvere un problema immediato, e siccome non c&amp;rsquo;è niente di più definitivo delle cose provvisorie, eccolo qui come se fosse un prodotto finito.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -164,11 +164,11 @@ La cosa peggiore tuttavia, restava il fatto che non fosse opensource.&lt;/p&gt;
     
     <item>
       <title>Streaming video con ffserver su raspberrypi</title>
-      <link>http://www.stefanoteodorani.it/2017/05/27/streaming-video-con-ffserver-su-raspberrypi/</link>
+      <link>https//www.stefanoteodorani.it/2017/05/27/streaming-video-con-ffserver-su-raspberrypi/</link>
       <pubDate>Sat, 27 May 2017 16:50:58 +0200</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2017/05/27/streaming-video-con-ffserver-su-raspberrypi/</guid>
-      <description>&lt;p&gt;Recentemento ho scritto un paio di righe su come compilare e &lt;a href=&#34;http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/&#34;&gt;installare ffmpeg sulla Raspberry Pi&lt;/a&gt;.
+      <guid>https//www.stefanoteodorani.it/2017/05/27/streaming-video-con-ffserver-su-raspberrypi/</guid>
+      <description>&lt;p&gt;Recentemento ho scritto un paio di righe su come compilare e &lt;a href=&#34;https//www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/&#34;&gt;installare ffmpeg sulla Raspberry Pi&lt;/a&gt;.
 Quando si installa ffmpeg viene installato anche un tool fighissimo chiamato ffserver che permette di fare lo streming di contenuto audio e/o video su internet. Vediamo come:&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -176,10 +176,10 @@ Quando si installa ffmpeg viene installato anche un tool fighissimo chiamato ffs
     
     <item>
       <title>Installare FFmpeg sulla Raspberry Pi 3</title>
-      <link>http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/</link>
+      <link>https//www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/</link>
       <pubDate>Sat, 27 May 2017 16:18:40 +0200</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/</guid>
+      <guid>https//www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/</guid>
       <description>&lt;p&gt;Purtroppo installare FFmpeg sulla Raspberry non è mai una cosa semplice. Non si capisce per quale motivo non si decidono a mettere i compilati nel repository.
 Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.&lt;/p&gt;
 
@@ -188,10 +188,10 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.&lt;
     
     <item>
       <title>Oracle Char vs Bytes</title>
-      <link>http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/</link>
+      <link>https//www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/</link>
       <pubDate>Wed, 24 May 2017 22:23:55 +0200</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/</guid>
+      <guid>https//www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/</guid>
       <description>&lt;p&gt;Nei database Oracle, i campi che possono contenere dati stringa possono assumere datatype diversi&lt;/p&gt;
 
 &lt;ul&gt;
@@ -207,10 +207,10 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.&lt;
     
     <item>
       <title>Digital signage con Pi-Kiosk</title>
-      <link>http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/</link>
+      <link>https//www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/</link>
       <pubDate>Sat, 20 May 2017 20:50:06 +0200</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/</guid>
+      <guid>https//www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/</guid>
       <description>&lt;p&gt;Conosco Luca. Ha una agenzia di viaggi a Rimini, e un&amp;rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.&lt;/p&gt;
 
 &lt;p&gt;E&amp;rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico &lt;a href=&#34;https://www.sergiogridelli.it/&#34;&gt;Sergio&lt;/a&gt; gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.&lt;/p&gt;
@@ -220,10 +220,10 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.&lt;
     
     <item>
       <title>Hotspot wifi con Raspberry PI 3</title>
-      <link>http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/</link>
+      <link>https//www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/</link>
       <pubDate>Sat, 20 May 2017 18:03:03 +0200</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/</guid>
+      <guid>https//www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/</guid>
       <description>&lt;p&gt;La Raspberry PI 3 è stata finalmente dotata di una scheda wifi incorporata. Il chipset della scheda (Broadcom BCM2837) consente di configurare la scheda anche come access point. Non male !
 Vediamo come:
 &lt;/p&gt;</description>
@@ -231,10 +231,10 @@ Vediamo come:
     
     <item>
       <title>Oracle grants remapper</title>
-      <link>http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/</link>
+      <link>https//www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/</link>
       <pubDate>Wed, 17 May 2017 22:17:06 +0200</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/</guid>
+      <guid>https//www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/</guid>
       <description>&lt;p&gt;&lt;code&gt;Oracle Grants Remmaper&lt;/code&gt; si collega ad una istanza oracle sorgente e crea un file &lt;code&gt;.sql&lt;/code&gt; per la rigenerazione di grants i sinonimi da applicare su una istanza oracle di destinazione.
 In base al file di configurazione passato come argomento, Oracle Grants Remmaper sostituisce i nomi degli schemi con quelli definiti nel file.&lt;/p&gt;
 
@@ -243,10 +243,10 @@ In base al file di configurazione passato come argomento, Oracle Grants Remmaper
     
     <item>
       <title>SSH senza password</title>
-      <link>http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/</link>
+      <link>https//www.stefanoteodorani.it/2017/05/17/ssh-senza-password/</link>
       <pubDate>Wed, 17 May 2017 21:39:51 +0200</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/</guid>
+      <guid>https//www.stefanoteodorani.it/2017/05/17/ssh-senza-password/</guid>
       <description>Uso spesso ssh per collegarmi sui server linux dei clienti. Per evitare di dover digitare sempre la password del server, è possibile configurare il vostro client per effettuare un collegamento senza dover digitare la password.
 Creare sul vostro computer la chiave pubblica e privata La prima cosa da fare è creare, sul client che deve collegarsi al server, le chiavi
 Digitare quindi il comando ssh-keygen
@@ -255,10 +255,10 @@ teopost@local-host$ ssh-keygen Generating public/private rsa key pair.</descript
     
     <item>
       <title>Recuperare i dati sull&#39;inquinamento della mia città da CKAN</title>
-      <link>http://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/</link>
+      <link>https//www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/</link>
       <pubDate>Fri, 24 Mar 2017 18:42:26 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/</guid>
+      <guid>https//www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/</guid>
       <description>Ho intenzione di scrivere un piccolo bot di telegram che mi dia indicazioni sulla qualità dell&amp;rsquo;aria che ogni giorno respiro nella mia città.
 Sono partito, nella mia indagine, da qui:
 https://www.arpae.it/liberiamo/statistiche_riepilogative.asp?idlivello=822  Questo sito è pieno zeppo di dati utili e fra questi ci sono anche quelli che servono a me; ma come recuperarli ?
@@ -267,10 +267,10 @@ Per fortuna la regione Emilia Romagna espone tutte queste informazioni sotto for
     
     <item>
       <title>Usare mkvextract</title>
-      <link>http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/</link>
+      <link>https//www.stefanoteodorani.it/2017/02/17/usare-mkvextract/</link>
       <pubDate>Fri, 17 Feb 2017 21:46:48 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/</guid>
+      <guid>https//www.stefanoteodorani.it/2017/02/17/usare-mkvextract/</guid>
       <description>mkvextract è un tool per manipolare file mkv da linea di comando.
 sudo apt-get install -y mkvtoolnix mkvtoolnix-gui sudo apt-get install -y libdca-utils aften wget https://github.com/JakeWharton/mkvdts2ac3/raw/master/mkvdts2ac3.sh chmod 777 mkvdts2ac3.sh &amp;amp;&amp;amp; sudo mv mkvdts2ac3.sh /usr/bin/  Alcuni esempi Creare la traccia AC3 nuova ed eliminare la DTS:
 mkvdts2ac3.sh -n Some.Random.Movie.mkv  Note:
@@ -280,10 +280,10 @@ mkvpropedit Che\ bella\ giornata\ \(copia\).mkv --edit track:2 --set flag-defaul
     
     <item>
       <title>Client Oracle sul Mac</title>
-      <link>http://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/</link>
+      <link>https//www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/</link>
       <pubDate>Thu, 16 Feb 2017 21:36:13 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/</guid>
+      <guid>https//www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/</guid>
       <description>Per installare il client Oracle sul Mac, utilizzare questa procedura:
 Creare la cartella /Users/[utente]/oracle e metterci dentro:
 instantclient-basic-macos.x64-11.2.0.4.0.zip instantclient-sdk-macos.x64-11.2.0.4.0.zip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip  scompattarli
@@ -295,10 +295,10 @@ curl -O https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fix_oralib.
     
     <item>
       <title>Testare applicazioni Android</title>
-      <link>http://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/</link>
+      <link>https//www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/</link>
       <pubDate>Fri, 20 Jan 2017 21:46:00 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/</guid>
+      <guid>https//www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/</guid>
       <description>Per poter testare le app mobile su piattaforma Android, Google mette a disposizione un servizio di aggiornamento automatico basato sul Play Store. Istriversi a questo servizio è un po macchinoso, ma garantisce gli aggiornamenti automatici delle app quando lo sviluppatore pubblica una nuova versione.
 Il servizio di cui parliamo è basato sulle Community di Google e funziona in questo modo:
  Lo sviluppatore crea una Community specifica per l&amp;rsquo;app (es: app-unixx-test) Lo sviluppatore invia una mail di invito al tester per consentirgli di entrare nella Community Nella mail ricevuta, il tester clicca il pulsante Anteprima community   Si viene reindirizzati nella pagina della community di google, in cui il tester deve cliccare il pulsante Accetta invito Ora sulla parte destra della pagina cliccare sul link App di test   Nella pagina successiva cliccare sul pulsante DIVENTA UN TESTER Nella pagina successiva, in basso cliccare nel link Scarica UniXX dal Play Store   A questo punto si e&amp;rsquo; indirizzati nella pagina del play store.</description>
@@ -306,10 +306,10 @@ Il servizio di cui parliamo è basato sulle Community di Google e funziona in qu
     
     <item>
       <title>IP Statico su Raspberry</title>
-      <link>http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/</link>
+      <link>https//www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/</link>
       <pubDate>Mon, 09 Jan 2017 16:02:00 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/</guid>
+      <guid>https//www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/</guid>
       <description>&lt;p&gt;Se si vuole utilizzare una raspberry come un server, la prima cosa da fare è evitare che l&amp;rsquo;indirizzo IP cambi ad ogni reboot. Insomma va disabilitato il dhcp.
 Per farlo agire come segue:&lt;/p&gt;
 
@@ -318,10 +318,10 @@ Per farlo agire come segue:&lt;/p&gt;
     
     <item>
       <title>Wordpress su Raspberry</title>
-      <link>http://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/</link>
+      <link>https//www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/</link>
       <pubDate>Sun, 08 Jan 2017 16:15:00 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/</guid>
+      <guid>https//www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/</guid>
       <description>Voglio installare un blog sulla raspberry. Per farlo, dopo aver installato un LAMP server, procedo come segue:
 Ecco cosa ho fatto:
 Preparare lo schema di DATABASE mysql -uroot -p&amp;lt;password&amp;gt; CREATE DATABASE wordpress; CREATE USER wordpressuser@localhost IDENTIFIED BY &#39;wppassword&#39; GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost;  dove  è la password di mysql che ho impostato durante l&amp;rsquo;installazione del LAMP server e wppassword è un esempio di password per l&amp;rsquo;utente wordpress che ho appenta creato su mysql</description>
@@ -329,10 +329,10 @@ Preparare lo schema di DATABASE mysql -uroot -p&amp;lt;password&amp;gt; CREATE D
     
     <item>
       <title>LAMP sulla Raspberry</title>
-      <link>http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/</link>
+      <link>https//www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/</link>
       <pubDate>Sat, 07 Jan 2017 16:10:00 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/</guid>
+      <guid>https//www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/</guid>
       <description>Voglio installare un blog sulla raspberry. Per farlo, dopo aver configurato un ip statico, devo installare i pacchetti software necessari per far girare il sito.
 Ecco cosa ho fatto:
 Installazione di Apache sudo apt-get update sudo apt-get install apache2  Se tutto ha funzionato vai su http://your_server_IP_address e vedi il web server attivo
@@ -342,20 +342,20 @@ Configurazione di MySql # Creare la struttura di directory del database dove sar
     
     <item>
       <title>Configurare GoDaddy per le Github Pages</title>
-      <link>http://www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/</link>
+      <link>https//www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/</link>
       <pubDate>Wed, 28 Dec 2016 22:45:00 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/</guid>
+      <guid>https//www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/</guid>
       <description>Possiedo il dominio www.stefanoteodorani.it su GoDaddy.com. Per far funzionare tale dominio con questo blog ho seguito i seguenti passi:
 Creazione sito teopost.github.io Ho creato sul mio profilo github un repository chiamato teopost.github.com. Ho committato il sorgente del mio sito sul master di tale repository. Github è così gentile da accorgersi che il sorgente committato sul master è un sorgente di jekyll, quindi provvede ad eseguirne la build e a pubblicarne il risultato.</description>
     </item>
     
     <item>
       <title>Disabilitare l&#39;autenticazione in Ubuntu Software Center</title>
-      <link>http://www.stefanoteodorani.it/2016/12/27/disabilitare-lautenticazione-in-ubuntu-software-center/</link>
+      <link>https//www.stefanoteodorani.it/2016/12/27/disabilitare-lautenticazione-in-ubuntu-software-center/</link>
       <pubDate>Tue, 27 Dec 2016 18:45:00 +0100</pubDate>
       
-      <guid>http://www.stefanoteodorani.it/2016/12/27/disabilitare-lautenticazione-in-ubuntu-software-center/</guid>
+      <guid>https//www.stefanoteodorani.it/2016/12/27/disabilitare-lautenticazione-in-ubuntu-software-center/</guid>
       <description>E&amp;rsquo; una rottura di scatole dover digitare sempre la password per installare gli aggiornamenti su Ubuntu. Quindi, ecco cosa si può fare:
  Aprire una finestra terminale
  Incollare questo comando
