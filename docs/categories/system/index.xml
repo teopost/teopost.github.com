@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>System on stefanoteodorani.it</title>
-    <link>https//www.stefanoteodorani.it/categories/system/</link>
+    <link>https://www.stefanoteodorani.it/categories/system/</link>
     <description>Recent content in System on stefanoteodorani.it</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-419</language>
     <lastBuildDate>Sun, 05 Aug 2018 18:00:00 +0100</lastBuildDate>
     
-	<atom:link href="https//www.stefanoteodorani.it/categories/system/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.stefanoteodorani.it/categories/system/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Sincronizzare cartelle in SSH con UNISON</title>
-      <link>https//www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/</link>
+      <link>https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/</link>
       <pubDate>Sun, 05 Aug 2018 18:00:00 +0100</pubDate>
       
-      <guid>https//www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/</guid>
+      <guid>https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/</guid>
       <description>&lt;p&gt;Recentemente, mi è capitato di dover risolvere questo problema.
 Su un server ftp, vengono copiati files in 3 separate cartelle.
 Tali file devono essere sincronizzati con 3 cartelle situate su 3 diverse macchine.
@@ -31,20 +31,20 @@ Tale sincronizzazione deve essere bidirezionale e i files creati sul server ftp 
     
     <item>
       <title>Usare file ppk con ssh sul Mac</title>
-      <link>https//www.stefanoteodorani.it/2018/01/02/usare-file-ppk-con-ssh-sul-mac/</link>
+      <link>https://www.stefanoteodorani.it/2018/01/02/usare-file-ppk-con-ssh-sul-mac/</link>
       <pubDate>Tue, 02 Jan 2018 22:45:00 +0100</pubDate>
       
-      <guid>https//www.stefanoteodorani.it/2018/01/02/usare-file-ppk-con-ssh-sul-mac/</guid>
+      <guid>https://www.stefanoteodorani.it/2018/01/02/usare-file-ppk-con-ssh-sul-mac/</guid>
       <description>Amo Linux. Sembra una contraddizione ma è proprio per questo che amo anche i Mac, e ne possiedo uno. Recentemente mi è capitato di dovermi collegare ad un server remoto via ssh utilizzando una chiave privata diversa dalla mia. Mi è stata fornita una chiave privata ma, ahimè, in un formato proprietario di putty (con estensione .ppk). Ecco quello che ho fatto:
 Conversione dile .ppk in .pem Per prima cosa ho convertito il file.</description>
     </item>
     
     <item>
       <title>Configurare GoDaddy per le Github Pages</title>
-      <link>https//www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/</link>
+      <link>https://www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/</link>
       <pubDate>Wed, 28 Dec 2016 22:45:00 +0100</pubDate>
       
-      <guid>https//www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/</guid>
+      <guid>https://www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/</guid>
       <description>Possiedo il dominio www.stefanoteodorani.it su GoDaddy.com. Per far funzionare tale dominio con questo blog ho seguito i seguenti passi:
 Creazione sito teopost.github.io Ho creato sul mio profilo github un repository chiamato teopost.github.com. Ho committato il sorgente del mio sito sul master di tale repository. Github è così gentile da accorgersi che il sorgente committato sul master è un sorgente di jekyll, quindi provvede ad eseguirne la build e a pubblicarne il risultato.</description>
     </item>

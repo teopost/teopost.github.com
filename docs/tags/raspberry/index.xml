@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Raspberry on stefanoteodorani.it</title>
-    <link>https//www.stefanoteodorani.it/tags/raspberry/</link>
+    <link>https://www.stefanoteodorani.it/tags/raspberry/</link>
     <description>Recent content in Raspberry on stefanoteodorani.it</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-419</language>
     <lastBuildDate>Tue, 20 Jun 2017 22:11:56 +0200</lastBuildDate>
     
-	<atom:link href="https//www.stefanoteodorani.it/tags/raspberry/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.stefanoteodorani.it/tags/raspberry/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Syncthing su Raspberrypi</title>
-      <link>https//www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/</link>
+      <link>https://www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/</link>
       <pubDate>Tue, 20 Jun 2017 22:11:56 +0200</pubDate>
       
-      <guid>https//www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/</guid>
+      <guid>https://www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/</guid>
       <description>&lt;p&gt;Btsync era veramente un bel programma, ma dopo aver fatto venire l&amp;rsquo;acquolina in bocca l&amp;rsquo;hanno messo a pagamento.
 La cosa peggiore tuttavia, restava il fatto che non fosse opensource.&lt;/p&gt;
 
@@ -25,11 +25,11 @@ La cosa peggiore tuttavia, restava il fatto che non fosse opensource.&lt;/p&gt;
     
     <item>
       <title>Streaming video con ffserver su raspberrypi</title>
-      <link>https//www.stefanoteodorani.it/2017/05/27/streaming-video-con-ffserver-su-raspberrypi/</link>
+      <link>https://www.stefanoteodorani.it/2017/05/27/streaming-video-con-ffserver-su-raspberrypi/</link>
       <pubDate>Sat, 27 May 2017 16:50:58 +0200</pubDate>
       
-      <guid>https//www.stefanoteodorani.it/2017/05/27/streaming-video-con-ffserver-su-raspberrypi/</guid>
-      <description>&lt;p&gt;Recentemento ho scritto un paio di righe su come compilare e &lt;a href=&#34;https//www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/&#34;&gt;installare ffmpeg sulla Raspberry Pi&lt;/a&gt;.
+      <guid>https://www.stefanoteodorani.it/2017/05/27/streaming-video-con-ffserver-su-raspberrypi/</guid>
+      <description>&lt;p&gt;Recentemento ho scritto un paio di righe su come compilare e &lt;a href=&#34;https://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/&#34;&gt;installare ffmpeg sulla Raspberry Pi&lt;/a&gt;.
 Quando si installa ffmpeg viene installato anche un tool fighissimo chiamato ffserver che permette di fare lo streming di contenuto audio e/o video su internet. Vediamo come:&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -37,10 +37,10 @@ Quando si installa ffmpeg viene installato anche un tool fighissimo chiamato ffs
     
     <item>
       <title>Installare FFmpeg sulla Raspberry Pi 3</title>
-      <link>https//www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/</link>
+      <link>https://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/</link>
       <pubDate>Sat, 27 May 2017 16:18:40 +0200</pubDate>
       
-      <guid>https//www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/</guid>
+      <guid>https://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/</guid>
       <description>&lt;p&gt;Purtroppo installare FFmpeg sulla Raspberry non è mai una cosa semplice. Non si capisce per quale motivo non si decidono a mettere i compilati nel repository.
 Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.&lt;/p&gt;
 
@@ -49,10 +49,10 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.&lt;
     
     <item>
       <title>Digital signage con Pi-Kiosk</title>
-      <link>https//www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/</link>
+      <link>https://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/</link>
       <pubDate>Sat, 20 May 2017 20:50:06 +0200</pubDate>
       
-      <guid>https//www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/</guid>
+      <guid>https://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/</guid>
       <description>&lt;p&gt;Conosco Luca. Ha una agenzia di viaggi a Rimini, e un&amp;rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.&lt;/p&gt;
 
 &lt;p&gt;E&amp;rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico &lt;a href=&#34;https://www.sergiogridelli.it/&#34;&gt;Sergio&lt;/a&gt; gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.&lt;/p&gt;
@@ -62,10 +62,10 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.&lt;
     
     <item>
       <title>Hotspot wifi con Raspberry PI 3</title>
-      <link>https//www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/</link>
+      <link>https://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/</link>
       <pubDate>Sat, 20 May 2017 18:03:03 +0200</pubDate>
       
-      <guid>https//www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/</guid>
+      <guid>https://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/</guid>
       <description>&lt;p&gt;La Raspberry PI 3 è stata finalmente dotata di una scheda wifi incorporata. Il chipset della scheda (Broadcom BCM2837) consente di configurare la scheda anche come access point. Non male !
 Vediamo come:
 &lt;/p&gt;</description>
@@ -73,10 +73,10 @@ Vediamo come:
     
     <item>
       <title>IP Statico su Raspberry</title>
-      <link>https//www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/</link>
+      <link>https://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/</link>
       <pubDate>Mon, 09 Jan 2017 16:02:00 +0100</pubDate>
       
-      <guid>https//www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/</guid>
+      <guid>https://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/</guid>
       <description>&lt;p&gt;Se si vuole utilizzare una raspberry come un server, la prima cosa da fare è evitare che l&amp;rsquo;indirizzo IP cambi ad ogni reboot. Insomma va disabilitato il dhcp.
 Per farlo agire come segue:&lt;/p&gt;
 
@@ -85,10 +85,10 @@ Per farlo agire come segue:&lt;/p&gt;
     
     <item>
       <title>Wordpress su Raspberry</title>
-      <link>https//www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/</link>
+      <link>https://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/</link>
       <pubDate>Sun, 08 Jan 2017 16:15:00 +0100</pubDate>
       
-      <guid>https//www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/</guid>
+      <guid>https://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/</guid>
       <description>Voglio installare un blog sulla raspberry. Per farlo, dopo aver installato un LAMP server, procedo come segue:
 Ecco cosa ho fatto:
 Preparare lo schema di DATABASE mysql -uroot -p&amp;lt;password&amp;gt; CREATE DATABASE wordpress; CREATE USER wordpressuser@localhost IDENTIFIED BY &#39;wppassword&#39; GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost;  dove  è la password di mysql che ho impostato durante l&amp;rsquo;installazione del LAMP server e wppassword è un esempio di password per l&amp;rsquo;utente wordpress che ho appenta creato su mysql</description>
@@ -96,10 +96,10 @@ Preparare lo schema di DATABASE mysql -uroot -p&amp;lt;password&amp;gt; CREATE D
     
     <item>
       <title>LAMP sulla Raspberry</title>
-      <link>https//www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/</link>
+      <link>https://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/</link>
       <pubDate>Sat, 07 Jan 2017 16:10:00 +0100</pubDate>
       
-      <guid>https//www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/</guid>
+      <guid>https://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/</guid>
       <description>Voglio installare un blog sulla raspberry. Per farlo, dopo aver configurato un ip statico, devo installare i pacchetti software necessari per far girare il sito.
 Ecco cosa ho fatto:
 Installazione di Apache sudo apt-get update sudo apt-get install apache2  Se tutto ha funzionato vai su http://your_server_IP_address e vedi il web server attivo

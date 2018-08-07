@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on stefanoteodorani.it</title>
-    <link>https//www.stefanoteodorani.it/tags/linux/</link>
+    <link>https://www.stefanoteodorani.it/tags/linux/</link>
     <description>Recent content in Linux on stefanoteodorani.it</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-419</language>
     <lastBuildDate>Sun, 05 Aug 2018 18:00:00 +0100</lastBuildDate>
     
-	<atom:link href="https//www.stefanoteodorani.it/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.stefanoteodorani.it/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Sincronizzare cartelle in SSH con UNISON</title>
-      <link>https//www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/</link>
+      <link>https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/</link>
       <pubDate>Sun, 05 Aug 2018 18:00:00 +0100</pubDate>
       
-      <guid>https//www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/</guid>
+      <guid>https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/</guid>
       <description>&lt;p&gt;Recentemente, mi è capitato di dover risolvere questo problema.
 Su un server ftp, vengono copiati files in 3 separate cartelle.
 Tali file devono essere sincronizzati con 3 cartelle situate su 3 diverse macchine.

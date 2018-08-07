@@ -1,4 +1,4 @@
-baseurl = "https//www.stefanoteodorani.it/"
+baseurl = "https://www.stefanoteodorani.it/"
 # https://www.fincher.org/Utilities/CountryLanguageList.shtml
 languageCode = "es-419"
 DefaultContentLanguage = "fr"

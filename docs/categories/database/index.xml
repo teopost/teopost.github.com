@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Database on stefanoteodorani.it</title>
-    <link>https//www.stefanoteodorani.it/categories/database/</link>
+    <link>https://www.stefanoteodorani.it/categories/database/</link>
     <description>Recent content in Database on stefanoteodorani.it</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-419</language>
     <lastBuildDate>Tue, 17 Apr 2018 12:00:00 +0100</lastBuildDate>
     
-	<atom:link href="https//www.stefanoteodorani.it/categories/database/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.stefanoteodorani.it/categories/database/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Riattivare un utente Oracle Expired</title>
-      <link>https//www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/</link>
+      <link>https://www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/</link>
       <pubDate>Tue, 17 Apr 2018 12:00:00 +0100</pubDate>
       
-      <guid>https//www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/</guid>
+      <guid>https://www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/</guid>
       <description>&lt;h2 id=&#34;introduzione&#34;&gt;Introduzione&lt;/h2&gt;
 
 &lt;p&gt;Un utente Oracle può essere creato in modo che la password scada dopo un certo periodo di tempo definito nel profilo assegnato. Per riattivare l&amp;rsquo;utente esistente è necessario reimpostare la password.
@@ -28,10 +28,10 @@ In questo articolo viene descritta una procedura un pò inconsueta per ripristin
     
     <item>
       <title>Spostare i controlfiles su Oracle 12.x</title>
-      <link>https//www.stefanoteodorani.it/2018/04/05/spostare-i-controlfiles-su-oracle-12.x/</link>
+      <link>https://www.stefanoteodorani.it/2018/04/05/spostare-i-controlfiles-su-oracle-12.x/</link>
       <pubDate>Thu, 05 Apr 2018 11:18:00 +0100</pubDate>
       
-      <guid>https//www.stefanoteodorani.it/2018/04/05/spostare-i-controlfiles-su-oracle-12.x/</guid>
+      <guid>https://www.stefanoteodorani.it/2018/04/05/spostare-i-controlfiles-su-oracle-12.x/</guid>
       <description>&lt;h2 id=&#34;introduzione&#34;&gt;Introduzione&lt;/h2&gt;
 
 &lt;p&gt;Oggi mi è capitato di dover spostare alcuni controlfile Oracle che erano stati creati in una cartella sbagliata. Spostare i controlfile non è difficile, ma essendo files molto critici per la sopravvivenza del DB, questa attività va fatta senza troppo casino nelle orecchie.&lt;/p&gt;
@@ -43,10 +43,10 @@ In questo articolo viene descritta una procedura un pò inconsueta per ripristin
     
     <item>
       <title>Spostare i redolog su Oracle 12.x</title>
-      <link>https//www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/</link>
+      <link>https://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/</link>
       <pubDate>Thu, 05 Apr 2018 11:18:00 +0100</pubDate>
       
-      <guid>https//www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/</guid>
+      <guid>https://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/</guid>
       <description>&lt;h2 id=&#34;introduzione&#34;&gt;Introduzione&lt;/h2&gt;
 
 &lt;p&gt;Oggi mi è capitato di dover spostare alcuni redolog che erano stati creati in una cartella sbagliata.
@@ -57,10 +57,10 @@ Ecco come ho fatto&lt;/p&gt;
     
     <item>
       <title>Installazione client Oracle 12.x su Red-Hat</title>
-      <link>https//www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/</link>
+      <link>https://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/</link>
       <pubDate>Fri, 30 Mar 2018 09:18:00 +0100</pubDate>
       
-      <guid>https//www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/</guid>
+      <guid>https://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/</guid>
       <description>&lt;h2 id=&#34;introduzione&#34;&gt;Introduzione&lt;/h2&gt;
 
 &lt;p&gt;Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.&lt;/p&gt;
@@ -81,20 +81,20 @@ Ecco come ho fatto&lt;/p&gt;
     
     <item>
       <title>Oracle Transparent Data Encryption (TDE)</title>
-      <link>https//www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/</link>
+      <link>https://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/</link>
       <pubDate>Thu, 29 Mar 2018 09:18:00 +0100</pubDate>
       
-      <guid>https//www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/</guid>
+      <guid>https://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/</guid>
       <description>Ultimamente sono tutti molto preoccupati per una cosa chiamata GDPR, una legge europea che riguarda la protezione dei dati degli utenti (era ora dico io) che descrive una serie di adempimenti, non esclusivamente tecnici, da adottare per la salvaguardia dei dati.
 Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dati, quindi se avete sui vostri server i databases dei vostri clienti, cominciate a tremare perchè le multe sono salatissime.</description>
     </item>
     
     <item>
       <title>Oracle mail spooler</title>
-      <link>https//www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/</link>
+      <link>https://www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/</link>
       <pubDate>Sat, 27 May 2017 23:35:16 +0200</pubDate>
       
-      <guid>https//www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/</guid>
+      <guid>https://www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/</guid>
       <description>&lt;p&gt;Può capitare di dover mandare mail da Oracle ? Si. Ho fatto questo script per l&amp;rsquo;invio di mail da una istanza Oracle per risolvere un problema immediato, e siccome non c&amp;rsquo;è niente di più definitivo delle cose provvisorie, eccolo qui come se fosse un prodotto finito.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -102,10 +102,10 @@ Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dat
     
     <item>
       <title>Oracle Char vs Bytes</title>
-      <link>https//www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/</link>
+      <link>https://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/</link>
       <pubDate>Wed, 24 May 2017 22:23:55 +0200</pubDate>
       
-      <guid>https//www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/</guid>
+      <guid>https://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/</guid>
       <description>&lt;p&gt;Nei database Oracle, i campi che possono contenere dati stringa possono assumere datatype diversi&lt;/p&gt;
 
 &lt;ul&gt;
@@ -121,10 +121,10 @@ Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dat
     
     <item>
       <title>Oracle grants remapper</title>
-      <link>https//www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/</link>
+      <link>https://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/</link>
       <pubDate>Wed, 17 May 2017 22:17:06 +0200</pubDate>
       
-      <guid>https//www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/</guid>
+      <guid>https://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/</guid>
       <description>&lt;p&gt;&lt;code&gt;Oracle Grants Remmaper&lt;/code&gt; si collega ad una istanza oracle sorgente e crea un file &lt;code&gt;.sql&lt;/code&gt; per la rigenerazione di grants i sinonimi da applicare su una istanza oracle di destinazione.
 In base al file di configurazione passato come argomento, Oracle Grants Remmaper sostituisce i nomi degli schemi con quelli definiti nel file.&lt;/p&gt;
 
@@ -133,10 +133,10 @@ In base al file di configurazione passato come argomento, Oracle Grants Remmaper
     
     <item>
       <title>Client Oracle sul Mac</title>
-      <link>https//www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/</link>
+      <link>https://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/</link>
       <pubDate>Thu, 16 Feb 2017 21:36:13 +0100</pubDate>
       
-      <guid>https//www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/</guid>
+      <guid>https://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/</guid>
       <description>Per installare il client Oracle sul Mac, utilizzare questa procedura:
 Creare la cartella /Users/[utente]/oracle e metterci dentro:
 instantclient-basic-macos.x64-11.2.0.4.0.zip instantclient-sdk-macos.x64-11.2.0.4.0.zip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip  scompattarli
