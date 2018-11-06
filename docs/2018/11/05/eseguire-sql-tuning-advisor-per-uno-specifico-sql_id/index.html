@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-419">
 <head>
-    <title>Developer &middot; stefanoteodorani.it</title>
+    <title>Eseguire SQL Tuning Advisor per uno specifico sql_id &middot; stefanoteodorani.it</title>
     <meta name="generator" content="Hugo 0.49.2" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,10 +10,7 @@
       <meta name="description" content="">
     
     
-      <link href="https://www.stefanoteodorani.it/categories/developer/index.xml" rel="alternate" type="application/rss+xml" title="stefanoteodorani.it" />
-      <link href="https://www.stefanoteodorani.it/categories/developer/index.xml" rel="feed" type="application/rss+xml" title="stefanoteodorani.it" />
-    
-    <link rel="canonical" href="https://www.stefanoteodorani.it/categories/developer/"/>
+    <link rel="canonical" href="https://www.stefanoteodorani.it/2018/11/05/eseguire-sql-tuning-advisor-per-uno-specifico-sql_id/"/>
     <link rel="icon" href="https://www.stefanoteodorani.it/favicon.ico">
     <link rel="apple-touch-icon" href="https://www.stefanoteodorani.it/apple-touch-icon.png"/>
     <link rel="stylesheet" href="https://www.stefanoteodorani.it/css/style.css">
@@ -29,22 +26,42 @@
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
 
 
-    <meta property="og:image" content="https://www.stefanoteodorani.it/" />
-    <meta property="og:title" content="Developer" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.stefanoteodorani.it/categories/developer/" />
-<meta property="og:updated_time" content="2017-09-17T12:52:00&#43;01:00"/>
+    <meta property="og:image" content="https://www.stefanoteodorani.it/banner/sql-tuning-advisor-with-sqlid.png" />
+    <meta property="og:title" content="Eseguire SQL Tuning Advisor per uno specifico sql_id" />
+<meta property="og:description" content="Quando eseguiamo il tuning advisor di Oracle, specificando il sql_id di una query SQL, possiamo ottenere prezioni suggerimenti per migliorare le prestazioni delle istruzioni SQL.
+In questo tutorial di seguito spiegherò come eseguire sql tuning advisor per uno specifico sql_Id.
+Supponiamo che l&rsquo;ID sql sia - 87s8z2zzpsg88
+Creare un tuning task
+DECLARE l_sql_tune_task_id VARCHAR2(100); BEGIN l_sql_tune_task_id := DBMS_SQLTUNE.create_tuning_task ( sql_id =&gt; &#39;87s8z2zzpsg88&#39;, scope =&gt; DBMS_SQLTUNE.scope_comprehensive, time_limit =&gt; 500, task_name =&gt; &#39;87s8z2zzpsg88_tuning_task11&#39;, description =&gt; &#39;Tuning task1 for statement 87s8z2zzpsg88&#39;); DBMS_OUTPUT." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.stefanoteodorani.it/2018/11/05/eseguire-sql-tuning-advisor-per-uno-specifico-sql_id/" /><meta property="article:published_time" content="2018-11-05T21:36:13&#43;01:00"/>
+<meta property="article:modified_time" content="2018-11-05T21:36:13&#43;01:00"/>
 
     
     
-<meta itemprop="name" content="Developer">
-<meta itemprop="description" content="">
+<meta itemprop="name" content="Eseguire SQL Tuning Advisor per uno specifico sql_id">
+<meta itemprop="description" content="Quando eseguiamo il tuning advisor di Oracle, specificando il sql_id di una query SQL, possiamo ottenere prezioni suggerimenti per migliorare le prestazioni delle istruzioni SQL.
+In questo tutorial di seguito spiegherò come eseguire sql tuning advisor per uno specifico sql_Id.
+Supponiamo che l&rsquo;ID sql sia - 87s8z2zzpsg88
+Creare un tuning task
+DECLARE l_sql_tune_task_id VARCHAR2(100); BEGIN l_sql_tune_task_id := DBMS_SQLTUNE.create_tuning_task ( sql_id =&gt; &#39;87s8z2zzpsg88&#39;, scope =&gt; DBMS_SQLTUNE.scope_comprehensive, time_limit =&gt; 500, task_name =&gt; &#39;87s8z2zzpsg88_tuning_task11&#39;, description =&gt; &#39;Tuning task1 for statement 87s8z2zzpsg88&#39;); DBMS_OUTPUT.">
 
+
+<meta itemprop="datePublished" content="2018-11-05T21:36:13&#43;01:00" />
+<meta itemprop="dateModified" content="2018-11-05T21:36:13&#43;01:00" />
+<meta itemprop="wordCount" content="302">
+
+
+
+<meta itemprop="keywords" content="oracle," />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Developer"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Eseguire SQL Tuning Advisor per uno specifico sql_id"/>
+<meta name="twitter:description" content="Quando eseguiamo il tuning advisor di Oracle, specificando il sql_id di una query SQL, possiamo ottenere prezioni suggerimenti per migliorare le prestazioni delle istruzioni SQL.
+In questo tutorial di seguito spiegherò come eseguire sql tuning advisor per uno specifico sql_Id.
+Supponiamo che l&rsquo;ID sql sia - 87s8z2zzpsg88
+Creare un tuning task
+DECLARE l_sql_tune_task_id VARCHAR2(100); BEGIN l_sql_tune_task_id := DBMS_SQLTUNE.create_tuning_task ( sql_id =&gt; &#39;87s8z2zzpsg88&#39;, scope =&gt; DBMS_SQLTUNE.scope_comprehensive, time_limit =&gt; 500, task_name =&gt; &#39;87s8z2zzpsg88_tuning_task11&#39;, description =&gt; &#39;Tuning task1 for statement 87s8z2zzpsg88&#39;); DBMS_OUTPUT."/>
 <meta name="twitter:site" content="@teopost"/>
 
  
@@ -61,7 +78,7 @@
 
 
 <div id="container">
-    <header id="header">
+	<header id="header">
   <div id="header-main" class="header-inner">
     <div class="outer">
       <a href="https://www.stefanoteodorani.it/" id="logo">
@@ -161,8 +178,10 @@
   </div>
 </header>
 
-    <div class="outer">
-        <aside id="profile">
+   	
+   	<div class="outer">
+   		
+	    <aside id="profile">
   <div class="inner profile-inner">
     <div class="base-info profile-block">
       <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
@@ -263,44 +282,303 @@
   </div>
 </aside>
 
-        <section id="main">
-            <section class="archives-wrap">
-                <div class="archive-category-wrap">
-                    <span class="archive-category">Developer</span>
-                </div>
-                <div class="archives">
-                    
-                    
-                        <article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
-        <div class="archive-article-thumbnail">
-            
-            <a href="https://www.stefanoteodorani.it/2017/09/17/git-checkout-di-una-specifica-sottocartella/" class="thumbnail">
-                <span style="background-image:url(https://www.stefanoteodorani.it/banner/git-checkout-for-specific-subfolder.png)" alt="Git checkout di una specifica sottocartella" class="thumbnail-image"></span>
-            </a>
-            
-        </div>
-        <header class="archive-article-header">
-            <h1 itemprop="name">
-            <a class="archive-article-title" href="https://www.stefanoteodorani.it/2017/09/17/git-checkout-di-una-specifica-sottocartella/">Git checkout di una specifica sottocartella</a>
-            </h1>
-            <div class="archive-article-date">
-                <i class="fa fa-calendar"></i>
-                <time datetime="2017-09-17 12:52:00 &#43;0100 &#43;0100" itemprop="datePublished">17-09-2017</time>
-            </div>
-        </header>
-    </div>
-</article>
- 
-                    
-                </div>
-            </section>
-            <nav id="page-nav">
+	    
 
+	    
+<section id="main">
+
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+                <img src="https://www.stefanoteodorani.it/banner/sql-tuning-advisor-with-sqlid.png" class="article-banner">
+            
+
+            <header class="article-header">
+    <a href="https://www.stefanoteodorani.it/2018/11/05/eseguire-sql-tuning-advisor-per-uno-specifico-sql_id/">
+    <h1 class="article-title" itemprop="name">
+        Eseguire SQL Tuning Advisor per uno specifico sql_id
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2018-11-05 21:36:13 &#43;0100 CET" itemprop="datePublished">05-11-2018</time>
+            &middot;
+            302
+            words
+            &middot;
+            2
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/database">database</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://www.stefanoteodorani.it/tags/oracle">oracle</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                
+
+<p>Quando eseguiamo il tuning advisor di Oracle, specificando il sql_id di una query SQL, possiamo ottenere prezioni suggerimenti per migliorare le prestazioni delle istruzioni SQL.</p>
+
+<p>In questo tutorial di seguito spiegherò come eseguire sql tuning advisor per uno specifico sql_Id.</p>
+
+<p>Supponiamo che l&rsquo;ID sql sia - 87s8z2zzpsg88</p>
+
+<p>Creare un tuning task</p>
+
+<pre><code class="language-sql">DECLARE
+  l_sql_tune_task_id  VARCHAR2(100);
+BEGIN
+  l_sql_tune_task_id := DBMS_SQLTUNE.create_tuning_task (
+                          sql_id      =&gt; '87s8z2zzpsg88',
+                          scope       =&gt; DBMS_SQLTUNE.scope_comprehensive,
+                          time_limit  =&gt; 500,
+                          task_name   =&gt; '87s8z2zzpsg88_tuning_task11',
+                          description =&gt; 'Tuning task1 for statement 87s8z2zzpsg88');
+  DBMS_OUTPUT.put_line('l_sql_tune_task_id: ' || l_sql_tune_task_id);
+END;
+/
+</code></pre>
+
+<p>Eseguire il tuning task</p>
+
+<pre><code class="language-sql">EXEC DBMS_SQLTUNE.execute_tuning_task(task_name =&gt; '87s8z2zzpsg88_tuning_task11');
+</code></pre>
+
+<p>Recuperare i suggerimenti del tuning advisor</p>
+
+<pre><code class="language-sql">set long 65536
+set longchunksize 65536
+set linesize 100
+select dbms_sqltune.report_tuning_task('87s8z2zzpsg88_tuning_task11') from dual;
+</code></pre>
+
+<p>Mostrare una lista dei task esistenti</p>
+
+<pre><code class="language-sql">SELECT TASK_NAME, STATUS FROM DBA_ADVISOR_LOG WHERE TASK_NAME = '87s8z2zzpsg88_tuning_task11';
+</code></pre>
+
+<p>Eliminare un task esistente</p>
+
+<pre><code class="language-sql">execute dbms_sqltune.drop_tuning_task('87s8z2zzpsg88_tuning_task11');
+</code></pre>
+
+<h2 id="e-se-il-sql-id-non-è-presente-nel-cursore-ma-lo-è-nello-snaphot-awr">E se il sql_id non è presente nel cursore, ma lo è nello snaphot AWR ?</h2>
+
+<p>First we need to find the begin snap and end snap of the sql_id.</p>
+
+<pre><code class="language-sql">select a.instance_number inst_id, a.snap_id,a.plan_hash_value, to_char(begin_interval_time,'dd-mon-yy hh24:mi') btime, abs(extract(minute from (end_interval_time-begin_interval_time)) + extract(hour from (end_interval_time-begin_interval_time))*60 + extract(day from (end_interval_time-begin_interval_time))*24*60) minutes,
+executions_delta executions, round(ELAPSED_TIME_delta/1000000/greatest(executions_delta,1),4) &quot;avg duration (sec)&quot; from dba_hist_SQLSTAT a, dba_hist_snapshot b
+where sql_id='&amp;sql_id' and a.snap_id=b.snap_id
+and a.instance_number=b.instance_number
+order by snap_id desc, a.instance_number;
+</code></pre>
+
+<p>From here we can get the begin snap and end snap of the sql_id.</p>
+
+<p>begin_snap -&gt; 235
+end_snap -&gt; 240</p>
+
+<p>Creare il tuning task</p>
+
+<pre><code class="language-sql">DECLARE
+  l_sql_tune_task_id  VARCHAR2(100);
+BEGIN
+  l_sql_tune_task_id := DBMS_SQLTUNE.create_tuning_task (
+                          begin_snap  =&gt; 235,
+                          end_snap    =&gt; 240,
+                          sql_id      =&gt; '24pzs2d6a6b13',
+                          scope       =&gt; DBMS_SQLTUNE.scope_comprehensive,
+                          time_limit  =&gt; 60,
+                          task_name   =&gt; '24pzs2d6a6b13_AWR_tuning_task',
+                          description =&gt; 'Tuning task for statement 24pzs2d6a6b13  in AWR');
+  DBMS_OUTPUT.put_line('l_sql_tune_task_id: ' || l_sql_tune_task_id);
+END;
+/
+
+</code></pre>
+
+<ol>
+<li>Execute the tuning task:</li>
+</ol>
+
+<pre><code class="language-sql">EXEC DBMS_SQLTUNE.execute_tuning_task(task_name =&gt; '24pzs2d6a6b13_AWR_tuning_task');
+</code></pre>
+
+<ol>
+<li>Recuperare i suggerimenti del tuning advisor</li>
+</ol>
+
+<pre><code class="language-sql">SET LONG 10000000;
+SET PAGESIZE 100000000
+
+SET LINESIZE 200
+SELECT DBMS_SQLTUNE.report_tuning_task('24pzs2d6a6b13_AWR_tuning_task') AS recommendations FROM dual;
+SET PAGESIZE 24
+</code></pre>
+
+<h2 id="riferimenti">Riferimenti</h2>
+
+<ul>
+<li><a href="http://dbaclass.com/article/how-to-run-sql-tuning-advisor-for-a-sql_id/">http://dbaclass.com/article/how-to-run-sql-tuning-advisor-for-a-sql_id/</a></li>
+</ul>
+
+            </div>
+            <footer class="article-footer">
+    <a data-url="https://www.stefanoteodorani.it/2018/11/05/eseguire-sql-tuning-advisor-per-uno-specifico-sql_id/" data-id="05108722584dcc284763cf6ce0734b38" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="https://www.stefanoteodorani.it/2018/11/05/eseguire-sql-tuning-advisor-per-uno-specifico-sql_id/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+
+        
+<nav id="article-nav">
+    
+    <a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Sincronizzare cartelle in SSH con UNISON</div>
+    </a>
+    
+
+    
 </nav>
 
-        </section>
-        <aside id="sidebar">
+
+    </article>
+
+    
+    <section id="comments">
+        <div id="disqus_thread">
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "stefanoteodorani" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </section>
+    
+</section>
+
+
+	    
+	    <aside id="sidebar">
     
 <div class="widget-wrap">
     <h3 class="widget-title">
@@ -311,9 +589,9 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="https://www.stefanoteodorani.it/2018/11/05/sql-tuning-advisor-per-uno-specifico-sql_id/" class="thumbnail">
+                    <a href="https://www.stefanoteodorani.it/2018/11/05/eseguire-sql-tuning-advisor-per-uno-specifico-sql_id/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/sql-tuning-advisor-with-sqlid.png)" alt="Developer" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/sql-tuning-advisor-with-sqlid.png)" alt="Eseguire SQL Tuning Advisor per uno specifico sql_id" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -328,7 +606,7 @@
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2018/11/05/sql-tuning-advisor-per-uno-specifico-sql_id/" class="title">SQL Tuning Advisor per uno specifico sql_id</a></p>
+                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2018/11/05/eseguire-sql-tuning-advisor-per-uno-specifico-sql_id/" class="title">Eseguire SQL Tuning Advisor per uno specifico sql_id</a></p>
                     <p class="item-date">
                         <time datetime="2018-11-05 21:36:13 &#43;0100 CET" itemprop="datePublished">05-11-2018</time>
                     </p>
@@ -339,7 +617,7 @@
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/unison-ssh.jpg)" alt="Developer" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/unison-ssh.jpg)" alt="Eseguire SQL Tuning Advisor per uno specifico sql_id" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -365,7 +643,7 @@
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/riattivare-utente-oracle-expired.jpg)" alt="Developer" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/riattivare-utente-oracle-expired.jpg)" alt="Eseguire SQL Tuning Advisor per uno specifico sql_id" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -391,7 +669,7 @@
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2018/04/05/spostare-i-controlfiles-su-oracle-12.x/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/spostare-oracle-controlfile.jpg)" alt="Developer" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/spostare-oracle-controlfile.jpg)" alt="Eseguire SQL Tuning Advisor per uno specifico sql_id" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -417,7 +695,7 @@
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/spostare-oracle-redolog.jpg)" alt="Developer" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/spostare-oracle-redolog.jpg)" alt="Eseguire SQL Tuning Advisor per uno specifico sql_id" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -664,7 +942,8 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
 
-    </div>
+	    
+	</div>
 </div>
 
 <footer id="footer">
