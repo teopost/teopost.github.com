@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Db Tools on stefanoteodorani.it</title>
+    <link>https://www.stefanoteodorani.it/tags/db-tools/</link>
+    <description>Recent content in Db Tools on stefanoteodorani.it</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-419</language>
+    <lastBuildDate>Thu, 22 Nov 2018 18:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.stefanoteodorani.it/tags/db-tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Liquibase vs Flyway</title>
+      <link>https://www.stefanoteodorani.it/2018/11/22/liquibase-vs-flyway/</link>
+      <pubDate>Thu, 22 Nov 2018 18:00:00 +0100</pubDate>
+      
+      <guid>https://www.stefanoteodorani.it/2018/11/22/liquibase-vs-flyway/</guid>
+      <description>&lt;p&gt;Liquibase e Flyway sono &amp;ldquo;database migration tool&amp;rdquo;, ovvero strumenti per l&amp;rsquo;applicazione di modifiche al database.
+Questo articolo descrive le principali funzionalità e le  differenze che li caratterizzano.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

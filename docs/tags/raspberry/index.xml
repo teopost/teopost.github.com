@@ -18,9 +18,7 @@
       
       <guid>https://www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/</guid>
       <description>&lt;p&gt;Btsync era veramente un bel programma, ma dopo aver fatto venire l&amp;rsquo;acquolina in bocca l&amp;rsquo;hanno messo a pagamento.
-La cosa peggiore tuttavia, restava il fatto che non fosse opensource.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+La cosa peggiore tuttavia, restava il fatto che non fosse opensource.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -30,9 +28,7 @@ La cosa peggiore tuttavia, restava il fatto che non fosse opensource.&lt;/p&gt;
       
       <guid>https://www.stefanoteodorani.it/2017/05/27/streaming-video-con-ffserver-su-raspberrypi/</guid>
       <description>&lt;p&gt;Recentemento ho scritto un paio di righe su come compilare e &lt;a href=&#34;https://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/&#34;&gt;installare ffmpeg sulla Raspberry Pi&lt;/a&gt;.
-Quando si installa ffmpeg viene installato anche un tool fighissimo chiamato ffserver che permette di fare lo streming di contenuto audio e/o video su internet. Vediamo come:&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+Quando si installa ffmpeg viene installato anche un tool fighissimo chiamato ffserver che permette di fare lo streming di contenuto audio e/o video su internet. Vediamo come:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -42,9 +38,7 @@ Quando si installa ffmpeg viene installato anche un tool fighissimo chiamato ffs
       
       <guid>https://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/</guid>
       <description>&lt;p&gt;Purtroppo installare FFmpeg sulla Raspberry non è mai una cosa semplice. Non si capisce per quale motivo non si decidono a mettere i compilati nel repository.
-Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -55,9 +49,7 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.&lt;
       <guid>https://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/</guid>
       <description>&lt;p&gt;Conosco Luca. Ha una agenzia di viaggi a Rimini, e un&amp;rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.&lt;/p&gt;
 
-&lt;p&gt;E&amp;rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico &lt;a href=&#34;https://www.sergiogridelli.it/&#34;&gt;Sergio&lt;/a&gt; gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;E&amp;rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico &lt;a href=&#34;https://www.sergiogridelli.it/&#34;&gt;Sergio&lt;/a&gt; gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -67,8 +59,7 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.&lt;
       
       <guid>https://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/</guid>
       <description>&lt;p&gt;La Raspberry PI 3 è stata finalmente dotata di una scheda wifi incorporata. Il chipset della scheda (Broadcom BCM2837) consente di configurare la scheda anche come access point. Non male !
-Vediamo come:
-&lt;/p&gt;</description>
+Vediamo come:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -78,9 +69,7 @@ Vediamo come:
       
       <guid>https://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/</guid>
       <description>&lt;p&gt;Se si vuole utilizzare una raspberry come un server, la prima cosa da fare è evitare che l&amp;rsquo;indirizzo IP cambi ad ogni reboot. Insomma va disabilitato il dhcp.
-Per farlo agire come segue:&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+Per farlo agire come segue:&lt;/p&gt;</description>
     </item>
     
     <item>

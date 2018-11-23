@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.49.2" />
+    <meta name="generator" content="Hugo 0.51" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -34,7 +34,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.stefanoteodorani.it/" />
-<meta property="og:updated_time" content="2018-11-05T21:36:13&#43;01:00"/>
+<meta property="og:updated_time" content="2018-11-22T18:00:00&#43;01:00"/>
 
     
     
@@ -178,12 +178,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        28
+        29
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          11
+          12
         
         <span>
             Tags
@@ -270,6 +270,156 @@
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
             
+            <a href="https://www.stefanoteodorani.it/2018/11/22/liquibase-vs-flyway/" itemprop="url">
+                <img src="https://www.stefanoteodorani.it/banner/liquibase-vs-flyway.png" class="article-banner">
+            
+            </a>
+
+            <header class="article-header">
+    <a href="https://www.stefanoteodorani.it/2018/11/22/liquibase-vs-flyway/">
+    <h1 class="article-title" itemprop="name">
+        Liquibase vs Flyway
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2018-11-22 18:00:00 &#43;0100 CET" itemprop="datePublished">22-11-2018</time>
+            &middot;
+            1299
+            words
+            &middot;
+            7
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/database">database</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://www.stefanoteodorani.it/tags/db-tools">db-tools</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    Liquibase e Flyway sono &ldquo;database migration tool&rdquo;, ovvero strumenti per l&rsquo;applicazione di modifiche al database.
+Questo articolo descrive le principali funzionalità e le  differenze che li caratterizzano.
+                    <br>
+                </p>
+                <p class="article-more-link">
+                    <a href="https://www.stefanoteodorani.it/2018/11/22/liquibase-vs-flyway/">
+                        Read more
+                    </a>
+                </p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="https://www.stefanoteodorani.it/2018/11/22/liquibase-vs-flyway/" data-id="b55c2c4fb4523559ac2c1c64cd0a9cf8" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="https://www.stefanoteodorani.it/2018/11/22/liquibase-vs-flyway/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
             <a href="https://www.stefanoteodorani.it/2018/11/05/sql-tuning-advisor-per-uno-specifico-sql_id/" itemprop="url">
                 <img src="https://www.stefanoteodorani.it/banner/sql-tuning-advisor-with-sqlid.png" class="article-banner">
             
@@ -332,8 +482,6 @@
 <p>In questo tutorial spiegherò come eseguire sql tuning advisor avendo a disposizione il sql_id di uno statement SQL.</p>
 
 <p>Supponiamo che l&rsquo;ID sql sia - 87s8z2zzpsg88</p>
-
-<p></p>
 
                     <br>
                 </p>
@@ -492,8 +640,6 @@ Tale sincronizzazione deve essere bidirezionale e i files creati sul server ftp 
 
 <p>Ecco quindi quello che ho fatto:</p>
 
-<p></p>
-
                     <br>
                 </p>
                 <p class="article-more-link">
@@ -646,10 +792,7 @@ Tale sincronizzazione deve essere bidirezionale e i files creati sul server ftp 
 
 <p>Un utente Oracle può essere creato in modo che la password scada dopo un certo periodo di tempo definito nel profilo assegnato. Per riattivare l&rsquo;utente esistente è necessario reimpostare la password.
 In alcuni casi questo può essere un problema.
-In questo articolo viene descritta una procedura un pò inconsueta per ripristinare un utente senza conoscere la sua password.</p>
-
-<p></p>
-
+In questo articolo viene descritta una procedura un pò inconsueta per ripristinare un utente senza conoscere la sua password.
                     <br>
                 </p>
                 <p class="article-more-link">
@@ -804,8 +947,6 @@ In questo articolo viene descritta una procedura un pò inconsueta per ripristin
 
 <p>Vi avviso però. Per spostare i controlfiles bisogna spegnere l&rsquo;istanza. Vediamo come fare.</p>
 
-<p></p>
-
                     <br>
                 </p>
                 <p class="article-more-link">
@@ -821,161 +962,6 @@ In questo articolo viene descritta una procedura un pò inconsueta per ripristin
     </a>
     
     <a href="https://www.stefanoteodorani.it/2018/04/05/spostare-i-controlfiles-su-oracle-12.x/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-        </div>
-    </article>
-    
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-            <a href="https://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" itemprop="url">
-                <img src="https://www.stefanoteodorani.it/banner/spostare-oracle-redolog.jpg" class="article-banner">
-            
-            </a>
-
-            <header class="article-header">
-    <a href="https://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/">
-    <h1 class="article-title" itemprop="name">
-        Spostare i redolog su Oracle 12.x
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2018-04-05 11:18:00 &#43;0100 &#43;0100" itemprop="datePublished">05-04-2018</time>
-            &middot;
-            296
-            words
-            &middot;
-            2
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/database">database</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="https://www.stefanoteodorani.it/tags/oracle">oracle</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    <h2 id="introduzione">Introduzione</h2>
-
-<p>Oggi mi è capitato di dover spostare alcuni redolog che erano stati creati in una cartella sbagliata.
-Ecco come ho fatto</p>
-
-<p></p>
-
-                    <br>
-                </p>
-                <p class="article-more-link">
-                    <a href="https://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/">
-                        Read more
-                    </a>
-                </p>
-            </div>
-            <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" data-id="d2339bbd923995259edb0eb38722ba31" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="https://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -1072,6 +1058,32 @@ Ecco come ho fatto</p>
     </h3>
     <div class="widget">
         <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.stefanoteodorani.it/2018/11/22/liquibase-vs-flyway/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/liquibase-vs-flyway.png)" alt="stefanoteodorani.it" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/database">
+                        database
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2018/11/22/liquibase-vs-flyway/" class="title">Liquibase vs Flyway</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-11-22 18:00:00 &#43;0100 CET" itemprop="datePublished">22-11-2018</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1177,32 +1189,6 @@ Ecco come ho fatto</p>
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/spostare-oracle-redolog.jpg)" alt="stefanoteodorani.it" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/database">
-                        database
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" class="title">Spostare i redolog su Oracle 12.x</a></p>
-                    <p class="item-date">
-                        <time datetime="2018-04-05 11:18:00 &#43;0100 &#43;0100" itemprop="datePublished">05-04-2018</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -1221,7 +1207,7 @@ Ecco come ho fatto</p>
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/database">
                     database
                 </a>
-                <span class="category-list-count">10</span>
+                <span class="category-list-count">11</span>
             </li>
             
             <li class="category-list-item">
@@ -1301,6 +1287,14 @@ Ecco come ho fatto</p>
                 
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/ckan">
                     ckan
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/db-tools">
+                    db-tools
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -1393,6 +1387,9 @@ Ecco come ho fatto</p>
         
         
         <a href="https://www.stefanoteodorani.it/tags/ckan" style="font-size: 12px;">ckan</a>
+        
+        
+        <a href="https://www.stefanoteodorani.it/tags/db-tools" style="font-size: 12px;">db-tools</a>
         
         
         <a href="https://www.stefanoteodorani.it/tags/git" style="font-size: 12px;">git</a>

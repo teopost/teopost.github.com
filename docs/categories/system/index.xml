@@ -24,9 +24,7 @@ Tale sincronizzazione deve essere bidirezionale e i files creati sul server ftp 
 
 &lt;p&gt;Per risolvere questo problema ho utilizzato unison, un tool che consente di sincronizzare in maniera bidirezionale due cartelle anche via ssh.&lt;/p&gt;
 
-&lt;p&gt;Ecco quindi quello che ho fatto:&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Ecco quindi quello che ho fatto:&lt;/p&gt;</description>
     </item>
     
     <item>

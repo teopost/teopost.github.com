@@ -21,9 +21,7 @@
 
 &lt;p&gt;In questo tutorial spiegherò come eseguire sql tuning advisor avendo a disposizione il sql_id di uno statement SQL.&lt;/p&gt;
 
-&lt;p&gt;Supponiamo che l&amp;rsquo;ID sql sia - 87s8z2zzpsg88&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Supponiamo che l&amp;rsquo;ID sql sia - 87s8z2zzpsg88&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -36,9 +34,7 @@
 
 &lt;p&gt;Un utente Oracle può essere creato in modo che la password scada dopo un certo periodo di tempo definito nel profilo assegnato. Per riattivare l&amp;rsquo;utente esistente è necessario reimpostare la password.
 In alcuni casi questo può essere un problema.
-In questo articolo viene descritta una procedura un pò inconsueta per ripristinare un utente senza conoscere la sua password.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+In questo articolo viene descritta una procedura un pò inconsueta per ripristinare un utente senza conoscere la sua password.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -51,9 +47,7 @@ In questo articolo viene descritta una procedura un pò inconsueta per ripristin
 
 &lt;p&gt;Oggi mi è capitato di dover spostare alcuni controlfile Oracle che erano stati creati in una cartella sbagliata. Spostare i controlfile non è difficile, ma essendo files molto critici per la sopravvivenza del DB, questa attività va fatta senza troppo casino nelle orecchie.&lt;/p&gt;
 
-&lt;p&gt;Vi avviso però. Per spostare i controlfiles bisogna spegnere l&amp;rsquo;istanza. Vediamo come fare.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Vi avviso però. Per spostare i controlfiles bisogna spegnere l&amp;rsquo;istanza. Vediamo come fare.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -65,9 +59,7 @@ In questo articolo viene descritta una procedura un pò inconsueta per ripristin
       <description>&lt;h2 id=&#34;introduzione&#34;&gt;Introduzione&lt;/h2&gt;
 
 &lt;p&gt;Oggi mi è capitato di dover spostare alcuni redolog che erano stati creati in una cartella sbagliata.
-Ecco come ho fatto&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+Ecco come ho fatto&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -89,9 +81,7 @@ Ecco come ho fatto&lt;/p&gt;
 &lt;li&gt;Installazione manuale con lo zip del client&lt;/li&gt;
 &lt;li&gt;Installazione del modulo client con il setup di Oracle Server&lt;/li&gt;
 &lt;li&gt;Questo documento descrive l&amp;rsquo;installazione del client utilizzando i pacchetti rpm.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -110,9 +100,7 @@ Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dat
       <pubDate>Sat, 27 May 2017 23:35:16 +0200</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/</guid>
-      <description>&lt;p&gt;Può capitare di dover mandare mail da Oracle ? Si. Ho fatto questo script per l&amp;rsquo;invio di mail da una istanza Oracle per risolvere un problema immediato, e siccome non c&amp;rsquo;è niente di più definitivo delle cose provvisorie, eccolo qui come se fosse un prodotto finito.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Può capitare di dover mandare mail da Oracle ? Si. Ho fatto questo script per l&amp;rsquo;invio di mail da una istanza Oracle per risolvere un problema immediato, e siccome non c&amp;rsquo;è niente di più definitivo delle cose provvisorie, eccolo qui come se fosse un prodotto finito.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -130,8 +118,7 @@ Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dat
 &lt;li&gt;VARCHAR2(n BYTE)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Ma che differenza c&amp;rsquo;è ?
-&lt;/p&gt;</description>
+&lt;p&gt;Ma che differenza c&amp;rsquo;è ?&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -141,9 +128,7 @@ Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dat
       
       <guid>https://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/</guid>
       <description>&lt;p&gt;&lt;code&gt;Oracle Grants Remmaper&lt;/code&gt; si collega ad una istanza oracle sorgente e crea un file &lt;code&gt;.sql&lt;/code&gt; per la rigenerazione di grants i sinonimi da applicare su una istanza oracle di destinazione.
-In base al file di configurazione passato come argomento, Oracle Grants Remmaper sostituisce i nomi degli schemi con quelli definiti nel file.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+In base al file di configurazione passato come argomento, Oracle Grants Remmaper sostituisce i nomi degli schemi con quelli definiti nel file.&lt;/p&gt;</description>
     </item>
     
     <item>
