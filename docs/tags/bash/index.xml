@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bash on stefanoteodorani.it</title>
+    <title>bash on stefanoteodorani.it</title>
     <link>https://www.stefanoteodorani.it/tags/bash/</link>
-    <description>Recent content in Bash on stefanoteodorani.it</description>
+    <description>Recent content in bash on stefanoteodorani.it</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-419</language>
     <lastBuildDate>Wed, 17 May 2017 21:39:51 +0200</lastBuildDate>

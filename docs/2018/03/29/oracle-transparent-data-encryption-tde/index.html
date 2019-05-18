@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Oracle Transparent Data Encryption (TDE) &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.51" />
+    <meta name="generator" content="Hugo 0.55.2" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -31,7 +31,8 @@
 <meta property="og:description" content="Ultimamente sono tutti molto preoccupati per una cosa chiamata GDPR, una legge europea che riguarda la protezione dei dati degli utenti (era ora dico io) che descrive una serie di adempimenti, non esclusivamente tecnici, da adottare per la salvaguardia dei dati.
 Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dati, quindi se avete sui vostri server i databases dei vostri clienti, cominciate a tremare perchè le multe sono salatissime." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/" /><meta property="article:published_time" content="2018-03-29T09:18:00&#43;01:00"/>
+<meta property="og:url" content="https://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/" />
+<meta property="article:published_time" content="2018-03-29T09:18:00&#43;01:00"/>
 <meta property="article:modified_time" content="2018-03-29T09:18:00&#43;01:00"/>
 
     
@@ -369,9 +370,9 @@ Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dat
 
 <p>Per criptare i dati, è necessario creare un wallet, e per farlo occorre prima creare la cartella che deve ospitare tale wallet.</p>
 
-<div class="notices info" ><p>Oracle consiglia di creare il wallet all&rsquo;esterno dell&rsquo;albero di directory $ORACLE_BASE per evitare di archiviare accidentalmente il wallet con i dati crittografati su un supporto di backup. La cartella suggerita da Oracle è <code>/etc/ORACLE/WALLETS/&lt;$ORACLE_UNQNAME&gt;</code>.</p>
+<div class="notices info" >
+Oracle consiglia di creare il wallet all'esterno dell'albero di directory $ORACLE_BASE per evitare di archiviare accidentalmente il wallet con i dati crittografati su un supporto di backup. La cartella suggerita da Oracle è ```/etc/ORACLE/WALLETS/<$ORACLE_UNQNAME>```.
 </div>
-
 
 <p>Per comodità da adesso in avanti sostituiamo &lt;$ORACLE_UNQNAME&gt; con DB01, quindi come utente root:</p>
 
@@ -396,11 +397,11 @@ Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dat
       (DIRECTORY = /etc/oracle/wallets/DB01/)))
 </code></pre>
 
-<div class="notices info" ><p>Se non diversamente configurato nel file sqlnet.ora, Oracle cerca il wallet in $ORACLE_BASE/admin/DB01/wallet/.
+<div class="notices info" >
+Se non diversamente configurato nel file sqlnet.ora, Oracle cerca il wallet in $ORACLE_BASE/admin/DB01/wallet/.
 Si può verificare questa configurazione facendo una query sulla vista di sistema V$ENCRYPTION_WALLET prima di modificare il file sqlnet.ora.
-E&rsquo; importante sapere che se si modifica tale percorso (come suggerito nell&rsquo;articolo), occorre effettuare uno shutdown e uno statup dell&rsquo;istanza per far leggere ad Oracle la nuova configurazione.</p>
+E' importante sapere che se si modifica tale percorso (come suggerito nell'articolo), occorre effettuare uno shutdown e uno statup dell'istanza per far leggere ad Oracle la nuova configurazione.
 </div>
-
 
 <h2 id="creare-il-wallet-1">Creare il wallet</h2>
 
@@ -426,9 +427,9 @@ SQL&gt; host ls /etc/oracle/wallets/DB01/
 ewallet.p12
 </code></pre>
 
-<div class="notices warning" ><p>walletpwd è la password del wallet. Non perdetela assolutamente!!!!</p>
+<div class="notices warning" >
+walletpwd è la password del wallet. Non perdetela assolutamente!!!!
 </div>
-
 
 <h2 id="aprire-il-wallet">Aprire il wallet</h2>
 
@@ -1032,7 +1033,7 @@ Per prima cosa rinominate il file:</p>
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2018
+      &copy; 2019
       Powered by <a href="//gohugo.io">Hugo</a>
     </div>
   </div>

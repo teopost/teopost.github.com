@@ -6,40 +6,13 @@
     <description>Recent content in Tags on stefanoteodorani.it</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-419</language>
-    <lastBuildDate>Fri, 20 Jan 2017 21:46:00 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 22 Nov 2018 18:00:00 +0100</lastBuildDate>
     
 	<atom:link href="https://www.stefanoteodorani.it/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Android</title>
-      <link>https://www.stefanoteodorani.it/tags/android/</link>
-      <pubDate>Fri, 20 Jan 2017 21:46:00 +0100</pubDate>
-      
-      <guid>https://www.stefanoteodorani.it/tags/android/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bash</title>
-      <link>https://www.stefanoteodorani.it/tags/bash/</link>
-      <pubDate>Wed, 17 May 2017 21:39:51 +0200</pubDate>
-      
-      <guid>https://www.stefanoteodorani.it/tags/bash/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ckan</title>
-      <link>https://www.stefanoteodorani.it/tags/ckan/</link>
-      <pubDate>Fri, 24 Mar 2017 18:42:26 +0100</pubDate>
-      
-      <guid>https://www.stefanoteodorani.it/tags/ckan/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Db Tools</title>
+      <title>db-tools</title>
       <link>https://www.stefanoteodorani.it/tags/db-tools/</link>
       <pubDate>Thu, 22 Nov 2018 18:00:00 +0100</pubDate>
       
@@ -48,34 +21,7 @@
     </item>
     
     <item>
-      <title>Git</title>
-      <link>https://www.stefanoteodorani.it/tags/git/</link>
-      <pubDate>Sun, 17 Sep 2017 12:52:00 +0100</pubDate>
-      
-      <guid>https://www.stefanoteodorani.it/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Github Pages</title>
-      <link>https://www.stefanoteodorani.it/tags/github-pages/</link>
-      <pubDate>Wed, 28 Dec 2016 22:45:00 +0100</pubDate>
-      
-      <guid>https://www.stefanoteodorani.it/tags/github-pages/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://www.stefanoteodorani.it/tags/linux/</link>
-      <pubDate>Sun, 05 Aug 2018 18:00:00 +0100</pubDate>
-      
-      <guid>https://www.stefanoteodorani.it/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Oracle</title>
+      <title>oracle</title>
       <link>https://www.stefanoteodorani.it/tags/oracle/</link>
       <pubDate>Mon, 05 Nov 2018 21:36:13 +0100</pubDate>
       
@@ -84,7 +30,16 @@
     </item>
     
     <item>
-      <title>Osx</title>
+      <title>linux</title>
+      <link>https://www.stefanoteodorani.it/tags/linux/</link>
+      <pubDate>Sun, 05 Aug 2018 18:00:00 +0100</pubDate>
+      
+      <guid>https://www.stefanoteodorani.it/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>osx</title>
       <link>https://www.stefanoteodorani.it/tags/osx/</link>
       <pubDate>Tue, 02 Jan 2018 22:45:00 +0100</pubDate>
       
@@ -93,7 +48,25 @@
     </item>
     
     <item>
-      <title>Raspberry</title>
+      <title>virtual-machines</title>
+      <link>https://www.stefanoteodorani.it/tags/virtual-machines/</link>
+      <pubDate>Thu, 28 Dec 2017 21:36:13 +0100</pubDate>
+      
+      <guid>https://www.stefanoteodorani.it/tags/virtual-machines/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://www.stefanoteodorani.it/tags/git/</link>
+      <pubDate>Sun, 17 Sep 2017 12:52:00 +0100</pubDate>
+      
+      <guid>https://www.stefanoteodorani.it/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>raspberry</title>
       <link>https://www.stefanoteodorani.it/tags/raspberry/</link>
       <pubDate>Tue, 20 Jun 2017 22:11:56 +0200</pubDate>
       
@@ -102,7 +75,25 @@
     </item>
     
     <item>
-      <title>Ubuntu</title>
+      <title>bash</title>
+      <link>https://www.stefanoteodorani.it/tags/bash/</link>
+      <pubDate>Wed, 17 May 2017 21:39:51 +0200</pubDate>
+      
+      <guid>https://www.stefanoteodorani.it/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ckan</title>
+      <link>https://www.stefanoteodorani.it/tags/ckan/</link>
+      <pubDate>Fri, 24 Mar 2017 18:42:26 +0100</pubDate>
+      
+      <guid>https://www.stefanoteodorani.it/tags/ckan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
       <link>https://www.stefanoteodorani.it/tags/ubuntu/</link>
       <pubDate>Fri, 17 Feb 2017 21:46:48 +0100</pubDate>
       
@@ -111,11 +102,20 @@
     </item>
     
     <item>
-      <title>Virtual Machines</title>
-      <link>https://www.stefanoteodorani.it/tags/virtual-machines/</link>
-      <pubDate>Thu, 28 Dec 2017 21:36:13 +0100</pubDate>
+      <title>android</title>
+      <link>https://www.stefanoteodorani.it/tags/android/</link>
+      <pubDate>Fri, 20 Jan 2017 21:46:00 +0100</pubDate>
       
-      <guid>https://www.stefanoteodorani.it/tags/virtual-machines/</guid>
+      <guid>https://www.stefanoteodorani.it/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github pages</title>
+      <link>https://www.stefanoteodorani.it/tags/github-pages/</link>
+      <pubDate>Wed, 28 Dec 2016 22:45:00 +0100</pubDate>
+      
+      <guid>https://www.stefanoteodorani.it/tags/github-pages/</guid>
       <description></description>
     </item>
     
