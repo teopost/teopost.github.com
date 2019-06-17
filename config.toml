@@ -111,4 +111,30 @@ publishDir = "docs"
     recent_articles = true
     categories = true
     tags = true
-    tag_cloud = true
+    tag_cloud = false
+
+
+# Privacy
+privacy_pack = true
+
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    anonymizeIP = false
+    disable = false
+    respectDoNotTrack = false
+    useSessionStorage = false
+  [privacy.instagram]
+    disable = false
+    simple = false
+  [privacy.twitter]
+    disable = false
+    enableDNT = false
+    simple = false
+  [privacy.vimeo]
+    disable = false
+    simple = false
+  [privacy.youtube]
+    disable = true
+    privacyEnhanced = false
