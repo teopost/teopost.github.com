@@ -6,10 +6,23 @@
     <description>Recent content on stefanoteodorani.it</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-419</language>
-    <lastBuildDate>Sun, 20 Jan 2019 18:42:26 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 24 Apr 2019 18:42:26 +0100</lastBuildDate>
     
 	<atom:link href="https://www.stefanoteodorani.it/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pagina di cortesia su Apache</title>
+      <link>https://www.stefanoteodorani.it/2019/04/24/pagina-di-cortesia-su-apache/</link>
+      <pubDate>Wed, 24 Apr 2019 18:42:26 +0100</pubDate>
+      
+      <guid>https://www.stefanoteodorani.it/2019/04/24/pagina-di-cortesia-su-apache/</guid>
+      <description>&lt;p&gt;Ci sono molti modi per attivare la cosiddetta pagina di cortesia di un sito.
+Nella maggior parte dei casi che mi è capitato di vedere, l&amp;rsquo;abitudine è quella di editare il file di configurazione di apache.
+In questo articolo vi mostro un modo secondo me più elegante per farlo.&lt;/p&gt;
+
+&lt;p&gt;Aggiungete questa regola nel file httpd.conf:&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Lock wait e timeout in DB2</title>

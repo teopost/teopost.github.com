@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+    <title>Pagina di cortesia su Apache &middot; stefanoteodorani.it</title>
+    <meta name="generator" content="Hugo 0.55.2" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Stefano Teodorani">
+    
+      <meta name="description" content="">
+    
+    
+    <link rel="canonical" href="https://www.stefanoteodorani.it/2019/04/24/pagina-di-cortesia-su-apache/"/>
+    <link rel="icon" href="https://www.stefanoteodorani.it/favicon.ico">
+    <link rel="apple-touch-icon" href="https://www.stefanoteodorani.it/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="https://www.stefanoteodorani.it/css/style.css">
+    <link rel="stylesheet" href="https://www.stefanoteodorani.it/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.stefanoteodorani.it/css/monokai.css">
+    <link rel="stylesheet" href="https://www.stefanoteodorani.it/fancybox/jquery.fancybox.css">
+    
+    <link rel="stylesheet" href="https://www.stefanoteodorani.it/css/button.css">
+    
+    <link rel="stylesheet" href="https://www.stefanoteodorani.it/css/notice.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+
+    <meta property="og:image" content="https://www.stefanoteodorani.it/banner/apache-pagina-cortesia.png" />
+    <meta property="og:title" content="Pagina di cortesia su Apache" />
+<meta property="og:description" content="Ci sono molti modi per attivare la cosiddetta pagina di cortesia di un sito.
+Nella maggior parte dei casi che mi è capitato di vedere, l&rsquo;abitudine è quella di editare il file di configurazione di apache.
+In questo articolo vi mostro un modo secondo me più elegante per farlo.
+
+Aggiungete questa regola nel file httpd.conf:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.stefanoteodorani.it/2019/04/24/pagina-di-cortesia-su-apache/" />
+<meta property="article:published_time" content="2019-04-24T18:42:26&#43;01:00"/>
+<meta property="article:modified_time" content="2019-04-24T18:42:26&#43;01:00"/>
+
+    
+    
+<meta itemprop="name" content="Pagina di cortesia su Apache">
+<meta itemprop="description" content="Ci sono molti modi per attivare la cosiddetta pagina di cortesia di un sito.
+Nella maggior parte dei casi che mi è capitato di vedere, l&rsquo;abitudine è quella di editare il file di configurazione di apache.
+In questo articolo vi mostro un modo secondo me più elegante per farlo.
+
+Aggiungete questa regola nel file httpd.conf:">
+
+
+<meta itemprop="datePublished" content="2019-04-24T18:42:26&#43;01:00" />
+<meta itemprop="dateModified" content="2019-04-24T18:42:26&#43;01:00" />
+<meta itemprop="wordCount" content="454">
+
+
+
+<meta itemprop="keywords" content="apache," />
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Pagina di cortesia su Apache"/>
+<meta name="twitter:description" content="Ci sono molti modi per attivare la cosiddetta pagina di cortesia di un sito.
+Nella maggior parte dei casi che mi è capitato di vedere, l&rsquo;abitudine è quella di editare il file di configurazione di apache.
+In questo articolo vi mostro un modo secondo me più elegante per farlo.
+
+Aggiungete questa regola nel file httpd.conf:"/>
+<meta name="twitter:site" content="@teopost"/>
+
+
+
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="https://www.stefanoteodorani.it/" id="logo">
+          
+          <i class="logo" style="background-image: url('https://www.stefanoteodorani.it/css/images/logo.png')"></i>
+          
+          <span class="site-title">stefanoteodorani.it</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="https://www.stefanoteodorani.it/">Home</a>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="http://teopost.github.io/ulisse">My Dog</a>
+          
+          
+          
+          <a class="main-nav-link" href="https://www.stefanoteodorani.it/tags/">Tags</a>
+          
+          
+          
+          <a class="main-nav-link" href="https://www.stefanoteodorani.it/categories/">Categories</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="https://www.stefanoteodorani.it/" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="https://www.stefanoteodorani.it/">Home</a></td>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="http://teopost.github.io/ulisse">My Dog</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="https://www.stefanoteodorani.it/tags/">Tags</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="https://www.stefanoteodorani.it/categories/">Categories</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="https://www.stefanoteodorani.it/" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   		
+	    <aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
+      <h2 id="name">Stefano Teodorani</h2>
+      <h3 id="title">Oracle DBA, Programmer, Linux Administrator and Opensource lover</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Savignano sul Rubicone</span>
+      
+          <a id="follow" href="https://github.com/teopost">
+              Follow
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        31
+        <span>Posts</span>
+      </div>
+      <div class="article-info-block">
+        
+          14
+        
+        <span>
+            Tags
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/teopost" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//instagram.com/teopost" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//linkedin.com/in/stefano-teodorani-58722b70/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//plus.google.com/+StefanoTeodorani" target="_blank" title="Google+"><i class="fa fa-google-plus"></i></a></td>
+
+
+
+<td><a href="//facebook.com/steodorani" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></td>
+
+
+
+<td><a href="//twitter.com/teopost" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
+
+
+          <td><a href="https://www.stefanoteodorani.it/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+	    
+
+	    
+<section id="main">
+
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+                <img src="https://www.stefanoteodorani.it/banner/apache-pagina-cortesia.png" class="article-banner">
+            
+
+            <header class="article-header">
+    <a href="https://www.stefanoteodorani.it/2019/04/24/pagina-di-cortesia-su-apache/">
+    <h1 class="article-title" itemprop="name">
+        Pagina di cortesia su Apache
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2019-04-24 18:42:26 &#43;0100 &#43;0100" itemprop="datePublished">24-04-2019</time>
+            &middot;
+            454
+            words
+            &middot;
+            3
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/linux">linux</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://www.stefanoteodorani.it/tags/apache">apache</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>Ci sono molti modi per attivare la cosiddetta pagina di cortesia di un sito.
+Nella maggior parte dei casi che mi è capitato di vedere, l&rsquo;abitudine è quella di editare il file di configurazione di apache.
+In questo articolo vi mostro un modo secondo me più elegante per farlo.</p>
+
+<p>Aggiungete questa regola nel file httpd.conf:</p>
+
+<pre><code>RewriteCond %{REMOTE_ADDR} !^172\.27\.
+RewriteCond %{REMOTE_ADDR} !^172\.16\.8\.102
+RewriteCond %{REMOTE_ADDR} !^172\.16\.8\.112
+RewriteCond %{REMOTE_ADDR} !^192\.168\.
+RewriteCond %{X-Forwarded-For} !^192\.168\.
+RewriteCond %{DOCUMENT_ROOT}/maintenance.txt -f
+RewriteRule &quot;/(.*)$&quot; &quot;/500.html&quot; [L,NC]
+
+</code></pre>
+
+<p>Questo esempio si legge così:</p>
+
+<ol>
+<li>RewriteCond %{REMOTE_ADDR} !^172.27.  - Tutti gli indirizzi che non sono 172.27.<em>.</em> vengono esclusi. Le successive righe sono in AND</li>
+<li>RewriteCond %{DOCUMENT_ROOT}/maintenance.txt -f - &hellip; inoltre, se esiste un file nella DOCUMENT_ROOT chiamato maintenance.txt</li>
+<li>Effettuo la rewrite alla pagina di maintenance (500.html)</li>
+</ol>
+
+<p>Come dicevo, usando questa sintassi non è necessario editare il file di configurazione per mettere in maintenance il sito.</p>
+
+<p>Per creare il file maintenance.txt si può usare uno scrippettino, tipo questo:</p>
+
+<pre><code class="language-bash">#!/bin/bash
+
+# Script for website maintenance mode
+# Author: Stefano Teodorani 13 feb 2019
+
+
+maintenance_file=&quot;/tmp/maintenance.txt&quot;
+
+if [ $# == 1 ]; then
+   if [ $1 != &quot;on&quot; -a $1 != &quot;off&quot; ]; then
+      echo &quot;ERR: bad parameter&quot;
+      echo &quot;Usage $(basename $0) [on|off]&quot;
+      exit
+   fi
+else
+   if [ -f $maintenance_file ]; then
+      echo &quot;Maintenance mode is ON&quot;
+   else
+      echo &quot;Maintenance mode is OFF&quot;
+   fi
+
+   echo &quot;Usage $(basename $0) [on|off]&quot;
+   exit
+fi
+
+case $1 in
+   &quot;on&quot;)
+      touch $maintenance_file
+      echo &quot;Maintenance mode is ON&quot;
+      ;;
+   &quot;off&quot;)
+      rm -f $maintenance_file
+      echo &quot;Maintenance mode is OFF&quot;
+      ;;
+esac
+</code></pre>
+
+<p>Se siamo un su un cluster di webserver, il suddetto file deve essere messo su tutti gli host.</p>
+
+<p>Per mettere in maintenance tutti i web server si può usare uno script tipo questo:</p>
+
+<pre><code class="language-bash">#!/bin/bash
+
+# Script for website maintenance mode
+# Author: Stefano Teodorani 13 feb 2019
+
+absolute_filename=$(readlink -f $0)
+export HOME_DIR=$(dirname $absolute_filename)
+
+$HOME_DIR/maintenance.sh on
+
+if [ $(hostname) = &quot;host-prd-1&quot; ];then
+  remote_host=&quot;host-prd-11&quot;
+elif [ $(hostname) = &quot;host-prd-1&quot; ]; then
+  remote_host=&quot;host-prd-11&quot;
+fi
+
+
+if [ ! -z $remote_host ]; then
+  echo &quot;Execute remote maintenanche script&quot;
+  ssh root@${remote_host} &quot;/opt/scripts/maintenance.sh on&quot;
+fi
+
+echo &quot;Maintenance mode ON for local site $(hostname)&quot;
+echo &quot;Maintenance mode ON for remote site $remote_host&quot;
+</code></pre>
+
+<h2 id="pianificazione-della-pagina-di-cortesia">Pianificazione della pagina di cortesia</h2>
+
+<p>In linux è possibile effettuare una schedulazione puntuale ed estemporanea con il comando at.</p>
+
+<p>Ora che non è necessario editare il file di configurazione per editare la pagina, possiamo mettere in manutenzione in sito ad un&rsquo;ora specifica con il seguente comando:</p>
+
+<pre><code class="language-bash"># Metto in maintenance il sito alle ore 22
+/opt/scripts/maintenance.sh on &gt;&gt; /tmp/maintenance-status.log | at 22:00
+
+# Tolgo il maintenance dal sito alle ore 09
+/opt/scripts/maintenance.sh on &gt;&gt; /tmp/maintenance-status.log | at 09:00
+</code></pre>
+
+<ul>
+<li>Puoi vedere la lista dei jobs at con il comando at -l</li>
+<li>Puoi cancellare un job con il comando atrm <job-number> (vedi comando precedente)</li>
+</ul>
+
+<h2 id="riferimenti">Riferimenti</h2>
+
+<ul>
+<li><a href="https://www.computerhope.com/unix/uat.htm">https://www.computerhope.com/unix/uat.htm</a></li>
+</ul>
+            </div>
+            <footer class="article-footer">
+    <a data-url="https://www.stefanoteodorani.it/2019/04/24/pagina-di-cortesia-su-apache/" data-id="4697b13901413876462e9e4562bd3ee0" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="https://www.stefanoteodorani.it/2019/04/24/pagina-di-cortesia-su-apache/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+
+        
+<nav id="article-nav">
+    
+    <a href="https://www.stefanoteodorani.it/2019/01/20/lock-wait-e-timeout-in-db2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Lock wait e timeout in DB2</div>
+    </a>
+    
+
+    
+</nav>
+
+
+    </article>
+
+    
+    <section id="comments">
+        <div id="disqus_thread">
+            
+        </div>
+    </section>
+    
+</section>
+
+
+	    
+	    <aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Recents
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.stefanoteodorani.it/2019/04/24/pagina-di-cortesia-su-apache/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/apache-pagina-cortesia.png)" alt="Pagina di cortesia su Apache" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2019/04/24/pagina-di-cortesia-su-apache/" class="title">Pagina di cortesia su Apache</a></p>
+                    <p class="item-date">
+                        <time datetime="2019-04-24 18:42:26 &#43;0100 &#43;0100" itemprop="datePublished">24-04-2019</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.stefanoteodorani.it/2019/01/20/lock-wait-e-timeout-in-db2/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/lock-wait-e-timeout-in-db2.jpg)" alt="Pagina di cortesia su Apache" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/database">
+                        database
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2019/01/20/lock-wait-e-timeout-in-db2/" class="title">Lock wait e timeout in DB2</a></p>
+                    <p class="item-date">
+                        <time datetime="2019-01-20 18:42:26 &#43;0100 CET" itemprop="datePublished">20-01-2019</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.stefanoteodorani.it/2018/11/22/liquibase-vs-flyway/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/liquibase-vs-flyway.png)" alt="Pagina di cortesia su Apache" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/database">
+                        database
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2018/11/22/liquibase-vs-flyway/" class="title">Liquibase vs Flyway</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-11-22 18:00:00 &#43;0100 CET" itemprop="datePublished">22-11-2018</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.stefanoteodorani.it/2018/11/05/sql-tuning-advisor-per-uno-specifico-sql_id/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/sql-tuning-advisor-with-sqlid.png)" alt="Pagina di cortesia su Apache" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/database">
+                        database
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2018/11/05/sql-tuning-advisor-per-uno-specifico-sql_id/" class="title">SQL Tuning Advisor per uno specifico sql_id</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-11-05 21:36:13 &#43;0100 CET" itemprop="datePublished">05-11-2018</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/unison-ssh.jpg)" alt="Pagina di cortesia su Apache" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/system">
+                        system
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" class="title">Sincronizzare cartelle in SSH con UNISON</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-08-05 18:00:00 &#43;0100 &#43;0100" itemprop="datePublished">05-08-2018</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/database">
+                    database
+                </a>
+                <span class="category-list-count">12</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/developer">
+                    developer
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/linux">
+                    linux
+                </a>
+                <span class="category-list-count">12</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/mobile">
+                    mobile
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/opendata">
+                    opendata
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/system">
+                    system
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tags
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/android">
+                    android
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/apache">
+                    apache
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/bash">
+                    bash
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/ckan">
+                    ckan
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/db-tools">
+                    db-tools
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/db2">
+                    db2
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/git">
+                    git
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/github-pages">
+                    github-pages
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/linux">
+                    linux
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/oracle">
+                    oracle
+                </a>
+                <span class="category-list-count">10</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/osx">
+                    osx
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/raspberry">
+                    raspberry
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/ubuntu">
+                    ubuntu
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/virtual-machines">
+                    virtual-machines
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+	    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019
+      Powered by <a href="//gohugo.io">Hugo</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://www.stefanoteodorani.it/fancybox/jquery.fancybox.pack.js"></script>
+<script src="https://www.stefanoteodorani.it/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+</body>
+</html>

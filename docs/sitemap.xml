@@ -4,25 +4,48 @@
   
   <url>
     <loc>https://www.stefanoteodorani.it/categories/</loc>
-    <lastmod>2019-01-20T18:42:26+01:00</lastmod>
+    <lastmod>2019-04-24T18:42:26+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.stefanoteodorani.it/2019/04/24/pagina-di-cortesia-su-apache/</loc>
+    <lastmod>2019-04-24T18:42:26+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.stefanoteodorani.it/post/</loc>
+    <lastmod>2019-04-24T18:42:26+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.stefanoteodorani.it/tags/</loc>
+    <lastmod>2019-04-24T18:42:26+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.stefanoteodorani.it/tags/apache/</loc>
+    <lastmod>2019-04-24T18:42:26+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.stefanoteodorani.it/categories/linux/</loc>
+    <lastmod>2019-04-24T18:42:26+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.stefanoteodorani.it/</loc>
+    <lastmod>2019-04-24T18:42:26+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.stefanoteodorani.it/2019/01/20/lock-wait-e-timeout-in-db2/</loc>
     <lastmod>2019-01-20T18:42:26+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.stefanoteodorani.it/post/</loc>
-    <lastmod>2019-01-20T18:42:26+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.stefanoteodorani.it/tags/</loc>
-    <lastmod>2019-01-20T18:42:26+01:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -33,12 +56,6 @@
   
   <url>
     <loc>https://www.stefanoteodorani.it/tags/db2/</loc>
-    <lastmod>2019-01-20T18:42:26+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.stefanoteodorani.it/</loc>
     <lastmod>2019-01-20T18:42:26+01:00</lastmod>
     <priority>0</priority>
   </url>
@@ -121,12 +138,6 @@
   <url>
     <loc>https://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/</loc>
     <lastmod>2017-12-28T21:36:13+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.stefanoteodorani.it/categories/linux/</loc>
-    <lastmod>2017-12-28T21:36:13+01:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
