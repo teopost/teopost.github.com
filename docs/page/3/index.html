@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.stefanoteodorani.it/" />
 
-<meta property="og:updated_time" content="2018-11-22T18:00:00&#43;01:00"/>
+<meta property="og:updated_time" content="2019-01-20T18:42:26&#43;01:00"/>
 
     
     
@@ -179,12 +179,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        29
+        30
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          12
+          13
         
         <span>
             Tags
@@ -267,6 +267,156 @@
 
     <section id="main">
     
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+            <a href="https://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/" itemprop="url">
+                <img src="https://www.stefanoteodorani.it/banner/rete-non-funzionante-con-centos-su-virtual-box.png" class="article-banner">
+            
+            </a>
+
+            <header class="article-header">
+    <a href="https://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/">
+    <h1 class="article-title" itemprop="name">
+        Rete non funzionante con CentOS su VirtualBox
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-12-28 21:36:13 &#43;0100 CET" itemprop="datePublished">28-12-2017</time>
+            &middot;
+            474
+            words
+            &middot;
+            3
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/linux">linux</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://www.stefanoteodorani.it/tags/virtual-machines">virtual-machines</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    Ho scaricato da osboxes.org una VM con dentro CentoOS (sono pigro e se posso uso cose già fatte). Ho avviato la macchina virtuale e ho provato a navigare su internet. Non funzionava. Eseguendo il comando ifconfig non appariva la scheda di rete. Eppure sembrava tutto configurato bene. Ecco come ho soluzionato, come direbbe il mio amico coniglio.
+[teopost@localhost ~]$ ifconfig ens32: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt; mtu 1500 ether 00:0c:29:68:22:e2 txqueuelen 1000 (Ethernet) RX packets 0 bytes 0 (0.
+                    <br>
+                </p>
+                <p class="article-more-link">
+                    <a href="https://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/">
+                        Read more
+                    </a>
+                </p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="https://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/" data-id="c7d52413215745469ce9b506b200e4c1" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="https://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
     
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
@@ -869,156 +1019,6 @@ Quando si installa ffmpeg viene installato anche un tool fighissimo chiamato ffs
         </div>
     </article>
     
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-            <a href="https://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/" itemprop="url">
-                <img src="https://www.stefanoteodorani.it/banner/ffmpeg-su-raspberrypi.png" class="article-banner">
-            
-            </a>
-
-            <header class="article-header">
-    <a href="https://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/">
-    <h1 class="article-title" itemprop="name">
-        Installare FFmpeg sulla Raspberry Pi 3
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2017-05-27 16:18:40 &#43;0200 CEST" itemprop="datePublished">27-05-2017</time>
-            &middot;
-            205
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/linux">linux</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="https://www.stefanoteodorani.it/tags/raspberry">raspberry</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    Purtroppo installare FFmpeg sulla Raspberry non è mai una cosa semplice. Non si capisce per quale motivo non si decidono a mettere i compilati nel repository.
-Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.
-                    <br>
-                </p>
-                <p class="article-more-link">
-                    <a href="https://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/">
-                        Read more
-                    </a>
-                </p>
-            </div>
-            <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/" data-id="b25e4ebf7f59e5a77b0bc9a6440e9abf" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="https://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-        </div>
-    </article>
-    
 
     <nav id="page-nav">
 
@@ -1046,6 +1046,32 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.
     </h3>
     <div class="widget">
         <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.stefanoteodorani.it/2019/01/20/lock-wait-e-timeout-in-db2/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/lock-wait-e-timeout-in-db2.jpg)" alt="stefanoteodorani.it" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/database">
+                        database
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2019/01/20/lock-wait-e-timeout-in-db2/" class="title">Lock wait e timeout in DB2</a></p>
+                    <p class="item-date">
+                        <time datetime="2019-01-20 18:42:26 &#43;0100 CET" itemprop="datePublished">20-01-2019</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1151,32 +1177,6 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://www.stefanoteodorani.it/2018/04/05/spostare-i-controlfiles-su-oracle-12.x/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/spostare-oracle-controlfile.jpg)" alt="stefanoteodorani.it" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/database">
-                        database
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2018/04/05/spostare-i-controlfiles-su-oracle-12.x/" class="title">Spostare i controlfiles su Oracle 12.x</a></p>
-                    <p class="item-date">
-                        <time datetime="2018-04-05 11:18:00 &#43;0100 &#43;0100" itemprop="datePublished">05-04-2018</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -1195,7 +1195,7 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/database">
                     database
                 </a>
-                <span class="category-list-count">11</span>
+                <span class="category-list-count">12</span>
             </li>
             
             <li class="category-list-item">
@@ -1283,6 +1283,14 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.
                 
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/db-tools">
                     db-tools
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/db2">
+                    db2
                 </a>
                 <span class="category-list-count">1</span>
             </li>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>db2 on stefanoteodorani.it</title>
+    <link>https://www.stefanoteodorani.it/tags/db2/</link>
+    <description>Recent content in db2 on stefanoteodorani.it</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-419</language>
+    <lastBuildDate>Sun, 20 Jan 2019 18:42:26 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.stefanoteodorani.it/tags/db2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lock wait e timeout in DB2</title>
+      <link>https://www.stefanoteodorani.it/2019/01/20/lock-wait-e-timeout-in-db2/</link>
+      <pubDate>Sun, 20 Jan 2019 18:42:26 +0100</pubDate>
+      
+      <guid>https://www.stefanoteodorani.it/2019/01/20/lock-wait-e-timeout-in-db2/</guid>
+      <description>&lt;p&gt;In DB2 un lock wait è una condizione che si verifica quanto una sessione attente di prendere un lock su un oggetto che sul quale un&amp;rsquo;altra sessione l&amp;rsquo;ha già preso.&lt;/p&gt;
+
+&lt;p&gt;In questa situazione la sessione che attende è una sessione in Lock Wait.&lt;/p&gt;
+
+&lt;p&gt;Con questa query è possibile vedere quali sessioni sono in attesa&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
