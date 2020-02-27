@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>database on stefanoteodorani.it</title>
@@ -17,10 +17,8 @@
       <pubDate>Sun, 20 Jan 2019 18:42:26 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2019/01/20/lock-wait-e-timeout-in-db2/</guid>
-      <description>&lt;p&gt;In DB2 un lock wait è una condizione che si verifica quanto una sessione attente di prendere un lock su un oggetto che sul quale un&amp;rsquo;altra sessione l&amp;rsquo;ha già preso.&lt;/p&gt;
-
+      <description>&lt;p&gt;Un lock wait è una condizione che si verifica quanto una sessione attende di prendere un lock su un oggetto che sul quale un&amp;rsquo;altra sessione l&amp;rsquo;ha già preso.&lt;/p&gt;
 &lt;p&gt;In questa situazione la sessione che attende è una sessione in Lock Wait.&lt;/p&gt;
-
 &lt;p&gt;Con questa query è possibile vedere quali sessioni sono in attesa&lt;/p&gt;</description>
     </item>
     
@@ -41,9 +39,7 @@ Questo articolo descrive le principali funzionalità e le  differenze che li car
       
       <guid>https://www.stefanoteodorani.it/2018/11/05/sql-tuning-advisor-per-uno-specifico-sql_id/</guid>
       <description>&lt;p&gt;Quando eseguiamo il tuning advisor di Oracle, specificando il sql_id di una query SQL, possiamo ottenere prezioni suggerimenti per migliorare le prestazioni delle istruzioni SQL.&lt;/p&gt;
-
 &lt;p&gt;In questo tutorial spiegherò come eseguire sql tuning advisor avendo a disposizione il sql_id di uno statement SQL.&lt;/p&gt;
-
 &lt;p&gt;Supponiamo che l&amp;rsquo;ID sql sia - 87s8z2zzpsg88&lt;/p&gt;</description>
     </item>
     
@@ -54,7 +50,6 @@ Questo articolo descrive le principali funzionalità e le  differenze che li car
       
       <guid>https://www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/</guid>
       <description>&lt;h2 id=&#34;introduzione&#34;&gt;Introduzione&lt;/h2&gt;
-
 &lt;p&gt;Un utente Oracle può essere creato in modo che la password scada dopo un certo periodo di tempo definito nel profilo assegnato. Per riattivare l&amp;rsquo;utente esistente è necessario reimpostare la password.
 In alcuni casi questo può essere un problema.
 In questo articolo viene descritta una procedura un pò inconsueta per ripristinare un utente senza conoscere la sua password.&lt;/p&gt;</description>
@@ -67,9 +62,7 @@ In questo articolo viene descritta una procedura un pò inconsueta per ripristin
       
       <guid>https://www.stefanoteodorani.it/2018/04/05/spostare-i-controlfiles-su-oracle-12.x/</guid>
       <description>&lt;h2 id=&#34;introduzione&#34;&gt;Introduzione&lt;/h2&gt;
-
 &lt;p&gt;Oggi mi è capitato di dover spostare alcuni controlfile Oracle che erano stati creati in una cartella sbagliata. Spostare i controlfile non è difficile, ma essendo files molto critici per la sopravvivenza del DB, questa attività va fatta senza troppo casino nelle orecchie.&lt;/p&gt;
-
 &lt;p&gt;Vi avviso però. Per spostare i controlfiles bisogna spegnere l&amp;rsquo;istanza. Vediamo come fare.&lt;/p&gt;</description>
     </item>
     
@@ -80,7 +73,6 @@ In questo articolo viene descritta una procedura un pò inconsueta per ripristin
       
       <guid>https://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/</guid>
       <description>&lt;h2 id=&#34;introduzione&#34;&gt;Introduzione&lt;/h2&gt;
-
 &lt;p&gt;Oggi mi è capitato di dover spostare alcuni redolog che erano stati creati in una cartella sbagliata.
 Ecco come ho fatto&lt;/p&gt;</description>
     </item>
@@ -92,13 +84,9 @@ Ecco come ho fatto&lt;/p&gt;</description>
       
       <guid>https://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/</guid>
       <description>&lt;h2 id=&#34;introduzione&#34;&gt;Introduzione&lt;/h2&gt;
-
 &lt;p&gt;Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.&lt;/p&gt;
-
 &lt;p&gt;Nell&amp;rsquo;Instant client non sono compresi una serie di tool tipicamente presenti in una installazione full (es: exp, imp, sqlldr, tnsping).&lt;/p&gt;
-
 &lt;p&gt;Per installare Oracle Instant client su una macchina Red-Hat si possono usare 3 modi diversi.&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Installazione dei pacchetti rpm&lt;/li&gt;
 &lt;li&gt;Installazione manuale con lo zip del client&lt;/li&gt;
@@ -123,7 +111,7 @@ Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dat
       <pubDate>Sat, 27 May 2017 23:35:16 +0200</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/</guid>
-      <description>&lt;p&gt;Può capitare di dover mandare mail da Oracle ? Si. Ho fatto questo script per l&amp;rsquo;invio di mail da una istanza Oracle per risolvere un problema immediato, e siccome non c&amp;rsquo;è niente di più definitivo delle cose provvisorie, eccolo qui come se fosse un prodotto finito.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Può capitare di dover mandare mail da Oracle ? Si. Ho fatto questo script per l&amp;rsquo;invio di mail da una istanza Oracle per risolvere un problema immediato, e siccome non c&#39;è niente di più definitivo delle cose provvisorie, eccolo qui come se fosse un prodotto finito.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -133,15 +121,13 @@ Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dat
       
       <guid>https://www.stefanoteodorani.it/2017/05/24/oracle-char-vs-bytes/</guid>
       <description>&lt;p&gt;Nei database Oracle, i campi che possono contenere dati stringa possono assumere datatype diversi&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;NVARCHAR2&lt;/li&gt;
 &lt;li&gt;VARCHAR2(n)&lt;/li&gt;
 &lt;li&gt;VARCHAR2(n CHAR)&lt;/li&gt;
 &lt;li&gt;VARCHAR2(n BYTE)&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Ma che differenza c&amp;rsquo;è ?&lt;/p&gt;</description>
+&lt;p&gt;Ma che differenza c&#39;è ?&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -162,11 +148,11 @@ In base al file di configurazione passato come argomento, Oracle Grants Remmaper
       <guid>https://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/</guid>
       <description>Per installare il client Oracle sul Mac, utilizzare questa procedura:
 Creare la cartella /Users/[utente]/oracle e metterci dentro:
-instantclient-basic-macos.x64-11.2.0.4.0.zip instantclient-sdk-macos.x64-11.2.0.4.0.zip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip  scompattarli
-unzip instantclient-basic-macos.x64-11.2.0.4.0.zip unzip instantclient-sdk-macos.x64-11.2.0.4.0.zip unzip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip  Andare nella cartella che lo scompattamento crea
-cd /Users/[utente]/instantclient11_2  Creare i 2 seguenti link simbolici (controllare la versione delle dll)
-ln -s libclntsh.dylib.11.1 libclntsh.dylib ln -s libocci.dylib.11.1 libocci.dylib  Eseguire la seguente fix
-curl -O https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fix_oralib.rb ruby fix_oralib.rb --absolute-path  Aggiungere nel .</description>
+instantclient-basic-macos.x64-11.2.0.4.0.zip instantclient-sdk-macos.x64-11.2.0.4.0.zip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip scompattarli
+unzip instantclient-basic-macos.x64-11.2.0.4.0.zip unzip instantclient-sdk-macos.x64-11.2.0.4.0.zip unzip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip Andare nella cartella che lo scompattamento crea
+cd /Users/[utente]/instantclient11_2 Creare i 2 seguenti link simbolici (controllare la versione delle dll)
+ln -s libclntsh.dylib.11.1 libclntsh.dylib ln -s libocci.dylib.11.1 libocci.dylib Eseguire la seguente fix
+curl -O https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fix_oralib.rb ruby fix_oralib.rb --absolute-path Aggiungere nel .bash_profile se seguenti righe</description>
     </item>
     
   </channel>

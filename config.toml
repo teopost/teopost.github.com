@@ -19,7 +19,7 @@ publishDir = "docs"
 [params]
   # Tell me who you are
   author = "Stefano Teodorani"
-  bio = "Oracle DBA, Programmer, Linux Administrator and Opensource lover"
+  bio = "DBA, Programmer, Linux Administrator and Opensource lover"
   location = "Savignano sul Rubicone"
   site_description = ""
   copyright  = "Powered by [Hugo](//gohugo.io)"

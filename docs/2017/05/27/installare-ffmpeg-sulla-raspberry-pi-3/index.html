@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Installare FFmpeg sulla Raspberry Pi 3 &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.55.2" />
+    <meta name="generator" content="Hugo 0.64.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -32,16 +32,13 @@
 Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.stefanoteodorani.it/2017/05/27/installare-ffmpeg-sulla-raspberry-pi-3/" />
-<meta property="article:published_time" content="2017-05-27T16:18:40&#43;02:00"/>
-<meta property="article:modified_time" content="2017-05-27T16:18:40&#43;02:00"/>
+<meta property="article:published_time" content="2017-05-27T16:18:40+02:00" />
+<meta property="article:modified_time" content="2017-05-27T16:18:40+02:00" />
 
     
-    
-<meta itemprop="name" content="Installare FFmpeg sulla Raspberry Pi 3">
+    <meta itemprop="name" content="Installare FFmpeg sulla Raspberry Pi 3">
 <meta itemprop="description" content="Purtroppo installare FFmpeg sulla Raspberry non è mai una cosa semplice. Non si capisce per quale motivo non si decidono a mettere i compilati nel repository.
 Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.">
-
-
 <meta itemprop="datePublished" content="2017-05-27T16:18:40&#43;02:00" />
 <meta itemprop="dateModified" content="2017-05-27T16:18:40&#43;02:00" />
 <meta itemprop="wordCount" content="205">
@@ -49,7 +46,6 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.">
 
 
 <meta itemprop="keywords" content="raspberry," />
-
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Installare FFmpeg sulla Raspberry Pi 3"/>
 <meta name="twitter:description" content="Purtroppo installare FFmpeg sulla Raspberry non è mai una cosa semplice. Non si capisce per quale motivo non si decidono a mettere i compilati nel repository.
@@ -178,7 +174,7 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti."/>
     <div class="base-info profile-block">
       <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
       <h2 id="name">Stefano Teodorani</h2>
-      <h3 id="title">Oracle DBA, Programmer, Linux Administrator and Opensource lover</h3>
+      <h3 id="title">DBA, Programmer, Linux Administrator and Opensource lover</h3>
       <span id="location"><i class="fa fa-map-marker"></i>Savignano sul Rubicone</span>
       
           <a id="follow" href="https://github.com/teopost">
@@ -338,20 +334,13 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti."/>
             <div class="article-entry" itemprop="articleBody">
                 <p>Purtroppo installare FFmpeg sulla Raspberry non è mai una cosa semplice. Non si capisce per quale motivo non si decidono a mettere i compilati nel repository.
 Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.</p>
-
 <p>Tutte le seguenti operazioni vanno fatte come utente root (<code>sudo -s</code>).</p>
-
 <p>Per prima cosa occorre installare git col solito comando:</p>
-
 <pre><code>apt-get install git
 </code></pre>
-
 <p>Dopo aver installato <code>git</code> procediamo con lo scaricamento dei sorgenti.</p>
-
 <h2 id="compilazione-e-installazione-libreria-video-x264">Compilazione e installazione libreria video x264</h2>
-
 <p>Visto che ci siamo installiamo le librerie video x264, quindi:</p>
-
 <pre><code>cd /usr/src
 git clone git://git.videolan.org/x264
 cd x264
@@ -359,27 +348,19 @@ cd x264
 make
 make install
 </code></pre>
-
 <p>Se dovesse essere necessario installare il supporto FFmpeg per altre librerie (mp3, aac, ecc..), bisogna farlo ora. Prima di compilare ffmpeg.</p>
-
 <h2 id="compilazione-e-installazione-ffmpeg">Compilazione e installazione FFmpeg:</h2>
-
 <pre><code>cd /usr/src
 git clone git://source.ffmpeg.org/ffmpeg.git
 cd ffmpeg/
 ./configure --arch=armel --target-os=linux --enable-gpl --enable-libx264 --enable-nonfree
 make
 </code></pre>
-
 <p>Notate l&rsquo;opzione <code>--enable-libx264</code> che compila ffmpeg con il supporto alle suddette librerie</p>
-
 <p>Questa seconda fase è un po lunghina. Fatela mentre vi guardate un film. Sulla Raspberry 3 potete eseguire la compilazione parallela <code>make -j4</code>. Dovrebbe velocizzare un po la cosa.</p>
-
 <p>Per ultimo:</p>
-
 <pre><code>make install
 </code></pre>
-
 <p>L&rsquo;installazione di FFmpeg comprende anche il tool ffserver che permette di fare lo streaming di video e audio.</p>
             </div>
             <footer class="article-footer">
@@ -845,7 +826,7 @@ make
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019
+      &copy; 2020
       Powered by <a href="//gohugo.io">Hugo</a>
     </div>
   </div>

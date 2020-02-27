@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>apache on stefanoteodorani.it</title>
@@ -20,7 +20,6 @@
       <description>&lt;p&gt;Ci sono molti modi per attivare la cosiddetta pagina di cortesia di un sito.
 Nella maggior parte dei casi che mi è capitato di vedere, l&amp;rsquo;abitudine è quella di editare il file di configurazione di apache.
 In questo articolo vi mostro un modo secondo me più elegante per farlo.&lt;/p&gt;
-
 &lt;p&gt;Aggiungete questa regola nel file httpd.conf:&lt;/p&gt;</description>
     </item>
     

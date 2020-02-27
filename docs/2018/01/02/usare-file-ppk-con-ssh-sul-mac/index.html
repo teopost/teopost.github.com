@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Usare file ppk con ssh sul Mac &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.55.2" />
+    <meta name="generator" content="Hugo 0.64.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -32,16 +32,13 @@
 Conversione dile .ppk in .pem Per prima cosa ho convertito il file." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.stefanoteodorani.it/2018/01/02/usare-file-ppk-con-ssh-sul-mac/" />
-<meta property="article:published_time" content="2018-01-02T22:45:00&#43;01:00"/>
-<meta property="article:modified_time" content="2018-01-02T22:45:00&#43;01:00"/>
+<meta property="article:published_time" content="2018-01-02T22:45:00+01:00" />
+<meta property="article:modified_time" content="2018-01-02T22:45:00+01:00" />
 
     
-    
-<meta itemprop="name" content="Usare file ppk con ssh sul Mac">
+    <meta itemprop="name" content="Usare file ppk con ssh sul Mac">
 <meta itemprop="description" content="Amo Linux. Sembra una contraddizione ma è proprio per questo che amo anche i Mac, e ne possiedo uno. Recentemente mi è capitato di dovermi collegare ad un server remoto via ssh utilizzando una chiave privata diversa dalla mia. Mi è stata fornita una chiave privata ma, ahimè, in un formato proprietario di putty (con estensione .ppk). Ecco quello che ho fatto:
 Conversione dile .ppk in .pem Per prima cosa ho convertito il file.">
-
-
 <meta itemprop="datePublished" content="2018-01-02T22:45:00&#43;01:00" />
 <meta itemprop="dateModified" content="2018-01-02T22:45:00&#43;01:00" />
 <meta itemprop="wordCount" content="201">
@@ -49,7 +46,6 @@ Conversione dile .ppk in .pem Per prima cosa ho convertito il file.">
 
 
 <meta itemprop="keywords" content="osx," />
-
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Usare file ppk con ssh sul Mac"/>
 <meta name="twitter:description" content="Amo Linux. Sembra una contraddizione ma è proprio per questo che amo anche i Mac, e ne possiedo uno. Recentemente mi è capitato di dovermi collegare ad un server remoto via ssh utilizzando una chiave privata diversa dalla mia. Mi è stata fornita una chiave privata ma, ahimè, in un formato proprietario di putty (con estensione .ppk). Ecco quello che ho fatto:
@@ -178,7 +174,7 @@ Conversione dile .ppk in .pem Per prima cosa ho convertito il file."/>
     <div class="base-info profile-block">
       <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
       <h2 id="name">Stefano Teodorani</h2>
-      <h3 id="title">Oracle DBA, Programmer, Linux Administrator and Opensource lover</h3>
+      <h3 id="title">DBA, Programmer, Linux Administrator and Opensource lover</h3>
       <span id="location"><i class="fa fa-map-marker"></i>Savignano sul Rubicone</span>
       
           <a id="follow" href="https://github.com/teopost">
@@ -336,61 +332,34 @@ Conversione dile .ppk in .pem Per prima cosa ho convertito il file."/>
 </header>
 
             <div class="article-entry" itemprop="articleBody">
-                
-
-<p>Amo Linux.
+                <p>Amo Linux.
 Sembra una contraddizione ma è proprio per questo che amo anche i Mac, e ne possiedo uno.
 Recentemente mi è capitato di dovermi collegare ad un server remoto via ssh utilizzando una chiave privata diversa dalla mia.
 Mi è stata fornita una chiave privata ma, ahimè, in un formato proprietario di putty (con estensione .ppk).
 Ecco quello che ho fatto:</p>
-
 <h2 id="conversione-dile-ppk-in-pem">Conversione dile .ppk in .pem</h2>
-
 <p>Per prima cosa ho convertito il file. Con brew ho installato una utility.</p>
-
-<pre><code class="language-bash">$ brew install putty
-</code></pre>
-
-<p>questo comando installa <code>puttygen</code>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ brew install putty
+</code></pre></div><p>questo comando installa <code>puttygen</code>
 Ora lo usiamo per convertire il file ppk.</p>
-
-<pre><code class="language-bash">$ puttygen  cert.ppk -O private-openssh -o cert.pem
-</code></pre>
-
-<h2 id="installiamo-il-certificato">Installiamo il certificato</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ puttygen  cert.ppk -O private-openssh -o cert.pem
+</code></pre></div><h2 id="installiamo-il-certificato">Installiamo il certificato</h2>
 <p>Copiamo ora il file .pem dove è giusto che stia. Quindi:</p>
-
-<pre><code class="language-bash">$ cp cerp.pem ~/.ssh/cert.pem
-</code></pre>
-
-<p>Diamo i giusti permessi</p>
-
-<pre><code class="language-bash">$ chmod 400 ~/.ssh/cert.pem
-</code></pre>
-
-<p>Se devi rimuovere la passphrase puoi farlo con questo comando</p>
-
-<pre><code class="language-bash">openssl rsa -in .ssh/cert.pem -out .ssh/cert-no-pass.pem
-</code></pre>
-
-<p>Bene, Ora controlliamo che ssh funzioni senza che mi chieda la password</p>
-
-<pre><code class="language-bash">$ ssh -i ~/.ssh/cert.pem user@host.com
-</code></pre>
-
-<h2 id="aggiorniamo-il-config">Aggiorniamo il config</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cp cerp.pem ~/.ssh/cert.pem
+</code></pre></div><p>Diamo i giusti permessi</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ chmod <span style="color:#ae81ff">400</span> ~/.ssh/cert.pem
+</code></pre></div><p>Se devi rimuovere la passphrase puoi farlo con questo comando</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">openssl rsa -in .ssh/cert.pem -out .ssh/cert-no-pass.pem
+</code></pre></div><p>Bene, Ora controlliamo che ssh funzioni senza che mi chieda la password</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh -i ~/.ssh/cert.pem user@host.com
+</code></pre></div><h2 id="aggiorniamo-il-config">Aggiorniamo il config</h2>
 <p>Ora configuro il mio config di ssh per utilizzare il file cert.pem.
 Apro il config e metto:</p>
-
 <pre><code>Host live_frontend
     HostName www.server.com
     User user
     IdentityFile ~/.ssh/cert.pem
-</code></pre>
-
-<p>Nota: Eventualmente si può anche aggiungere a ssh-agent con <code>ssh-add ~/.ssh/cert.pem</code></p>
+</code></pre><p>Nota: Eventualmente si può anche aggiungere a ssh-agent con <code>ssh-add ~/.ssh/cert.pem</code></p>
 
             </div>
             <footer class="article-footer">
@@ -856,7 +825,7 @@ Apro il config e metto:</p>
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019
+      &copy; 2020
       Powered by <a href="//gohugo.io">Hugo</a>
     </div>
   </div>

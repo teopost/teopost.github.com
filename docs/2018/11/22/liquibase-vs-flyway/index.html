@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Liquibase vs Flyway &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.55.2" />
+    <meta name="generator" content="Hugo 0.64.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -32,16 +32,13 @@
 Questo articolo descrive le principali funzionalità e le  differenze che li caratterizzano." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.stefanoteodorani.it/2018/11/22/liquibase-vs-flyway/" />
-<meta property="article:published_time" content="2018-11-22T18:00:00&#43;01:00"/>
-<meta property="article:modified_time" content="2018-11-22T18:00:00&#43;01:00"/>
+<meta property="article:published_time" content="2018-11-22T18:00:00+01:00" />
+<meta property="article:modified_time" content="2018-11-22T18:00:00+01:00" />
 
     
-    
-<meta itemprop="name" content="Liquibase vs Flyway">
+    <meta itemprop="name" content="Liquibase vs Flyway">
 <meta itemprop="description" content="Liquibase e Flyway sono &ldquo;database migration tool&rdquo;, ovvero strumenti per l&rsquo;applicazione di modifiche al database.
 Questo articolo descrive le principali funzionalità e le  differenze che li caratterizzano.">
-
-
 <meta itemprop="datePublished" content="2018-11-22T18:00:00&#43;01:00" />
 <meta itemprop="dateModified" content="2018-11-22T18:00:00&#43;01:00" />
 <meta itemprop="wordCount" content="1299">
@@ -49,7 +46,6 @@ Questo articolo descrive le principali funzionalità e le  differenze che li car
 
 
 <meta itemprop="keywords" content="db-tools," />
-
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Liquibase vs Flyway"/>
 <meta name="twitter:description" content="Liquibase e Flyway sono &ldquo;database migration tool&rdquo;, ovvero strumenti per l&rsquo;applicazione di modifiche al database.
@@ -178,7 +174,7 @@ Questo articolo descrive le principali funzionalità e le  differenze che li car
     <div class="base-info profile-block">
       <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
       <h2 id="name">Stefano Teodorani</h2>
-      <h3 id="title">Oracle DBA, Programmer, Linux Administrator and Opensource lover</h3>
+      <h3 id="title">DBA, Programmer, Linux Administrator and Opensource lover</h3>
       <span id="location"><i class="fa fa-map-marker"></i>Savignano sul Rubicone</span>
       
           <a id="follow" href="https://github.com/teopost">
@@ -338,40 +334,26 @@ Questo articolo descrive le principali funzionalità e le  differenze che li car
             <div class="article-entry" itemprop="articleBody">
                 <p>Liquibase e Flyway sono &ldquo;database migration tool&rdquo;, ovvero strumenti per l&rsquo;applicazione di modifiche al database.
 Questo articolo descrive le principali funzionalità e le  differenze che li caratterizzano.</p>
-
 <p>Siquibase che flyway sono scritti in Java.
 Utilizzano jdbc per l&rsquo;accesso al database e supportano sia Oracle che DB2.</p>
-
 <p>Entrambi, dato un elenco di file che descrivono le modifiche da applicare al database (DBFIX), si collegano ad un database target ed eseguono tali file escludendo quelli già eseguiti in una precedente migrazione.
 Tutte le modifiche vengono registrate in una tabella di metadati.</p>
-
 <h2 id="checksum-dei-files-e-tabella-di-modifiche">Checksum dei files e tabella di modifiche</h2>
-
 <p>Come fanno liquibase e flyway a sapere se una DBFIX è da applicare o se è già stata applicata ?</p>
-
 <p>Entrambi i tool registrano, su una propria tabella, la storia delle DBFIX applicate.
 In tale tabella vengono memorizzate varie informazioni come, ad esemepio, la data di esecuzione, il nome del file e la versione della fix.
 Oltre a ciò, si salvanno anche un checksum che identifica univocamente il file applicato.
 Tale checksum viene sempre controllato quando la fix viene eseguita.
 Tale dettaglio è importante perché se un file viene modificato dopo essere stato applicato ad un db, la migrazione fallisce.</p>
-
 <p>Esiste il modo di ripristinare manualmente tale checksum ma in entrambi i casi è una operazione da fare manualmente e abbastanza delicata da effettuare.</p>
-
 <h2 id="versioni-delle-dbfix">Versioni delle DBFIX</h2>
-
 <h3 id="flyway">Flyway</h3>
-
 <p>Flyway identifica la versione e la descrizione di una fix estraendola dal nome del file.
 Sulla base di una particolare naming convention (che può essere  personalizzata) è in grado di determinare anche la sequenza di applicazione di tali fix.</p>
-
 <p>Esempio:</p>
-
 <pre><code>V1.0.0__Creazione_tabella_USERS.sql
 V2.0.0__Aggiunta_campo_SEX_a_tabella_USERS.sql
-</code></pre>
-
-<p>Dopo l&rsquo;applicazione, nella tabella di changelog (chiamata schema_version), viene riportato:</p>
-
+</code></pre><p>Dopo l&rsquo;applicazione, nella tabella di changelog (chiamata schema_version), viene riportato:</p>
 <table>
 <thead>
 <tr>
@@ -380,14 +362,12 @@ V2.0.0__Aggiunta_campo_SEX_a_tabella_USERS.sql
 <th>description&hellip;</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>1</td>
 <td>1.0.0</td>
 <td>Creazione tabella USERS</td>
 </tr>
-
 <tr>
 <td>2</td>
 <td>2.0.0</td>
@@ -395,23 +375,16 @@ V2.0.0__Aggiunta_campo_SEX_a_tabella_USERS.sql
 </tr>
 </tbody>
 </table>
-
 <p>Flyway, nel sopracitato esempio, applica prima la V1.0.0 ed in seguito la V2.0.0.
 La sequenza di applicazione delle fix la si può evincere dal campo installed_rank.</p>
-
 <p>Per Flyway quindi ogni file è una dbfix con una versione.</p>
-
 <h3 id="liquibase">Liquibase</h3>
-
 <p>Per liquibase il concetto di versione della fix non è necessariamente associato al singolo file.
 Un file può anche contenere una serie di modifiche (changeset) che devono essere &ldquo;marcate&rdquo; all&rsquo;interno del file.
 Se si usa il formato .sql, i changeset devono essere esplicitati sotto forma di commenti.</p>
-
 <p>Ogni changeset è marcato dalla coppia di valori &ldquo;autore&rdquo; e &ldquo;id&rdquo;.
 Tale coppia di valori rende univoca la fix nel caso in cui più sviluppatori lavorano in contemporanea su uno stesso set di funzioni.</p>
-
 <p>Esempio:</p>
-
 <pre><code>--liquibase formatted sql
 
 --changeset teodorani:1
@@ -429,18 +402,13 @@ insert into test_sql (id, name) values (2, 'name 2');
 --changeset teodorani:3
 insert into test_sql (id, name) values (3, 'name 3');
 
-</code></pre>
-
-<p>Nel suddetto esempio, la DBFIX contiene 2 commenti che vengono interpretati da liquibase come direttive, ovvero:</p>
-
+</code></pre><p>Nel suddetto esempio, la DBFIX contiene 2 commenti che vengono interpretati da liquibase come direttive, ovvero:</p>
 <ul>
 <li><code>--liquibase formatted sql</code>: Valore obbligatorio che indica il formato della DBFIX (puo&rsquo; essere sql, xml o json).</li>
 <li><code>--changeset teodorani:1</code>: Valore che identifica una specifica modifica composto da nome dello sviluppatore e da un numero (facoltativo).</li>
 <li><code>--rollback drop table test_sql;</code>: Statement da eseguire in caso di fallimento del changeset superiore</li>
 </ul>
-
 <p>Dopo aver applicato la DBFIX, liquibase memorizza nella tabella DATABASECHANGELOG i seguenti dati:</p>
-
 <table>
 <thead>
 <tr>
@@ -451,7 +419,6 @@ insert into test_sql (id, name) values (3, 'name 3');
 <th>ORDEREXECUTED&hellip;.</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>1</td>
@@ -460,7 +427,6 @@ insert into test_sql (id, name) values (3, 'name 3');
 <td>22/11/2018 10.17.09,069030</td>
 <td>1</td>
 </tr>
-
 <tr>
 <td>2</td>
 <td>teodorani</td>
@@ -468,7 +434,6 @@ insert into test_sql (id, name) values (3, 'name 3');
 <td>22/11/2018 10.17.09,150484</td>
 <td>2</td>
 </tr>
-
 <tr>
 <td>3</td>
 <td>teodorani</td>
@@ -476,7 +441,6 @@ insert into test_sql (id, name) values (3, 'name 3');
 <td>22/11/2018 10.17.09,182781</td>
 <td>3</td>
 </tr>
-
 <tr>
 <td>1</td>
 <td>sarli</td>
@@ -486,21 +450,14 @@ insert into test_sql (id, name) values (3, 'name 3');
 </tr>
 </tbody>
 </table>
-
 <h2 id="sequenza-di-applicazione-delle-dbfix">Sequenza di applicazione delle DBFIX</h2>
-
 <h3 id="flyway-1">Flyway</h3>
-
 <p>Flayway determina la sequenza di applicazione di una fix sulla base dei files contenuti in una o più cartelle.
 E&rsquo; quindi sufficiente mettere i files in una cartella secondo una struttura che puo&rsquo; essere personalizzata.
 Oltre a ciò è possibile applicare dei files di pre e post migrazione (files con un nome particolare).</p>
-
 <h3 id="liquibase-1">Liquibase</h3>
-
 <p>Liquibase determina la sequenza di fix di applicare sulla base di un file master xml in cui devono essere inserite le entry dei files da applicare.</p>
-
 <p>Esempio di file master:</p>
-
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;databaseChangeLog
   xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog&quot;
@@ -513,10 +470,7 @@ Oltre a ciò è possibile applicare dei files di pre e post migrazione (files co
 
 &lt;/databaseChangeLog&gt;
 
-</code></pre>
-
-<p>File changelog-1.0.sql</p>
-
+</code></pre><p>File changelog-1.0.sql</p>
 <pre><code>--liquibase formatted sql
 
 --changeset teodorani:1
@@ -533,102 +487,60 @@ insert into test_sql (id, name) values (2, 'name 2');
 
 --changeset teodorani:3
 insert into test_sql (id, name) values (3, 'name 3');
-</code></pre>
-
-<p>File changelog-2.0.sql</p>
-
+</code></pre><p>File changelog-2.0.sql</p>
 <pre><code>--liquibase formatted sql
 
 --changeset sarli:1
 alter table test_sql add surname varchar2(255);
-</code></pre>
-
-<p>Quindi non importa il nome del file e non è importante il path.
+</code></pre><p>Quindi non importa il nome del file e non è importante il path.
 Quello che è importante è solo la corretta creazione del file xml master.
 Il vantaggio di questo approccio è notevole perché è possibile far coesistere DBFIX di formati diversi (sql,json, xml) e disporle in una alberatura su disco a piacere.</p>
-
 <h2 id="multidatabase">Multidatabase</h2>
-
 <h3 id="flyway-2">Flyway</h3>
-
 <p>Flyway si limita ad applicare file di tipo SQL. Non è possibile applicare le stesse DBFIX a database target differenti (DB2 e ORACLE) se non creando gli specifici statement con la sintassi oracle e DB2</p>
-
 <h3 id="liquibase-2">Liquibase</h3>
-
 <p>Se si utilizza la sintassi basata non su SQL (es: XML), liquibase genera, in base al DB target, gli statement opportuni per le modifiche al db.</p>
-
 <h2 id="rollback">Rollback</h2>
-
 <p>Flyway non consente di definire files di rollback. Questa funzione non è disponibile.
 Liquibase consente di specificare quali istruzioni di rollback eseguire</p>
-
 <h2 id="documentazione">Documentazione</h2>
-
 <p>Con Liquibase è possibile generare una documentazione descrittiva con le modifiche applicate per ogni changeset.
 E&rsquo; disponibile un esempio on line a questo indirizzo: <a href="http://www.liquibase.org/dbdoc/index.html">http://www.liquibase.org/dbdoc/index.html</a>
 Tale funzionalità non è presente in Flyway</p>
-
 <h2 id="sql-placeholder">SQL Placeholder</h2>
-
 <p>I files SQL, in Flyway possono contenere i placeholder. Vere e proprie variabili che possono essere sostituite in fase di esecuzione:</p>
-
 <p>Esempio:</p>
-
-<pre><code class="language-sql">INSERT INTO ${tableName} (name) VALUES ('Mr. T');
-</code></pre>
-
-<p>Tali placeholder possono essere valorizzati in files di properties.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#960050;background-color:#1e0010">{</span>tableName<span style="color:#960050;background-color:#1e0010">}</span> (name) <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Mr. T</span><span style="color:#e6db74">&#39;</span>);
+</code></pre></div><p>Tali placeholder possono essere valorizzati in files di properties.</p>
 <p>Liquibase non dispone di questa funzionalità</p>
-
 <h2 id="baseline">Baseline</h2>
-
 <p>In flyway è possibile definire le baseline, ovvero un tab ad una versione specifica.
 Questo consente di eseguire migrazioni fino ad una specifica baseline.</p>
-
 <p>In liquibase questa funzionalità non è presente ma è facilmente gestibile con differenti file xml master.</p>
-
 <h2 id="precondition">Precondition</h2>
-
 <p>Con liquibase è possibile definire delle condizioni indispensabili per l&rsquo;applicazione delle DBFIX.</p>
-
 <p>Esempio di precondition nel formato XML:</p>
-
-<pre><code class="language-xml">&lt;preConditions onFail=&quot;WARN&quot;&gt;
-     &lt;sqlCheck expectedResult=&quot;0&quot;&gt;select count(*) from my_table&lt;/sqlCheck&gt;
- &lt;/preConditions&gt;
-</code></pre>
-
-<p>Faccio un esempio più interessate basato su file SQL
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;preConditions</span> <span style="color:#a6e22e">onFail=</span><span style="color:#e6db74">&#34;WARN&#34;</span><span style="color:#f92672">&gt;</span>
+     <span style="color:#f92672">&lt;sqlCheck</span> <span style="color:#a6e22e">expectedResult=</span><span style="color:#e6db74">&#34;0&#34;</span><span style="color:#f92672">&gt;</span>select count(*) from my_table<span style="color:#f92672">&lt;/sqlCheck&gt;</span>
+ <span style="color:#f92672">&lt;/preConditions&gt;</span>
+</code></pre></div><p>Faccio un esempio più interessate basato su file SQL
 Diciamo che dobbiamo inserire un valore nella STORECONF solo se non presente:</p>
-
-<pre><code class="language-sql">--preconditions onFail:WARN onError:HALT
---precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM STORECONF where STOREENT_ID='1000' and NAME='CreateOrderServiceURL'
-insert into STORECONF (STOREENT_ID, NAME, VALUE,...)
-values (1000, 'CreateOrderServiceURL',...)
-</code></pre>
-
-<h2 id="context">Context</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">--preconditions onFail:WARN onError:HALT
+</span><span style="color:#75715e"></span><span style="color:#75715e">--precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM STORECONF where STOREENT_ID=&#39;1000&#39; and NAME=&#39;CreateOrderServiceURL&#39;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">insert</span> <span style="color:#66d9ef">into</span> STORECONF (STOREENT_ID, NAME, VALUE,...)
+<span style="color:#66d9ef">values</span> (<span style="color:#ae81ff">1000</span>, <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">CreateOrderServiceURL</span><span style="color:#e6db74">&#39;</span>,...)
+</code></pre></div><h2 id="context">Context</h2>
 <p>Talvolta esistono situazioni in cui statement SQL devono essere eseguiti solo se si è su un determinato ambiente (DEV piuttosto che PROD).</p>
-
 <p>Con liquibase è possibile definire i context per questo scopo.</p>
-
 <p>In questo esempio, l&rsquo;insert viene effettuata solo se si è nell&rsquo;ambiente UAT.</p>
-
-<pre><code class="language-sql">--changeset teodorani:3 context=UAT
-insert into STORECONF (STOREENT_ID, NAME, VALUE,...)
-values (1000, 'CreateOrderServiceURL',...)
-</code></pre>
-
-<p>I context vengono passati via command-line a liquibase in fase di migrazione.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">--changeset teodorani:3 context=UAT
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">insert</span> <span style="color:#66d9ef">into</span> STORECONF (STOREENT_ID, NAME, VALUE,...)
+<span style="color:#66d9ef">values</span> (<span style="color:#ae81ff">1000</span>, <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">CreateOrderServiceURL</span><span style="color:#e6db74">&#39;</span>,...)
+</code></pre></div><p>I context vengono passati via command-line a liquibase in fase di migrazione.</p>
 <ul>
 <li>Elenco pre-condition: <a href="http://www.liquibase.org/documentation/preconditions.html">http://www.liquibase.org/documentation/preconditions.html</a></li>
 </ul>
-
 <h2 id="tabella-di-confronto-funzionalità">Tabella di confronto funzionalità</h2>
-
 <table>
 <thead>
 <tr>
@@ -637,74 +549,62 @@ values (1000, 'CreateOrderServiceURL',...)
 <th align="center">Liquibase</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>SQL Placeholder</td>
 <td align="center">X</td>
-<td align="center"></td>
+<td></td>
 </tr>
-
 <tr>
 <td>Baseline</td>
 <td align="center">X</td>
-<td align="center"></td>
+<td></td>
 </tr>
-
 <tr>
 <td>Precondition</td>
 <td align="center"></td>
 <td align="center">X</td>
 </tr>
-
 <tr>
 <td>Context</td>
 <td align="center"></td>
 <td align="center">X</td>
 </tr>
-
 <tr>
 <td>Supporto jdbc</td>
 <td align="center">X</td>
 <td align="center">X</td>
 </tr>
-
 <tr>
 <td>Supporto fix in XML</td>
 <td align="center"></td>
 <td align="center">X</td>
 </tr>
-
 <tr>
 <td>Supporto fix in JSON</td>
 <td align="center"></td>
 <td align="center">X</td>
 </tr>
-
 <tr>
 <td>Supporto fix in YAML</td>
 <td align="center"></td>
 <td align="center">X</td>
 </tr>
-
 <tr>
 <td>Supporto fix in SQL</td>
 <td align="center">X</td>
 <td align="center">X</td>
 </tr>
-
 <tr>
 <td>Supporto PL/SQL</td>
 <td align="center">X</td>
 <td align="center">X</td>
 </tr>
-
 <tr>
 <td>Gen. Documentazione</td>
 <td align="center"></td>
 <td align="center">X</td>
 </tr>
-
 <tr>
 <td>DBFIX checksum based</td>
 <td align="center">X</td>
@@ -712,14 +612,10 @@ values (1000, 'CreateOrderServiceURL',...)
 </tr>
 </tbody>
 </table>
-
 <h2 id="conclusioni">Conclusioni</h2>
-
 <p>Personalmente ho esperienza diretta sull&rsquo;utilizzo di flyway su cui ho riscontrato anche alcuni problemi sull&rsquo;applicazione di DBFIX custom che possono cambiare a seconda delle integrazioni da effettuare.</p>
-
 <p>Flyway determina la sequenza di fix da applicare in base a come vengono trovate in una cartella, questo rende estremamente complicato gestire casi in cui, a seconda delle integrazioni da effettuare, tali cartelle possono essere diverse.
 Infatti flyway, a meno che non si attivi una modalità chiamata out-of-order, non permette di applicare una fix con versione minore (es:1.0), se è gia&rsquo; stata applicata la 1.1.</p>
-
 <p>Liquibase non sembra avere questo problema perché per liquibase quello che comanda é sempre il file xml master.</p>
             </div>
             <footer class="article-footer">
@@ -1185,7 +1081,7 @@ Infatti flyway, a meno che non si attivi una modalità chiamata out-of-order, no
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019
+      &copy; 2020
       Powered by <a href="//gohugo.io">Hugo</a>
     </div>
   </div>

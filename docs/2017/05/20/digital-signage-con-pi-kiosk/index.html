@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Digital signage con Pi-Kiosk &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.55.2" />
+    <meta name="generator" content="Hugo 0.64.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -29,21 +29,16 @@
     <meta property="og:image" content="https://www.stefanoteodorani.it/banner/digital-signage-con-pi-kiosk.jpg" />
     <meta property="og:title" content="Digital signage con Pi-Kiosk" />
 <meta property="og:description" content="Conosco Luca. Ha una agenzia di viaggi a Rimini, e un&rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.
-
 E&rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico Sergio gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" />
-<meta property="article:published_time" content="2017-05-20T20:50:06&#43;02:00"/>
-<meta property="article:modified_time" content="2017-05-20T20:50:06&#43;02:00"/>
+<meta property="article:published_time" content="2017-05-20T20:50:06+02:00" />
+<meta property="article:modified_time" content="2017-05-20T20:50:06+02:00" />
 
     
-    
-<meta itemprop="name" content="Digital signage con Pi-Kiosk">
+    <meta itemprop="name" content="Digital signage con Pi-Kiosk">
 <meta itemprop="description" content="Conosco Luca. Ha una agenzia di viaggi a Rimini, e un&rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.
-
 E&rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico Sergio gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.">
-
-
 <meta itemprop="datePublished" content="2017-05-20T20:50:06&#43;02:00" />
 <meta itemprop="dateModified" content="2017-05-20T20:50:06&#43;02:00" />
 <meta itemprop="wordCount" content="723">
@@ -51,11 +46,9 @@ E&rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di sl
 
 
 <meta itemprop="keywords" content="raspberry," />
-
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Digital signage con Pi-Kiosk"/>
 <meta name="twitter:description" content="Conosco Luca. Ha una agenzia di viaggi a Rimini, e un&rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.
-
 E&rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico Sergio gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore."/>
 <meta name="twitter:site" content="@teopost"/>
 
@@ -181,7 +174,7 @@ E&rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di sl
     <div class="base-info profile-block">
       <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
       <h2 id="name">Stefano Teodorani</h2>
-      <h3 id="title">Oracle DBA, Programmer, Linux Administrator and Opensource lover</h3>
+      <h3 id="title">DBA, Programmer, Linux Administrator and Opensource lover</h3>
       <span id="location"><i class="fa fa-map-marker"></i>Savignano sul Rubicone</span>
       
           <a id="follow" href="https://github.com/teopost">
@@ -340,35 +333,29 @@ E&rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di sl
 
             <div class="article-entry" itemprop="articleBody">
                 <p>Conosco Luca. Ha una agenzia di viaggi a Rimini, e un&rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.</p>
-
 <p>E&rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico <a href="https://www.sergiogridelli.it/">Sergio</a> gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.</p>
-
 <p>Purtroppo però, dopo aver provato per un po questa soluzione, sono venuti fuori alcuni problemi.</p>
-
 <ul>
-<li><p><strong>Non era possibile copiare le immagini da remoto.</strong> Per farlo bisognava essere fisicamente sul posto, scaricare le immagini che Sergio gli mandava per posta, copiare le immagini sulla chiavetta, mettere la chiavetta nel televisore. Inoltre durante questa operazione il televisore non proiettava niente.</p></li>
-
-<li><p><strong>Non tutte le immagini venivano mostrate correttamente.</strong> Alcune formati non erano supportati.</p></li>
-
-<li><p><strong>Il televisore rimaneva inutilmente accesso anche la notte.</strong> Luca vuole risparmiare sulla bolletta della luce</p></li>
-
-<li><p><strong>Il caricamento delle immagini era lento.</strong> Le immagini venivano caricate lentamente e l&rsquo;effetto in effetti non era grachè.</p></li>
+<li>
+<p><strong>Non era possibile copiare le immagini da remoto.</strong> Per farlo bisognava essere fisicamente sul posto, scaricare le immagini che Sergio gli mandava per posta, copiare le immagini sulla chiavetta, mettere la chiavetta nel televisore. Inoltre durante questa operazione il televisore non proiettava niente.</p>
+</li>
+<li>
+<p><strong>Non tutte le immagini venivano mostrate correttamente.</strong> Alcune formati non erano supportati.</p>
+</li>
+<li>
+<p><strong>Il televisore rimaneva inutilmente accesso anche la notte.</strong> Luca vuole risparmiare sulla bolletta della luce</p>
+</li>
+<li>
+<p><strong>Il caricamento delle immagini era lento.</strong> Le immagini venivano caricate lentamente e l&rsquo;effetto in effetti non era grachè.</p>
+</li>
 </ul>
-
 <p>Luca ha quindi pensato di chiedere al sottoscritto se, con tutti i progetti e smanettamenti inutili che faccio, ce ne era uno che poteva risolvergli tutti questi problemi.</p>
-
 <p>Così è nato Pi-Kiosk.</p>
-
 <h2 id="pi-kiosk">Pi-Kiosk</h2>
-
 <p>Pi-Kiosk è una soluzione basata su raspberry pi, che consente di eseguire lo slideshow di una cartella di immagini su un televisore.</p>
-
 <p>Prevede l&rsquo;utilizzo di btsync per l&rsquo;aggiornamento delle immagini. Grazie a btsync è possibile utilizzare un computer desktop o uno smartphone per tenere aggiornata la presentazione.</p>
-
 <p>Pi-Kiosk spegne il televisore la sera e lo riaccende la mattina utilizzando lo standard cec dell&rsquo;HDMI presente ormai in quasi tutti i televisori di ultima generazione.</p>
-
 <h2 id="materiale-occorrente">Materiale occorrente</h2>
-
 <ul>
 <li>n.1 <a href="https://www.amazon.it/Raspberry-PI-Model-Scheda-madre/dp/B01CD5VC92/ref=sr_1_4?s=pc&amp;ie=UTF8&amp;qid=1495318603&amp;sr=1-4&amp;keywords=raspberry+pi+3">Raspberry Pi</a></li>
 <li>n.1 <a href="https://www.amazon.it/Raspberry-Pi-3-Case-BLACK/dp/B00W7S1BFG/ref=sr_1_4?s=pc&amp;ie=UTF8&amp;qid=1495318648&amp;sr=1-4&amp;keywords=case+raspberry+pi">Case</a></li>
@@ -377,70 +364,43 @@ E&rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di sl
 <li>n.1 Cavo HDMI</li>
 <li>n.1 Televisore con HDMI cec</li>
 </ul>
-
 <h2 id="preparare-la-raspberry">Preparare la Raspberry</h2>
-
 <p>Installate l&rsquo;ultima versione del sistema operativo raspbian. Ci sono centinaia di guide su internet su come farlo. Se hai linux, ecco la centunesima:</p>
-
 <p>Aprire una finestra terminal e da root inserire l&rsquo;SD nel card reader del computer. Eseguire questo comando:</p>
-
 <pre><code># df -h
 </code></pre>
-
 <p>Eseguire l&rsquo;umount della scheda: (sdb1 è solo un esempio, il nome potrebbe essere diverso)</p>
-
 <pre><code># umount /dev/sdb1
 </code></pre>
-
 <p>Scrivere l&rsquo;immagine nella SD</p>
-
 <pre><code># dd if=./immagine.img of=/dev/sdX bs=4k
 </code></pre>
-
 <p>Eseguire questo comando per essere sicuri che tutta la cache sia scritta nell&rsquo;SD</p>
-
 <pre><code># sync
 </code></pre>
-
 <h2 id="installare-pi-kiosk">Installare pi-kiosk</h2>
-
 <p>Installare il programma di visualizzazione immagini</p>
-
 <pre><code>$ sudo apt-get install feh unclutter
 </code></pre>
-
 <p>Collegarsi in ssh sulla rasp e posizionarsi nell home</p>
-
 <pre><code>$ cd
 </code></pre>
-
 <p>Scaricare il software</p>
-
 <pre><code>$ git clone https://github.com/teopost/pi-kiosk
 </code></pre>
-
 <p>Aggiornare il software</p>
-
 <pre><code>$ sudo apt-get dist-upgrade
 $ sudo rpi-update
 $ sudo apt-get remove mathematica* sonic-pi wolfram*
 $ rm python_games
 </code></pre>
-
 <h2 id="configurare-il-software">Configurare il software</h2>
-
 <p>Rendere eseguibili gli script:</p>
-
 <pre><code>chmod 777 ./pi-kiosk/bin/*.sh
-</code></pre>
-
-<p>Per disabilitare lo screensaver editare il file autostart situato sotto /etc/xdg/lxsession/LXDE-pi. Quindi:</p>
-
+</code></pre><p>Per disabilitare lo screensaver editare il file autostart situato sotto /etc/xdg/lxsession/LXDE-pi. Quindi:</p>
 <pre><code>sudo vi /etc/xdg/lxsession/LXDE-pi/autostart
 </code></pre>
-
 <p>quindi</p>
-
 <pre><code>@lxpanel --profile LXDE-pi
 @pcmanfm --desktop --profile LXDE-pi
 # @xscreensaver -no-splash           # &lt;-- COMMENTARE
@@ -448,18 +408,11 @@ $ rm python_games
 @xset -dpms
 @xset s noblank
 @/home/pi/pi-kiosk/bin/slideshow.sh      # &lt;-- AGGIUNGERE
-</code></pre>
-
-<p>Nel file, commentare la riga che contiene xscreensaver e aggiungere la riga in fondo per l&rsquo;esecuzione automatica di pi-kiosk.</p>
-
+</code></pre><p>Nel file, commentare la riga che contiene xscreensaver e aggiungere la riga in fondo per l&rsquo;esecuzione automatica di pi-kiosk.</p>
 <h2 id="installazione-di-btsync">Installazione di btsync</h2>
-
 <p>Per sincronizzare le immagini installare <a href="http://getsync.com">btsync</a>. Ovviamente la versione per ARM.</p>
-
 <h2 id="spegnimento-automatico">Spegnimento automatico</h2>
-
 <p>Per spegnere e riaccendere automaticamente il televisore occorre installare la libreria cec per raspberry. Operazione da fare come root.</p>
-
 <pre><code># apt-get instal cec-utils
 # apt-get instal cec-client		+# apt-get instal cec-utils
 
@@ -472,58 +425,31 @@ $ rm python_games
 # make
 # make install
 # ldconfig
-</code></pre>
-
-<h2 id="pianificare-lo-spegnimento-e-la-riaccensione-del-tv">Pianificare lo spegnimento e la riaccensione del TV</h2>
-
+</code></pre><h2 id="pianificare-lo-spegnimento-e-la-riaccensione-del-tv">Pianificare lo spegnimento e la riaccensione del TV</h2>
 <p>Nel crontab dell&rsquo;utente pi, incollare le seguenti righe:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># .---------------- [m]inute: minuto (0 - 59)</span>
+<span style="color:#75715e"># |  .------------- [h]our: ora (0 - 23)</span>
+<span style="color:#75715e"># |  |  .---------- [d]ay [o]f [m]onth: giorno del mese (1 - 31)</span>
+<span style="color:#75715e"># |  |  |  .------- [mon]th: mese (1 - 12) OPPURE jan,feb,mar,apr...</span>
+<span style="color:#75715e"># |  |  |  |  .---- [d]ay [o]f [w]eek: giorno della settimana (0 - 6) (domenica=0 o 7)  OPPURE sun,mon,tue,wed,thu,fri,sat</span>
+<span style="color:#75715e"># |  |  |  |  |</span>
 
-<pre><code class="language-bash"># .---------------- [m]inute: minuto (0 - 59)
-# |  .------------- [h]our: ora (0 - 23)
-# |  |  .---------- [d]ay [o]f [m]onth: giorno del mese (1 - 31)
-# |  |  |  .------- [mon]th: mese (1 - 12) OPPURE jan,feb,mar,apr...
-# |  |  |  |  .---- [d]ay [o]f [w]eek: giorno della settimana (0 - 6) (domenica=0 o 7)  OPPURE sun,mon,tue,wed,thu,fri,sat
-# |  |  |  |  |
-
-54 23 * * * /mnt/pi-kiosk/bin/turntv.sh off
-30  7 * * * /mnt/pi-kiosk/bin/turntv.sh on &amp;&amp; sleep 3 &amp;&amp; /mnt/pi-kiosk/bin/turntv.sh input
-</code></pre>
-
-<h2 id="riferimenti">Riferimenti</h2>
-
+<span style="color:#ae81ff">54</span> <span style="color:#ae81ff">23</span> * * * /mnt/pi-kiosk/bin/turntv.sh off
+<span style="color:#ae81ff">30</span>  <span style="color:#ae81ff">7</span> * * * /mnt/pi-kiosk/bin/turntv.sh on <span style="color:#f92672">&amp;&amp;</span> sleep <span style="color:#ae81ff">3</span> <span style="color:#f92672">&amp;&amp;</span> /mnt/pi-kiosk/bin/turntv.sh input
+</code></pre></div><h2 id="riferimenti">Riferimenti</h2>
 <ul>
 <li><a href="http://raspberry-at-home.com/control-rpi-with-tv-remote/">http://raspberry-at-home.com/control-rpi-with-tv-remote/</a></li>
 <li><a href="http://raspberrypi.stackexchange.com/questions/8698/how-can-my-raspberry-pi-turn-on-off-my-samsung-tv">http://raspberrypi.stackexchange.com/questions/8698/how-can-my-raspberry-pi-turn-on-off-my-samsung-tv</a></li>
 </ul>
-
 <h2 id="aggiornamento-del-20-maggio-2017">Aggiornamento del 20 maggio 2017</h2>
-
 <p>Btsync è morto. Poco male. <a href="https://www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/">Sostituitelo con syncthing</a></p>
-
-<p><a  href="https://github.com/teopost/pi-kiosk" target="_blank"  class="btn btn-default"></p>
-
-<p><i class="fa fa-github"></i></p>
-
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <p>Get source code from Git-Hub</p>
-
-<p></a></p>
-
-<p><br/></p>
-
-<!--
-
-Alcuni appunti:
-
-* https://info-beamer.com/blog/raspberry-pi-hardware-video-scaler
-* http://www.whizzy.org/wp-content/uploads/2012/11/cecsimple.sh_.txt
-
-# lista comandi
-echo h | cec-client -s -d 1
-
-# Attiva la porta cec come attiva
-echo "as" | cec-client -s
-
--->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
             </div>
             <footer class="article-footer">
     <a data-url="https://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" data-id="cd47f510fcce96e77bf972b13d2f628c" class="article-share-link">
@@ -988,7 +914,7 @@ echo "as" | cec-client -s
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019
+      &copy; 2020
       Powered by <a href="//gohugo.io">Hugo</a>
     </div>
   </div>

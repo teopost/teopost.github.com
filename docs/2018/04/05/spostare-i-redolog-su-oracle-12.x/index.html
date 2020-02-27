@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Spostare i redolog su Oracle 12.x &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.55.2" />
+    <meta name="generator" content="Hugo 0.64.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -29,23 +29,18 @@
     <meta property="og:image" content="https://www.stefanoteodorani.it/banner/spostare-oracle-redolog.jpg" />
     <meta property="og:title" content="Spostare i redolog su Oracle 12.x" />
 <meta property="og:description" content="Introduzione
-
 Oggi mi è capitato di dover spostare alcuni redolog che erano stati creati in una cartella sbagliata.
 Ecco come ho fatto" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" />
-<meta property="article:published_time" content="2018-04-05T11:18:00&#43;01:00"/>
-<meta property="article:modified_time" content="2018-04-05T11:18:00&#43;01:00"/>
+<meta property="article:published_time" content="2018-04-05T11:18:00+01:00" />
+<meta property="article:modified_time" content="2018-04-05T11:18:00+01:00" />
 
     
-    
-<meta itemprop="name" content="Spostare i redolog su Oracle 12.x">
+    <meta itemprop="name" content="Spostare i redolog su Oracle 12.x">
 <meta itemprop="description" content="Introduzione
-
 Oggi mi è capitato di dover spostare alcuni redolog che erano stati creati in una cartella sbagliata.
 Ecco come ho fatto">
-
-
 <meta itemprop="datePublished" content="2018-04-05T11:18:00&#43;01:00" />
 <meta itemprop="dateModified" content="2018-04-05T11:18:00&#43;01:00" />
 <meta itemprop="wordCount" content="296">
@@ -53,11 +48,9 @@ Ecco come ho fatto">
 
 
 <meta itemprop="keywords" content="oracle," />
-
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Spostare i redolog su Oracle 12.x"/>
 <meta name="twitter:description" content="Introduzione
-
 Oggi mi è capitato di dover spostare alcuni redolog che erano stati creati in una cartella sbagliata.
 Ecco come ho fatto"/>
 <meta name="twitter:site" content="@teopost"/>
@@ -184,7 +177,7 @@ Ecco come ho fatto"/>
     <div class="base-info profile-block">
       <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
       <h2 id="name">Stefano Teodorani</h2>
-      <h3 id="title">Oracle DBA, Programmer, Linux Administrator and Opensource lover</h3>
+      <h3 id="title">DBA, Programmer, Linux Administrator and Opensource lover</h3>
       <span id="location"><i class="fa fa-map-marker"></i>Savignano sul Rubicone</span>
       
           <a id="follow" href="https://github.com/teopost">
@@ -343,78 +336,58 @@ Ecco come ho fatto"/>
 
             <div class="article-entry" itemprop="articleBody">
                 <h2 id="introduzione">Introduzione</h2>
-
 <p>Oggi mi è capitato di dover spostare alcuni redolog che erano stati creati in una cartella sbagliata.
 Ecco come ho fatto</p>
-
 <h2 id="procedimento">Procedimento</h2>
-
 <p>Per prima cosa vediamo dove sono posizionati tali files:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># sqlplus &#34;/ as sysdba&#34;</span>
 
-<pre><code class="language-bash"># sqlplus &quot;/ as sysdba&quot;
-
-SQL&gt;  select member from v$logfile;
+SQL&gt;  <span style="color:#66d9ef">select</span> member from v$logfile;
 
 MEMBER
 ---------------------------------------
 /u02/oradata/INTDB01/controlfile/o1_mf_f3h3nxgs_.ctl
 /u03/oradata/INTDB01/controlfile/o1_mf_f3h3nxlh_.ctl
 /u04/oradate/INTDB01/controlfile/o1_mf_f3h3nxol_.ctl
-</code></pre>
-
-<p>Il problema è la cartella oradate (si deve chiamare oradata).
+</code></pre></div><p>Il problema è la cartella oradate (si deve chiamare oradata).
 I redo logs non possono essere rinominati (o spostati) mentre il database è online.
 Il database deve essere in stato mount.
 Per prima cosa faccio lo shutdown del DB.</p>
-
 <p>Quindi:</p>
-
-<pre><code class="language-bash">SQL&gt; shutdown immediate
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">SQL&gt; shutdown immediate
 Database closed.
 Database dismounted.
 ORACLE instance shut down.
-</code></pre>
-
-<p>Ora posso spostare il file:</p>
-
-<pre><code class="language-bash">$ mv /u04/oradate/INTDB01/controlfile/o1_mf_f3h3nxol_.ctl /u04/oradata/INTDB01/controlfile/
-</code></pre>
-
-<p>Ora rimetto il DB in mount e aggiorno il dizionario dati di Oracle con la nuova posizione dei files.</p>
-
-<pre><code class="language-bash">SQL&gt; startup mount
+</code></pre></div><p>Ora posso spostare il file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mv /u04/oradate/INTDB01/controlfile/o1_mf_f3h3nxol_.ctl /u04/oradata/INTDB01/controlfile/
+</code></pre></div><p>Ora rimetto il DB in mount e aggiorno il dizionario dati di Oracle con la nuova posizione dei files.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">SQL&gt; startup mount
 ORACLE instance started.
  
-Total System Global Area 1849530880 bytes
-Fixed Size                 31339824 bytes
-Variable Size            5528485968 bytes
-Database Buffers         5314572800 bytes
-Redo Buffers               55132288 bytes
+Total System Global Area <span style="color:#ae81ff">1849530880</span> bytes
+Fixed Size                 <span style="color:#ae81ff">31339824</span> bytes
+Variable Size            <span style="color:#ae81ff">5528485968</span> bytes
+Database Buffers         <span style="color:#ae81ff">5314572800</span> bytes
+Redo Buffers               <span style="color:#ae81ff">55132288</span> bytes
 Database mounted.
-SQL&gt; alter database rename file '/u04/oradate/INTDB01/controlfile/o1_mf_f3h3nxol_.ctl' to '/u04/oradata/INTDB01/controlfile/o1_mf_f3h3nxol_.ctl';
+SQL&gt; alter database rename file <span style="color:#e6db74">&#39;/u04/oradate/INTDB01/controlfile/o1_mf_f3h3nxol_.ctl&#39;</span> to <span style="color:#e6db74">&#39;/u04/oradata/INTDB01/controlfile/o1_mf_f3h3nxol_.ctl&#39;</span>;
  
 Database altered.
  
 SQL&gt; alter database open;
  
 Database altered.
-</code></pre>
-
-<p>Controlliamo che tutto sia andato ben</p>
-
-<pre><code class="language-bash"># sqlplus &quot;/ as sysdba&quot;
-SQL&gt;  select member from v$logfile;
+</code></pre></div><p>Controlliamo che tutto sia andato ben</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># sqlplus &#34;/ as sysdba&#34;</span>
+SQL&gt;  <span style="color:#66d9ef">select</span> member from v$logfile;
 
 MEMBER
 ---------------------------------------
 /u02/oradata/INTDB01/controlfile/o1_mf_f3h3nxgs_.ctl
 /u03/oradata/INTDB01/controlfile/o1_mf_f3h3nxlh_.ctl
 /u04/oradata/INTDB01/controlfile/o1_mf_f3h3nxol_.ctl
-</code></pre>
-
-<p>Controllo i parametri db_create_online_log_dest</p>
-
-<pre><code class="language-bash">SQL&gt; show parameter db_create_online_log_dest
+</code></pre></div><p>Controllo i parametri db_create_online_log_dest</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">SQL&gt; show parameter db_create_online_log_dest
 
 NAME				     TYPE	 VALUE
 ------------------------------------ ----------- ------------------------------
@@ -423,11 +396,8 @@ db_create_online_log_dest_2	     string	 /u03/oradata
 db_create_online_log_dest_3	     string	 /u04/oradate
 db_create_online_log_dest_4	     string
 db_create_online_log_dest_5	     string
-</code></pre>
-
-<p>Lo sistemo e controllo</p>
-
-<pre><code class="language-bash">SQL&gt; alter system set db_create_online_log_dest_3='/u04/oradata' scope=spfile;
+</code></pre></div><p>Lo sistemo e controllo</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">SQL&gt; alter system set db_create_online_log_dest_3<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/u04/oradata&#39;</span> scope<span style="color:#f92672">=</span>spfile;
 
 System altered.
 
@@ -449,15 +419,13 @@ ORACLE instance shut down.
 SQL&gt; startup
 ORACLE instance started.
  
-Total System Global Area 1849530880 bytes
-Fixed Size                 31339824 bytes
-Variable Size            5528485968 bytes
-Database Buffers         5314572800 bytes
-Redo Buffers               55132288 bytes
+Total System Global Area <span style="color:#ae81ff">1849530880</span> bytes
+Fixed Size                 <span style="color:#ae81ff">31339824</span> bytes
+Variable Size            <span style="color:#ae81ff">5528485968</span> bytes
+Database Buffers         <span style="color:#ae81ff">5314572800</span> bytes
+Redo Buffers               <span style="color:#ae81ff">55132288</span> bytes
 Database mounted.
-</code></pre>
-
-<p>FATTO</p>
+</code></pre></div><p>FATTO</p>
             </div>
             <footer class="article-footer">
     <a data-url="https://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" data-id="d2339bbd923995259edb0eb38722ba31" class="article-share-link">
@@ -922,7 +890,7 @@ Database mounted.
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019
+      &copy; 2020
       Powered by <a href="//gohugo.io">Hugo</a>
     </div>
   </div>

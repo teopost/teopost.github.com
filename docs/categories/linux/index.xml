@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linux on stefanoteodorani.it</title>
@@ -20,7 +20,6 @@
       <description>&lt;p&gt;Ci sono molti modi per attivare la cosiddetta pagina di cortesia di un sito.
 Nella maggior parte dei casi che mi è capitato di vedere, l&amp;rsquo;abitudine è quella di editare il file di configurazione di apache.
 In questo articolo vi mostro un modo secondo me più elegante per farlo.&lt;/p&gt;
-
 &lt;p&gt;Aggiungete questa regola nel file httpd.conf:&lt;/p&gt;</description>
     </item>
     
@@ -71,7 +70,6 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.&lt;
       
       <guid>https://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/</guid>
       <description>&lt;p&gt;Conosco Luca. Ha una agenzia di viaggi a Rimini, e un&amp;rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.&lt;/p&gt;
-
 &lt;p&gt;E&amp;rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico &lt;a href=&#34;https://www.sergiogridelli.it/&#34;&gt;Sergio&lt;/a&gt; gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.&lt;/p&gt;</description>
     </item>
     
@@ -104,8 +102,8 @@ teopost@local-host$ ssh-keygen Generating public/private rsa key pair.</descript
       
       <guid>https://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/</guid>
       <description>mkvextract è un tool per manipolare file mkv da linea di comando.
-sudo apt-get install -y mkvtoolnix mkvtoolnix-gui sudo apt-get install -y libdca-utils aften wget https://github.com/JakeWharton/mkvdts2ac3/raw/master/mkvdts2ac3.sh chmod 777 mkvdts2ac3.sh &amp;amp;&amp;amp; sudo mv mkvdts2ac3.sh /usr/bin/  Alcuni esempi Creare la traccia AC3 nuova ed eliminare la DTS:
-mkvdts2ac3.sh -n Some.Random.Movie.mkv  Note:
+sudo apt-get install -y mkvtoolnix mkvtoolnix-gui sudo apt-get install -y libdca-utils aften wget https://github.com/JakeWharton/mkvdts2ac3/raw/master/mkvdts2ac3.sh chmod 777 mkvdts2ac3.sh &amp;amp;&amp;amp; sudo mv mkvdts2ac3.sh /usr/bin/ Alcuni esempi Creare la traccia AC3 nuova ed eliminare la DTS:
+mkvdts2ac3.sh -n Some.Random.Movie.mkv Note:
  http://www.bunkus.org/videotools/mkvtoolnix/doc/mkvpropedit.html http://linux.die.net/man/1/mkvextract  Cambiare il flag default dalla prima alla seconda traccia
 mkvpropedit Che\ bella\ giornata\ \(copia\).mkv --edit track:2 --set flag-default=0 --edit track:3 --set flag-default=1  Cambiare il flag forced a true nella seconda traccia audio</description>
     </item>
@@ -128,7 +126,7 @@ Per farlo agire come segue:&lt;/p&gt;</description>
       <guid>https://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/</guid>
       <description>Voglio installare un blog sulla raspberry. Per farlo, dopo aver installato un LAMP server, procedo come segue:
 Ecco cosa ho fatto:
-Preparare lo schema di DATABASE mysql -uroot -p&amp;lt;password&amp;gt; CREATE DATABASE wordpress; CREATE USER wordpressuser@localhost IDENTIFIED BY &#39;wppassword&#39; GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost;  dove  è la password di mysql che ho impostato durante l&amp;rsquo;installazione del LAMP server e wppassword è un esempio di password per l&amp;rsquo;utente wordpress che ho appenta creato su mysql</description>
+Preparare lo schema di DATABASE mysql -uroot -p&amp;lt;password&amp;gt; CREATE DATABASE wordpress; CREATE USER wordpressuser@localhost IDENTIFIED BY &amp;#39;wppassword&amp;#39; GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost; dove è la password di mysql che ho impostato durante l&amp;rsquo;installazione del LAMP server e wppassword è un esempio di password per l&amp;rsquo;utente wordpress che ho appenta creato su mysql</description>
     </item>
     
     <item>
@@ -137,11 +135,11 @@ Preparare lo schema di DATABASE mysql -uroot -p&amp;lt;password&amp;gt; CREATE D
       <pubDate>Sat, 07 Jan 2017 16:10:00 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/</guid>
-      <description>Voglio installare un blog sulla raspberry. Per farlo, dopo aver configurato un ip statico, devo installare i pacchetti software necessari per far girare il sito.
+      <description>Voglio installare un blog sulla raspberry. Per farlo, dopo aver [configurato un ip statico]({% post_url 2017-01-09-ip-statico-raspberry %}), devo installare i pacchetti software necessari per far girare il sito.
 Ecco cosa ho fatto:
-Installazione di Apache sudo apt-get update sudo apt-get install apache2  Se tutto ha funzionato vai su http://your_server_IP_address e vedi il web server attivo
-Installazione di MySql sudo apt-get install mysql-server php5-mysql  Inserire una password
-Configurazione di MySql # Creare la struttura di directory del database dove sarà memorizzare le informazioni sudo mysql_install_db # Rimuoviamo alcuni valori di default pericolosi e limitiamo l&#39;accesso al db sudo mysql_secure_installation  Installazione di PHP sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt  Riferimenti Questa documentazione è l&amp;rsquo;estratto di questo articolo molto più completo</description>
+Installazione di Apache sudo apt-get update sudo apt-get install apache2 Se tutto ha funzionato vai su http://your_server_IP_address e vedi il web server attivo
+Installazione di MySql sudo apt-get install mysql-server php5-mysql Inserire una password
+Configurazione di MySql # Creare la struttura di directory del database dove sarà memorizzare le informazioni sudo mysql_install_db # Rimuoviamo alcuni valori di default pericolosi e limitiamo l&amp;#39;accesso al db sudo mysql_secure_installation Installazione di PHP sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt Riferimenti Questa documentazione è l&amp;rsquo;estratto di questo articolo molto più completo</description>
     </item>
     
   </channel>

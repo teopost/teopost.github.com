@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Recuperare i dati sull&#39;inquinamento della mia città da CKAN &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.55.2" />
+    <meta name="generator" content="Hugo 0.64.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -34,18 +34,15 @@ https://www.arpae.it/liberiamo/statistiche_riepilogative.asp?idlivello=822  Ques
 Per fortuna la regione Emilia Romagna espone tutte queste informazioni sotto forma di Open Data utilizzando un software open source chiamato CKAN." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/" />
-<meta property="article:published_time" content="2017-03-24T18:42:26&#43;01:00"/>
-<meta property="article:modified_time" content="2017-03-24T18:42:26&#43;01:00"/>
+<meta property="article:published_time" content="2017-03-24T18:42:26+01:00" />
+<meta property="article:modified_time" content="2017-03-24T18:42:26+01:00" />
 
     
-    
-<meta itemprop="name" content="Recuperare i dati sull&#39;inquinamento della mia città da CKAN">
+    <meta itemprop="name" content="Recuperare i dati sull&#39;inquinamento della mia città da CKAN">
 <meta itemprop="description" content="Ho intenzione di scrivere un piccolo bot di telegram che mi dia indicazioni sulla qualità dell&rsquo;aria che ogni giorno respiro nella mia città.
 Sono partito, nella mia indagine, da qui:
 https://www.arpae.it/liberiamo/statistiche_riepilogative.asp?idlivello=822  Questo sito è pieno zeppo di dati utili e fra questi ci sono anche quelli che servono a me; ma come recuperarli ?
 Per fortuna la regione Emilia Romagna espone tutte queste informazioni sotto forma di Open Data utilizzando un software open source chiamato CKAN.">
-
-
 <meta itemprop="datePublished" content="2017-03-24T18:42:26&#43;01:00" />
 <meta itemprop="dateModified" content="2017-03-24T18:42:26&#43;01:00" />
 <meta itemprop="wordCount" content="560">
@@ -53,7 +50,6 @@ Per fortuna la regione Emilia Romagna espone tutte queste informazioni sotto for
 
 
 <meta itemprop="keywords" content="ckan," />
-
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Recuperare i dati sull&#39;inquinamento della mia città da CKAN"/>
 <meta name="twitter:description" content="Ho intenzione di scrivere un piccolo bot di telegram che mi dia indicazioni sulla qualità dell&rsquo;aria che ogni giorno respiro nella mia città.
@@ -184,7 +180,7 @@ Per fortuna la regione Emilia Romagna espone tutte queste informazioni sotto for
     <div class="base-info profile-block">
       <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
       <h2 id="name">Stefano Teodorani</h2>
-      <h3 id="title">Oracle DBA, Programmer, Linux Administrator and Opensource lover</h3>
+      <h3 id="title">DBA, Programmer, Linux Administrator and Opensource lover</h3>
       <span id="location"><i class="fa fa-map-marker"></i>Savignano sul Rubicone</span>
       
           <a id="follow" href="https://github.com/teopost">
@@ -342,166 +338,119 @@ Per fortuna la regione Emilia Romagna espone tutte queste informazioni sotto for
 </header>
 
             <div class="article-entry" itemprop="articleBody">
-                
-
-<p>Ho intenzione di scrivere un piccolo bot di telegram che mi dia indicazioni sulla qualità dell&rsquo;aria che ogni giorno respiro nella mia città.</p>
-
+                <p>Ho intenzione di scrivere un piccolo bot di telegram che mi dia indicazioni sulla qualità dell&rsquo;aria che ogni giorno respiro nella mia città.</p>
 <p>Sono partito, nella mia indagine, da qui:</p>
-
 <pre><code>https://www.arpae.it/liberiamo/statistiche_riepilogative.asp?idlivello=822
 </code></pre>
-
 <p>Questo sito è pieno zeppo di dati utili e fra questi ci sono anche quelli che servono a me; ma come recuperarli ?</p>
-
 <p>Per fortuna la regione Emilia Romagna espone tutte queste informazioni sotto forma di Open Data utilizzando un software open source chiamato CKAN.</p>
-
 <p>CKAN consente di raggruppare dati da fonti eterogene, li trasforma e li rende disponibili in vari modi, fra cui, formati JSON che tanto piacciono ai programmatori.</p>
-
 <p>A Savignano sul Rubicone, luogo in cui vivo, purtroppo nessuno dell&rsquo;amministrazione comunale conosce questo strumento, e questo è un vero peccato.</p>
-
 <p>Scopriamo il perchè.</p>
-
 <h2 id="leggere-i-dati-da-ckan">Leggere i dati da CKAN</h2>
-
 <p>Come dicevo, la regione espone i dati con CKAN. Lo fa con questo sito:</p>
-
 <pre><code>https://dati.arpae.it
 </code></pre>
-
 <p>i dati sui PM10 sono qua:</p>
-
 <pre><code>https://dati.arpae.it/dataset/qualita-dell-aria-rete-di-monitoraggio
 </code></pre>
-
 <p>l&rsquo;insieme di dati che serve a me (chiamato dataset) e che devo recuperare e&rsquo; questo:</p>
-
 <pre><code>https://dati.arpae.it/dataset/qualita-dell-aria-rete-di-monitoraggio/resource/a1c46cfe-46e5-44b4-9231-7d9260a38e68
 </code></pre>
-
 <p>per leggere i dati in formato json (grazie al mitico CKAN) basta chiamare questa url per ottenere i primi 5 risultati:</p>
-
 <pre><code>https://dati.arpae.it/api/action/datastore_search?resource_id=a1c46cfe-46e5-44b4-9231-7d9260a38e68&amp;limit=5
 </code></pre>
-
 <p>Questa lista contiene tutti i rilevamenti di tutte le stazioni nella provincia di forlì-cesena.
 In questa lista di dati, i campi che ci interessano sono:</p>
-
 <ul>
 <li><code>campo station_id</code>: identifica la stazione di rilevamento</li>
 <li><code>reftime</code>: rappresenta la data di rilevamento</li>
 <li><code>variable_id</code>: rappresenta la tipologia di dato recuperato</li>
 </ul>
-
-<p>c&rsquo;è una tabella completa delle stazioni qui:</p>
-
+<p>c'è una tabella completa delle stazioni qui:</p>
 <pre><code>https://dati.arpae.it/dataset/qualita-dell-aria-rete-di-monitoraggio/resource/6b1c73c6-2fa9-40b2-854a-d3f822d1451a
 </code></pre>
-
-<p>e c&rsquo;è anche una legenda dei parametri disponibili qui:</p>
-
+<p>e c'è anche una legenda dei parametri disponibili qui:</p>
 <pre><code>https://dati.arpae.it/dataset/qualita-dell-aria-rete-di-monitoraggio/resource/6fb8af6d-a3cc-4cf7-b098-ed95c5744cee
 </code></pre>
-
 <p>i dati che interessano me sono:</p>
-
 <ul>
 <li>6000031: La stazione di Savignano</li>
 <li>5: Il dato che identifica i PM10</li>
 </ul>
-
 <p>Bene, ora grazie a questi dati posso inviare una query a CKAN tipo questa:</p>
-
-<pre><code class="language-sql">SELECT * FROM &quot;a1c46cfe-46e5-44b4-9231-7d9260a38e68&quot;
-WHERE station_id = '6000031' and reftime='2017-02-22T00:00:00'and variable_id=5
-</code></pre>
-
-<p>per farlo basta sostituire con caratteri d&rsquo;escape spazi, apici e affini, nonchè passarlo in query string, incollarlo nel browser e il gioco è fatto.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">a1c46cfe-46e5-44b4-9231-7d9260a38e68</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">WHERE</span> station_id <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">6000031</span><span style="color:#e6db74">&#39;</span> <span style="color:#66d9ef">and</span> reftime<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">2017-02-22T00:00:00</span><span style="color:#e6db74">&#39;</span><span style="color:#66d9ef">and</span> variable_id<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
+</code></pre></div><p>per farlo basta sostituire con caratteri d&rsquo;escape spazi, apici e affini, nonchè passarlo in query string, incollarlo nel browser e il gioco è fatto.</p>
 <pre><code>https://dati.arpae.it/api/action/datastore_search_sql?sql=SELECT%20*%20from%20%22a1c46cfe-46e5-44b4-9231-7d9260a38e68%22%20WHERE%20station_id%20=%20%276000031%27%20and%20reftime=%272017-02-22T00:00:00%27and%20variable_id=5
 </code></pre>
-
 <p>questo è il risultato:</p>
-
-<pre><code class="language-json">{ &quot;help&quot; : &quot;https://dati.arpae.it/api/3/action/help_show?name=datastore_search_sql&quot;,
-  &quot;result&quot; : { &quot;fields&quot; : [ { &quot;id&quot; : &quot;_id&quot;,
-            &quot;type&quot; : &quot;int4&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{ <span style="color:#f92672">&#34;help&#34;</span> : <span style="color:#e6db74">&#34;https://dati.arpae.it/api/3/action/help_show?name=datastore_search_sql&#34;</span>,
+  <span style="color:#f92672">&#34;result&#34;</span> : { <span style="color:#f92672">&#34;fields&#34;</span> : [ { <span style="color:#f92672">&#34;id&#34;</span> : <span style="color:#e6db74">&#34;_id&#34;</span>,
+            <span style="color:#f92672">&#34;type&#34;</span> : <span style="color:#e6db74">&#34;int4&#34;</span>
           },
-          { &quot;id&quot; : &quot;_full_text&quot;,
-            &quot;type&quot; : &quot;tsvector&quot;
+          { <span style="color:#f92672">&#34;id&#34;</span> : <span style="color:#e6db74">&#34;_full_text&#34;</span>,
+            <span style="color:#f92672">&#34;type&#34;</span> : <span style="color:#e6db74">&#34;tsvector&#34;</span>
           },
-          { &quot;id&quot; : &quot;station_id&quot;,
-            &quot;type&quot; : &quot;int4&quot;
+          { <span style="color:#f92672">&#34;id&#34;</span> : <span style="color:#e6db74">&#34;station_id&#34;</span>,
+            <span style="color:#f92672">&#34;type&#34;</span> : <span style="color:#e6db74">&#34;int4&#34;</span>
           },
-          { &quot;id&quot; : &quot;variable_id&quot;,
-            &quot;type&quot; : &quot;int4&quot;
+          { <span style="color:#f92672">&#34;id&#34;</span> : <span style="color:#e6db74">&#34;variable_id&#34;</span>,
+            <span style="color:#f92672">&#34;type&#34;</span> : <span style="color:#e6db74">&#34;int4&#34;</span>
           },
-          { &quot;id&quot; : &quot;reftime&quot;,
-            &quot;type&quot; : &quot;timestamp&quot;
+          { <span style="color:#f92672">&#34;id&#34;</span> : <span style="color:#e6db74">&#34;reftime&#34;</span>,
+            <span style="color:#f92672">&#34;type&#34;</span> : <span style="color:#e6db74">&#34;timestamp&#34;</span>
           },
-          { &quot;id&quot; : &quot;value&quot;,
-            &quot;type&quot; : &quot;float8&quot;
+          { <span style="color:#f92672">&#34;id&#34;</span> : <span style="color:#e6db74">&#34;value&#34;</span>,
+            <span style="color:#f92672">&#34;type&#34;</span> : <span style="color:#e6db74">&#34;float8&#34;</span>
           }
         ],
-      &quot;records&quot; : [ { &quot;_full_text&quot; : &quot;'00':4,5 '03/23/2017':3 '36':6 '5':1 '6000031':2&quot;,
-            &quot;_id&quot; : 571594,
-            &quot;reftime&quot; : &quot;2017-03-23T00:00:00&quot;,
-            &quot;station_id&quot; : 6000031,
-            &quot;value&quot; : 54.0,
-            &quot;variable_id&quot; : 5
+      <span style="color:#f92672">&#34;records&#34;</span> : [ { <span style="color:#f92672">&#34;_full_text&#34;</span> : <span style="color:#e6db74">&#34;&#39;00&#39;:4,5 &#39;03/23/2017&#39;:3 &#39;36&#39;:6 &#39;5&#39;:1 &#39;6000031&#39;:2&#34;</span>,
+            <span style="color:#f92672">&#34;_id&#34;</span> : <span style="color:#ae81ff">571594</span>,
+            <span style="color:#f92672">&#34;reftime&#34;</span> : <span style="color:#e6db74">&#34;2017-03-23T00:00:00&#34;</span>,
+            <span style="color:#f92672">&#34;station_id&#34;</span> : <span style="color:#ae81ff">6000031</span>,
+            <span style="color:#f92672">&#34;value&#34;</span> : <span style="color:#ae81ff">54.0</span>,
+            <span style="color:#f92672">&#34;variable_id&#34;</span> : <span style="color:#ae81ff">5</span>
           } ],
-      &quot;sql&quot; : &quot;SELECT * from \&quot;a1c46cfe-46e5-44b4-9231-7d9260a38e68\&quot; WHERE station_id = '6000031' and reftime='2017-02-22T00:00:00'and variable_id=5&quot;
+      <span style="color:#f92672">&#34;sql&#34;</span> : <span style="color:#e6db74">&#34;SELECT * from \&#34;a1c46cfe-46e5-44b4-9231-7d9260a38e68\&#34; WHERE station_id = &#39;6000031&#39; and reftime=&#39;2017-02-22T00:00:00&#39;and variable_id=5&#34;</span>
     },
-  &quot;success&quot; : true
+  <span style="color:#f92672">&#34;success&#34;</span> : <span style="color:#66d9ef">true</span>
 }
-</code></pre>
+</code></pre></div><p>a questo punto con un po di python è semplice leggere il dato che mi interessa</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/usr/bin/python</span>
+<span style="color:#75715e"># -*- coding: utf-8 -*-</span>
 
-<p>a questo punto con un po di python è semplice leggere il dato che mi interessa</p>
+__author__ <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">teopost</span><span style="color:#e6db74">&#39;</span>
 
-<pre><code class="language-python">#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
-__author__ = 'teopost'
-
-import urllib
-import json
+<span style="color:#f92672">import</span> urllib
+<span style="color:#f92672">import</span> json
 
 
-url = &quot;https://dati.arpae.it/api/action/datastore_search_sql?sql=SELECT * from %22a1c46cfe-46e5-44b4-9231-7d9260a38e68%22 WHERE station_id = %276000031%27 and reftime=%272017-02-22T00:00:00%27 and variable_id=5 order by value desc&quot;
+url <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">https://dati.arpae.it/api/action/datastore_search_sql?sql=SELECT * from </span><span style="color:#e6db74">%</span><span style="color:#e6db74">22a1c46cfe-46e5-44b4-9231-7d9260a38e68</span><span style="color:#e6db74">%</span><span style="color:#e6db74">22 WHERE station_id = </span><span style="color:#e6db74">%276000031%</span><span style="color:#e6db74">27 and reftime=</span><span style="color:#e6db74">%</span><span style="color:#e6db74">272017-02-22T00:00:00</span><span style="color:#e6db74">%</span><span style="color:#e6db74">27 and variable_id=5 order by value desc</span><span style="color:#e6db74">&#34;</span>
 
-fileobj = urllib.urlopen(url)
-results = fileobj.read().decode(&quot;utf-8&quot;)
+fileobj <span style="color:#f92672">=</span> urllib<span style="color:#f92672">.</span>urlopen(url)
+results <span style="color:#f92672">=</span> fileobj<span style="color:#f92672">.</span>read()<span style="color:#f92672">.</span>decode(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">utf-8</span><span style="color:#e6db74">&#34;</span>)
 
-data = json.loads(results)
+data <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>loads(results)
 
-print data[&quot;result&quot;][&quot;records&quot;][0][&quot;value&quot;]
+<span style="color:#66d9ef">print</span> data[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">result</span><span style="color:#e6db74">&#34;</span>][<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">records</span><span style="color:#e6db74">&#34;</span>][<span style="color:#ae81ff">0</span>][<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">value</span><span style="color:#e6db74">&#34;</span>]
 
-</code></pre>
-
-<p>e cioè, il giorno 23 Marzo 2017, a Savignano sul Rubicone, i livello di PM10 rilevato era 54 µg/m3 (il limite consentito per legge è 50 µg/m3).
+</code></pre></div><p>e cioè, il giorno 23 Marzo 2017, a Savignano sul Rubicone, i livello di PM10 rilevato era 54 µg/m3 (il limite consentito per legge è 50 µg/m3).
 Forse era meglio non saperlo !</p>
-
 <h2 id="conclusioni">Conclusioni</h2>
-
 <p>CKAN è una figata pazzesca. Peccato che uno strumento così utile e oltretutto opensource non sia usato da tutte le pubbliche amministrazioni (come quella in cui abito).</p>
-
 <h2 id="riferimenti">Riferimenti</h2>
-
 <ul>
 <li><a href="https://www.arpae.it/liberiamo/statistiche_riepilogative.asp?idlivello=822">https://www.arpae.it/liberiamo/statistiche_riepilogative.asp?idlivello=822</a></li>
 <li><a href="https://www.arpae.it/v2_aria.asp?idlivello=134&amp;tema=valutazioni#">https://www.arpae.it/v2_aria.asp?idlivello=134&amp;tema=valutazioni#</a></li>
 <li><a href="http://service.arpa.emr.it/qualita-aria/bollettino.aspx?prov=FC">http://service.arpa.emr.it/qualita-aria/bollettino.aspx?prov=FC</a></li>
 <li><a href="https://www.arpae.it/liberiamo/dati_giornalieri_14gg.asp?idlivello=821">https://www.arpae.it/liberiamo/dati_giornalieri_14gg.asp?idlivello=821</a></li>
 </ul>
-
-<p><a  href="https://gist.github.com/teopost/299bb00cea2988bfae3994cc1af2900a" target="_blank"  class="btn btn-default"></p>
-
-<p><i class="fa fa-github"></i></p>
-
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <p>Get source code from Git-Hub</p>
-
-<p></a></p>
-
-<p><br/></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
             </div>
             <footer class="article-footer">
@@ -967,7 +916,7 @@ Forse era meglio non saperlo !</p>
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019
+      &copy; 2020
       Powered by <a href="//gohugo.io">Hugo</a>
     </div>
   </div>

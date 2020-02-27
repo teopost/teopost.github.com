@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Riattivare un utente Oracle Expired &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.55.2" />
+    <meta name="generator" content="Hugo 0.64.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -29,25 +29,20 @@
     <meta property="og:image" content="https://www.stefanoteodorani.it/banner/riattivare-utente-oracle-expired.jpg" />
     <meta property="og:title" content="Riattivare un utente Oracle Expired" />
 <meta property="og:description" content="Introduzione
-
 Un utente Oracle può essere creato in modo che la password scada dopo un certo periodo di tempo definito nel profilo assegnato. Per riattivare l&rsquo;utente esistente è necessario reimpostare la password.
 In alcuni casi questo può essere un problema.
 In questo articolo viene descritta una procedura un pò inconsueta per ripristinare un utente senza conoscere la sua password." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/" />
-<meta property="article:published_time" content="2018-04-17T12:00:00&#43;01:00"/>
-<meta property="article:modified_time" content="2018-04-17T12:00:00&#43;01:00"/>
+<meta property="article:published_time" content="2018-04-17T12:00:00+01:00" />
+<meta property="article:modified_time" content="2018-04-17T12:00:00+01:00" />
 
     
-    
-<meta itemprop="name" content="Riattivare un utente Oracle Expired">
+    <meta itemprop="name" content="Riattivare un utente Oracle Expired">
 <meta itemprop="description" content="Introduzione
-
 Un utente Oracle può essere creato in modo che la password scada dopo un certo periodo di tempo definito nel profilo assegnato. Per riattivare l&rsquo;utente esistente è necessario reimpostare la password.
 In alcuni casi questo può essere un problema.
 In questo articolo viene descritta una procedura un pò inconsueta per ripristinare un utente senza conoscere la sua password.">
-
-
 <meta itemprop="datePublished" content="2018-04-17T12:00:00&#43;01:00" />
 <meta itemprop="dateModified" content="2018-04-17T12:00:00&#43;01:00" />
 <meta itemprop="wordCount" content="198">
@@ -55,11 +50,9 @@ In questo articolo viene descritta una procedura un pò inconsueta per ripristin
 
 
 <meta itemprop="keywords" content="oracle," />
-
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Riattivare un utente Oracle Expired"/>
 <meta name="twitter:description" content="Introduzione
-
 Un utente Oracle può essere creato in modo che la password scada dopo un certo periodo di tempo definito nel profilo assegnato. Per riattivare l&rsquo;utente esistente è necessario reimpostare la password.
 In alcuni casi questo può essere un problema.
 In questo articolo viene descritta una procedura un pò inconsueta per ripristinare un utente senza conoscere la sua password."/>
@@ -187,7 +180,7 @@ In questo articolo viene descritta una procedura un pò inconsueta per ripristin
     <div class="base-info profile-block">
       <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
       <h2 id="name">Stefano Teodorani</h2>
-      <h3 id="title">Oracle DBA, Programmer, Linux Administrator and Opensource lover</h3>
+      <h3 id="title">DBA, Programmer, Linux Administrator and Opensource lover</h3>
       <span id="location"><i class="fa fa-map-marker"></i>Savignano sul Rubicone</span>
       
           <a id="follow" href="https://github.com/teopost">
@@ -346,35 +339,27 @@ In questo articolo viene descritta una procedura un pò inconsueta per ripristin
 
             <div class="article-entry" itemprop="articleBody">
                 <h2 id="introduzione">Introduzione</h2>
-
 <p>Un utente Oracle può essere creato in modo che la password scada dopo un certo periodo di tempo definito nel profilo assegnato. Per riattivare l&rsquo;utente esistente è necessario reimpostare la password.
 In alcuni casi questo può essere un problema.
 In questo articolo viene descritta una procedura un pò inconsueta per ripristinare un utente senza conoscere la sua password.</p>
-
 <h2 id="procedimento">Procedimento</h2>
-
 <p>Il trucco sta nel cambiare la password dell&rsquo;utente specificando il valore criptato recuperato dalle tabelle di catalogo.</p>
-
 <p>Prima di tutto imposto l&rsquo;utente come EXPIRED.</p>
-
-<pre><code class="language-bash"># sqlplus &quot;/ as sysdba&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># sqlplus &#34;/ as sysdba&#34;</span>
 
 SQL&gt; alter user SCOTT password expire;
 
 User altered.
 
-SQL&gt; select username, account_status from dba_users where username='SCOTT';
+SQL&gt; <span style="color:#66d9ef">select</span> username, account_status from dba_users where username<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;SCOTT&#39;</span>;
 
 USERNAME                       ACCOUNT_STATUS
 ------------------------------ --------------------------------
 SCOTT                          EXPIRED
 
-1 row selected.
+<span style="color:#ae81ff">1</span> row selected.
 
-</code></pre>
-
-<p>A questo punto costruisco lo statement da eseguire per modificare la password:</p>
-
+</code></pre></div><p>A questo punto costruisco lo statement da eseguire per modificare la password:</p>
 <pre><code>SQL&gt; SELECT 'ALTER USER '|| name ||' IDENTIFIED BY VALUES '''|| spare4 ||';'|| password ||''';' FROM sys.user$ WHERE name='SCOTT';
 
 'ALTERUSER'||NAME||'IDENTIFIEDBYVALUES'''||SPARE4||';'||PASSWORD||''';'
@@ -383,17 +368,11 @@ ALTER USER SCOTT IDENTIFIED BY VALUES 'S:ADEB92DE98CCE3A01033BFE530092B43AD1AE39
 
 1 row selected.
 
-</code></pre>
-
-<p>Poi eseguo lo statement creato</p>
-
+</code></pre><p>Poi eseguo lo statement creato</p>
 <pre><code>SQL&gt; ALTER USER SCOTT IDENTIFIED BY VALUES 'S:ADEB92DE98CCE3A01033BFE530092B43AD1AE394220C93BA4ED3813C05C6;B0334ACB686B0325';
 
 User altered.
-</code></pre>
-
-<p>Verifico lo stato dell&rsquo;utente</p>
-
+</code></pre><p>Verifico lo stato dell&rsquo;utente</p>
 <pre><code>SQL&gt; select username, account_status from dba_users where username='SCOTT';
 
 USERNAME                       ACCOUNT_STATUS
@@ -404,9 +383,7 @@ SCOTT                          OPEN
 
 SQL&gt; connect simon/tiger
 Connected.
-</code></pre>
-
-<p>Finito</p>
+</code></pre><p>Finito</p>
             </div>
             <footer class="article-footer">
     <a data-url="https://www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/" data-id="63b32ce9bbc772afe3b2ff60c1b395f7" class="article-share-link">
@@ -871,7 +848,7 @@ Connected.
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019
+      &copy; 2020
       Powered by <a href="//gohugo.io">Hugo</a>
     </div>
   </div>

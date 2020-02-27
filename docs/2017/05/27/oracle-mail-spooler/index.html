@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Oracle mail spooler &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.55.2" />
+    <meta name="generator" content="Hugo 0.64.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -28,29 +28,25 @@
 
     <meta property="og:image" content="https://www.stefanoteodorani.it/banner/oracle-mail-spooler.png" />
     <meta property="og:title" content="Oracle mail spooler" />
-<meta property="og:description" content="Può capitare di dover mandare mail da Oracle ? Si. Ho fatto questo script per l&rsquo;invio di mail da una istanza Oracle per risolvere un problema immediato, e siccome non c&rsquo;è niente di più definitivo delle cose provvisorie, eccolo qui come se fosse un prodotto finito." />
+<meta property="og:description" content="Può capitare di dover mandare mail da Oracle ? Si. Ho fatto questo script per l&rsquo;invio di mail da una istanza Oracle per risolvere un problema immediato, e siccome non c&#39;è niente di più definitivo delle cose provvisorie, eccolo qui come se fosse un prodotto finito." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/" />
-<meta property="article:published_time" content="2017-05-27T23:35:16&#43;02:00"/>
-<meta property="article:modified_time" content="2017-05-27T23:35:16&#43;02:00"/>
+<meta property="article:published_time" content="2017-05-27T23:35:16+02:00" />
+<meta property="article:modified_time" content="2017-05-27T23:35:16+02:00" />
 
     
-    
-<meta itemprop="name" content="Oracle mail spooler">
-<meta itemprop="description" content="Può capitare di dover mandare mail da Oracle ? Si. Ho fatto questo script per l&rsquo;invio di mail da una istanza Oracle per risolvere un problema immediato, e siccome non c&rsquo;è niente di più definitivo delle cose provvisorie, eccolo qui come se fosse un prodotto finito.">
-
-
+    <meta itemprop="name" content="Oracle mail spooler">
+<meta itemprop="description" content="Può capitare di dover mandare mail da Oracle ? Si. Ho fatto questo script per l&rsquo;invio di mail da una istanza Oracle per risolvere un problema immediato, e siccome non c&#39;è niente di più definitivo delle cose provvisorie, eccolo qui come se fosse un prodotto finito.">
 <meta itemprop="datePublished" content="2017-05-27T23:35:16&#43;02:00" />
 <meta itemprop="dateModified" content="2017-05-27T23:35:16&#43;02:00" />
-<meta itemprop="wordCount" content="596">
+<meta itemprop="wordCount" content="594">
 
 
 
 <meta itemprop="keywords" content="oracle," />
-
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Oracle mail spooler"/>
-<meta name="twitter:description" content="Può capitare di dover mandare mail da Oracle ? Si. Ho fatto questo script per l&rsquo;invio di mail da una istanza Oracle per risolvere un problema immediato, e siccome non c&rsquo;è niente di più definitivo delle cose provvisorie, eccolo qui come se fosse un prodotto finito."/>
+<meta name="twitter:description" content="Può capitare di dover mandare mail da Oracle ? Si. Ho fatto questo script per l&rsquo;invio di mail da una istanza Oracle per risolvere un problema immediato, e siccome non c&#39;è niente di più definitivo delle cose provvisorie, eccolo qui come se fosse un prodotto finito."/>
 <meta name="twitter:site" content="@teopost"/>
 
 
@@ -175,7 +171,7 @@
     <div class="base-info profile-block">
       <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
       <h2 id="name">Stefano Teodorani</h2>
-      <h3 id="title">Oracle DBA, Programmer, Linux Administrator and Opensource lover</h3>
+      <h3 id="title">DBA, Programmer, Linux Administrator and Opensource lover</h3>
       <span id="location"><i class="fa fa-map-marker"></i>Savignano sul Rubicone</span>
       
           <a id="follow" href="https://github.com/teopost">
@@ -295,7 +291,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2017-05-27 23:35:16 &#43;0200 CEST" itemprop="datePublished">27-05-2017</time>
             &middot;
-            596
+            594
             words
             &middot;
             3
@@ -333,14 +329,10 @@
 </header>
 
             <div class="article-entry" itemprop="articleBody">
-                <p>Può capitare di dover mandare mail da Oracle ? Si. Ho fatto questo script per l&rsquo;invio di mail da una istanza Oracle per risolvere un problema immediato, e siccome non c&rsquo;è niente di più definitivo delle cose provvisorie, eccolo qui come se fosse un prodotto finito.</p>
-
+                <p>Può capitare di dover mandare mail da Oracle ? Si. Ho fatto questo script per l&rsquo;invio di mail da una istanza Oracle per risolvere un problema immediato, e siccome non c'è niente di più definitivo delle cose provvisorie, eccolo qui come se fosse un prodotto finito.</p>
 <p>L&rsquo;idea è semplice. Creare una tabella si spool in cui accodare la lista delle mail da inviare. L&rsquo;invio vero e proprio può essere immediato (eseguendo una specifica stored procedure) o asincrono schedulando l&rsquo;esecuzione della stored procedure come job Oracle.</p>
-
 <p>Per far funzionare oracle mail spooler occorrono alcuni oggetti di database.</p>
-
 <h2 id="tabelle">Tabelle</h2>
-
 <table>
 <thead>
 <tr>
@@ -348,22 +340,18 @@
 <th>Descrizione</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>MAIL_BOXES</td>
 <td>Contiene la configurazione degli account con cui mandare le mail</td>
 </tr>
-
 <tr>
 <td>MAIL_SPOOLER</td>
 <td>Contiene la coda di messaggi da inviare</td>
 </tr>
 </tbody>
 </table>
-
 <h2 id="procedure">Procedure</h2>
-
 <table>
 <thead>
 <tr>
@@ -371,160 +359,128 @@
 <th>Descrizione</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>MAIL_QUEUE</td>
 <td>Procedura da usare per mettere in coda le mail da inviare</td>
 </tr>
-
 <tr>
 <td>SEND_MAIL</td>
 <td>Procedura che effettua l&rsquo;invio della mail</td>
 </tr>
-
 <tr>
 <td>SEND_QUEUE</td>
 <td>Procedura da schedulare che verifica sulla tabella MAIL_SPOOLER l&rsquo;esistenza di massaggi da spedire (Statu = Q) e se esistono chiama la SEND_MAIL per l&rsquo;invio.</td>
 </tr>
 </tbody>
 </table>
-
 <h2 id="schema">Schema</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">/*</span><span style="color:#75715e"> 1. Eseguire come utente system </span><span style="color:#75715e">*/</span>
 
-<pre><code class="language-sql">/* 1. Eseguire come utente system */
+<span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">USER</span>  MAIL_QUEUE <span style="color:#66d9ef">CASCADE</span>;
 
-DROP USER  MAIL_QUEUE CASCADE;
-
-CREATE USER MAIL_QUEUE
-  IDENTIFIED BY MAIL_QUEUE
-  DEFAULT TABLESPACE USERS
-  TEMPORARY TABLESPACE TEMP
+<span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">USER</span> MAIL_QUEUE
+  IDENTIFIED <span style="color:#66d9ef">BY</span> MAIL_QUEUE
+  <span style="color:#66d9ef">DEFAULT</span> TABLESPACE USERS
+  <span style="color:#66d9ef">TEMPORARY</span> TABLESPACE TEMP
   ACCOUNT UNLOCK;
 
-ALTER USER MAIL_QUEUE QUOTA UNLIMITED ON USERS;
+<span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">USER</span> MAIL_QUEUE QUOTA UNLIMITED <span style="color:#66d9ef">ON</span> USERS;
 
-GRANT CONNECT, RESOURCE TO MAIL_QUEUE;
-GRANT UPDATE ANY TABLE TO MAIL_QUEUE;
-GRANT SELECT ANY TABLE TO MAIL_QUEUE;
-GRANT CREATE ANY TABLE TO MAIL_QUEUE;
-GRANT QUERY REWRITE TO MAIL_QUEUE;
-GRANT ALTER ANY TRIGGER TO MAIL_QUEUE;
-GRANT EXECUTE ANY PROCEDURE TO MAIL_QUEUE;
-GRANT CREATE ANY SYNONYM TO MAIL_QUEUE;
-GRANT INSERT ANY TABLE TO MAIL_QUEUE;
-GRANT EXECUTE ANY LIBRARY TO MAIL_QUEUE;
-GRANT UNLIMITED TABLESPACE TO MAIL_QUEUE;
-GRANT DELETE ANY TABLE TO MAIL_QUEUE;
-GRANT CREATE VIEW TO MAIL_QUEUE;
-</code></pre>
-
-<h2 id="grants">Grants</h2>
-
+<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">CONNECT</span>, RESOURCE <span style="color:#66d9ef">TO</span> MAIL_QUEUE;
+<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">UPDATE</span> <span style="color:#66d9ef">ANY</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">TO</span> MAIL_QUEUE;
+<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">ANY</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">TO</span> MAIL_QUEUE;
+<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">ANY</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">TO</span> MAIL_QUEUE;
+<span style="color:#66d9ef">GRANT</span> QUERY REWRITE <span style="color:#66d9ef">TO</span> MAIL_QUEUE;
+<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">ANY</span> <span style="color:#66d9ef">TRIGGER</span> <span style="color:#66d9ef">TO</span> MAIL_QUEUE;
+<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">EXECUTE</span> <span style="color:#66d9ef">ANY</span> <span style="color:#66d9ef">PROCEDURE</span> <span style="color:#66d9ef">TO</span> MAIL_QUEUE;
+<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">ANY</span> SYNONYM <span style="color:#66d9ef">TO</span> MAIL_QUEUE;
+<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">ANY</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">TO</span> MAIL_QUEUE;
+<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">EXECUTE</span> <span style="color:#66d9ef">ANY</span> LIBRARY <span style="color:#66d9ef">TO</span> MAIL_QUEUE;
+<span style="color:#66d9ef">GRANT</span> UNLIMITED TABLESPACE <span style="color:#66d9ef">TO</span> MAIL_QUEUE;
+<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">ANY</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">TO</span> MAIL_QUEUE;
+<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">VIEW</span> <span style="color:#66d9ef">TO</span> MAIL_QUEUE;
+</code></pre></div><h2 id="grants">Grants</h2>
 <p>Tutti gli oggetti per l&rsquo;invio delle mail sono creati in uno schema specifico (nel caso descritto chiamao MAIL_QUEUE).
 Per utilizzare la procedure che mette in coda i messaggi e per consultare la lista dei messaggi in coda, occorre dare i seguenti grant:</p>
-
-<pre><code class="language-sql">-- Eseguire come system
-grant execute on mail_queue.MAIL_QUEUE to MYUSER;
-grant all on mail_queue.MAIL_SPOOLER to MYUSER;
-grant execute on mail_queue.SEND_QUEUE to MYUSER;
-</code></pre>
-
-<h2 id="synonyms">Synonyms</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">-- Eseguire come system
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">grant</span> <span style="color:#66d9ef">execute</span> <span style="color:#66d9ef">on</span> mail_queue.MAIL_QUEUE <span style="color:#66d9ef">to</span> MYUSER;
+<span style="color:#66d9ef">grant</span> <span style="color:#66d9ef">all</span> <span style="color:#66d9ef">on</span> mail_queue.MAIL_SPOOLER <span style="color:#66d9ef">to</span> MYUSER;
+<span style="color:#66d9ef">grant</span> <span style="color:#66d9ef">execute</span> <span style="color:#66d9ef">on</span> mail_queue.SEND_QUEUE <span style="color:#66d9ef">to</span> MYUSER;
+</code></pre></div><h2 id="synonyms">Synonyms</h2>
 <p>Collegarsi all&rsquo;utente system di oracle.
 Al primo utilizzo è consigliabile creare 2 sinomini per accedere piu&rsquo; facilmente agli oggetti:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">-- Eseguire come system
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">create</span> synonym MYUSER.MAIL_QUEUE <span style="color:#66d9ef">for</span> mail_queue.MAIL_QUEUE;
 
-<pre><code class="language-sql">-- Eseguire come system
-create synonym MYUSER.MAIL_QUEUE for mail_queue.MAIL_QUEUE;
+<span style="color:#75715e">-- Se si desidera consultare la tabella di spooler
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">create</span> synonym MYUSER.MAIL_SPOOLER <span style="color:#66d9ef">for</span> mail_queue.MAIL_SPOOLER;
 
--- Se si desidera consultare la tabella di spooler
-create synonym MYUSER.MAIL_SPOOLER for mail_queue.MAIL_SPOOLER;
-
--- Se si desidera forzare l'invio delle mail
-create synonym MYUSER.SEND_QUEUE for mail_queue.SEND_QUEUE;
-</code></pre>
-
-<h2 id="creazione-acl-oracle">Creazione ACL Oracle</h2>
-
+<span style="color:#75715e">-- Se si desidera forzare l&#39;invio delle mail
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">create</span> synonym MYUSER.SEND_QUEUE <span style="color:#66d9ef">for</span> mail_queue.SEND_QUEUE;
+</code></pre></div><h2 id="creazione-acl-oracle">Creazione ACL Oracle</h2>
 <p>Per poter effettuare chiamate http, smtp, ssh, ecc direttamente da una istanza oracle è necessario attivare specifiche ACL.
 Per fare questo collegarsi come utente system e creato la necessaria ACL, quindi:</p>
-
-<pre><code class="language-sql">-- Eseguire come system
--- Creo una ACL per il mio utente MAIL_QUEUE
-BEGIN
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">-- Eseguire come system
+</span><span style="color:#75715e"></span><span style="color:#75715e">-- Creo una ACL per il mio utente MAIL_QUEUE
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">BEGIN</span>
   DBMS_NETWORK_ACL_ADMIN.create_acl (
-    acl          =&gt; 'mail_queue.xml',
-    description  =&gt; 'Acl per invio mail da utente MAIL_QUEUE',
-    principal    =&gt; 'MAIL_QUEUE',
-    is_grant     =&gt; TRUE,
-    privilege    =&gt; 'connect');
+    acl          <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">mail_queue.xml</span><span style="color:#e6db74">&#39;</span>,
+    description  <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Acl per invio mail da utente MAIL_QUEUE</span><span style="color:#e6db74">&#39;</span>,
+    principal    <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">MAIL_QUEUE</span><span style="color:#e6db74">&#39;</span>,
+    is_grant     <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">TRUE</span>,
+    privilege    <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">connect</span><span style="color:#e6db74">&#39;</span>);
 
-  COMMIT;
-END;
-/
+  <span style="color:#66d9ef">COMMIT</span>;
+<span style="color:#66d9ef">END</span>;
+<span style="color:#f92672">/</span>
 
--- Add privilege of ACL to user MAIL_QUEUE
-BEGIN
+<span style="color:#75715e">-- Add privilege of ACL to user MAIL_QUEUE
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">BEGIN</span>
   DBMS_NETWORK_ACL_ADMIN.ADD_PRIVILEGE
-    (acl      =&gt; 'mail_queue.xml',
-    principal =&gt; 'MAIL_QUEUE',
-    is_grant  =&gt;  true,
-    privilege =&gt; 'resolve');
-  commit;
-END;
-/
+    (acl      <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">mail_queue.xml</span><span style="color:#e6db74">&#39;</span>,
+    principal <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">MAIL_QUEUE</span><span style="color:#e6db74">&#39;</span>,
+    is_grant  <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span>  <span style="color:#66d9ef">true</span>,
+    privilege <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">resolve</span><span style="color:#e6db74">&#39;</span>);
+  <span style="color:#66d9ef">commit</span>;
+<span style="color:#66d9ef">END</span>;
+<span style="color:#f92672">/</span>
 
-BEGIN
+<span style="color:#66d9ef">BEGIN</span>
   DBMS_NETWORK_ACL_ADMIN.assign_acl (
-    acl =&gt; 'mail_queue.xml',
-    host =&gt; 'smtp.universita.it',
-    lower_port =&gt; 25,
-    upper_port =&gt; NULL);
-  COMMIT;
-END;
-/
-</code></pre>
+    acl <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">mail_queue.xml</span><span style="color:#e6db74">&#39;</span>,
+    <span style="color:#66d9ef">host</span> <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">smtp.universita.it</span><span style="color:#e6db74">&#39;</span>,
+    lower_port <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">25</span>,
+    upper_port <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">NULL</span>);
+  <span style="color:#66d9ef">COMMIT</span>;
+<span style="color:#66d9ef">END</span>;
+<span style="color:#f92672">/</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">/*</span><span style="color:#75715e"> Controllo che l&#39;ACL sia stata creata </span><span style="color:#75715e">*/</span>
+<span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> dba_network_acls
+</code></pre></div><h2 id="invio-della-mail">Invio della mail</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">-- Mette in coda la mail per la spedizione
+</span><span style="color:#75715e"></span><span style="color:#75715e">-- 1 è il numero mailbox configurato in MAIL_BOXES)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">exec</span> MAIL_QUEUE.MAIL_QUEUE (<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Oggetto</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Testo in formato TXT</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Testo in formato HTML</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">destinatazio@gmail.com</span><span style="color:#e6db74">&#39;</span>, <span style="color:#ae81ff">1</span>)
 
-<pre><code class="language-sql">/* Controllo che l'ACL sia stata creata */
-select * from dba_network_acls
-</code></pre>
-
-<h2 id="invio-della-mail">Invio della mail</h2>
-
-<pre><code class="language-sql">-- Mette in coda la mail per la spedizione
--- 1 è il numero mailbox configurato in MAIL_BOXES)
-exec MAIL_QUEUE.MAIL_QUEUE ('Oggetto', 'Testo in formato TXT', 'Testo in formato HTML', 'destinatazio@gmail.com', 1)
-
--- Invia la mail
-exec MAIL_QUEUE.SEND_QUEUE
-</code></pre>
-
-<h2 id="limitazioni">Limitazioni</h2>
-
+<span style="color:#75715e">-- Invia la mail
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">exec</span> MAIL_QUEUE.SEND_QUEUE
+</code></pre></div><h2 id="limitazioni">Limitazioni</h2>
 <ul>
 <li>Non possono essere inviati messaggi a piu&rsquo; destinatari.</li>
 <li>Attualmente il corpo dei messaggi non può superare i 4000 caratteri (facilmente risolvibile)</li>
 <li>Non possono essere inviati allegati</li>
 </ul>
-
 <h2 id="riferimenti">Riferimenti</h2>
-
 <ul>
 <li><a href="http://remidian.com/2013/01/email-network-access-in-oracle-11g-network-access-control-list-acl/">http://remidian.com/2013/01/email-network-access-in-oracle-11g-network-access-control-list-acl/</a></li>
 <li><a href="http://oracle-base.com/articles/misc/email-from-oracle-plsql.php">http://oracle-base.com/articles/misc/email-from-oracle-plsql.php</a></li>
 <li><a href="https://arkatec.wordpress.com/2011/08/15/sending-email-using-oracle-database-and-google-mail-service/">https://arkatec.wordpress.com/2011/08/15/sending-email-using-oracle-database-and-google-mail-service/</a></li>
 </ul>
-
-<p><a  href="https://github.com/teopost/oracle-mail-spooler/" target="_blank"  class="btn btn-default"></p>
-
-<p><i class="fa fa-github"></i></p>
-
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <p>Scarica da Git-Hub</p>
-
-<p></a></p>
-
-<p><br/></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
             </div>
             <footer class="article-footer">
     <a data-url="https://www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/" data-id="597d98b41a54834334a36e6f7f1af937" class="article-share-link">
@@ -989,7 +945,7 @@ exec MAIL_QUEUE.SEND_QUEUE
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019
+      &copy; 2020
       Powered by <a href="//gohugo.io">Hugo</a>
     </div>
   </div>

@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Wordpress su Raspberry &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.55.2" />
+    <meta name="generator" content="Hugo 0.64.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -30,20 +30,17 @@
     <meta property="og:title" content="Wordpress su Raspberry" />
 <meta property="og:description" content="Voglio installare un blog sulla raspberry. Per farlo, dopo aver installato un LAMP server, procedo come segue:
 Ecco cosa ho fatto:
-Preparare lo schema di DATABASE mysql -uroot -p&lt;password&gt; CREATE DATABASE wordpress; CREATE USER wordpressuser@localhost IDENTIFIED BY &#39;wppassword&#39; GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost;  dove  è la password di mysql che ho impostato durante l&rsquo;installazione del LAMP server e wppassword è un esempio di password per l&rsquo;utente wordpress che ho appenta creato su mysql" />
+Preparare lo schema di DATABASE mysql -uroot -p&lt;password&gt; CREATE DATABASE wordpress; CREATE USER wordpressuser@localhost IDENTIFIED BY &#39;wppassword&#39; GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost; dove è la password di mysql che ho impostato durante l&rsquo;installazione del LAMP server e wppassword è un esempio di password per l&rsquo;utente wordpress che ho appenta creato su mysql" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/" />
-<meta property="article:published_time" content="2017-01-08T16:15:00&#43;01:00"/>
-<meta property="article:modified_time" content="2017-01-08T16:15:00&#43;01:00"/>
+<meta property="article:published_time" content="2017-01-08T16:15:00+01:00" />
+<meta property="article:modified_time" content="2017-01-08T16:15:00+01:00" />
 
     
-    
-<meta itemprop="name" content="Wordpress su Raspberry">
+    <meta itemprop="name" content="Wordpress su Raspberry">
 <meta itemprop="description" content="Voglio installare un blog sulla raspberry. Per farlo, dopo aver installato un LAMP server, procedo come segue:
 Ecco cosa ho fatto:
-Preparare lo schema di DATABASE mysql -uroot -p&lt;password&gt; CREATE DATABASE wordpress; CREATE USER wordpressuser@localhost IDENTIFIED BY &#39;wppassword&#39; GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost;  dove  è la password di mysql che ho impostato durante l&rsquo;installazione del LAMP server e wppassword è un esempio di password per l&rsquo;utente wordpress che ho appenta creato su mysql">
-
-
+Preparare lo schema di DATABASE mysql -uroot -p&lt;password&gt; CREATE DATABASE wordpress; CREATE USER wordpressuser@localhost IDENTIFIED BY &#39;wppassword&#39; GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost; dove è la password di mysql che ho impostato durante l&rsquo;installazione del LAMP server e wppassword è un esempio di password per l&rsquo;utente wordpress che ho appenta creato su mysql">
 <meta itemprop="datePublished" content="2017-01-08T16:15:00&#43;01:00" />
 <meta itemprop="dateModified" content="2017-01-08T16:15:00&#43;01:00" />
 <meta itemprop="wordCount" content="173">
@@ -51,12 +48,11 @@ Preparare lo schema di DATABASE mysql -uroot -p&lt;password&gt; CREATE DATABASE 
 
 
 <meta itemprop="keywords" content="raspberry," />
-
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Wordpress su Raspberry"/>
 <meta name="twitter:description" content="Voglio installare un blog sulla raspberry. Per farlo, dopo aver installato un LAMP server, procedo come segue:
 Ecco cosa ho fatto:
-Preparare lo schema di DATABASE mysql -uroot -p&lt;password&gt; CREATE DATABASE wordpress; CREATE USER wordpressuser@localhost IDENTIFIED BY &#39;wppassword&#39; GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost;  dove  è la password di mysql che ho impostato durante l&rsquo;installazione del LAMP server e wppassword è un esempio di password per l&rsquo;utente wordpress che ho appenta creato su mysql"/>
+Preparare lo schema di DATABASE mysql -uroot -p&lt;password&gt; CREATE DATABASE wordpress; CREATE USER wordpressuser@localhost IDENTIFIED BY &#39;wppassword&#39; GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost; dove è la password di mysql che ho impostato durante l&rsquo;installazione del LAMP server e wppassword è un esempio di password per l&rsquo;utente wordpress che ho appenta creato su mysql"/>
 <meta name="twitter:site" content="@teopost"/>
 
 
@@ -181,7 +177,7 @@ Preparare lo schema di DATABASE mysql -uroot -p&lt;password&gt; CREATE DATABASE 
     <div class="base-info profile-block">
       <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
       <h2 id="name">Stefano Teodorani</h2>
-      <h3 id="title">Oracle DBA, Programmer, Linux Administrator and Opensource lover</h3>
+      <h3 id="title">DBA, Programmer, Linux Administrator and Opensource lover</h3>
       <span id="location"><i class="fa fa-map-marker"></i>Savignano sul Rubicone</span>
       
           <a id="follow" href="https://github.com/teopost">
@@ -339,32 +335,21 @@ Preparare lo schema di DATABASE mysql -uroot -p&lt;password&gt; CREATE DATABASE 
 </header>
 
             <div class="article-entry" itemprop="articleBody">
-                
-
-<p>Voglio installare un blog sulla raspberry.
+                <p>Voglio installare un blog sulla raspberry.
 Per farlo, dopo aver <a href="https://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/">installato un LAMP server</a>, procedo come segue:</p>
-
 <p>Ecco cosa ho fatto:</p>
-
 <h3 id="preparare-lo-schema-di-database">Preparare lo schema di DATABASE</h3>
-
-<pre><code class="language-sql">mysql -uroot -p&lt;password&gt;
-CREATE DATABASE wordpress;
-CREATE USER wordpressuser@localhost IDENTIFIED BY 'wppassword'
-GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost;
-</code></pre>
-
-<p>dove <password> è la password di mysql che ho impostato durante l&rsquo;installazione del LAMP server e wppassword è un esempio
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">mysql <span style="color:#f92672">-</span>uroot <span style="color:#f92672">-</span>p<span style="color:#f92672">&lt;</span>password<span style="color:#f92672">&gt;</span>
+<span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> wordpress;
+<span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">USER</span> wordpressuser<span style="color:#f92672">@</span>localhost IDENTIFIED <span style="color:#66d9ef">BY</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">wppassword</span><span style="color:#e6db74">&#39;</span>
+<span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">ALL</span> <span style="color:#66d9ef">PRIVILEGES</span> <span style="color:#66d9ef">ON</span> wordpress.<span style="color:#f92672">*</span> <span style="color:#66d9ef">TO</span> wordpressuser<span style="color:#f92672">@</span>localhost;
+</code></pre></div><p>dove <!-- raw HTML omitted --> è la password di mysql che ho impostato durante l&rsquo;installazione del LAMP server e wppassword è un esempio
 di password per l&rsquo;utente wordpress che ho appenta creato su mysql</p>
-
-<p>Se tutto ha funzionato vai su <a href="http://your_server_IP_address">http://your_server_IP_address</a> e vedi il web server attivo</p>
-
+<p>Se tutto ha funzionato vai su http://your_server_IP_address e vedi il web server attivo</p>
 <h3 id="installazione-di-wordpress">Installazione di Wordpress</h3>
-
 <p>Ora scarico l&rsquo;ultima versione di wordpress e la installo nella Rasp.
 Queste operazioni le devo eseguire come root.</p>
-
-<pre><code class="language-bash">sudo -s
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo -s
 cd ~
 wget http://wordpress.org/latest.tar.gz
 tar xzvf latest.tar.gz
@@ -375,20 +360,13 @@ apt-get update
 apt-get install php5-gd libssh2-php
 cp wp-config-sample.php wp-config.php
 vi wp-config.php
-</code></pre>
-
-<p>a questo punto inserisco i dati per l&rsquo;accesso a wordpress. Poi proseguo:</p>
-
-<pre><code class="language-bash">apt-get install rsync
+</code></pre></div><p>a questo punto inserisco i dati per l&rsquo;accesso a wordpress. Poi proseguo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt-get install rsync
 sudo rsync -avP ~/wordpress/ /var/www/html/
 sudo chown -R root:www-data *
 mkdir /var/www/html/wp-content/uploads
-</code></pre>
-
-<h3 id="riferimenti">Riferimenti</h3>
-
+</code></pre></div><h3 id="riferimenti">Riferimenti</h3>
 <p>Questa documentazione è l&rsquo;estratto di questo articolo molto più completo</p>
-
 <ul>
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-ubuntu-14-04">https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-ubuntu-14-04</a></li>
 </ul>
@@ -857,7 +835,7 @@ mkdir /var/www/html/wp-content/uploads
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019
+      &copy; 2020
       Powered by <a href="//gohugo.io">Hugo</a>
     </div>
   </div>

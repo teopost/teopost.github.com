@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Syncthing su Raspberrypi &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.55.2" />
+    <meta name="generator" content="Hugo 0.64.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -32,24 +32,20 @@
 La cosa peggiore tuttavia, restava il fatto che non fosse opensource." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/" />
-<meta property="article:published_time" content="2017-06-20T22:11:56&#43;02:00"/>
-<meta property="article:modified_time" content="2017-06-20T22:11:56&#43;02:00"/>
+<meta property="article:published_time" content="2017-06-20T22:11:56+02:00" />
+<meta property="article:modified_time" content="2017-06-20T22:11:56+02:00" />
 
     
-    
-<meta itemprop="name" content="Syncthing su Raspberrypi">
+    <meta itemprop="name" content="Syncthing su Raspberrypi">
 <meta itemprop="description" content="Btsync era veramente un bel programma, ma dopo aver fatto venire l&rsquo;acquolina in bocca l&rsquo;hanno messo a pagamento.
 La cosa peggiore tuttavia, restava il fatto che non fosse opensource.">
-
-
 <meta itemprop="datePublished" content="2017-06-20T22:11:56&#43;02:00" />
 <meta itemprop="dateModified" content="2017-06-20T22:11:56&#43;02:00" />
-<meta itemprop="wordCount" content="797">
+<meta itemprop="wordCount" content="791">
 
 
 
 <meta itemprop="keywords" content="raspberry," />
-
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Syncthing su Raspberrypi"/>
 <meta name="twitter:description" content="Btsync era veramente un bel programma, ma dopo aver fatto venire l&rsquo;acquolina in bocca l&rsquo;hanno messo a pagamento.
@@ -178,7 +174,7 @@ La cosa peggiore tuttavia, restava il fatto che non fosse opensource."/>
     <div class="base-info profile-block">
       <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
       <h2 id="name">Stefano Teodorani</h2>
-      <h3 id="title">Oracle DBA, Programmer, Linux Administrator and Opensource lover</h3>
+      <h3 id="title">DBA, Programmer, Linux Administrator and Opensource lover</h3>
       <span id="location"><i class="fa fa-map-marker"></i>Savignano sul Rubicone</span>
       
           <a id="follow" href="https://github.com/teopost">
@@ -298,7 +294,7 @@ La cosa peggiore tuttavia, restava il fatto che non fosse opensource."/>
             <i class="fa fa-calendar"></i>
             <time datetime="2017-06-20 22:11:56 &#43;0200 CEST" itemprop="datePublished">20-06-2017</time>
             &middot;
-            797
+            791
             words
             &middot;
             4
@@ -338,206 +334,169 @@ La cosa peggiore tuttavia, restava il fatto che non fosse opensource."/>
             <div class="article-entry" itemprop="articleBody">
                 <p>Btsync era veramente un bel programma, ma dopo aver fatto venire l&rsquo;acquolina in bocca l&rsquo;hanno messo a pagamento.
 La cosa peggiore tuttavia, restava il fatto che non fosse opensource.</p>
-
 <p>Per fortuna esiste una validissima alternativa che risolte questi 2 problemi. Syncthing.
 Syncthing che è scritto in go ed è per questo molto veloce e adatto ad essere installato su dispositivi che non hanno molta memorie e potenza di calcolo come, ad esempio, la mia amata Raspberry Pi.
 La cosa che contraddistingue Syncthing, rispetto altre soluzioni opensource simili, è la sua architettura che si appoggia su relay server in cloud per la sincronizzazione dei file.
 In questo modo la sincronizzazione può avvenire senza dover aprire porte nel vostro router, esattamente come accade con programmi tipo Dropbox.</p>
-
-<p>Prima di partire, tenete presente che alla fine di questa guida:
-1. Syncthing dovrà funzionare sotto l&rsquo;utente pi
-2. Come conseguente del punto 1, i files di configurazione saranno creati sotto la home dell&rsquo;utente pi (/home/pi/.config).
-2. Le cartelle che potrebe condividere dovranno stare sotto la home dell&rsquo;utente pi.</p>
-
+<p>Prima di partire, tenete presente che alla fine di questa guida:</p>
+<ol>
+<li>Syncthing dovrà funzionare sotto l&rsquo;utente pi</li>
+<li>Come conseguente del punto 1, i files di configurazione saranno creati sotto la home dell&rsquo;utente pi (/home/pi/.config).</li>
+<li>Le cartelle che potrebe condividere dovranno stare sotto la home dell&rsquo;utente pi.</li>
+</ol>
 <p>Bene. Vediamo ora come possiamo installarlo sulla Raspbian.</p>
-
 <h2 id="installazione">Installazione</h2>
-
 <p>Innanzitutto scarichiamo la chiave gpg per poter aggiungere in seguito il repository debian.</p>
-
-<pre><code class="language-bash">wget -O - https://syncthing.net/release-key.txt | sudo apt-key add -
-</code></pre>
-
-<p>Ora aggiungiamo il repository</p>
-
-<pre><code class="language-bash">echo &quot;deb http://apt.syncthing.net/ syncthing release&quot; | sudo tee -a /etc/apt/sources.list.d/syncthing-release.list
-</code></pre>
-
-<p>Aggiorniamo il repository</p>
-
-<pre><code class="language-bash">sudo apt-get update
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wget -O - https://syncthing.net/release-key.txt | sudo apt-key add -
+</code></pre></div><p>Ora aggiungiamo il repository</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#34;deb http://apt.syncthing.net/ syncthing release&#34;</span> | sudo tee -a /etc/apt/sources.list.d/syncthing-release.list
+</code></pre></div><p>Aggiorniamo il repository</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get update
 sudo apt-get install syncthing -y
-</code></pre>
-
-<p>Ora facciamo partire syncthing una prima volta. Questa operazione crea i files di configurazione nella home dell&rsquo;utente con cui abbiamo lanciato il programma. Digitate quindi</p>
-
-<pre><code class="language-bash">syncthing
-</code></pre>
-
-<p>Dovreste vedere un output tipo questo</p>
-
-<pre><code class="language-bash">[monitor] 17:45:33 INFO: Starting syncthing
-[start] 17:45:33 INFO: Generating RSA key and certificate for syncthing...
-[HR2B5] 17:47:33 INFO: syncthing v0.11.12 (go1.4.2 linux-arm default) unknown-user@syncthing-builder 2015-07-05 09:24:21 UTC
-[HR2B5] 17:47:33 INFO: My ID: HR2B56D-52WUAGB-36PBQRH-VBU3AAN-YS6SXIM-LJXVBZP-BR3CEMP-STI4EQW
-[HR2B5] 17:47:33 INFO: No config file; starting with empty defaults
-[HR2B5] 17:47:33 INFO: Edit /home/pi/.config/syncthing/config.xml to taste or use the GUI
-[HR2B5] 17:47:33 INFO: Database block cache capacity 8192 KiB
-[HR2B5] 17:47:33 OK: Ready to synchronize default (read-write)
-[HR2B5] 17:47:33 INFO: Starting web GUI on http://127.0.0.1:8384/
-[HR2B5] 17:47:33 INFO: Loading HTTPS certificate: open /home/pi/.config/syncthing/https-cert.pem: no such file or directory
-[HR2B5] 17:47:33 INFO: Creating new HTTPS certificate
-[HR2B5] 17:47:33 INFO: Generating RSA key and certificate for raspberrypi...
-[HR2B5] 17:47:33 INFO: Completed initial scan (rw) of folder default
-</code></pre>
-
-<p>Ora fermiamo il programma premendo Ctrl-C</p>
-
+</code></pre></div><p>Ora facciamo partire syncthing una prima volta. Questa operazione crea i files di configurazione nella home dell&rsquo;utente con cui abbiamo lanciato il programma. Digitate quindi</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">syncthing
+</code></pre></div><p>Dovreste vedere un output tipo questo</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>monitor<span style="color:#f92672">]</span> 17:45:33 INFO: Starting syncthing
+<span style="color:#f92672">[</span>start<span style="color:#f92672">]</span> 17:45:33 INFO: Generating RSA key and certificate <span style="color:#66d9ef">for</span> syncthing...
+<span style="color:#f92672">[</span>HR2B5<span style="color:#f92672">]</span> 17:47:33 INFO: syncthing v0.11.12 <span style="color:#f92672">(</span>go1.4.2 linux-arm default<span style="color:#f92672">)</span> unknown-user@syncthing-builder 2015-07-05 09:24:21 UTC
+<span style="color:#f92672">[</span>HR2B5<span style="color:#f92672">]</span> 17:47:33 INFO: My ID: HR2B56D-52WUAGB-36PBQRH-VBU3AAN-YS6SXIM-LJXVBZP-BR3CEMP-STI4EQW
+<span style="color:#f92672">[</span>HR2B5<span style="color:#f92672">]</span> 17:47:33 INFO: No config file; starting with empty defaults
+<span style="color:#f92672">[</span>HR2B5<span style="color:#f92672">]</span> 17:47:33 INFO: Edit /home/pi/.config/syncthing/config.xml to taste or use the GUI
+<span style="color:#f92672">[</span>HR2B5<span style="color:#f92672">]</span> 17:47:33 INFO: Database block cache capacity <span style="color:#ae81ff">8192</span> KiB
+<span style="color:#f92672">[</span>HR2B5<span style="color:#f92672">]</span> 17:47:33 OK: Ready to synchronize default <span style="color:#f92672">(</span>read-write<span style="color:#f92672">)</span>
+<span style="color:#f92672">[</span>HR2B5<span style="color:#f92672">]</span> 17:47:33 INFO: Starting web GUI on http://127.0.0.1:8384/
+<span style="color:#f92672">[</span>HR2B5<span style="color:#f92672">]</span> 17:47:33 INFO: Loading HTTPS certificate: open /home/pi/.config/syncthing/https-cert.pem: no such file or directory
+<span style="color:#f92672">[</span>HR2B5<span style="color:#f92672">]</span> 17:47:33 INFO: Creating new HTTPS certificate
+<span style="color:#f92672">[</span>HR2B5<span style="color:#f92672">]</span> 17:47:33 INFO: Generating RSA key and certificate <span style="color:#66d9ef">for</span> raspberrypi...
+<span style="color:#f92672">[</span>HR2B5<span style="color:#f92672">]</span> 17:47:33 INFO: Completed initial scan <span style="color:#f92672">(</span>rw<span style="color:#f92672">)</span> of folder default
+</code></pre></div><p>Ora fermiamo il programma premendo Ctrl-C</p>
 <p>La configurazione standard di syncthing, prevede che l&rsquo;accesso alla sua pagina web di configurazione, possa avvenire solo dalla macchina locale. Stiamo installando syncthing su una raspberry quindi è ovvio che dobbiamo accedervi da remoto. Apriamo quindi il file di configurazione per modificare tale impostazione.</p>
-
-<pre><code class="language-bash">vi /home/pi/.config/syncthing/config.xml
-</code></pre>
-
-<p>Nel file dobbiamo cambiare la riga con scritto 127.0.0.1 (solo accessibile dalla macchina locale) in 0.0.0.0 (accessibile da tutte le macchine)</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vi /home/pi/.config/syncthing/config.xml
+</code></pre></div><p>Nel file dobbiamo cambiare la riga con scritto 127.0.0.1 (solo accessibile dalla macchina locale) in 0.0.0.0 (accessibile da tutte le macchine)</p>
 <p>Modificare tls in true se volete attivare l&rsquo;ssl per l&rsquo;interfaccia di configurazione.</p>
-
-<pre><code class="language-bash">&lt;gui enabled=&quot;true&quot; tls=&quot;false&quot;&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&lt;gui enabled<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span> tls<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span>&gt;
  &lt;address&gt;0.0.0.0:8384&lt;/address&gt;
  &lt;apikey&gt;VbsKT2fCELYldTI74Tk4BKCbJP8Frlij&lt;/apikey&gt;
 &lt;/gui&gt;
-</code></pre>
-
-<h2 id="autostart-di-syncthing-su-raspberry-pi">Autostart di Syncthing su Raspberry Pi</h2>
-
+</code></pre></div><h2 id="autostart-di-syncthing-su-raspberry-pi">Autostart di Syncthing su Raspberry Pi</h2>
 <p>Creare il file di init.d</p>
-
-<pre><code class="language-bash">sudo vi /etc/init.d/syncthing
-</code></pre>
-
-<p>Incollateci dentro questo:</p>
-
-<pre><code class="language-bash">#!/bin/sh
-### BEGIN INIT INFO
-# Provides:          Syncthing
-# Required-Start:    $local_fs $remote_fs $network
-# Required-Stop:     $local_fs $remote_fs $network
-# Default-Start:     2 3 4 5
-# Default-Stop:      0 1 6
-# Short-Description: Syncthing
-# Description:       Syncthing is for backups
-### END INIT INFO
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo vi /etc/init.d/syncthing
+</code></pre></div><p>Incollateci dentro questo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/sh
+</span><span style="color:#75715e"></span><span style="color:#75715e">### BEGIN INIT INFO</span>
+<span style="color:#75715e"># Provides:          Syncthing</span>
+<span style="color:#75715e"># Required-Start:    $local_fs $remote_fs $network</span>
+<span style="color:#75715e"># Required-Stop:     $local_fs $remote_fs $network</span>
+<span style="color:#75715e"># Default-Start:     2 3 4 5</span>
+<span style="color:#75715e"># Default-Stop:      0 1 6</span>
+<span style="color:#75715e"># Short-Description: Syncthing</span>
+<span style="color:#75715e"># Description:       Syncthing is for backups</span>
+<span style="color:#75715e">### END INIT INFO</span>
 
 
-# Documentation available at
-# http://refspecs.linuxfoundation.org/LSB_3.1.0/LSB-Core-generic/LSB-Core-generic/iniscrptfunc.html
-# Debian provides some extra functions though
+<span style="color:#75715e"># Documentation available at</span>
+<span style="color:#75715e"># http://refspecs.linuxfoundation.org/LSB_3.1.0/LSB-Core-generic/LSB-Core-generic/iniscrptfunc.html</span>
+<span style="color:#75715e"># Debian provides some extra functions though</span>
 . /lib/lsb/init-functions
 
 
-DAEMON_NAME=&quot;syncthing&quot;
-DAEMON_USER=pi
-DAEMON_PATH=&quot;/usr/bin/syncthing&quot;
-DAEMON_OPTS=&quot;&quot;
-DAEMON_PWD=&quot;${PWD}&quot;
-DAEMON_DESC=$(get_lsb_header_val $0 &quot;Short-Description&quot;)
-DAEMON_PID=&quot;/var/run/${DAEMON_NAME}.pid&quot;
-DAEMON_NICE=0
-DAEMON_LOG='/var/log/syncthing'
+DAEMON_NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;syncthing&#34;</span>
+DAEMON_USER<span style="color:#f92672">=</span>pi
+DAEMON_PATH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/usr/bin/syncthing&#34;</span>
+DAEMON_OPTS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>
+DAEMON_PWD<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>PWD<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+DAEMON_DESC<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>get_lsb_header_val $0 <span style="color:#e6db74">&#34;Short-Description&#34;</span><span style="color:#66d9ef">)</span>
+DAEMON_PID<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">/var/run/</span><span style="color:#e6db74">${</span>DAEMON_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74">.pid</span><span style="color:#e6db74">&#34;</span>
+DAEMON_NICE<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+DAEMON_LOG<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/var/log/syncthing&#39;</span>
 
-[ -r &quot;/etc/default/${DAEMON_NAME}&quot; ] &amp;&amp; . &quot;/etc/default/${DAEMON_NAME}&quot;
+<span style="color:#f92672">[</span> -r <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">/etc/default/</span><span style="color:#e6db74">${</span>DAEMON_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> . <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">/etc/default/</span><span style="color:#e6db74">${</span>DAEMON_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
 
-do_start() {
+do_start<span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
   local result
 
-	pidofproc -p &quot;${DAEMON_PID}&quot; &quot;${DAEMON_PATH}&quot; &gt; /dev/null
-	if [ $? -eq 0 ]; then
-		log_warning_msg &quot;${DAEMON_NAME} is already started&quot;
-		result=0
-	else
-		log_daemon_msg &quot;Starting ${DAEMON_DESC}&quot; &quot;${DAEMON_NAME}&quot;
-		touch &quot;${DAEMON_LOG}&quot;
-		chown $DAEMON_USER &quot;${DAEMON_LOG}&quot;
-		chmod u+rw &quot;${DAEMON_LOG}&quot;
-		if [ -z &quot;${DAEMON_USER}&quot; ]; then
-			start-stop-daemon --start --quiet --oknodo --background \
-				--nicelevel $DAEMON_NICE \
-				--chdir &quot;${DAEMON_PWD}&quot; \
-				--pidfile &quot;${DAEMON_PID}&quot; --make-pidfile \
-				--exec &quot;${DAEMON_PATH}&quot; -- $DAEMON_OPTS
-			result=$?
-		else
-			start-stop-daemon --start --quiet --oknodo --background \
-				--nicelevel $DAEMON_NICE \
-				--chdir &quot;${DAEMON_PWD}&quot; \
-				--pidfile &quot;${DAEMON_PID}&quot; --make-pidfile \
-				--chuid &quot;${DAEMON_USER}&quot; \
-				--exec &quot;${DAEMON_PATH}&quot; -- $DAEMON_OPTS
-			result=$?
-		fi
+	pidofproc -p <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PID<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> &gt; /dev/null
+	<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $? -eq <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+		log_warning_msg <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74"> is already started</span><span style="color:#e6db74">&#34;</span>
+		result<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+	<span style="color:#66d9ef">else</span>
+		log_daemon_msg <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Starting </span><span style="color:#e6db74">${</span>DAEMON_DESC<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+		touch <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_LOG<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+		chown $DAEMON_USER <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_LOG<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+		chmod u+rw <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_LOG<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+		<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_USER<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+			start-stop-daemon --start --quiet --oknodo --background <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>				--nicelevel $DAEMON_NICE <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>				--chdir <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PWD<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>				--pidfile <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PID<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> --make-pidfile <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>				--exec <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> -- $DAEMON_OPTS
+			result<span style="color:#f92672">=</span>$?
+		<span style="color:#66d9ef">else</span>
+			start-stop-daemon --start --quiet --oknodo --background <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>				--nicelevel $DAEMON_NICE <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>				--chdir <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PWD<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>				--pidfile <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PID<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> --make-pidfile <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>				--chuid <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_USER<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>				--exec <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> -- $DAEMON_OPTS
+			result<span style="color:#f92672">=</span>$?
+		<span style="color:#66d9ef">fi</span>
 		log_end_msg $result
-	fi
-	return $result
-}
+	<span style="color:#66d9ef">fi</span>
+	<span style="color:#66d9ef">return</span> $result
+<span style="color:#f92672">}</span>
 
-do_stop() {
+do_stop<span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 	local result
 
-	pidofproc -p &quot;${DAEMON_PID}&quot; &quot;${DAEMON_PATH}&quot; &gt; /dev/null
-	if [ $? -ne 0 ]; then
-		log_warning_msg &quot;${DAEMON_NAME} is not started&quot;
-		result=0
-	else
-		log_daemon_msg &quot;Stopping ${DAEMON_DESC}&quot; &quot;${DAEMON_NAME}&quot;
-		killproc -p &quot;${DAEMON_PID}&quot; &quot;${DAEMON_PATH}&quot;
-		result=$?
+	pidofproc -p <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PID<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> &gt; /dev/null
+	<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $? -ne <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+		log_warning_msg <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74"> is not started</span><span style="color:#e6db74">&#34;</span>
+		result<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+	<span style="color:#66d9ef">else</span>
+		log_daemon_msg <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Stopping </span><span style="color:#e6db74">${</span>DAEMON_DESC<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+		killproc -p <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PID<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+		result<span style="color:#f92672">=</span>$?
 		log_end_msg $result
-		rm &quot;${DAEMON_PID}&quot;
-	fi
-	return $result
-}
+		rm <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PID<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+	<span style="color:#66d9ef">fi</span>
+	<span style="color:#66d9ef">return</span> $result
+<span style="color:#f92672">}</span>
 
-do_restart() {
+do_restart<span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 	local result
 	do_stop
-	result=$?
-	if [ $result = 0 ]; then
+	result<span style="color:#f92672">=</span>$?
+	<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $result <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
 		do_start
-		result=$?
-	fi
-	return $result
-}
+		result<span style="color:#f92672">=</span>$?
+	<span style="color:#66d9ef">fi</span>
+	<span style="color:#66d9ef">return</span> $result
+<span style="color:#f92672">}</span>
 
-do_status() {
+do_status<span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 	local result
-	status_of_proc -p &quot;${DAEMON_PID}&quot; &quot;${DAEMON_PATH}&quot; &quot;${DAEMON_NAME}&quot;
-	result=$?
-	return $result
-}
+	status_of_proc -p <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PID<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+	result<span style="color:#f92672">=</span>$?
+	<span style="color:#66d9ef">return</span> $result
+<span style="color:#f92672">}</span>
 
-do_usage() {
-	echo $&quot;Usage: $0 {start | stop | restart | status}&quot;
-	exit 1
-}
+do_usage<span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+	echo $<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Usage: </span>$0<span style="color:#e6db74"> {start | stop | restart | status}</span><span style="color:#e6db74">&#34;</span>
+	exit <span style="color:#ae81ff">1</span>
+<span style="color:#f92672">}</span>
 
-case &quot;$1&quot; in
-start)   do_start;   exit $? ;;
-stop)    do_stop;    exit $? ;;
-restart) do_restart; exit $? ;;
-status)  do_status;  exit $? ;;
-*)       do_usage;   exit  1 ;;
-esac
-</code></pre>
-
-<p>Rendere il file eseguibile</p>
-
-<pre><code class="language-bash">sudo chmod +x /etc/init.d/syncthing
-</code></pre>
-
-<p>Impostare lo startup del servizio alla partenza della raspberrypi</p>
-
-<pre><code class="language-bash">sudo update-rc.d syncthing defaults
-</code></pre>
+<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> in
+start<span style="color:#f92672">)</span>   do_start;   exit $? ;;
+stop<span style="color:#f92672">)</span>    do_stop;    exit $? ;;
+restart<span style="color:#f92672">)</span> do_restart; exit $? ;;
+status<span style="color:#f92672">)</span>  do_status;  exit $? ;;
+*<span style="color:#f92672">)</span>       do_usage;   exit  <span style="color:#ae81ff">1</span> ;;
+<span style="color:#66d9ef">esac</span>
+</code></pre></div><p>Rendere il file eseguibile</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo chmod +x /etc/init.d/syncthing
+</code></pre></div><p>Impostare lo startup del servizio alla partenza della raspberrypi</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo update-rc.d syncthing defaults
+</code></pre></div>
             </div>
             <footer class="article-footer">
     <a data-url="https://www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/" data-id="c3b2cf950337eb9c02f9e85fbd992d80" class="article-share-link">
@@ -1002,7 +961,7 @@ esac
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019
+      &copy; 2020
       Powered by <a href="//gohugo.io">Hugo</a>
     </div>
   </div>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linux on stefanoteodorani.it</title>
@@ -21,9 +21,7 @@
 Su un server ftp, vengono copiati files in 3 separate cartelle.
 Tali file devono essere sincronizzati con 3 cartelle situate su 3 diverse macchine.
 Tale sincronizzazione deve essere bidirezionale e i files creati sul server ftp devono scomparire quanto sulle cartelle remote qualcuno li cancella.&lt;/p&gt;
-
 &lt;p&gt;Per risolvere questo problema ho utilizzato unison, un tool che consente di sincronizzare in maniera bidirezionale due cartelle anche via ssh.&lt;/p&gt;
-
 &lt;p&gt;Ecco quindi quello che ho fatto:&lt;/p&gt;</description>
     </item>
     

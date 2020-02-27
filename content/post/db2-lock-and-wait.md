@@ -10,7 +10,7 @@ title = "Lock wait e timeout in DB2"
 
 +++
 
-In DB2 un lock wait è una condizione che si verifica quanto una sessione attente di prendere un lock su un oggetto che sul quale un'altra sessione l'ha già preso.
+Un lock wait è una condizione che si verifica quanto una sessione attende di prendere un lock su un oggetto che sul quale un'altra sessione l'ha già preso.
 
 In questa situazione la sessione che attende è una sessione in Lock Wait.
 

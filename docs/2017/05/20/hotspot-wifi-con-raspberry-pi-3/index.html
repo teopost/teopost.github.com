@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Hotspot wifi con Raspberry PI 3 &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.55.2" />
+    <meta name="generator" content="Hugo 0.64.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -32,16 +32,13 @@
 Vediamo come:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" />
-<meta property="article:published_time" content="2017-05-20T18:03:03&#43;02:00"/>
-<meta property="article:modified_time" content="2017-05-20T18:03:03&#43;02:00"/>
+<meta property="article:published_time" content="2017-05-20T18:03:03+02:00" />
+<meta property="article:modified_time" content="2017-05-20T18:03:03+02:00" />
 
     
-    
-<meta itemprop="name" content="Hotspot wifi con Raspberry PI 3">
+    <meta itemprop="name" content="Hotspot wifi con Raspberry PI 3">
 <meta itemprop="description" content="La Raspberry PI 3 è stata finalmente dotata di una scheda wifi incorporata. Il chipset della scheda (Broadcom BCM2837) consente di configurare la scheda anche come access point. Non male !
 Vediamo come:">
-
-
 <meta itemprop="datePublished" content="2017-05-20T18:03:03&#43;02:00" />
 <meta itemprop="dateModified" content="2017-05-20T18:03:03&#43;02:00" />
 <meta itemprop="wordCount" content="878">
@@ -49,7 +46,6 @@ Vediamo come:">
 
 
 <meta itemprop="keywords" content="raspberry," />
-
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Hotspot wifi con Raspberry PI 3"/>
 <meta name="twitter:description" content="La Raspberry PI 3 è stata finalmente dotata di una scheda wifi incorporata. Il chipset della scheda (Broadcom BCM2837) consente di configurare la scheda anche come access point. Non male !
@@ -178,7 +174,7 @@ Vediamo come:"/>
     <div class="base-info profile-block">
       <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
       <h2 id="name">Stefano Teodorani</h2>
-      <h3 id="title">Oracle DBA, Programmer, Linux Administrator and Opensource lover</h3>
+      <h3 id="title">DBA, Programmer, Linux Administrator and Opensource lover</h3>
       <span id="location"><i class="fa fa-map-marker"></i>Savignano sul Rubicone</span>
       
           <a id="follow" href="https://github.com/teopost">
@@ -338,42 +334,28 @@ Vediamo come:"/>
             <div class="article-entry" itemprop="articleBody">
                 <p>La Raspberry PI 3 è stata finalmente dotata di una scheda wifi incorporata. Il chipset della scheda (Broadcom BCM2837) consente di configurare la scheda anche come access point. Non male !
 Vediamo come:</p>
-
 <h2 id="installazione-pacchetti">Installazione pacchetti</h2>
-
 <p>Il primo passo è quello di installare il software necessario. Lo facciamo con il comando:</p>
-
 <pre><code>sudo apt-get install dnsmasq hostapd
 </code></pre>
-
 <p>questo installerà:</p>
-
 <ul>
 <li>hostapd: Consente di utilizzare il WiFi della Raspberry come punto di accesso</li>
 <li>dnsmasq: Questo è un server DHCP e DNS. Semplice da configurare e sufficiente ai nostri scopi.</li>
 </ul>
-
 <h2 id="configurazione-interfacce-di-rete">Configurazione interfacce di rete</h2>
-
 <p>La prima cosa da fare è configurare l&rsquo; interfaccia wlan0 con un IP statico.
 Ovviamente, per farlo, deve connetterti via rete alla Raspberry.
 Usa SSH.</p>
-
 <p>Nelle versioni più recenti di Raspian, la configurazione dell&rsquo;interfaccia viene gestita da dhcpcd per impostazione predefinita. Dobbiamo dirle di ignorare wlan0 , poichè la configureremo con un indirizzo IP statico.</p>
-
 <p>Aprire quindi il file di configurazione dhcpcd con:</p>
-
 <pre><code>sudo vi /etc/dhcpcd.conf
 </code></pre>
-
 <p>aggiungere la seguente riga alla base del file:</p>
-
 <pre><code>denyinterfaces wlan0
 </code></pre>
-
 <p>Ora dobbiamo configurare l&rsquo; IP statico.
 Apri il file di configurazione dell&rsquo;interfaccia con <code>sudo vi /etc/network/interfaces</code> e modifica la sezione wlan0 modo che sia simile a questa:</p>
-
 <pre><code>allow-hotplug wlan0
 iface wlan0 inet static
     address 172.24.1.1
@@ -382,15 +364,11 @@ iface wlan0 inet static
     broadcast 172.24.1.255
 #    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 </code></pre>
-
 <p>Riavviare dhcpcd con il comando <code>sudo service dhcpcd restart</code> e ricaricare la configurazione per wlan0 con <code>sudo ifdown wlan0</code> seguito da <code>sudo ifup wlan0</code>.</p>
-
 <h2 id="configurare-hostapd">Configurare hostapd</h2>
-
 <p>Ora dobbiamo configurare hostapd.
 Dobbiamo creare un nuovo file di configurazione con il comando <code>sudo vi  /etc/hostapd/hostapd.conf</code>.
 ALl&rsquo;interno dobbiam avere i seguenti contenuti:</p>
-
 <pre><code># This is the name of the WiFi interface we configured above
 interface=wlan0
 
@@ -436,31 +414,21 @@ wpa_passphrase=raspberry
 # Use AES, instead of TKIP
 rsn_pairwise=CCMP
 </code></pre>
-
 <p>Ora facciamo una verifica per capire se il lavoro fatto fino a qui funziona correttamente.
 Eseguiamo quindi:</p>
-
 <pre><code>sudo /usr/sbin/hostapd /etc/hostapd/hostapd.conf
 </code></pre>
-
 <p>A questo punto, se controlli fra le reti wifi disponibili sul tuo portatile,  dovresti essere in grado di vedere la anche rete  VoxPopuli-Hub.</p>
-
 <p>Se tentassimo di connetterci a questa rete però, non riusciremmo ad ottenere un IP. Questo perchè ancora non abbiamo configurato <code>dnsmasq</code>.
 Facciamolo. Fai un bel Control-C.</p>
-
 <p>Apri il file di configurazione di hostapd con <code>sudo vi /etc/default/hostapd</code> e cerca la riga <code>#DAEMON_CONF=&quot;&quot;</code>. Deve essere sostituita con <code>DAEMON_CONF=&quot;/etc/hostapd/hostapd.conf&quot;</code>.</p>
-
 <h2 id="configurare-dnsmasq">Configurare dnsmasq</h2>
-
 <p>Il file di configurazione dnsmasq fornito contiene una grande quantità di informazioni, ma la maggior parte di esse non ci serve.
 Facciamo quindi una copia del file (non si sa mai) e creiamone uno nuovo.</p>
-
 <pre><code>sudo mv /etc/dnsmasq.conf /etc/dnsmasq.conf.orig
 sudo vi /etc/dnsmasq.conf
 </code></pre>
-
 <p>Dentro al nuovo file copiamo quanto segue:</p>
-
 <pre><code>interface=wlan0      # Use interface wlan0
 listen-address=172.24.1.1 # Explicitly specify the address to listen on
 bind-interfaces      # Bind to the interface to make sure we aren't sending things elsewhere
@@ -469,67 +437,40 @@ domain-needed        # Don't forward short names
 bogus-priv           # Never forward addresses in the non-routed address spaces.
 dhcp-range=172.24.1.50,172.24.1.150,12h # Assign IP addresses between 172.24.1.50 and 172.24.1.150 with a 12 hour lease time
 </code></pre>
-
 <h2 id="impostare-l-ipv4-forwarding">Impostare l&rsquo; IPV4 forwarding.</h2>
-
 <p>Una delle ultime cose che dobbiamo fare è di abilitare l&rsquo;inoltro dei pacchetti.</p>
-
 <p>Per fare questo apriamo il file <code>sysctl.conf</code> con <code>sudo vi /etc/sysctl.con</code> e togliamo il commento dall&rsquo;inizio della riga che contiene <code>net.ipv4.ip_forward=1</code>.</p>
-
 <p>L&rsquo;operazione appena fatta diventa effettiva al prossimo riavvio della raspberry, ma è possibile attivare subito la modifica con:</p>
-
 <pre><code>sudo sh -c &quot;echo 1 &gt; /proc/sys/net/ipv4/ip_forward&quot;
 </code></pre>
-
 <h2 id="condividere-la-connessione-internet-su-eth0">Condividere la connessione internet su eth0</h2>
-
 <p>A questo punto facciamo un ultima operazione che ci consentirà di condividere la connessione internet della Raspberry Pi (attraverso la scheda di rete) con i dispositivi collegati tramite WiFi. Per farlo bisogna configurare un NAT tra l&rsquo;interfaccia wlan0 e l&rsquo;interfaccia eth0.
 Possiamo farlo utilizzando i seguenti comandi:</p>
-
 <pre><code>sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 sudo iptables -A FORWARD -i eth0 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT
 sudo iptables -A FORWARD -i wlan0 -o eth0 -j ACCEPT
 </code></pre>
-
 <p>Questa ultima configurazione deve essere applicata tutte le volte che la Raspberry viene riavviata, quindi procediamo in questo modo. Prima di tutto ci salviamo le regole in un file:</p>
-
 <pre><code>sudo sh -c &quot;iptables-save &gt; /etc/iptables.ipv4.nat
 </code></pre>
-
 <p>poi, per fare in modo che vengano applicate ad ogni reboot della Raspberry, ne aggiungiamo l&rsquo;esecuzione nel file <code>rc.local</code>. Tale file, situato sotto /etc, viene eseguito ogni volta che la Rasp parte.
 Quindi, riassumento:</p>
-
 <pre><code>sudo vi /etc/rc.local
 </code></pre>
-
 <p>al cui interno metteremo:</p>
-
 <pre><code>iptables-restore &lt; /etc/iptables.ipv4.nat
 </code></pre>
-
 <p><strong>IMPORTANTE</strong>: Se non vuoi che la Rasp si blocchi in fase di boot, ricorda di controllare che alla fine del file <code>/etc/rc.local</code> ci sia sempre l&rsquo;istruzione <code>exit 0</code> alla fine.</p>
-
 <h2 id="rush-finale">Rush finale</h2>
-
 <p>Ci siamo. Facciamo partire i servizi:</p>
-
 <pre><code>sudo service hostapd start
 sudo service dnsmasq start
 </code></pre>
-
 <p>Ora dovresti essere in grado di connettersi a Internet attraverso la Pi passando dal collegamento WiFi.</p>
-
 <p>Riavvia la raspberry e vedi se tutto continua a funzionare.</p>
-
 <p>Ah! Dimentiavo. Se qualcosa è andato storto, GOTO 10!.</p>
-
-<!--
-
-Riferimenti:
-
-https://frillip.com/using-your-raspberry-pi-3-as-a-wifi-access-point-with-hostapd
-
--->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
             </div>
             <footer class="article-footer">
     <a data-url="https://www.stefanoteodorani.it/2017/05/20/hotspot-wifi-con-raspberry-pi-3/" data-id="a1d3ece3fd4956fd4851fb3d9630d454" class="article-share-link">
@@ -994,7 +935,7 @@ https://frillip.com/using-your-raspberry-pi-3-as-a-wifi-access-point-with-hostap
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019
+      &copy; 2020
       Powered by <a href="//gohugo.io">Hugo</a>
     </div>
   </div>
