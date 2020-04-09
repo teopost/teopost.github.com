@@ -329,7 +329,7 @@ Per farlo agire come segue:&lt;/p&gt;</description>
       <guid>https://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/</guid>
       <description>Voglio installare un blog sulla raspberry. Per farlo, dopo aver installato un LAMP server, procedo come segue:
 Ecco cosa ho fatto:
-Preparare lo schema di DATABASE mysql -uroot -p&amp;lt;password&amp;gt; CREATE DATABASE wordpress; CREATE USER wordpressuser@localhost IDENTIFIED BY &amp;#39;wppassword&amp;#39; GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost; dove è la password di mysql che ho impostato durante l&amp;rsquo;installazione del LAMP server e wppassword è un esempio di password per l&amp;rsquo;utente wordpress che ho appenta creato su mysql</description>
+Preparare lo schema di DATABASE mysql -uroot -p&amp;lt;password&amp;gt; CREATE DATABASE wordpress; CREATE USER wordpressuser@localhost IDENTIFIED BY &amp;#39;wppassword&amp;#39; GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost; dove  è la password di mysql che ho impostato durante l&amp;rsquo;installazione del LAMP server e wppassword è un esempio di password per l&amp;rsquo;utente wordpress che ho appenta creato su mysql</description>
     </item>
     
     <item>
@@ -385,7 +385,7 @@ Creazione sito teopost.github.io Ho creato sul mio profilo github un repository 
       <guid>https://www.stefanoteodorani.it/sandbox/</guid>
       <description>Note This is a footnote.1
 Tabelle    Name Age     Bob 27   Alice 23    Task list  a task list item list syntax required incomplete completed  Esempi di link:  Link a una pagina esterna: Sergio Link a un articolo del blog: LAMP server  Esempio di quote  Nota quotata
- Esempi di shortcodes Buttons Scarica Pi-Kiosk da Git-Hub</description>
+ Esempi di shortcodes A notice disclaimer  A notice disclaimer  A notice disclaimer  A notice disclaimer  Buttons</description>
     </item>
     
   </channel>

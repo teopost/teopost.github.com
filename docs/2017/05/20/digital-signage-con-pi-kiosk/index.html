@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Digital signage con Pi-Kiosk &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.64.1" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -443,13 +443,25 @@ $ rm python_games
 </ul>
 <h2 id="aggiornamento-del-20-maggio-2017">Aggiornamento del 20 maggio 2017</h2>
 <p>Btsync è morto. Poco male. <a href="https://www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/">Sostituitelo con syncthing</a></p>
-<!-- raw HTML omitted -->
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<a  href="https://github.com/teopost/pi-kiosk" target="_blank"  class="btn btn-default">
+<p><i class="fa fa-github"></i></p>
 <p>Get source code from Git-Hub</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+</a>
+<br/>
+<!--
+
+Alcuni appunti:
+
+* https://info-beamer.com/blog/raspberry-pi-hardware-video-scaler
+* http://www.whizzy.org/wp-content/uploads/2012/11/cecsimple.sh_.txt
+
+# lista comandi
+echo h | cec-client -s -d 1
+
+# Attiva la porta cec come attiva
+echo "as" | cec-client -s
+
+-->
             </div>
             <footer class="article-footer">
     <a data-url="https://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/" data-id="cd47f510fcce96e77bf972b13d2f628c" class="article-share-link">

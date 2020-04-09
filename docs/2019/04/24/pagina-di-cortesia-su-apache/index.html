@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Pagina di cortesia su Apache &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.64.1" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -366,10 +366,10 @@ RewriteRule &quot;/(.*)$&quot; &quot;/500.html&quot; [L,NC]
 
 maintenance_file<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/tmp/maintenance.txt&#34;</span>
 
-<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $1 !<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;on&#34;</span> -a $1 !<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;off&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
       echo <span style="color:#e6db74">&#34;ERR: bad parameter&#34;</span>
-      echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Usage </span><span style="color:#66d9ef">$(</span>basename $0<span style="color:#66d9ef">)</span><span style="color:#e6db74"> [on|off]</span><span style="color:#e6db74">&#34;</span>
+      echo <span style="color:#e6db74">&#34;Usage </span><span style="color:#66d9ef">$(</span>basename $0<span style="color:#66d9ef">)</span><span style="color:#e6db74"> [on|off]&#34;</span>
       exit
    <span style="color:#66d9ef">fi</span>
 <span style="color:#66d9ef">else</span>
@@ -379,7 +379,7 @@ maintenance_file<span style="color:#f92672">=</span><span style="color:#e6db74">
       echo <span style="color:#e6db74">&#34;Maintenance mode is OFF&#34;</span>
    <span style="color:#66d9ef">fi</span>
 
-   echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Usage </span><span style="color:#66d9ef">$(</span>basename $0<span style="color:#66d9ef">)</span><span style="color:#e6db74"> [on|off]</span><span style="color:#e6db74">&#34;</span>
+   echo <span style="color:#e6db74">&#34;Usage </span><span style="color:#66d9ef">$(</span>basename $0<span style="color:#66d9ef">)</span><span style="color:#e6db74"> [on|off]&#34;</span>
    exit
 <span style="color:#66d9ef">fi</span>
 
@@ -417,8 +417,8 @@ $HOME_DIR/maintenance.sh on
   ssh root@<span style="color:#e6db74">${</span>remote_host<span style="color:#e6db74">}</span> <span style="color:#e6db74">&#34;/opt/scripts/maintenance.sh on&#34;</span>
 <span style="color:#66d9ef">fi</span>
 
-echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Maintenance mode ON for local site </span><span style="color:#66d9ef">$(</span>hostname<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
-echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Maintenance mode ON for remote site </span>$remote_host<span style="color:#e6db74">&#34;</span>
+echo <span style="color:#e6db74">&#34;Maintenance mode ON for local site </span><span style="color:#66d9ef">$(</span>hostname<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+echo <span style="color:#e6db74">&#34;Maintenance mode ON for remote site </span>$remote_host<span style="color:#e6db74">&#34;</span>
 </code></pre></div><h2 id="pianificazione-della-pagina-di-cortesia">Pianificazione della pagina di cortesia</h2>
 <p>In linux è possibile effettuare una schedulazione puntuale ed estemporanea con il comando at.</p>
 <p>Ora che non è necessario editare il file di configurazione per editare la pagina, possiamo mettere in manutenzione in sito ad un&rsquo;ora specifica con il seguente comando:</p>
@@ -429,7 +429,7 @@ echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Mainten
 /opt/scripts/maintenance.sh on &gt;&gt; /tmp/maintenance-status.log | at 09:00
 </code></pre></div><ul>
 <li>Puoi vedere la lista dei jobs at con il comando at -l</li>
-<li>Puoi cancellare un job con il comando atrm <!-- raw HTML omitted --> (vedi comando precedente)</li>
+<li>Puoi cancellare un job con il comando atrm <job-number> (vedi comando precedente)</li>
 </ul>
 <h2 id="riferimenti">Riferimenti</h2>
 <ul>

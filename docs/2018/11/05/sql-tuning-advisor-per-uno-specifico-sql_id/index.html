@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>SQL Tuning Advisor per uno specifico sql_id &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.64.1" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -346,47 +346,47 @@ Supponiamo che l&rsquo;ID sql sia - 87s8z2zzpsg88"/>
   l_sql_tune_task_id  VARCHAR2(<span style="color:#ae81ff">100</span>);
 <span style="color:#66d9ef">BEGIN</span>
   l_sql_tune_task_id :<span style="color:#f92672">=</span> DBMS_SQLTUNE.create_tuning_task (
-                          sql_id      <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">87s8z2zzpsg88</span><span style="color:#e6db74">&#39;</span>,
-                          <span style="color:#66d9ef">scope</span>       <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> DBMS_SQLTUNE.scope_comprehensive,
-                          time_limit  <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">500</span>,
-                          task_name   <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">87s8z2zzpsg88_tuning_task11</span><span style="color:#e6db74">&#39;</span>,
-                          description <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Tuning task1 for statement 87s8z2zzpsg88</span><span style="color:#e6db74">&#39;</span>);
-  DBMS_OUTPUT.put_line(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">l_sql_tune_task_id: </span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">|</span><span style="color:#f92672">|</span> l_sql_tune_task_id);
+                          sql_id      <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;87s8z2zzpsg88&#39;</span>,
+                          <span style="color:#66d9ef">scope</span>       <span style="color:#f92672">=&gt;</span> DBMS_SQLTUNE.scope_comprehensive,
+                          time_limit  <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">500</span>,
+                          task_name   <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;87s8z2zzpsg88_tuning_task11&#39;</span>,
+                          description <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;Tuning task1 for statement 87s8z2zzpsg88&#39;</span>);
+  DBMS_OUTPUT.put_line(<span style="color:#e6db74">&#39;l_sql_tune_task_id: &#39;</span> <span style="color:#f92672">||</span> l_sql_tune_task_id);
 <span style="color:#66d9ef">END</span>;
 <span style="color:#f92672">/</span>
 </code></pre></div><ul>
 <li>Esecuzione del tuning task</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">EXEC</span> DBMS_SQLTUNE.execute_tuning_task(task_name <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">87s8z2zzpsg88_tuning_task11</span><span style="color:#e6db74">&#39;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">EXEC</span> DBMS_SQLTUNE.execute_tuning_task(task_name <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;87s8z2zzpsg88_tuning_task11&#39;</span>);
 </code></pre></div><ul>
 <li>Recupero dei suggerimenti del tuning advisor</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">set</span> long <span style="color:#ae81ff">65536</span>
 <span style="color:#66d9ef">set</span> longchunksize <span style="color:#ae81ff">65536</span>
 <span style="color:#66d9ef">set</span> linesize <span style="color:#ae81ff">100</span>
-<span style="color:#66d9ef">select</span> dbms_sqltune.report_tuning_task(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">87s8z2zzpsg88_tuning_task11</span><span style="color:#e6db74">&#39;</span>) <span style="color:#66d9ef">from</span> dual;
+<span style="color:#66d9ef">select</span> dbms_sqltune.report_tuning_task(<span style="color:#e6db74">&#39;87s8z2zzpsg88_tuning_task11&#39;</span>) <span style="color:#66d9ef">from</span> dual;
 </code></pre></div><ul>
 <li>Vedere la lista dei task esistenti</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> TASK_NAME, STATUS <span style="color:#66d9ef">FROM</span> DBA_ADVISOR_LOG <span style="color:#66d9ef">WHERE</span> TASK_NAME <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">87s8z2zzpsg88_tuning_task11</span><span style="color:#e6db74">&#39;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> TASK_NAME, STATUS <span style="color:#66d9ef">FROM</span> DBA_ADVISOR_LOG <span style="color:#66d9ef">WHERE</span> TASK_NAME <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;87s8z2zzpsg88_tuning_task11&#39;</span>;
 </code></pre></div><ul>
 <li>Eliminare un task esistente</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">execute</span> dbms_sqltune.drop_tuning_task(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">87s8z2zzpsg88_tuning_task11</span><span style="color:#e6db74">&#39;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">execute</span> dbms_sqltune.drop_tuning_task(<span style="color:#e6db74">&#39;87s8z2zzpsg88_tuning_task11&#39;</span>);
 </code></pre></div><h2 id="se-il-sql_id-non-è-presente-nel-cursore-ma-lo-è-nello-snap-awr">Se il sql_id non è presente nel cursore, ma lo è nello snap AWR</h2>
 <p>Per prima cosa dobbiamo trovare lo snapshot di inizio e fine in cui si trova il sql_id</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">select</span>
   a.instance_number inst_id,
   a.snap_id,a.plan_hash_value,
-  to_char(begin_interval_time,<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">dd-mon-yy hh24:mi</span><span style="color:#e6db74">&#39;</span>) btime,
+  to_char(begin_interval_time,<span style="color:#e6db74">&#39;dd-mon-yy hh24:mi&#39;</span>) btime,
   <span style="color:#66d9ef">abs</span>(<span style="color:#66d9ef">extract</span>(<span style="color:#66d9ef">minute</span> <span style="color:#66d9ef">from</span> (end_interval_time<span style="color:#f92672">-</span>begin_interval_time)) <span style="color:#f92672">+</span> <span style="color:#66d9ef">extract</span>(hour <span style="color:#66d9ef">from</span> (end_interval_time<span style="color:#f92672">-</span>begin_interval_time))<span style="color:#f92672">*</span><span style="color:#ae81ff">60</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">extract</span>(<span style="color:#66d9ef">day</span> <span style="color:#66d9ef">from</span> (end_interval_time<span style="color:#f92672">-</span>begin_interval_time))<span style="color:#f92672">*</span><span style="color:#ae81ff">24</span><span style="color:#f92672">*</span><span style="color:#ae81ff">60</span>) minutes,
   executions_delta executions,
-  round(ELAPSED_TIME_delta<span style="color:#f92672">/</span><span style="color:#ae81ff">1000000</span><span style="color:#f92672">/</span>greatest(executions_delta,<span style="color:#ae81ff">1</span>),<span style="color:#ae81ff">4</span>) <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">avg duration (sec)</span><span style="color:#e6db74">&#34;</span>
+  round(ELAPSED_TIME_delta<span style="color:#f92672">/</span><span style="color:#ae81ff">1000000</span><span style="color:#f92672">/</span>greatest(executions_delta,<span style="color:#ae81ff">1</span>),<span style="color:#ae81ff">4</span>) <span style="color:#e6db74">&#34;avg duration (sec)&#34;</span>
 <span style="color:#66d9ef">from</span>
   dba_hist_SQLSTAT a,
   dba_hist_snapshot b
 <span style="color:#66d9ef">where</span>
-  sql_id<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&amp;sql_id</span><span style="color:#e6db74">&#39;</span>
+  sql_id<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&amp;sql_id&#39;</span>
 <span style="color:#66d9ef">and</span> a.snap_id<span style="color:#f92672">=</span>b.snap_id
 <span style="color:#66d9ef">and</span> a.instance_number<span style="color:#f92672">=</span>b.instance_number
 <span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span>
@@ -403,21 +403,21 @@ Supponiamo che l&rsquo;ID sql sia - 87s8z2zzpsg88"/>
   l_sql_tune_task_id  VARCHAR2(<span style="color:#ae81ff">100</span>);
 <span style="color:#66d9ef">BEGIN</span>
   l_sql_tune_task_id :<span style="color:#f92672">=</span> DBMS_SQLTUNE.create_tuning_task (
-                          begin_snap  <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">235</span>,
-                          end_snap    <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">240</span>,
-                          sql_id      <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">24pzs2d6a6b13</span><span style="color:#e6db74">&#39;</span>,
-                          <span style="color:#66d9ef">scope</span>       <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> DBMS_SQLTUNE.scope_comprehensive,
-                          time_limit  <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">60</span>,
-                          task_name   <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">24pzs2d6a6b13_AWR_tuning_task</span><span style="color:#e6db74">&#39;</span>,
-                          description <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Tuning task for statement 24pzs2d6a6b13  in AWR</span><span style="color:#e6db74">&#39;</span>);
-  DBMS_OUTPUT.put_line(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">l_sql_tune_task_id: </span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">|</span><span style="color:#f92672">|</span> l_sql_tune_task_id);
+                          begin_snap  <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">235</span>,
+                          end_snap    <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">240</span>,
+                          sql_id      <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;24pzs2d6a6b13&#39;</span>,
+                          <span style="color:#66d9ef">scope</span>       <span style="color:#f92672">=&gt;</span> DBMS_SQLTUNE.scope_comprehensive,
+                          time_limit  <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">60</span>,
+                          task_name   <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;24pzs2d6a6b13_AWR_tuning_task&#39;</span>,
+                          description <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;Tuning task for statement 24pzs2d6a6b13  in AWR&#39;</span>);
+  DBMS_OUTPUT.put_line(<span style="color:#e6db74">&#39;l_sql_tune_task_id: &#39;</span> <span style="color:#f92672">||</span> l_sql_tune_task_id);
 <span style="color:#66d9ef">END</span>;
 <span style="color:#f92672">/</span>
 
 </code></pre></div><ul>
 <li>Eseguiamo il tuning task</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">EXEC</span> DBMS_SQLTUNE.execute_tuning_task(task_name <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">24pzs2d6a6b13_AWR_tuning_task</span><span style="color:#e6db74">&#39;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">EXEC</span> DBMS_SQLTUNE.execute_tuning_task(task_name <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;24pzs2d6a6b13_AWR_tuning_task&#39;</span>);
 </code></pre></div><ul>
 <li>Recuperiamo i suggerimenti del tuning advisor</li>
 </ul>
@@ -425,7 +425,7 @@ Supponiamo che l&rsquo;ID sql sia - 87s8z2zzpsg88"/>
 <span style="color:#66d9ef">SET</span> PAGESIZE <span style="color:#ae81ff">100000000</span>
 
 <span style="color:#66d9ef">SET</span> LINESIZE <span style="color:#ae81ff">200</span>
-<span style="color:#66d9ef">SELECT</span> DBMS_SQLTUNE.report_tuning_task(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">24pzs2d6a6b13_AWR_tuning_task</span><span style="color:#e6db74">&#39;</span>) <span style="color:#66d9ef">AS</span> recommendations <span style="color:#66d9ef">FROM</span> dual;
+<span style="color:#66d9ef">SELECT</span> DBMS_SQLTUNE.report_tuning_task(<span style="color:#e6db74">&#39;24pzs2d6a6b13_AWR_tuning_task&#39;</span>) <span style="color:#66d9ef">AS</span> recommendations <span style="color:#66d9ef">FROM</span> dual;
 <span style="color:#66d9ef">SET</span> PAGESIZE <span style="color:#ae81ff">24</span>
 </code></pre></div><h2 id="riferimenti">Riferimenti</h2>
 <ul>

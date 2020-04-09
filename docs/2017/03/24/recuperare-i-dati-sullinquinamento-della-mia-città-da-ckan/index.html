@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Recuperare i dati sull&#39;inquinamento della mia città da CKAN &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.64.1" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -379,8 +379,8 @@ In questa lista di dati, i campi che ci interessano sono:</p>
 <li>5: Il dato che identifica i PM10</li>
 </ul>
 <p>Bene, ora grazie a questi dati posso inviare una query a CKAN tipo questa:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">a1c46cfe-46e5-44b4-9231-7d9260a38e68</span><span style="color:#e6db74">&#34;</span>
-<span style="color:#66d9ef">WHERE</span> station_id <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">6000031</span><span style="color:#e6db74">&#39;</span> <span style="color:#66d9ef">and</span> reftime<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">2017-02-22T00:00:00</span><span style="color:#e6db74">&#39;</span><span style="color:#66d9ef">and</span> variable_id<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">&#34;a1c46cfe-46e5-44b4-9231-7d9260a38e68&#34;</span>
+<span style="color:#66d9ef">WHERE</span> station_id <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;6000031&#39;</span> <span style="color:#66d9ef">and</span> reftime<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;2017-02-22T00:00:00&#39;</span><span style="color:#66d9ef">and</span> variable_id<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
 </code></pre></div><p>per farlo basta sostituire con caratteri d&rsquo;escape spazi, apici e affini, nonchè passarlo in query string, incollarlo nel browser e il gioco è fatto.</p>
 <pre><code>https://dati.arpae.it/api/action/datastore_search_sql?sql=SELECT%20*%20from%20%22a1c46cfe-46e5-44b4-9231-7d9260a38e68%22%20WHERE%20station_id%20=%20%276000031%27%20and%20reftime=%272017-02-22T00:00:00%27and%20variable_id=5
 </code></pre>
@@ -420,20 +420,20 @@ In questa lista di dati, i campi che ci interessano sono:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/usr/bin/python</span>
 <span style="color:#75715e"># -*- coding: utf-8 -*-</span>
 
-__author__ <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">teopost</span><span style="color:#e6db74">&#39;</span>
+__author__ <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;teopost&#39;</span>
 
 <span style="color:#f92672">import</span> urllib
 <span style="color:#f92672">import</span> json
 
 
-url <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">https://dati.arpae.it/api/action/datastore_search_sql?sql=SELECT * from </span><span style="color:#e6db74">%</span><span style="color:#e6db74">22a1c46cfe-46e5-44b4-9231-7d9260a38e68</span><span style="color:#e6db74">%</span><span style="color:#e6db74">22 WHERE station_id = </span><span style="color:#e6db74">%276000031%</span><span style="color:#e6db74">27 and reftime=</span><span style="color:#e6db74">%</span><span style="color:#e6db74">272017-02-22T00:00:00</span><span style="color:#e6db74">%</span><span style="color:#e6db74">27 and variable_id=5 order by value desc</span><span style="color:#e6db74">&#34;</span>
+url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://dati.arpae.it/api/action/datastore_search_sql?sql=SELECT * from %22a1c46cfe-46e5-44b4-9231-7d9260a38e68%22 WHERE station_id = </span><span style="color:#e6db74">%276000031%</span><span style="color:#e6db74">27 and reftime=%272017-02-22T00:00:00%27 and variable_id=5 order by value desc&#34;</span>
 
 fileobj <span style="color:#f92672">=</span> urllib<span style="color:#f92672">.</span>urlopen(url)
-results <span style="color:#f92672">=</span> fileobj<span style="color:#f92672">.</span>read()<span style="color:#f92672">.</span>decode(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">utf-8</span><span style="color:#e6db74">&#34;</span>)
+results <span style="color:#f92672">=</span> fileobj<span style="color:#f92672">.</span>read()<span style="color:#f92672">.</span>decode(<span style="color:#e6db74">&#34;utf-8&#34;</span>)
 
 data <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>loads(results)
 
-<span style="color:#66d9ef">print</span> data[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">result</span><span style="color:#e6db74">&#34;</span>][<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">records</span><span style="color:#e6db74">&#34;</span>][<span style="color:#ae81ff">0</span>][<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">value</span><span style="color:#e6db74">&#34;</span>]
+<span style="color:#66d9ef">print</span> data[<span style="color:#e6db74">&#34;result&#34;</span>][<span style="color:#e6db74">&#34;records&#34;</span>][<span style="color:#ae81ff">0</span>][<span style="color:#e6db74">&#34;value&#34;</span>]
 
 </code></pre></div><p>e cioè, il giorno 23 Marzo 2017, a Savignano sul Rubicone, i livello di PM10 rilevato era 54 µg/m3 (il limite consentito per legge è 50 µg/m3).
 Forse era meglio non saperlo !</p>
@@ -446,11 +446,11 @@ Forse era meglio non saperlo !</p>
 <li><a href="http://service.arpa.emr.it/qualita-aria/bollettino.aspx?prov=FC">http://service.arpa.emr.it/qualita-aria/bollettino.aspx?prov=FC</a></li>
 <li><a href="https://www.arpae.it/liberiamo/dati_giornalieri_14gg.asp?idlivello=821">https://www.arpae.it/liberiamo/dati_giornalieri_14gg.asp?idlivello=821</a></li>
 </ul>
-<!-- raw HTML omitted -->
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<a  href="https://gist.github.com/teopost/299bb00cea2988bfae3994cc1af2900a" target="_blank"  class="btn btn-default">
+<p><i class="fa fa-github"></i></p>
 <p>Get source code from Git-Hub</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+</a>
+<br/>
 
             </div>
             <footer class="article-footer">
