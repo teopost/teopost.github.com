@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Liquibase vs Flyway &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.64.1" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -510,7 +510,7 @@ Tale funzionalità non è presente in Flyway</p>
 <h2 id="sql-placeholder">SQL Placeholder</h2>
 <p>I files SQL, in Flyway possono contenere i placeholder. Vere e proprie variabili che possono essere sostituite in fase di esecuzione:</p>
 <p>Esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#960050;background-color:#1e0010">{</span>tableName<span style="color:#960050;background-color:#1e0010">}</span> (name) <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Mr. T</span><span style="color:#e6db74">&#39;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#960050;background-color:#1e0010">${</span>tableName<span style="color:#960050;background-color:#1e0010">}</span> (name) <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;Mr. T&#39;</span>);
 </code></pre></div><p>Tali placeholder possono essere valorizzati in files di properties.</p>
 <p>Liquibase non dispone di questa funzionalità</p>
 <h2 id="baseline">Baseline</h2>
@@ -526,16 +526,16 @@ Questo consente di eseguire migrazioni fino ad una specifica baseline.</p>
 </code></pre></div><p>Faccio un esempio più interessate basato su file SQL
 Diciamo che dobbiamo inserire un valore nella STORECONF solo se non presente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">--preconditions onFail:WARN onError:HALT
-</span><span style="color:#75715e"></span><span style="color:#75715e">--precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM STORECONF where STOREENT_ID=&#39;1000&#39; and NAME=&#39;CreateOrderServiceURL&#39;
+</span><span style="color:#75715e">--precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM STORECONF where STOREENT_ID=&#39;1000&#39; and NAME=&#39;CreateOrderServiceURL&#39;
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">insert</span> <span style="color:#66d9ef">into</span> STORECONF (STOREENT_ID, NAME, VALUE,...)
-<span style="color:#66d9ef">values</span> (<span style="color:#ae81ff">1000</span>, <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">CreateOrderServiceURL</span><span style="color:#e6db74">&#39;</span>,...)
+<span style="color:#66d9ef">values</span> (<span style="color:#ae81ff">1000</span>, <span style="color:#e6db74">&#39;CreateOrderServiceURL&#39;</span>,...)
 </code></pre></div><h2 id="context">Context</h2>
 <p>Talvolta esistono situazioni in cui statement SQL devono essere eseguiti solo se si è su un determinato ambiente (DEV piuttosto che PROD).</p>
 <p>Con liquibase è possibile definire i context per questo scopo.</p>
 <p>In questo esempio, l&rsquo;insert viene effettuata solo se si è nell&rsquo;ambiente UAT.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">--changeset teodorani:3 context=UAT
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">insert</span> <span style="color:#66d9ef">into</span> STORECONF (STOREENT_ID, NAME, VALUE,...)
-<span style="color:#66d9ef">values</span> (<span style="color:#ae81ff">1000</span>, <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">CreateOrderServiceURL</span><span style="color:#e6db74">&#39;</span>,...)
+<span style="color:#66d9ef">values</span> (<span style="color:#ae81ff">1000</span>, <span style="color:#e6db74">&#39;CreateOrderServiceURL&#39;</span>,...)
 </code></pre></div><p>I context vengono passati via command-line a liquibase in fase di migrazione.</p>
 <ul>
 <li>Elenco pre-condition: <a href="http://www.liquibase.org/documentation/preconditions.html">http://www.liquibase.org/documentation/preconditions.html</a></li>

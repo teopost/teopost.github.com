@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Oracle grants remapper &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.64.1" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -367,17 +367,17 @@ QUICK_SUPPORT<span style="color:#f92672">=</span>QUICK_SUPPORT
 </ul>
 <p>In coda a questi parametri c&rsquo;e&rsquo; una sezione in cui si effettua il remapping vero e proprio degli schemi.</p>
 <p>Se ad esempio sull&rsquo;istanza di origine dovesse esistere un grant come questo:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">EXECUTE</span> <span style="color:#66d9ef">ON</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">SCHEMA_UNIBOCCONI_PROD</span><span style="color:#e6db74">&#34;</span>.<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">TABELLA_01</span><span style="color:#e6db74">&#34;</span> <span style="color:#66d9ef">TO</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">SCHEMA_UNIBOCCONI_PROD_READ</span><span style="color:#e6db74">&#34;</span>;
-<span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> SYNONYM <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">SCHEMA_UNIBOCCONI_PROD_READ</span><span style="color:#e6db74">&#34;</span>.<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">SYN_TABELLA_01</span><span style="color:#e6db74">&#34;</span> <span style="color:#66d9ef">FOR</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">SCHEMA_UNIBOCCONI_PROD</span><span style="color:#e6db74">&#34;</span>.<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">TABELLA_01</span><span style="color:#e6db74">&#34;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">EXECUTE</span> <span style="color:#66d9ef">ON</span> <span style="color:#e6db74">&#34;SCHEMA_UNIBOCCONI_PROD&#34;</span>.<span style="color:#e6db74">&#34;TABELLA_01&#34;</span> <span style="color:#66d9ef">TO</span> <span style="color:#e6db74">&#34;SCHEMA_UNIBOCCONI_PROD_READ&#34;</span>;
+<span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> SYNONYM <span style="color:#e6db74">&#34;SCHEMA_UNIBOCCONI_PROD_READ&#34;</span>.<span style="color:#e6db74">&#34;SYN_TABELLA_01&#34;</span> <span style="color:#66d9ef">FOR</span> <span style="color:#e6db74">&#34;SCHEMA_UNIBOCCONI_PROD&#34;</span>.<span style="color:#e6db74">&#34;TABELLA_01&#34;</span>;
 </code></pre></div><p>sulla base del file di configurazione riportato in esempio verra&rsquo; creato il seguente script</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">EXECUTE</span> <span style="color:#66d9ef">ON</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">SCHEMA_UNIBOCCONI_PREPROD</span><span style="color:#e6db74">&#34;</span>.<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">TABELLA_01</span><span style="color:#e6db74">&#34;</span> <span style="color:#66d9ef">TO</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">SCHEMA_UNIBOCCONI_PREPROD_READ</span><span style="color:#e6db74">&#34;</span>;
-<span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> SYNONYM <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">SCHEMA_UNIBOCCONI_PREPROD_READ</span><span style="color:#e6db74">&#34;</span>.<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">SYN_TABELLA_01</span><span style="color:#e6db74">&#34;</span> <span style="color:#66d9ef">FOR</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">SCHEMA_UNIBOCCONI_PREPROD</span><span style="color:#e6db74">&#34;</span>.<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">TABELLA_01</span><span style="color:#e6db74">&#34;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">EXECUTE</span> <span style="color:#66d9ef">ON</span> <span style="color:#e6db74">&#34;SCHEMA_UNIBOCCONI_PREPROD&#34;</span>.<span style="color:#e6db74">&#34;TABELLA_01&#34;</span> <span style="color:#66d9ef">TO</span> <span style="color:#e6db74">&#34;SCHEMA_UNIBOCCONI_PREPROD_READ&#34;</span>;
+<span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> SYNONYM <span style="color:#e6db74">&#34;SCHEMA_UNIBOCCONI_PREPROD_READ&#34;</span>.<span style="color:#e6db74">&#34;SYN_TABELLA_01&#34;</span> <span style="color:#66d9ef">FOR</span> <span style="color:#e6db74">&#34;SCHEMA_UNIBOCCONI_PREPROD&#34;</span>.<span style="color:#e6db74">&#34;TABELLA_01&#34;</span>;
 </code></pre></div><p>A questo punto, basta eseguire lo script sullo schema di destinazione per rigenerare i grants e i sinonimi giusti.</p>
-<!-- raw HTML omitted -->
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<a  href="https://github.com/teopost/oracle-grants-remapper" target="_blank"  class="btn btn-default">
+<p><i class="fa fa-github"></i></p>
 <p>Get source code from Git-Hub</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+</a>
+<br/>
             </div>
             <footer class="article-footer">
     <a data-url="https://www.stefanoteodorani.it/2017/05/17/oracle-grants-remapper/" data-id="506c227b90e1031402c2cda2093a9937" class="article-share-link">

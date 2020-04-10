@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Disabilitare l&#39;autenticazione in Ubuntu Software Center &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.64.1" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -355,10 +355,10 @@ sudo gedit /usr/share/polkit-1/actions/org.debian.apt.policy
 <pre><code>org.debian.apt.install-or-remove-packages
 </code></pre></li>
 <li>
-<p>Sotto la linea <!-- raw HTML omitted -->, modificare le 3 linee con questo:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;allow_any</span><span style="color:#f92672">&gt;</span>yes<span style="color:#f92672">&lt;/allow_any&gt;</span>
-<span style="color:#f92672">&lt;allow_inactive</span><span style="color:#f92672">&gt;</span>yes<span style="color:#f92672">&lt;/allow_inactive&gt;</span>
-<span style="color:#f92672">&lt;allow_active</span><span style="color:#f92672">&gt;</span>yes<span style="color:#f92672">&lt;/allow_active&gt;</span>
+<p>Sotto la linea <defaults>, modificare le 3 linee con questo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;allow_any&gt;</span>yes<span style="color:#f92672">&lt;/allow_any&gt;</span>
+<span style="color:#f92672">&lt;allow_inactive&gt;</span>yes<span style="color:#f92672">&lt;/allow_inactive&gt;</span>
+<span style="color:#f92672">&lt;allow_active&gt;</span>yes<span style="color:#f92672">&lt;/allow_active&gt;</span>
 </code></pre></div></li>
 <li>
 <p>Cliccare Save and exit. Non è necessario far ripartire Ubuntu.</p>

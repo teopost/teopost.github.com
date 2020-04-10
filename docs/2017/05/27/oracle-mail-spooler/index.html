@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Oracle mail spooler &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.64.1" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -39,7 +39,7 @@
 <meta itemprop="description" content="Può capitare di dover mandare mail da Oracle ? Si. Ho fatto questo script per l&rsquo;invio di mail da una istanza Oracle per risolvere un problema immediato, e siccome non c&#39;è niente di più definitivo delle cose provvisorie, eccolo qui come se fosse un prodotto finito.">
 <meta itemprop="datePublished" content="2017-05-27T23:35:16&#43;02:00" />
 <meta itemprop="dateModified" content="2017-05-27T23:35:16&#43;02:00" />
-<meta itemprop="wordCount" content="594">
+<meta itemprop="wordCount" content="596">
 
 
 
@@ -291,7 +291,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2017-05-27 23:35:16 &#43;0200 CEST" itemprop="datePublished">27-05-2017</time>
             &middot;
-            594
+            596
             words
             &middot;
             3
@@ -375,7 +375,7 @@
 </tbody>
 </table>
 <h2 id="schema">Schema</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">/*</span><span style="color:#75715e"> 1. Eseguire come utente system </span><span style="color:#75715e">*/</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">/* 1. Eseguire come utente system */</span>
 
 <span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">USER</span>  MAIL_QUEUE <span style="color:#66d9ef">CASCADE</span>;
 
@@ -422,14 +422,14 @@ Al primo utilizzo è consigliabile creare 2 sinomini per accedere piu&rsquo; fac
 <p>Per poter effettuare chiamate http, smtp, ssh, ecc direttamente da una istanza oracle è necessario attivare specifiche ACL.
 Per fare questo collegarsi come utente system e creato la necessaria ACL, quindi:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">-- Eseguire come system
-</span><span style="color:#75715e"></span><span style="color:#75715e">-- Creo una ACL per il mio utente MAIL_QUEUE
+</span><span style="color:#75715e">-- Creo una ACL per il mio utente MAIL_QUEUE
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">BEGIN</span>
   DBMS_NETWORK_ACL_ADMIN.create_acl (
-    acl          <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">mail_queue.xml</span><span style="color:#e6db74">&#39;</span>,
-    description  <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Acl per invio mail da utente MAIL_QUEUE</span><span style="color:#e6db74">&#39;</span>,
-    principal    <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">MAIL_QUEUE</span><span style="color:#e6db74">&#39;</span>,
-    is_grant     <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">TRUE</span>,
-    privilege    <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">connect</span><span style="color:#e6db74">&#39;</span>);
+    acl          <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;mail_queue.xml&#39;</span>,
+    description  <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;Acl per invio mail da utente MAIL_QUEUE&#39;</span>,
+    principal    <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;MAIL_QUEUE&#39;</span>,
+    is_grant     <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">TRUE</span>,
+    privilege    <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;connect&#39;</span>);
 
   <span style="color:#66d9ef">COMMIT</span>;
 <span style="color:#66d9ef">END</span>;
@@ -438,29 +438,29 @@ Per fare questo collegarsi come utente system e creato la necessaria ACL, quindi
 <span style="color:#75715e">-- Add privilege of ACL to user MAIL_QUEUE
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">BEGIN</span>
   DBMS_NETWORK_ACL_ADMIN.ADD_PRIVILEGE
-    (acl      <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">mail_queue.xml</span><span style="color:#e6db74">&#39;</span>,
-    principal <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">MAIL_QUEUE</span><span style="color:#e6db74">&#39;</span>,
-    is_grant  <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span>  <span style="color:#66d9ef">true</span>,
-    privilege <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">resolve</span><span style="color:#e6db74">&#39;</span>);
+    (acl      <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;mail_queue.xml&#39;</span>,
+    principal <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;MAIL_QUEUE&#39;</span>,
+    is_grant  <span style="color:#f92672">=&gt;</span>  <span style="color:#66d9ef">true</span>,
+    privilege <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;resolve&#39;</span>);
   <span style="color:#66d9ef">commit</span>;
 <span style="color:#66d9ef">END</span>;
 <span style="color:#f92672">/</span>
 
 <span style="color:#66d9ef">BEGIN</span>
   DBMS_NETWORK_ACL_ADMIN.assign_acl (
-    acl <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">mail_queue.xml</span><span style="color:#e6db74">&#39;</span>,
-    <span style="color:#66d9ef">host</span> <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">smtp.universita.it</span><span style="color:#e6db74">&#39;</span>,
-    lower_port <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">25</span>,
-    upper_port <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">NULL</span>);
+    acl <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;mail_queue.xml&#39;</span>,
+    <span style="color:#66d9ef">host</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;smtp.universita.it&#39;</span>,
+    lower_port <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">25</span>,
+    upper_port <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">NULL</span>);
   <span style="color:#66d9ef">COMMIT</span>;
 <span style="color:#66d9ef">END</span>;
 <span style="color:#f92672">/</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">/*</span><span style="color:#75715e"> Controllo che l&#39;ACL sia stata creata </span><span style="color:#75715e">*/</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">/* Controllo che l&#39;ACL sia stata creata */</span>
 <span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> dba_network_acls
 </code></pre></div><h2 id="invio-della-mail">Invio della mail</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">-- Mette in coda la mail per la spedizione
-</span><span style="color:#75715e"></span><span style="color:#75715e">-- 1 è il numero mailbox configurato in MAIL_BOXES)
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">exec</span> MAIL_QUEUE.MAIL_QUEUE (<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Oggetto</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Testo in formato TXT</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Testo in formato HTML</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">destinatazio@gmail.com</span><span style="color:#e6db74">&#39;</span>, <span style="color:#ae81ff">1</span>)
+</span><span style="color:#75715e">-- 1 è il numero mailbox configurato in MAIL_BOXES)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">exec</span> MAIL_QUEUE.MAIL_QUEUE (<span style="color:#e6db74">&#39;Oggetto&#39;</span>, <span style="color:#e6db74">&#39;Testo in formato TXT&#39;</span>, <span style="color:#e6db74">&#39;Testo in formato HTML&#39;</span>, <span style="color:#e6db74">&#39;destinatazio@gmail.com&#39;</span>, <span style="color:#ae81ff">1</span>)
 
 <span style="color:#75715e">-- Invia la mail
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">exec</span> MAIL_QUEUE.SEND_QUEUE
@@ -476,11 +476,11 @@ Per fare questo collegarsi come utente system e creato la necessaria ACL, quindi
 <li><a href="http://oracle-base.com/articles/misc/email-from-oracle-plsql.php">http://oracle-base.com/articles/misc/email-from-oracle-plsql.php</a></li>
 <li><a href="https://arkatec.wordpress.com/2011/08/15/sending-email-using-oracle-database-and-google-mail-service/">https://arkatec.wordpress.com/2011/08/15/sending-email-using-oracle-database-and-google-mail-service/</a></li>
 </ul>
-<!-- raw HTML omitted -->
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<a  href="https://github.com/teopost/oracle-mail-spooler/" target="_blank"  class="btn btn-default">
+<p><i class="fa fa-github"></i></p>
 <p>Scarica da Git-Hub</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+</a>
+<br/>
             </div>
             <footer class="article-footer">
     <a data-url="https://www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/" data-id="597d98b41a54834334a36e6f7f1af937" class="article-share-link">

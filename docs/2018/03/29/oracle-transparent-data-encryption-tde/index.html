@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Oracle Transparent Data Encryption (TDE) &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.64.1" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -41,7 +41,7 @@ Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dat
 Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dati, quindi se avete sui vostri server i databases dei vostri clienti, cominciate a tremare perchè le multe sono salatissime.">
 <meta itemprop="datePublished" content="2018-03-29T09:18:00&#43;01:00" />
 <meta itemprop="dateModified" content="2018-03-29T09:18:00&#43;01:00" />
-<meta itemprop="wordCount" content="933">
+<meta itemprop="wordCount" content="1036">
 
 
 
@@ -294,7 +294,7 @@ Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dat
             <i class="fa fa-calendar"></i>
             <time datetime="2018-03-29 09:18:00 &#43;0100 &#43;0100" itemprop="datePublished">29-03-2018</time>
             &middot;
-            933
+            1036
             words
             &middot;
             5
@@ -351,7 +351,9 @@ Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dat
 </ol>
 <h2 id="creare-il-wallet">Creare il wallet</h2>
 <p>Per criptare i dati, è necessario creare un wallet, e per farlo occorre prima creare la cartella che deve ospitare tale wallet.</p>
-<!-- raw HTML omitted -->
+<div class="notices info" >
+Oracle consiglia di creare il wallet all'esterno dell'albero di directory $ORACLE_BASE per evitare di archiviare accidentalmente il wallet con i dati crittografati su un supporto di backup. La cartella suggerita da Oracle è ```/etc/ORACLE/WALLETS/<$ORACLE_UNQNAME>```.
+</div>
 <p>Per comodità da adesso in avanti sostituiamo &lt;$ORACLE_UNQNAME&gt; con DB01, quindi come utente root:</p>
 <pre><code># cd /etc
 # mkdir -pv oracle/wallets/DB01
@@ -365,7 +367,11 @@ Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dat
   (SOURCE = (METHOD = FILE)
     (METHOD_DATA =
       (DIRECTORY = /etc/oracle/wallets/DB01/)))
-</code></pre><!-- raw HTML omitted -->
+</code></pre><div class="notices info" >
+Se non diversamente configurato nel file sqlnet.ora, Oracle cerca il wallet in $ORACLE_BASE/admin/DB01/wallet/.
+Si può verificare questa configurazione facendo una query sulla vista di sistema V$ENCRYPTION_WALLET prima di modificare il file sqlnet.ora.
+E' importante sapere che se si modifica tale percorso (come suggerito nell'articolo), occorre effettuare uno shutdown e uno statup dell'istanza per far leggere ad Oracle la nuova configurazione.
+</div>
 <h2 id="creare-il-wallet-1">Creare il wallet</h2>
 <p>Entrare come utente SYS o comunque con un utente che abbia il ruolo SYSKM, ed eseguire:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># sqlplus / as sysdba</span>
@@ -376,11 +382,13 @@ NAME                <span style="color:#66d9ef">TYPE</span>     VALUE
 </span><span style="color:#75715e"></span>compatible          string   <span style="color:#ae81ff">12</span>.<span style="color:#ae81ff">1</span>.<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">2</span>.<span style="color:#ae81ff">0</span>
 noncdb_compatible   boolean  <span style="color:#66d9ef">FALSE</span>
 </code></pre></div><p>A questo punto possiamo creare il wallet (file p12 nella cartella wallet) specificando una master key password:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SQL</span><span style="color:#f92672">&gt;</span> ADMINISTER <span style="color:#66d9ef">KEY</span> MANAGEMENT <span style="color:#66d9ef">CREATE</span> KEYSTORE <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">/u01/app/oracle/admin/DB01/wallet</span><span style="color:#e6db74">&#39;</span> identified <span style="color:#66d9ef">by</span> walletpwd;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SQL</span><span style="color:#f92672">&gt;</span> ADMINISTER <span style="color:#66d9ef">KEY</span> MANAGEMENT <span style="color:#66d9ef">CREATE</span> KEYSTORE <span style="color:#e6db74">&#39;/u01/app/oracle/admin/DB01/wallet&#39;</span> identified <span style="color:#66d9ef">by</span> walletpwd;
 keystore altered.
 <span style="color:#66d9ef">SQL</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">host</span> ls <span style="color:#f92672">/</span>etc<span style="color:#f92672">/</span>oracle<span style="color:#f92672">/</span>wallets<span style="color:#f92672">/</span>DB01<span style="color:#f92672">/</span>
 ewallet.p12
-</code></pre></div><!-- raw HTML omitted -->
+</code></pre></div><div class="notices warning" >
+walletpwd è la password del wallet. Non perdetela assolutamente!!!!
+</div>
 <h2 id="aprire-il-wallet">Aprire il wallet</h2>
 <p>Apriamo il wallet. Il wallet rimane aperto fino a quando non si fa lo shutdown (a meno che non venga creato di tipo auto_login).
 Chiudere il wallet permette di disabilitare l&rsquo;accesso alla masterkey e di inibile l&rsquo;accesso ai dati criptati.</p>
@@ -389,12 +397,12 @@ Chiudere il wallet permette di disabilitare l&rsquo;accesso alla masterkey e di 
 <p>Ora che il wallet è aperto, occorre creare la chiave (master encryption key).
 Il seguente comando crea la chiave e contestualmente, per sicurezza, ne crea anche una copia di backup.
 Se si sputtana questo file sono <a href="https://www.youtube.com/watch?v=KeCwQjhX-R8">volatili per diabetici</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SQL</span><span style="color:#f92672">&gt;</span> ADMINISTER <span style="color:#66d9ef">KEY</span> MANAGEMENT <span style="color:#66d9ef">SET</span> <span style="color:#66d9ef">KEY</span> IDENTIFIED <span style="color:#66d9ef">BY</span> walletpwd <span style="color:#66d9ef">WITH</span> BACKUP <span style="color:#66d9ef">USING</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">key_backup</span><span style="color:#e6db74">&#39;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SQL</span><span style="color:#f92672">&gt;</span> ADMINISTER <span style="color:#66d9ef">KEY</span> MANAGEMENT <span style="color:#66d9ef">SET</span> <span style="color:#66d9ef">KEY</span> IDENTIFIED <span style="color:#66d9ef">BY</span> walletpwd <span style="color:#66d9ef">WITH</span> BACKUP <span style="color:#66d9ef">USING</span> <span style="color:#e6db74">&#39;key_backup&#39;</span>;
 </code></pre></div><h2 id="creare-la-tablespace-encrypted">Creare la Tablespace Encrypted</h2>
 <p>Per creare la tablespace encripted usare questa sintassi</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> TABLESPACE USERS_CRYPT 
     DATAFILE 
-        <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">/u01/app/oracle/oradata/DB01/users01_crypt.dbf</span><span style="color:#e6db74">&#39;</span> 
+        <span style="color:#e6db74">&#39;/u01/app/oracle/oradata/DB01/users01_crypt.dbf&#39;</span> 
         <span style="color:#66d9ef">SIZE</span> <span style="color:#ae81ff">5242880</span> AUTOEXTEND <span style="color:#66d9ef">ON</span> <span style="color:#66d9ef">NEXT</span> <span style="color:#ae81ff">1310720</span> MAXSIZE <span style="color:#ae81ff">34358689792</span> 
         BLOCKSIZE <span style="color:#ae81ff">8192</span> 
     <span style="color:#66d9ef">DEFAULT</span> 
@@ -403,7 +411,7 @@ Se si sputtana questo file sono <a href="https://www.youtube.com/watch?v=KeCwQjh
     ONLINE 
     SEGMENT <span style="color:#66d9ef">SPACE</span> MANAGEMENT AUTO 
     EXTENT MANAGEMENT <span style="color:#66d9ef">LOCAL</span> AUTOALLOCATE
-        ENCRYPTION <span style="color:#66d9ef">USING</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">AES256</span><span style="color:#e6db74">&#39;</span>;
+        ENCRYPTION <span style="color:#66d9ef">USING</span> <span style="color:#e6db74">&#39;AES256&#39;</span>;
 </code></pre></div><p>Et voilà. Da adesso in poi, tutti gli oggetti creati su questa tablespace verranno scritti sul filesystem in modo criptato.
 Poichè non è possibile criptare una tablespace esistente, per mettere i dati nella nuova tablespace ci sono 2 modi:</p>
 <ol>
@@ -413,7 +421,7 @@ Poichè non è possibile criptare una tablespace esistente, per mettere i dati n
 <h2 id="creare-un-wallet-auto_login">Creare un wallet AUTO_LOGIN</h2>
 <p>Per evitare di dover riaprire sempre manualmente il wallet, è possibile crearlo di tipo AUTOLOGIN. Un Wallet autologin si riapre automaticamente ogni volta che il database viene fatto ripartire.</p>
 <p>Il comando è il seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SQL</span><span style="color:#f92672">&gt;</span> ADMINISTER <span style="color:#66d9ef">KEY</span> MANAGEMENT <span style="color:#66d9ef">CREATE</span> AUTO_LOGIN KEYSTORE <span style="color:#66d9ef">FROM</span> KEYSTORE <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">/u01/app/oracle/admin/INTDB01/wallet</span><span style="color:#e6db74">&#39;</span> IDENTIFIED <span style="color:#66d9ef">BY</span> walletpwd;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SQL</span><span style="color:#f92672">&gt;</span> ADMINISTER <span style="color:#66d9ef">KEY</span> MANAGEMENT <span style="color:#66d9ef">CREATE</span> AUTO_LOGIN KEYSTORE <span style="color:#66d9ef">FROM</span> KEYSTORE <span style="color:#e6db74">&#39;/u01/app/oracle/admin/INTDB01/wallet&#39;</span> IDENTIFIED <span style="color:#66d9ef">BY</span> walletpwd;
 </code></pre></div><h2 id="disabilitare-lauto_login-da-un-wallet-esistente">Disabilitare l&rsquo;AUTO_LOGIN da un wallet esistente</h2>
 <p>Un wallet autologin è comodo, ma è molto meno sicuro. Un malintenzionato puo&rsquo; accedere ai dati semplicemente facendo ripartire l&rsquo;istanza.
 Se volete disabilitare l&rsquo;AUTO_LOGIN potete sempre farlo in questo modo:</p>
