@@ -11,10 +11,14 @@ title = "Git checkout di una specifica sottocartella"
 
 Esiste un comando di git chiamato ```sparse checkout``` che permette di popolare la propria cartella di lavoro con una specifica cartella del repository. Utile perché non si è costretti a scaricare il contenuto di tutto il repository git.
 
+<!--more-->
+
 Supponiamo di avere su github un repository al cui interno è contenuta la sottocartella database. Devo scaricare tutti i files SQL contenuti nella cartella. Come posso fare :
 
 Ecco come:
 
+
+## Procedimento
 
 ```bash
 mkdir databas

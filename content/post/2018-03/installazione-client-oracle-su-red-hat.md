@@ -10,9 +10,11 @@ title = "Installazione client Oracle 12.x su Red-Hat"
 
 +++
 
-## Introduzione
-
 Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.
+
+In questo articolo vediamo come installarlo su una macchina Red-Hat
+
+<!--more-->
 
 Nell'Instant client non sono compresi una serie di tool tipicamente presenti in una installazione full (es: exp, imp, sqlldr, tnsping).
 
@@ -22,8 +24,6 @@ Per installare Oracle Instant client su una macchina Red-Hat si possono usare 3 
 * Installazione manuale con lo zip del client
 * Installazione del modulo client con il setup di Oracle Server
 * Questo documento descrive l'installazione del client utilizzando i pacchetti rpm.
-
-<!--more-->
 
 ## Scaricare il software
 

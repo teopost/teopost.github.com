@@ -12,6 +12,8 @@ title = "Oracle Transparent Data Encryption (TDE)"
 
 Ultimamente sono tutti molto preoccupati per una cosa chiamata [GDPR](https://it.wikipedia.org/wiki/Regolamento_generale_sulla_protezione_dei_dati), una legge europea che riguarda la protezione dei dati degli utenti (era ora dico io) che descrive una serie di adempimenti, non esclusivamente tecnici, da adottare per la salvaguardia dei dati.
 
+<!--more-->
+
 Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dati, quindi se avete sui vostri server i databases dei vostri clienti, cominciate a tremare perchè le multe sono salatissime.
 
 Siccome le responsabilità non riguardano esclusivamente chi detiene i dati, ma anche a chi fornisce il software per il loro trattamento, Oracle risolve questo problema con una serie di [moduli e funzionalità aggiuntive](https://www.oracle.com/it/applications/gdpr/index.html).

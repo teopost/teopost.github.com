@@ -36,6 +36,7 @@ Esiste il modo di ripristinare manualmente tale checksum ma in entrambi i casi �
 ## Versioni delle DBFIX
 
 ### Flyway
+
 Flyway identifica la versione e la descrizione di una fix estraendola dal nome del file.
 Sulla base di una particolare naming convention (che può essere  personalizzata) è in grado di determinare anche la sequenza di applicazione di tali fix.
 
@@ -48,10 +49,10 @@ V2.0.0__Aggiunta_campo_SEX_a_tabella_USERS.sql
 
 Dopo l'applicazione, nella tabella di changelog (chiamata schema_version), viene riportato:
 
-installed_rank | version | description...       
----------------|---------|-----------------------
-1              | 1.0.0   | Creazione tabella USERS
-2              | 2.0.0   | Aggiunta campo SEX a tabella USERS
+| installed_rank | version | description                        |
+| -------------- | ------- | ---------------------------------- |
+| 1              | 1.0.0   | Creazione tabella USERS            |
+| 2              | 2.0.0   | Aggiunta campo SEX a tabella USERS |
 
 Flyway, nel sopracitato esempio, applica prima la V1.0.0 ed in seguito la V2.0.0.
 La sequenza di applicazione delle fix la si può evincere dal campo installed_rank.
@@ -86,7 +87,6 @@ insert into test_sql (id, name) values (2, 'name 2');
 
 --changeset teodorani:3
 insert into test_sql (id, name) values (3, 'name 3');
-
 ```
 
 Nel suddetto esempio, la DBFIX contiene 2 commenti che vengono interpretati da liquibase come direttive, ovvero:
@@ -97,12 +97,12 @@ Nel suddetto esempio, la DBFIX contiene 2 commenti che vengono interpretati da l
 
 Dopo aver applicato la DBFIX, liquibase memorizza nella tabella DATABASECHANGELOG i seguenti dati:
 
-ID | AUTHOR    | FILENAME          | DATEEXECUTED               | ORDEREXECUTED....      
----|-----------|-------------------|----------------------------|--------
-1  | teodorani | changelog-1.0.sql | 22/11/2018 10.17.09,069030 | 1
-2  | teodorani | changelog-1.0.sql | 22/11/2018 10.17.09,150484 | 2
-3  | teodorani | changelog-1.0.sql | 22/11/2018 10.17.09,182781 | 3
-1  | sarli     | changelog-2.0.sql | 22/11/2018 10.17.09,182781 | 3
+| ID  | AUTHOR    | FILENAME          | DATEEXECUTED               | ORDEREXECUTED.... |
+| --- | --------- | ----------------- | -------------------------- | ----------------- |
+| 1   | teodorani | changelog-1.0.sql | 22/11/2018 10.17.09,069030 | 1                 |
+| 2   | teodorani | changelog-1.0.sql | 22/11/2018 10.17.09,150484 | 2                 |
+| 3   | teodorani | changelog-1.0.sql | 22/11/2018 10.17.09,182781 | 3                 |
+| 1   | sarli     | changelog-2.0.sql | 22/11/2018 10.17.09,182781 | 3                 |
 
 ## Sequenza di applicazione delle DBFIX
 
@@ -130,7 +130,6 @@ Esempio di file master:
   <include file="fix-sql/changelog-2.0.sql"/>
 
 </databaseChangeLog>
-
 ```
 
 File changelog-1.0.sql
@@ -252,23 +251,24 @@ I context vengono passati via command-line a liquibase in fase di migrazione.
 Tabella di confronto funzionalità
 ---
 
-Feature               | Flyway   | Liquibase
-----------------------|:--------:|:---------:
-SQL Placeholder       |    X     |     
-Baseline              |    X     |
-Precondition          |          |     X
-Context               |          |     X
-Supporto jdbc         |    X     |     X
-Supporto fix in XML   |          |     X
-Supporto fix in JSON  |          |     X
-Supporto fix in YAML  |          |     X
-Supporto fix in SQL   |    X     |     X
-Supporto PL/SQL       |    X     |     X
-Gen. Documentazione   |          |     X
-DBFIX checksum based  |    X     |     X
+| Feature              | Flyway | Liquibase |
+| -------------------- |:------:|:---------:|
+| SQL Placeholder      | X      |           |
+| Baseline             | X      |           |
+| Precondition         |        | X         |
+| Context              |        | X         |
+| Supporto jdbc        | X      | X         |
+| Supporto fix in XML  |        | X         |
+| Supporto fix in JSON |        | X         |
+| Supporto fix in YAML |        | X         |
+| Supporto fix in SQL  | X      | X         |
+| Supporto PL/SQL      | X      | X         |
+| Gen. Documentazione  |        | X         |
+| DBFIX checksum based | X      | X         |
 
 Conclusioni
 -----------
+
 Personalmente ho esperienza diretta sull'utilizzo di flyway su cui ho riscontrato anche alcuni problemi sull'applicazione di DBFIX custom che possono cambiare a seconda delle integrazioni da effettuare.
 
 Flyway determina la sequenza di fix da applicare in base a come vengono trovate in una cartella, questo rende estremamente complicato gestire casi in cui, a seconda delle integrazioni da effettuare, tali cartelle possono essere diverse.
