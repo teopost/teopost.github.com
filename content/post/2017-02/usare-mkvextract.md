@@ -12,7 +12,9 @@ title = "Usare mkvextract"
 
 mkvextract è un tool per manipolare file mkv da linea di comando.
 
-``` bash
+<!--more-->
+
+```bash
 sudo apt-get install -y mkvtoolnix mkvtoolnix-gui
 sudo apt-get install -y libdca-utils aften
 wget https://github.com/JakeWharton/mkvdts2ac3/raw/master/mkvdts2ac3.sh
@@ -31,7 +33,6 @@ Note:
 
 * http://www.bunkus.org/videotools/mkvtoolnix/doc/mkvpropedit.html
 * http://linux.die.net/man/1/mkvextract
-
 
 Cambiare il flag default dalla prima alla seconda traccia
 
@@ -52,7 +53,7 @@ Mettere il default flag a 1 (non devono essercene altri pero)
 Mostra l'elenco delle tracce
 
     mkvmerge -i Che_bella_giornata.mkv
-
+    
     Track ID 1: video (V_MPEG4/ISO/AVC)
     Track ID 2: audio (A_DTS)
     Track ID 3: audio (A_AC3)

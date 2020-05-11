@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.68.3" />
+    <meta name="generator" content="Hugo 0.70.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -34,7 +34,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.stefanoteodorani.it/" />
-<meta property="og:updated_time" content="2019-04-24T18:42:26+01:00" />
+<meta property="og:updated_time" content="2020-05-01T18:42:26+01:00" />
 
     
     <meta itemprop="name" content="stefanoteodorani.it">
@@ -175,7 +175,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        31
+        32
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -243,8 +243,6 @@
 
 
 
-<td><a href="//plus.google.com/+StefanoTeodorani" target="_blank" title="Google+"><i class="fa fa-google-plus"></i></a></td>
-
 
 
 <td><a href="//facebook.com/steodorani" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></td>
@@ -263,6 +261,161 @@
 
     <section id="main">
     
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+            <a href="https://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/" itemprop="url">
+                <img src="https://www.stefanoteodorani.it/banner/client-oracle-sul-mac.jpg" class="article-banner">
+            
+            </a>
+
+            <header class="article-header">
+    <a href="https://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/">
+    <h1 class="article-title" itemprop="name">
+        Client Oracle sul Mac
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-02-16 21:36:13 &#43;0100 CET" itemprop="datePublished">16-02-2017</time>
+            &middot;
+            86
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/database">database</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://www.stefanoteodorani.it/tags/oracle">oracle</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    Per installare il client Oracle sul Mac, utilizzare questa procedura:
+Creare la cartella /Users/[utente]/oracle e metterci dentro:
+instantclient-basic-macos.x64-11.2.0.4.0.zip instantclient-sdk-macos.x64-11.2.0.4.0.zip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip scompattarli
+unzip instantclient-basic-macos.x64-11.2.0.4.0.zip unzip instantclient-sdk-macos.x64-11.2.0.4.0.zip unzip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip Andare nella cartella che lo scompattamento crea
+cd /Users/[utente]/instantclient11_2 Creare i 2 seguenti link simbolici (controllare la versione delle dll)
+ln -s libclntsh.dylib.11.1 libclntsh.dylib ln -s libocci.dylib.11.1 libocci.dylib Eseguire la seguente fix
+curl -O <a href="https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fix_oralib.rb">https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fix_oralib.rb</a> ruby fix_oralib.rb &ndash;absolute-path Aggiungere nel .bash_profile se seguenti righe
+                    <br>
+                </p>
+                <p class="article-more-link">
+                    <a href="https://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/">
+                        Read more
+                    </a>
+                </p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="https://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/" data-id="bf91ff447b256f9e37287e40ae5e2321" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="https://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
     
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
@@ -336,7 +489,7 @@ Lo sviluppatore crea una Community specifica per l’app (es: app-unixx-test) Lo
                 </p>
             </div>
             <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/" data-id="70b9005b4ffbeedae4b1a99be06ce1e0" class="article-share-link">
+    <a data-url="https://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/" data-id="00c246caca8074e9f294370238e4242c" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -486,7 +639,7 @@ Per farlo agire come segue:
                 </p>
             </div>
             <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/" data-id="7451de91796909c36e0cdec9eb83068f" class="article-share-link">
+    <a data-url="https://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/" data-id="8224ac6af8ddb5ea556839088d21e7bf" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -637,7 +790,7 @@ Preparare lo schema di DATABASE mysql -uroot -p&lt;password&gt; CREATE DATABASE 
                 </p>
             </div>
             <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/" data-id="58c7c8ec5a487e3185ad8d5fa9f11adb" class="article-share-link">
+    <a data-url="https://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/" data-id="c5c705e0ed179b25658648b00865502a" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -790,162 +943,12 @@ Configurazione di MySql # Creare la struttura di directory del database dove sar
                 </p>
             </div>
             <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/" data-id="d24dad52869f92ec0e1da8bd8711fbab" class="article-share-link">
+    <a data-url="https://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/" data-id="9e877631da1456634283d3ee9f1deb98" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
     <a href="https://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-        </div>
-    </article>
-    
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-            <a href="https://www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/" itemprop="url">
-                <img src="https://www.stefanoteodorani.it/banner/configurare-godaddy-per-le-github-pages.jpg" class="article-banner">
-            
-            </a>
-
-            <header class="article-header">
-    <a href="https://www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/">
-    <h1 class="article-title" itemprop="name">
-        Configurare GoDaddy per le Github Pages
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2016-12-28 22:45:00 &#43;0100 CET" itemprop="datePublished">28-12-2016</time>
-            &middot;
-            187
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/system">system</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="https://www.stefanoteodorani.it/tags/github-pages">github pages</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    Possiedo il dominio <a href="http://www.stefanoteodorani.it">www.stefanoteodorani.it</a> su GoDaddy.com. Per far funzionare tale dominio con questo blog ho seguito i seguenti passi:
-Creazione sito teopost.github.io Ho creato sul mio profilo github un repository chiamato teopost.github.com. Ho committato il sorgente del mio sito sul master di tale repository. Github è così gentile da accorgersi che il sorgente committato sul master è un sorgente di jekyll, quindi provvede ad eseguirne la build e a pubblicarne il risultato.
-                    <br>
-                </p>
-                <p class="article-more-link">
-                    <a href="https://www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/">
-                        Read more
-                    </a>
-                </p>
-            </div>
-            <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/" data-id="01cbaf76da29343eb78c91212ee8f918" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="https://www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -1046,6 +1049,32 @@ Creazione sito teopost.github.io Ho creato sul mio profilo github un repository 
     </h3>
     <div class="widget">
         <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/apache-pagina-cortesia.png)" alt="stefanoteodorani.it" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/" class="title">Schedulare nmon nel crontab</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-05-01 18:42:26 &#43;0100 &#43;0100" itemprop="datePublished">01-05-2020</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1151,32 +1180,6 @@ Creazione sito teopost.github.io Ho creato sul mio profilo github un repository 
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/unison-ssh.jpg)" alt="stefanoteodorani.it" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/system">
-                        system
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" class="title">Sincronizzare cartelle in SSH con UNISON</a></p>
-                    <p class="item-date">
-                        <time datetime="2018-08-05 18:00:00 &#43;0100 &#43;0100" itemprop="datePublished">05-08-2018</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -1211,7 +1214,7 @@ Creazione sito teopost.github.io Ho creato sul mio profilo github un repository 
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/linux">
                     linux
                 </a>
-                <span class="category-list-count">12</span>
+                <span class="category-list-count">13</span>
             </li>
             
             <li class="category-list-item">
@@ -1324,7 +1327,7 @@ Creazione sito teopost.github.io Ho creato sul mio profilo github un repository 
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/linux">
                     linux
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">

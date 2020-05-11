@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.68.3" />
+    <meta name="generator" content="Hugo 0.70.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -34,7 +34,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.stefanoteodorani.it/" />
-<meta property="og:updated_time" content="2019-04-24T18:42:26+01:00" />
+<meta property="og:updated_time" content="2020-05-01T18:42:26+01:00" />
 
     
     <meta itemprop="name" content="stefanoteodorani.it">
@@ -175,7 +175,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        31
+        32
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -243,8 +243,6 @@
 
 
 
-<td><a href="//plus.google.com/+StefanoTeodorani" target="_blank" title="Google+"><i class="fa fa-google-plus"></i></a></td>
-
 
 
 <td><a href="//facebook.com/steodorani" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></td>
@@ -263,6 +261,160 @@
 
     <section id="main">
     
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+            <a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" itemprop="url">
+                <img src="https://www.stefanoteodorani.it/banner/unison-ssh.jpg" class="article-banner">
+            
+            </a>
+
+            <header class="article-header">
+    <a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/">
+    <h1 class="article-title" itemprop="name">
+        Sincronizzare cartelle in SSH con UNISON
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2018-08-05 18:00:00 &#43;0100 &#43;0100" itemprop="datePublished">05-08-2018</time>
+            &middot;
+            522
+            words
+            &middot;
+            3
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/system">system</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://www.stefanoteodorani.it/tags/linux">linux</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    <p>Recentemente, mi è capitato di dover risolvere questo problema.
+Su un server ftp, vengono copiati files in 3 separate cartelle.
+Tali file devono essere sincronizzati con 3 cartelle situate su 3 diverse macchine.
+Tale sincronizzazione deve essere bidirezionale e i files creati sul server ftp devono scomparire quanto sulle cartelle remote qualcuno li cancella.</p>
+<p>Per risolvere questo problema ho utilizzato unison, un tool che consente di sincronizzare in maniera bidirezionale due cartelle anche via ssh.</p>
+<p>Ecco quindi quello che ho fatto:</p>
+                    <br>
+                </p>
+                <p class="article-more-link">
+                    <a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/">
+                        Read more
+                    </a>
+                </p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" data-id="8c635caa536d26f5cab17edb5cc7f1a2" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
     
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
@@ -337,7 +489,7 @@ In questo articolo viene descritta una procedura un pò inconsueta per ripristin
                 </p>
             </div>
             <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/" data-id="63b32ce9bbc772afe3b2ff60c1b395f7" class="article-share-link">
+    <a data-url="https://www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/" data-id="94f081ca09aa75ba72d9f63cac1ef002" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -488,7 +640,7 @@ In questo articolo viene descritta una procedura un pò inconsueta per ripristin
                 </p>
             </div>
             <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2018/04/05/spostare-i-controlfiles-su-oracle-12.x/" data-id="c240b77a14a6badbe40863b2bea94865" class="article-share-link">
+    <a data-url="https://www.stefanoteodorani.it/2018/04/05/spostare-i-controlfiles-su-oracle-12.x/" data-id="1b7504ca74230a8214c431ba968773d6" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -639,7 +791,7 @@ Ecco come ho fatto
                 </p>
             </div>
             <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" data-id="d2339bbd923995259edb0eb38722ba31" class="article-share-link">
+    <a data-url="https://www.stefanoteodorani.it/2018/04/05/spostare-i-redolog-su-oracle-12.x/" data-id="c38e851811102f93c50a69a72f87ba5b" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -739,7 +891,7 @@ Ecco come ho fatto
             <i class="fa fa-calendar"></i>
             <time datetime="2018-03-30 09:18:00 &#43;0100 &#43;0100" itemprop="datePublished">30-03-2018</time>
             &middot;
-            331
+            340
             words
             &middot;
             2
@@ -778,16 +930,8 @@ Ecco come ho fatto
 
             <div class="article-entry" itemprop="articleBody">
                 <p>
-                    <h2 id="introduzione">Introduzione</h2>
-<p>Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.</p>
-<p>Nell&rsquo;Instant client non sono compresi una serie di tool tipicamente presenti in una installazione full (es: exp, imp, sqlldr, tnsping).</p>
-<p>Per installare Oracle Instant client su una macchina Red-Hat si possono usare 3 modi diversi.</p>
-<ul>
-<li>Installazione dei pacchetti rpm</li>
-<li>Installazione manuale con lo zip del client</li>
-<li>Installazione del modulo client con il setup di Oracle Server</li>
-<li>Questo documento descrive l&rsquo;installazione del client utilizzando i pacchetti rpm.</li>
-</ul>
+                    <p>Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.</p>
+<p>In questo articolo vediamo come installarlo su una macchina Red-Hat</p>
                     <br>
                 </p>
                 <p class="article-more-link">
@@ -797,162 +941,12 @@ Ecco come ho fatto
                 </p>
             </div>
             <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/" data-id="0529e942227e8bda355bf61577590acf" class="article-share-link">
+    <a data-url="https://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/" data-id="e261092c14aba3530b8d54d26c19b862" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
     <a href="https://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-        </div>
-    </article>
-    
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-            <a href="https://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/" itemprop="url">
-                <img src="https://www.stefanoteodorani.it/banner/oracle-tde-transparent-data-encryption.jpg" class="article-banner">
-            
-            </a>
-
-            <header class="article-header">
-    <a href="https://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/">
-    <h1 class="article-title" itemprop="name">
-        Oracle Transparent Data Encryption (TDE)
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2018-03-29 09:18:00 &#43;0100 &#43;0100" itemprop="datePublished">29-03-2018</time>
-            &middot;
-            1036
-            words
-            &middot;
-            5
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/database">database</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="https://www.stefanoteodorani.it/tags/oracle">oracle</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    Ultimamente sono tutti molto preoccupati per una cosa chiamata GDPR, una legge europea che riguarda la protezione dei dati degli utenti (era ora dico io) che descrive una serie di adempimenti, non esclusivamente tecnici, da adottare per la salvaguardia dei dati.
-Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dati, quindi se avete sui vostri server i databases dei vostri clienti, cominciate a tremare perchè le multe sono salatissime.
-                    <br>
-                </p>
-                <p class="article-more-link">
-                    <a href="https://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/">
-                        Read more
-                    </a>
-                </p>
-            </div>
-            <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/" data-id="b20ab2474791831aaf749cc2b36d0f8c" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="https://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -1053,6 +1047,32 @@ Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dat
     </h3>
     <div class="widget">
         <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/apache-pagina-cortesia.png)" alt="stefanoteodorani.it" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/" class="title">Schedulare nmon nel crontab</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-05-01 18:42:26 &#43;0100 &#43;0100" itemprop="datePublished">01-05-2020</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1158,32 +1178,6 @@ Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dat
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/unison-ssh.jpg)" alt="stefanoteodorani.it" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/system">
-                        system
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" class="title">Sincronizzare cartelle in SSH con UNISON</a></p>
-                    <p class="item-date">
-                        <time datetime="2018-08-05 18:00:00 &#43;0100 &#43;0100" itemprop="datePublished">05-08-2018</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -1218,7 +1212,7 @@ Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dat
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/linux">
                     linux
                 </a>
-                <span class="category-list-count">12</span>
+                <span class="category-list-count">13</span>
             </li>
             
             <li class="category-list-item">
@@ -1331,7 +1325,7 @@ Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dat
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/linux">
                     linux
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">

@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.68.3" />
+    <meta name="generator" content="Hugo 0.70.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -34,7 +34,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.stefanoteodorani.it/" />
-<meta property="og:updated_time" content="2019-04-24T18:42:26+01:00" />
+<meta property="og:updated_time" content="2020-05-01T18:42:26+01:00" />
 
     
     <meta itemprop="name" content="stefanoteodorani.it">
@@ -175,7 +175,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        31
+        32
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -243,8 +243,6 @@
 
 
 
-<td><a href="//plus.google.com/+StefanoTeodorani" target="_blank" title="Google+"><i class="fa fa-google-plus"></i></a></td>
-
 
 
 <td><a href="//facebook.com/steodorani" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></td>
@@ -263,6 +261,155 @@
 
     <section id="main">
     
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+            <a href="https://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/" itemprop="url">
+                <img src="https://www.stefanoteodorani.it/banner/oracle-tde-transparent-data-encryption.jpg" class="article-banner">
+            
+            </a>
+
+            <header class="article-header">
+    <a href="https://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/">
+    <h1 class="article-title" itemprop="name">
+        Oracle Transparent Data Encryption (TDE)
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2018-03-29 09:18:00 &#43;0100 &#43;0100" itemprop="datePublished">29-03-2018</time>
+            &middot;
+            1036
+            words
+            &middot;
+            5
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/database">database</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://www.stefanoteodorani.it/tags/oracle">oracle</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    Ultimamente sono tutti molto preoccupati per una cosa chiamata <a href="https://it.wikipedia.org/wiki/Regolamento_generale_sulla_protezione_dei_dati">GDPR</a>, una legge europea che riguarda la protezione dei dati degli utenti (era ora dico io) che descrive una serie di adempimenti, non esclusivamente tecnici, da adottare per la salvaguardia dei dati.
+                    <br>
+                </p>
+                <p class="article-more-link">
+                    <a href="https://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/">
+                        Read more
+                    </a>
+                </p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="https://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/" data-id="b86a404e616dc3a482ba7ccdd66bfe0d" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="https://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
     
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
@@ -335,7 +482,7 @@ Conversione dile .ppk in .pem Per prima cosa ho convertito il file.
                 </p>
             </div>
             <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2018/01/02/usare-file-ppk-con-ssh-sul-mac/" data-id="9863d46b1d33c1fa8680d34336e5c6bc" class="article-share-link">
+    <a data-url="https://www.stefanoteodorani.it/2018/01/02/usare-file-ppk-con-ssh-sul-mac/" data-id="efb994362704e6ef264c26c73302eb62" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -485,7 +632,7 @@ Conversione dile .ppk in .pem Per prima cosa ho convertito il file.
                 </p>
             </div>
             <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/" data-id="c7d52413215745469ce9b506b200e4c1" class="article-share-link">
+    <a data-url="https://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/" data-id="eb34baeb60789fd49a725d58794f6fc7" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -585,7 +732,7 @@ Conversione dile .ppk in .pem Per prima cosa ho convertito il file.
             <i class="fa fa-calendar"></i>
             <time datetime="2017-09-17 12:52:00 &#43;0100 &#43;0100" itemprop="datePublished">17-09-2017</time>
             &middot;
-            121
+            122
             words
             &middot;
             1
@@ -624,10 +771,7 @@ Conversione dile .ppk in .pem Per prima cosa ho convertito il file.
 
             <div class="article-entry" itemprop="articleBody">
                 <p>
-                    Esiste un comando di git chiamato sparse checkout che permette di popolare la propria cartella di lavoro con una specifica cartella del repository. Utile perché non si è costretti a scaricare il contenuto di tutto il repository git.
-Supponiamo di avere su github un repository al cui interno è contenuta la sottocartella database. Devo scaricare tutti i files SQL contenuti nella cartella. Come posso fare :
-Ecco come:
-mkdir databas cd database/ # Inizializzo il repo vuoto git init # Aggiungo il remote origin git remote add origin -f https://github.
+                    Esiste un comando di git chiamato <code>sparse checkout</code> che permette di popolare la propria cartella di lavoro con una specifica cartella del repository. Utile perché non si è costretti a scaricare il contenuto di tutto il repository git.
                     <br>
                 </p>
                 <p class="article-more-link">
@@ -637,7 +781,7 @@ mkdir databas cd database/ # Inizializzo il repo vuoto git init # Aggiungo il re
                 </p>
             </div>
             <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2017/09/17/git-checkout-di-una-specifica-sottocartella/" data-id="7d6008fe1d0ebb132cf636180bcc36a7" class="article-share-link">
+    <a data-url="https://www.stefanoteodorani.it/2017/09/17/git-checkout-di-una-specifica-sottocartella/" data-id="bab6551da201935837b6d35127fb80d3" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -787,161 +931,12 @@ La cosa peggiore tuttavia, restava il fatto che non fosse opensource.
                 </p>
             </div>
             <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/" data-id="c3b2cf950337eb9c02f9e85fbd992d80" class="article-share-link">
+    <a data-url="https://www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/" data-id="4ced86267ac95b9d4be798f947b91a08" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
     <a href="https://www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-        </div>
-    </article>
-    
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-            <a href="https://www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/" itemprop="url">
-                <img src="https://www.stefanoteodorani.it/banner/oracle-mail-spooler.png" class="article-banner">
-            
-            </a>
-
-            <header class="article-header">
-    <a href="https://www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/">
-    <h1 class="article-title" itemprop="name">
-        Oracle mail spooler
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2017-05-27 23:35:16 &#43;0200 CEST" itemprop="datePublished">27-05-2017</time>
-            &middot;
-            596
-            words
-            &middot;
-            3
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/database">database</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="https://www.stefanoteodorani.it/tags/oracle">oracle</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    Può capitare di dover mandare mail da Oracle ? Si. Ho fatto questo script per l&rsquo;invio di mail da una istanza Oracle per risolvere un problema immediato, e siccome non c'è niente di più definitivo delle cose provvisorie, eccolo qui come se fosse un prodotto finito.
-                    <br>
-                </p>
-                <p class="article-more-link">
-                    <a href="https://www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/">
-                        Read more
-                    </a>
-                </p>
-            </div>
-            <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/" data-id="597d98b41a54834334a36e6f7f1af937" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="https://www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -1042,6 +1037,32 @@ La cosa peggiore tuttavia, restava il fatto che non fosse opensource.
     </h3>
     <div class="widget">
         <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/apache-pagina-cortesia.png)" alt="stefanoteodorani.it" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/" class="title">Schedulare nmon nel crontab</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-05-01 18:42:26 &#43;0100 &#43;0100" itemprop="datePublished">01-05-2020</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1147,32 +1168,6 @@ La cosa peggiore tuttavia, restava il fatto che non fosse opensource.
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/unison-ssh.jpg)" alt="stefanoteodorani.it" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/system">
-                        system
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" class="title">Sincronizzare cartelle in SSH con UNISON</a></p>
-                    <p class="item-date">
-                        <time datetime="2018-08-05 18:00:00 &#43;0100 &#43;0100" itemprop="datePublished">05-08-2018</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -1207,7 +1202,7 @@ La cosa peggiore tuttavia, restava il fatto che non fosse opensource.
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/linux">
                     linux
                 </a>
-                <span class="category-list-count">12</span>
+                <span class="category-list-count">13</span>
             </li>
             
             <li class="category-list-item">
@@ -1320,7 +1315,7 @@ La cosa peggiore tuttavia, restava il fatto che non fosse opensource.
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/linux">
                     linux
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">

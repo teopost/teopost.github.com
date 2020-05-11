@@ -17,10 +17,7 @@
       <pubDate>Sun, 17 Sep 2017 12:52:00 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2017/09/17/git-checkout-di-una-specifica-sottocartella/</guid>
-      <description>Esiste un comando di git chiamato sparse checkout che permette di popolare la propria cartella di lavoro con una specifica cartella del repository. Utile perché non si è costretti a scaricare il contenuto di tutto il repository git.
-Supponiamo di avere su github un repository al cui interno è contenuta la sottocartella database. Devo scaricare tutti i files SQL contenuti nella cartella. Come posso fare :
-Ecco come:
-mkdir databas cd database/ # Inizializzo il repo vuoto git init # Aggiungo il remote origin git remote add origin -f https://github.</description>
+      <description>&lt;p&gt;Esiste un comando di git chiamato &lt;code&gt;sparse checkout&lt;/code&gt; che permette di popolare la propria cartella di lavoro con una specifica cartella del repository. Utile perché non si è costretti a scaricare il contenuto di tutto il repository git.&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Installazione client Oracle 12.x su Red-Hat &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.68.3" />
+    <meta name="generator" content="Hugo 0.70.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -28,16 +28,8 @@
 
     <meta property="og:image" content="https://www.stefanoteodorani.it/banner/oracle-logo.png" />
     <meta property="og:title" content="Installazione client Oracle 12.x su Red-Hat" />
-<meta property="og:description" content="Introduzione
-Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.
-Nell&rsquo;Instant client non sono compresi una serie di tool tipicamente presenti in una installazione full (es: exp, imp, sqlldr, tnsping).
-Per installare Oracle Instant client su una macchina Red-Hat si possono usare 3 modi diversi.
-
-Installazione dei pacchetti rpm
-Installazione manuale con lo zip del client
-Installazione del modulo client con il setup di Oracle Server
-Questo documento descrive l&rsquo;installazione del client utilizzando i pacchetti rpm.
-" />
+<meta property="og:description" content="Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.
+In questo articolo vediamo come installarlo su una macchina Red-Hat" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/" />
 <meta property="article:published_time" content="2018-03-30T09:18:00+01:00" />
@@ -45,35 +37,19 @@ Questo documento descrive l&rsquo;installazione del client utilizzando i pacchet
 
     
     <meta itemprop="name" content="Installazione client Oracle 12.x su Red-Hat">
-<meta itemprop="description" content="Introduzione
-Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.
-Nell&rsquo;Instant client non sono compresi una serie di tool tipicamente presenti in una installazione full (es: exp, imp, sqlldr, tnsping).
-Per installare Oracle Instant client su una macchina Red-Hat si possono usare 3 modi diversi.
-
-Installazione dei pacchetti rpm
-Installazione manuale con lo zip del client
-Installazione del modulo client con il setup di Oracle Server
-Questo documento descrive l&rsquo;installazione del client utilizzando i pacchetti rpm.
-">
+<meta itemprop="description" content="Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.
+In questo articolo vediamo come installarlo su una macchina Red-Hat">
 <meta itemprop="datePublished" content="2018-03-30T09:18:00&#43;01:00" />
 <meta itemprop="dateModified" content="2018-03-30T09:18:00&#43;01:00" />
-<meta itemprop="wordCount" content="331">
+<meta itemprop="wordCount" content="340">
 
 
 
 <meta itemprop="keywords" content="oracle," />
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Installazione client Oracle 12.x su Red-Hat"/>
-<meta name="twitter:description" content="Introduzione
-Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.
-Nell&rsquo;Instant client non sono compresi una serie di tool tipicamente presenti in una installazione full (es: exp, imp, sqlldr, tnsping).
-Per installare Oracle Instant client su una macchina Red-Hat si possono usare 3 modi diversi.
-
-Installazione dei pacchetti rpm
-Installazione manuale con lo zip del client
-Installazione del modulo client con il setup di Oracle Server
-Questo documento descrive l&rsquo;installazione del client utilizzando i pacchetti rpm.
-"/>
+<meta name="twitter:description" content="Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.
+In questo articolo vediamo come installarlo su una macchina Red-Hat"/>
 <meta name="twitter:site" content="@teopost"/>
 
 
@@ -192,8 +168,9 @@ Questo documento descrive l&rsquo;installazione del client utilizzando i pacchet
 
    	
    	<div class="outer">
+		   
    		
-	    <aside id="profile">
+	    	<aside id="profile">
   <div class="inner profile-inner">
     <div class="base-info profile-block">
       <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
@@ -208,7 +185,7 @@ Questo documento descrive l&rsquo;installazione del client utilizzando i pacchet
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        31
+        32
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -276,8 +253,6 @@ Questo documento descrive l&rsquo;installazione del client utilizzando i pacchet
 
 
 
-<td><a href="//plus.google.com/+StefanoTeodorani" target="_blank" title="Google+"><i class="fa fa-google-plus"></i></a></td>
-
 
 
 <td><a href="//facebook.com/steodorani" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></td>
@@ -318,7 +293,7 @@ Questo documento descrive l&rsquo;installazione del client utilizzando i pacchet
             <i class="fa fa-calendar"></i>
             <time datetime="2018-03-30 09:18:00 &#43;0100 &#43;0100" itemprop="datePublished">30-03-2018</time>
             &middot;
-            331
+            340
             words
             &middot;
             2
@@ -356,8 +331,8 @@ Questo documento descrive l&rsquo;installazione del client utilizzando i pacchet
 </header>
 
             <div class="article-entry" itemprop="articleBody">
-                <h2 id="introduzione">Introduzione</h2>
-<p>Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.</p>
+                <p>Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.</p>
+<p>In questo articolo vediamo come installarlo su una macchina Red-Hat</p>
 <p>Nell&rsquo;Instant client non sono compresi una serie di tool tipicamente presenti in una installazione full (es: exp, imp, sqlldr, tnsping).</p>
 <p>Per installare Oracle Instant client su una macchina Red-Hat si possono usare 3 modi diversi.</p>
 <ul>
@@ -417,7 +392,7 @@ export PATH<span style="color:#f92672">=</span>/usr/lib/oracle/12.1/client64/bin
 </code></pre></div>
             </div>
             <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/" data-id="0529e942227e8bda355bf61577590acf" class="article-share-link">
+    <a data-url="https://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/" data-id="e261092c14aba3530b8d54d26c19b862" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -530,7 +505,7 @@ export PATH<span style="color:#f92672">=</span>/usr/lib/oracle/12.1/client64/bin
 
 
 	    
-	    <aside id="sidebar">
+	    	<aside id="sidebar">
     
 <div class="widget-wrap">
     <h3 class="widget-title">
@@ -538,6 +513,32 @@ export PATH<span style="color:#f92672">=</span>/usr/lib/oracle/12.1/client64/bin
     </h3>
     <div class="widget">
         <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/apache-pagina-cortesia.png)" alt="Installazione client Oracle 12.x su Red-Hat" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/" class="title">Schedulare nmon nel crontab</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-05-01 18:42:26 &#43;0100 &#43;0100" itemprop="datePublished">01-05-2020</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -643,32 +644,6 @@ export PATH<span style="color:#f92672">=</span>/usr/lib/oracle/12.1/client64/bin
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/unison-ssh.jpg)" alt="Installazione client Oracle 12.x su Red-Hat" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/system">
-                        system
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" class="title">Sincronizzare cartelle in SSH con UNISON</a></p>
-                    <p class="item-date">
-                        <time datetime="2018-08-05 18:00:00 &#43;0100 &#43;0100" itemprop="datePublished">05-08-2018</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -703,7 +678,7 @@ export PATH<span style="color:#f92672">=</span>/usr/lib/oracle/12.1/client64/bin
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/linux">
                     linux
                 </a>
-                <span class="category-list-count">12</span>
+                <span class="category-list-count">13</span>
             </li>
             
             <li class="category-list-item">
@@ -816,7 +791,7 @@ export PATH<span style="color:#f92672">=</span>/usr/lib/oracle/12.1/client64/bin
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/linux">
                     linux
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">
@@ -872,7 +847,8 @@ export PATH<span style="color:#f92672">=</span>/usr/lib/oracle/12.1/client64/bin
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
 
-	    
+		
+		
 	</div>
 </div>
 

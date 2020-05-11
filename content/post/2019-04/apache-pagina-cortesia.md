@@ -16,9 +16,7 @@ In questo articolo vi mostro un modo più elegante per farlo.
 
 <!--more-->
 
-
 Aggiungete questa regola nel file **httpd.conf**:
-
 
 ```
 RewriteCond %{REMOTE_ADDR} !^172\.27\.

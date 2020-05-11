@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.68.3" />
+    <meta name="generator" content="Hugo 0.70.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -34,7 +34,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.stefanoteodorani.it/" />
-<meta property="og:updated_time" content="2019-04-24T18:42:26+01:00" />
+<meta property="og:updated_time" content="2020-05-01T18:42:26+01:00" />
 
     
     <meta itemprop="name" content="stefanoteodorani.it">
@@ -175,7 +175,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        31
+        32
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -243,8 +243,6 @@
 
 
 
-<td><a href="//plus.google.com/+StefanoTeodorani" target="_blank" title="Google+"><i class="fa fa-google-plus"></i></a></td>
-
 
 
 <td><a href="//facebook.com/steodorani" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></td>
@@ -267,6 +265,157 @@
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
             
+            <a href="https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/" itemprop="url">
+                <img src="https://www.stefanoteodorani.it/banner/apache-pagina-cortesia.png" class="article-banner">
+            
+            </a>
+
+            <header class="article-header">
+    <a href="https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/">
+    <h1 class="article-title" itemprop="name">
+        Schedulare nmon nel crontab
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-05-01 18:42:26 &#43;0100 &#43;0100" itemprop="datePublished">01-05-2020</time>
+            &middot;
+            151
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/linux">linux</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://www.stefanoteodorani.it/tags/linux">linux</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    <p>Per monitorare lo stato dei server in un infrastruttura Linux, esistono oggi molti strumenti (zabbix, netdata, zenoss, ecc).
+In alcuni casi, dove non si ha la possibilità di installare questi validissimi tools, può essere utile fare un salto indietro nel tempo e utilizzare il buon &ldquo;vecchio&rdquo; nmon.</p>
+<p>In questo articolo vi mostro come installarlo come servizio su Red Hat.</p>
+                    <br>
+                </p>
+                <p class="article-more-link">
+                    <a href="https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/">
+                        Read more
+                    </a>
+                </p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/" data-id="5f75820bb29406bde7737169696ac53d" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
             <a href="https://www.stefanoteodorani.it/2019/04/24/pagina-di-cortesia-su-apache/" itemprop="url">
                 <img src="https://www.stefanoteodorani.it/banner/apache-pagina-cortesia.png" class="article-banner">
             
@@ -285,7 +434,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2019-04-24 18:42:26 &#43;0100 &#43;0100" itemprop="datePublished">24-04-2019</time>
             &middot;
-            452
+            450
             words
             &middot;
             3
@@ -324,10 +473,9 @@
 
             <div class="article-entry" itemprop="articleBody">
                 <p>
-                    <p>Ci sono molti modi per attivare la cosiddetta pagina di cortesia di un sito.
-Nella maggior parte dei casi che mi è capitato di vedere, l&rsquo;abitudine è quella di editare il file di configurazione di apache.
-In questo articolo vi mostro un modo secondo me più elegante per farlo.</p>
-<p>Aggiungete questa regola nel file httpd.conf:</p>
+                    <p>Ci sono molti modi per attivare la cosiddetta pagina di cortesia di un sito.</p>
+<p>Nella maggior parte dei casi che mi è capitato di vedere, l&rsquo;abitudine è quella di editare il file di configurazione di apache.
+In questo articolo vi mostro un modo più elegante per farlo.</p>
                     <br>
                 </p>
                 <p class="article-more-link">
@@ -337,7 +485,7 @@ In questo articolo vi mostro un modo secondo me più elegante per farlo.</p>
                 </p>
             </div>
             <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2019/04/24/pagina-di-cortesia-su-apache/" data-id="4697b13901413876462e9e4562bd3ee0" class="article-share-link">
+    <a data-url="https://www.stefanoteodorani.it/2019/04/24/pagina-di-cortesia-su-apache/" data-id="7c4e82aae71d2ec5d815e4d58cfede08" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -488,7 +636,7 @@ In questo articolo vi mostro un modo secondo me più elegante per farlo.</p>
                 </p>
             </div>
             <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2019/01/20/lock-wait-e-timeout-in-db2/" data-id="d3a33ce34ef9a15c399e2397c63e37dc" class="article-share-link">
+    <a data-url="https://www.stefanoteodorani.it/2019/01/20/lock-wait-e-timeout-in-db2/" data-id="ad356540aaed2ba71f2c2da38c3e4a5b" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -638,7 +786,7 @@ Questo articolo descrive le principali funzionalità e le  differenze che li car
                 </p>
             </div>
             <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2018/11/22/liquibase-vs-flyway/" data-id="b55c2c4fb4523559ac2c1c64cd0a9cf8" class="article-share-link">
+    <a data-url="https://www.stefanoteodorani.it/2018/11/22/liquibase-vs-flyway/" data-id="8a39ef2d0e9ab0ba5ea88e0427ed1742" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -789,166 +937,12 @@ Questo articolo descrive le principali funzionalità e le  differenze che li car
                 </p>
             </div>
             <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2018/11/05/sql-tuning-advisor-per-uno-specifico-sql_id/" data-id="05108722584dcc284763cf6ce0734b38" class="article-share-link">
+    <a data-url="https://www.stefanoteodorani.it/2018/11/05/sql-tuning-advisor-per-uno-specifico-sql_id/" data-id="d5f408a66b69b726985ea00082fc6907" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
     <a href="https://www.stefanoteodorani.it/2018/11/05/sql-tuning-advisor-per-uno-specifico-sql_id/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-        </div>
-    </article>
-    
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
-        <div class="article-inner">
-            
-            <a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" itemprop="url">
-                <img src="https://www.stefanoteodorani.it/banner/unison-ssh.jpg" class="article-banner">
-            
-            </a>
-
-            <header class="article-header">
-    <a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/">
-    <h1 class="article-title" itemprop="name">
-        Sincronizzare cartelle in SSH con UNISON
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2018-08-05 18:00:00 &#43;0100 &#43;0100" itemprop="datePublished">05-08-2018</time>
-            &middot;
-            522
-            words
-            &middot;
-            3
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/system">system</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="https://www.stefanoteodorani.it/tags/linux">linux</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    <p>Recentemente, mi è capitato di dover risolvere questo problema.
-Su un server ftp, vengono copiati files in 3 separate cartelle.
-Tali file devono essere sincronizzati con 3 cartelle situate su 3 diverse macchine.
-Tale sincronizzazione deve essere bidirezionale e i files creati sul server ftp devono scomparire quanto sulle cartelle remote qualcuno li cancella.</p>
-<p>Per risolvere questo problema ho utilizzato unison, un tool che consente di sincronizzare in maniera bidirezionale due cartelle anche via ssh.</p>
-<p>Ecco quindi quello che ho fatto:</p>
-                    <br>
-                </p>
-                <p class="article-more-link">
-                    <a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/">
-                        Read more
-                    </a>
-                </p>
-            </div>
-            <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" data-id="dfae242940bc45272fa1c6e487354fe0" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -1045,6 +1039,32 @@ Tale sincronizzazione deve essere bidirezionale e i files creati sul server ftp 
     </h3>
     <div class="widget">
         <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/apache-pagina-cortesia.png)" alt="stefanoteodorani.it" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/" class="title">Schedulare nmon nel crontab</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-05-01 18:42:26 &#43;0100 &#43;0100" itemprop="datePublished">01-05-2020</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1150,32 +1170,6 @@ Tale sincronizzazione deve essere bidirezionale e i files creati sul server ftp 
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/unison-ssh.jpg)" alt="stefanoteodorani.it" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/system">
-                        system
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" class="title">Sincronizzare cartelle in SSH con UNISON</a></p>
-                    <p class="item-date">
-                        <time datetime="2018-08-05 18:00:00 &#43;0100 &#43;0100" itemprop="datePublished">05-08-2018</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -1210,7 +1204,7 @@ Tale sincronizzazione deve essere bidirezionale e i files creati sul server ftp 
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/linux">
                     linux
                 </a>
-                <span class="category-list-count">12</span>
+                <span class="category-list-count">13</span>
             </li>
             
             <li class="category-list-item">
@@ -1323,7 +1317,7 @@ Tale sincronizzazione deve essere bidirezionale e i files creati sul server ftp 
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/linux">
                     linux
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">

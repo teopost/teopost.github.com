@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Syncthing su Raspberrypi &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.68.3" />
+    <meta name="generator" content="Hugo 0.70.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -168,8 +168,9 @@ La cosa peggiore tuttavia, restava il fatto che non fosse opensource."/>
 
    	
    	<div class="outer">
+		   
    		
-	    <aside id="profile">
+	    	<aside id="profile">
   <div class="inner profile-inner">
     <div class="base-info profile-block">
       <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
@@ -184,7 +185,7 @@ La cosa peggiore tuttavia, restava il fatto che non fosse opensource."/>
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        31
+        32
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -251,8 +252,6 @@ La cosa peggiore tuttavia, restava il fatto che non fosse opensource."/>
 
 
 
-
-<td><a href="//plus.google.com/+StefanoTeodorani" target="_blank" title="Google+"><i class="fa fa-google-plus"></i></a></td>
 
 
 
@@ -415,74 +414,74 @@ DAEMON_LOG<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/
 do_start<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
   local result
 
-	pidofproc -p <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PID<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> &gt; /dev/null
-	<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $? -eq <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
-		log_warning_msg <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74"> is already started&#34;</span>
-		result<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
-	<span style="color:#66d9ef">else</span>
-		log_daemon_msg <span style="color:#e6db74">&#34;Starting </span><span style="color:#e6db74">${</span>DAEMON_DESC<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
-		touch <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_LOG<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
-		chown $DAEMON_USER <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_LOG<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
-		chmod u+rw <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_LOG<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
-		<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_USER<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
-			start-stop-daemon --start --quiet --oknodo --background <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>				--nicelevel $DAEMON_NICE <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>				--chdir <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PWD<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>				--pidfile <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PID<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> --make-pidfile <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>				--exec <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> -- $DAEMON_OPTS
-			result<span style="color:#f92672">=</span>$?
-		<span style="color:#66d9ef">else</span>
-			start-stop-daemon --start --quiet --oknodo --background <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>				--nicelevel $DAEMON_NICE <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>				--chdir <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PWD<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>				--pidfile <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PID<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> --make-pidfile <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>				--chuid <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_USER<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>				--exec <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> -- $DAEMON_OPTS
-			result<span style="color:#f92672">=</span>$?
-		<span style="color:#66d9ef">fi</span>
-		log_end_msg $result
-	<span style="color:#66d9ef">fi</span>
-	<span style="color:#66d9ef">return</span> $result
+    pidofproc -p <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PID<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> &gt; /dev/null
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $? -eq <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+        log_warning_msg <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74"> is already started&#34;</span>
+        result<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">else</span>
+        log_daemon_msg <span style="color:#e6db74">&#34;Starting </span><span style="color:#e6db74">${</span>DAEMON_DESC<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+        touch <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_LOG<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+        chown $DAEMON_USER <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_LOG<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+        chmod u+rw <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_LOG<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_USER<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+            start-stop-daemon --start --quiet --oknodo --background <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                --nicelevel $DAEMON_NICE <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                --chdir <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PWD<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                --pidfile <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PID<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> --make-pidfile <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                --exec <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> -- $DAEMON_OPTS
+            result<span style="color:#f92672">=</span>$?
+        <span style="color:#66d9ef">else</span>
+            start-stop-daemon --start --quiet --oknodo --background <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                --nicelevel $DAEMON_NICE <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                --chdir <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PWD<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                --pidfile <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PID<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> --make-pidfile <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                --chuid <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_USER<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                --exec <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> -- $DAEMON_OPTS
+            result<span style="color:#f92672">=</span>$?
+        <span style="color:#66d9ef">fi</span>
+        log_end_msg $result
+    <span style="color:#66d9ef">fi</span>
+    <span style="color:#66d9ef">return</span> $result
 <span style="color:#f92672">}</span>
 
 do_stop<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-	local result
+    local result
 
-	pidofproc -p <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PID<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> &gt; /dev/null
-	<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $? -ne <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
-		log_warning_msg <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74"> is not started&#34;</span>
-		result<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
-	<span style="color:#66d9ef">else</span>
-		log_daemon_msg <span style="color:#e6db74">&#34;Stopping </span><span style="color:#e6db74">${</span>DAEMON_DESC<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
-		killproc -p <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PID<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
-		result<span style="color:#f92672">=</span>$?
-		log_end_msg $result
-		rm <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PID<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
-	<span style="color:#66d9ef">fi</span>
-	<span style="color:#66d9ef">return</span> $result
+    pidofproc -p <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PID<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> &gt; /dev/null
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $? -ne <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+        log_warning_msg <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74"> is not started&#34;</span>
+        result<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">else</span>
+        log_daemon_msg <span style="color:#e6db74">&#34;Stopping </span><span style="color:#e6db74">${</span>DAEMON_DESC<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+        killproc -p <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PID<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+        result<span style="color:#f92672">=</span>$?
+        log_end_msg $result
+        rm <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PID<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+    <span style="color:#66d9ef">fi</span>
+    <span style="color:#66d9ef">return</span> $result
 <span style="color:#f92672">}</span>
 
 do_restart<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-	local result
-	do_stop
-	result<span style="color:#f92672">=</span>$?
-	<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $result <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
-		do_start
-		result<span style="color:#f92672">=</span>$?
-	<span style="color:#66d9ef">fi</span>
-	<span style="color:#66d9ef">return</span> $result
+    local result
+    do_stop
+    result<span style="color:#f92672">=</span>$?
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $result <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+        do_start
+        result<span style="color:#f92672">=</span>$?
+    <span style="color:#66d9ef">fi</span>
+    <span style="color:#66d9ef">return</span> $result
 <span style="color:#f92672">}</span>
 
 do_status<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-	local result
-	status_of_proc -p <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PID<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
-	result<span style="color:#f92672">=</span>$?
-	<span style="color:#66d9ef">return</span> $result
+    local result
+    status_of_proc -p <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PID<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_PATH<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DAEMON_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+    result<span style="color:#f92672">=</span>$?
+    <span style="color:#66d9ef">return</span> $result
 <span style="color:#f92672">}</span>
 
 do_usage<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-	echo $<span style="color:#e6db74">&#34;Usage: </span>$0<span style="color:#e6db74"> {start | stop | restart | status}&#34;</span>
-	exit <span style="color:#ae81ff">1</span>
+    echo $<span style="color:#e6db74">&#34;Usage: </span>$0<span style="color:#e6db74"> {start | stop | restart | status}&#34;</span>
+    exit <span style="color:#ae81ff">1</span>
 <span style="color:#f92672">}</span>
 
 <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> in
@@ -499,7 +498,7 @@ status<span style="color:#f92672">)</span>  do_status;  exit $? ;;
 </code></pre></div>
             </div>
             <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/" data-id="c3b2cf950337eb9c02f9e85fbd992d80" class="article-share-link">
+    <a data-url="https://www.stefanoteodorani.it/2017/06/20/syncthing-su-raspberrypi/" data-id="4ced86267ac95b9d4be798f947b91a08" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -612,7 +611,7 @@ status<span style="color:#f92672">)</span>  do_status;  exit $? ;;
 
 
 	    
-	    <aside id="sidebar">
+	    	<aside id="sidebar">
     
 <div class="widget-wrap">
     <h3 class="widget-title">
@@ -620,6 +619,32 @@ status<span style="color:#f92672">)</span>  do_status;  exit $? ;;
     </h3>
     <div class="widget">
         <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/apache-pagina-cortesia.png)" alt="Syncthing su Raspberrypi" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/" class="title">Schedulare nmon nel crontab</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-05-01 18:42:26 &#43;0100 &#43;0100" itemprop="datePublished">01-05-2020</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -725,32 +750,6 @@ status<span style="color:#f92672">)</span>  do_status;  exit $? ;;
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/unison-ssh.jpg)" alt="Syncthing su Raspberrypi" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/system">
-                        system
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" class="title">Sincronizzare cartelle in SSH con UNISON</a></p>
-                    <p class="item-date">
-                        <time datetime="2018-08-05 18:00:00 &#43;0100 &#43;0100" itemprop="datePublished">05-08-2018</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -785,7 +784,7 @@ status<span style="color:#f92672">)</span>  do_status;  exit $? ;;
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/linux">
                     linux
                 </a>
-                <span class="category-list-count">12</span>
+                <span class="category-list-count">13</span>
             </li>
             
             <li class="category-list-item">
@@ -898,7 +897,7 @@ status<span style="color:#f92672">)</span>  do_status;  exit $? ;;
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/linux">
                     linux
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">
@@ -954,7 +953,8 @@ status<span style="color:#f92672">)</span>  do_status;  exit $? ;;
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
 
-	    
+		
+		
 	</div>
 </div>
 

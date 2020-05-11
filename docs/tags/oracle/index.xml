@@ -62,16 +62,8 @@ Ecco come ho fatto&lt;/p&gt;</description>
       <pubDate>Fri, 30 Mar 2018 09:18:00 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/</guid>
-      <description>&lt;h2 id=&#34;introduzione&#34;&gt;Introduzione&lt;/h2&gt;
-&lt;p&gt;Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.&lt;/p&gt;
-&lt;p&gt;Nell&amp;rsquo;Instant client non sono compresi una serie di tool tipicamente presenti in una installazione full (es: exp, imp, sqlldr, tnsping).&lt;/p&gt;
-&lt;p&gt;Per installare Oracle Instant client su una macchina Red-Hat si possono usare 3 modi diversi.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Installazione dei pacchetti rpm&lt;/li&gt;
-&lt;li&gt;Installazione manuale con lo zip del client&lt;/li&gt;
-&lt;li&gt;Installazione del modulo client con il setup di Oracle Server&lt;/li&gt;
-&lt;li&gt;Questo documento descrive l&amp;rsquo;installazione del client utilizzando i pacchetti rpm.&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;p&gt;Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.&lt;/p&gt;
+&lt;p&gt;In questo articolo vediamo come installarlo su una macchina Red-Hat&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -80,8 +72,7 @@ Ecco come ho fatto&lt;/p&gt;</description>
       <pubDate>Thu, 29 Mar 2018 09:18:00 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2018/03/29/oracle-transparent-data-encryption-tde/</guid>
-      <description>Ultimamente sono tutti molto preoccupati per una cosa chiamata GDPR, una legge europea che riguarda la protezione dei dati degli utenti (era ora dico io) che descrive una serie di adempimenti, non esclusivamente tecnici, da adottare per la salvaguardia dei dati.
-Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dati, quindi se avete sui vostri server i databases dei vostri clienti, cominciate a tremare perchè le multe sono salatissime.</description>
+      <description>&lt;p&gt;Ultimamente sono tutti molto preoccupati per una cosa chiamata &lt;a href=&#34;https://it.wikipedia.org/wiki/Regolamento_generale_sulla_protezione_dei_dati&#34;&gt;GDPR&lt;/a&gt;, una legge europea che riguarda la protezione dei dati degli utenti (era ora dico io) che descrive una serie di adempimenti, non esclusivamente tecnici, da adottare per la salvaguardia dei dati.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -90,7 +81,7 @@ Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dat
       <pubDate>Sat, 27 May 2017 23:35:16 +0200</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2017/05/27/oracle-mail-spooler/</guid>
-      <description>&lt;p&gt;Può capitare di dover mandare mail da Oracle ? Si. Ho fatto questo script per l&amp;rsquo;invio di mail da una istanza Oracle per risolvere un problema immediato, e siccome non c&#39;è niente di più definitivo delle cose provvisorie, eccolo qui come se fosse un prodotto finito.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Può capitare di dover mandare mail da Oracle ? Si. Ho fatto questo script per l&amp;rsquo;invio di mail da una istanza Oracle per risolvere un problema immediato, e siccome non c&amp;rsquo;è niente di più definitivo delle cose provvisorie, eccolo qui come se fosse un prodotto finito.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -106,7 +97,7 @@ Il GDPR prevede responsabilità molto forti per chi manipola e mantiene tali dat
 &lt;li&gt;VARCHAR2(n CHAR)&lt;/li&gt;
 &lt;li&gt;VARCHAR2(n BYTE)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Ma che differenza c&#39;è ?&lt;/p&gt;</description>
+&lt;p&gt;Ma che differenza c&amp;rsquo;è ?&lt;/p&gt;</description>
     </item>
     
     <item>

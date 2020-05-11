@@ -106,7 +106,7 @@ publishDir = "docs"
     stackoverflow   = ""
     reddit          = ""
     pinterest       = ""
-    googleplus      = "StefanoTeodorani"
+    googleplus      = ""
     facebook        = "steodorani"
     facebook_admin  = ""
     twitter_domain  = ""
@@ -115,10 +115,11 @@ publishDir = "docs"
 # Enable and disable widgets for the right sidebar
 [params.widgets]
     recent_articles = true
+    recent_articles_right = false
+    recent_articles_left = true
     categories = true
     tags = true
     tag_cloud = false
-
 
 # Privacy
 privacy_pack = true

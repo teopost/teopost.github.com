@@ -17,11 +17,7 @@
       <pubDate>Fri, 17 Feb 2017 21:46:48 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/</guid>
-      <description>mkvextract è un tool per manipolare file mkv da linea di comando.
-sudo apt-get install -y mkvtoolnix mkvtoolnix-gui sudo apt-get install -y libdca-utils aften wget https://github.com/JakeWharton/mkvdts2ac3/raw/master/mkvdts2ac3.sh chmod 777 mkvdts2ac3.sh &amp;amp;&amp;amp; sudo mv mkvdts2ac3.sh /usr/bin/ Alcuni esempi Creare la traccia AC3 nuova ed eliminare la DTS:
-mkvdts2ac3.sh -n Some.Random.Movie.mkv Note:
- http://www.bunkus.org/videotools/mkvtoolnix/doc/mkvpropedit.html http://linux.die.net/man/1/mkvextract  Cambiare il flag default dalla prima alla seconda traccia
-mkvpropedit Che\ bella\ giornata\ \(copia\).mkv --edit track:2 --set flag-default=0 --edit track:3 --set flag-default=1  Cambiare il flag forced a true nella seconda traccia audio</description>
+      <description>&lt;p&gt;mkvextract è un tool per manipolare file mkv da linea di comando.&lt;/p&gt;</description>
     </item>
     
     <item>

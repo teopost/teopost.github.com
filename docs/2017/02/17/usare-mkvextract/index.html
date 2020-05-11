@@ -2,7 +2,7 @@
 <html lang="es-419">
 <head>
     <title>Usare mkvextract &middot; stefanoteodorani.it</title>
-    <meta name="generator" content="Hugo 0.68.3" />
+    <meta name="generator" content="Hugo 0.70.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Stefano Teodorani">
@@ -28,11 +28,7 @@
 
     <meta property="og:image" content="https://www.stefanoteodorani.it/banner/usare-mkvextract.png" />
     <meta property="og:title" content="Usare mkvextract" />
-<meta property="og:description" content="mkvextract è un tool per manipolare file mkv da linea di comando.
-sudo apt-get install -y mkvtoolnix mkvtoolnix-gui sudo apt-get install -y libdca-utils aften wget https://github.com/JakeWharton/mkvdts2ac3/raw/master/mkvdts2ac3.sh chmod 777 mkvdts2ac3.sh &amp;&amp; sudo mv mkvdts2ac3.sh /usr/bin/ Alcuni esempi Creare la traccia AC3 nuova ed eliminare la DTS:
-mkvdts2ac3.sh -n Some.Random.Movie.mkv Note:
- http://www.bunkus.org/videotools/mkvtoolnix/doc/mkvpropedit.html http://linux.die.net/man/1/mkvextract  Cambiare il flag default dalla prima alla seconda traccia
-mkvpropedit Che\ bella\ giornata\ \(copia\).mkv --edit track:2 --set flag-default=0 --edit track:3 --set flag-default=1  Cambiare il flag forced a true nella seconda traccia audio" />
+<meta property="og:description" content="mkvextract è un tool per manipolare file mkv da linea di comando." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/" />
 <meta property="og:image" content="http://riparazione-pc.it/wp-content/uploads/2016/11/multimediaaudio.jpg" />
@@ -41,11 +37,7 @@ mkvpropedit Che\ bella\ giornata\ \(copia\).mkv --edit track:2 --set flag-defaul
 
     
     <meta itemprop="name" content="Usare mkvextract">
-<meta itemprop="description" content="mkvextract è un tool per manipolare file mkv da linea di comando.
-sudo apt-get install -y mkvtoolnix mkvtoolnix-gui sudo apt-get install -y libdca-utils aften wget https://github.com/JakeWharton/mkvdts2ac3/raw/master/mkvdts2ac3.sh chmod 777 mkvdts2ac3.sh &amp;&amp; sudo mv mkvdts2ac3.sh /usr/bin/ Alcuni esempi Creare la traccia AC3 nuova ed eliminare la DTS:
-mkvdts2ac3.sh -n Some.Random.Movie.mkv Note:
- http://www.bunkus.org/videotools/mkvtoolnix/doc/mkvpropedit.html http://linux.die.net/man/1/mkvextract  Cambiare il flag default dalla prima alla seconda traccia
-mkvpropedit Che\ bella\ giornata\ \(copia\).mkv --edit track:2 --set flag-default=0 --edit track:3 --set flag-default=1  Cambiare il flag forced a true nella seconda traccia audio">
+<meta itemprop="description" content="mkvextract è un tool per manipolare file mkv da linea di comando.">
 <meta itemprop="datePublished" content="2017-02-17T21:46:48&#43;01:00" />
 <meta itemprop="dateModified" content="2017-02-17T21:46:48&#43;01:00" />
 <meta itemprop="wordCount" content="177">
@@ -58,11 +50,7 @@ mkvpropedit Che\ bella\ giornata\ \(copia\).mkv --edit track:2 --set flag-defaul
 <meta name="twitter:image" content="http://riparazione-pc.it/wp-content/uploads/2016/11/multimediaaudio.jpg"/>
 
 <meta name="twitter:title" content="Usare mkvextract"/>
-<meta name="twitter:description" content="mkvextract è un tool per manipolare file mkv da linea di comando.
-sudo apt-get install -y mkvtoolnix mkvtoolnix-gui sudo apt-get install -y libdca-utils aften wget https://github.com/JakeWharton/mkvdts2ac3/raw/master/mkvdts2ac3.sh chmod 777 mkvdts2ac3.sh &amp;&amp; sudo mv mkvdts2ac3.sh /usr/bin/ Alcuni esempi Creare la traccia AC3 nuova ed eliminare la DTS:
-mkvdts2ac3.sh -n Some.Random.Movie.mkv Note:
- http://www.bunkus.org/videotools/mkvtoolnix/doc/mkvpropedit.html http://linux.die.net/man/1/mkvextract  Cambiare il flag default dalla prima alla seconda traccia
-mkvpropedit Che\ bella\ giornata\ \(copia\).mkv --edit track:2 --set flag-default=0 --edit track:3 --set flag-default=1  Cambiare il flag forced a true nella seconda traccia audio"/>
+<meta name="twitter:description" content="mkvextract è un tool per manipolare file mkv da linea di comando."/>
 <meta name="twitter:site" content="@teopost"/>
 
 
@@ -181,8 +169,9 @@ mkvpropedit Che\ bella\ giornata\ \(copia\).mkv --edit track:2 --set flag-defaul
 
    	
    	<div class="outer">
+		   
    		
-	    <aside id="profile">
+	    	<aside id="profile">
   <div class="inner profile-inner">
     <div class="base-info profile-block">
       <img id="avatar" src="https://avatars0.githubusercontent.com/u/2573389?v=3&amp;s=460">
@@ -197,7 +186,7 @@ mkvpropedit Che\ bella\ giornata\ \(copia\).mkv --edit track:2 --set flag-defaul
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        31
+        32
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -264,8 +253,6 @@ mkvpropedit Che\ bella\ giornata\ \(copia\).mkv --edit track:2 --set flag-defaul
 
 
 
-
-<td><a href="//plus.google.com/+StefanoTeodorani" target="_blank" title="Google+"><i class="fa fa-google-plus"></i></a></td>
 
 
 
@@ -391,10 +378,9 @@ Track ID 5: subtitles (S_TEXT/UTF8)
 <li><a href="http://www.setupswarm.com/main/media/ubuntu-dts-to-ac3">http://www.setupswarm.com/main/media/ubuntu-dts-to-ac3</a></li>
 <li><a href="https://github.com/JakeWharton/mkvdts2ac3">https://github.com/JakeWharton/mkvdts2ac3</a></li>
 </ul>
-
             </div>
             <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/" data-id="b5b42b4ba2240a5edbae327e9cbd74bc" class="article-share-link">
+    <a data-url="https://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/" data-id="901667ec9007bc8ebd2de85eb287187b" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -507,7 +493,7 @@ Track ID 5: subtitles (S_TEXT/UTF8)
 
 
 	    
-	    <aside id="sidebar">
+	    	<aside id="sidebar">
     
 <div class="widget-wrap">
     <h3 class="widget-title">
@@ -515,6 +501,32 @@ Track ID 5: subtitles (S_TEXT/UTF8)
     </h3>
     <div class="widget">
         <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/apache-pagina-cortesia.png)" alt="Usare mkvextract" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/linux">
+                        linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/" class="title">Schedulare nmon nel crontab</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-05-01 18:42:26 &#43;0100 &#43;0100" itemprop="datePublished">01-05-2020</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -620,32 +632,6 @@ Track ID 5: subtitles (S_TEXT/UTF8)
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/unison-ssh.jpg)" alt="Usare mkvextract" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://www.stefanoteodorani.it/categories/system">
-                        system
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/" class="title">Sincronizzare cartelle in SSH con UNISON</a></p>
-                    <p class="item-date">
-                        <time datetime="2018-08-05 18:00:00 &#43;0100 &#43;0100" itemprop="datePublished">05-08-2018</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -680,7 +666,7 @@ Track ID 5: subtitles (S_TEXT/UTF8)
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/linux">
                     linux
                 </a>
-                <span class="category-list-count">12</span>
+                <span class="category-list-count">13</span>
             </li>
             
             <li class="category-list-item">
@@ -793,7 +779,7 @@ Track ID 5: subtitles (S_TEXT/UTF8)
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/linux">
                     linux
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">
@@ -849,7 +835,8 @@ Track ID 5: subtitles (S_TEXT/UTF8)
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
 
-	    
+		
+		
 	</div>
 </div>
 

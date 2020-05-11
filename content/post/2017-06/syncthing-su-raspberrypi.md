@@ -21,9 +21,10 @@ La cosa che contraddistingue Syncthing, rispetto altre soluzioni opensource simi
 In questo modo la sincronizzazione può avvenire senza dover aprire porte nel vostro router, esattamente come accade con programmi tipo Dropbox.
 
 Prima di partire, tenete presente che alla fine di questa guida:
+
 1. Syncthing dovrà funzionare sotto l'utente pi
 2. Come conseguente del punto 1, i files di configurazione saranno creati sotto la home dell'utente pi (/home/pi/.config).
-2. Le cartelle che potrebe condividere dovranno stare sotto la home dell'utente pi.
+3. Le cartelle che potrebe condividere dovranno stare sotto la home dell'utente pi.
 
 Bene. Vediamo ora come possiamo installarlo sulla Raspbian.
 
@@ -84,7 +85,6 @@ Nel file dobbiamo cambiare la riga con scritto 127.0.0.1 (solo accessibile dalla
 
 Modificare tls in true se volete attivare l'ssl per l'interfaccia di configurazione.
 
-
 ```bash
 <gui enabled="true" tls="false">
  <address>0.0.0.0:8384</address>
@@ -136,74 +136,74 @@ DAEMON_LOG='/var/log/syncthing'
 do_start() {
   local result
 
-	pidofproc -p "${DAEMON_PID}" "${DAEMON_PATH}" > /dev/null
-	if [ $? -eq 0 ]; then
-		log_warning_msg "${DAEMON_NAME} is already started"
-		result=0
-	else
-		log_daemon_msg "Starting ${DAEMON_DESC}" "${DAEMON_NAME}"
-		touch "${DAEMON_LOG}"
-		chown $DAEMON_USER "${DAEMON_LOG}"
-		chmod u+rw "${DAEMON_LOG}"
-		if [ -z "${DAEMON_USER}" ]; then
-			start-stop-daemon --start --quiet --oknodo --background \
-				--nicelevel $DAEMON_NICE \
-				--chdir "${DAEMON_PWD}" \
-				--pidfile "${DAEMON_PID}" --make-pidfile \
-				--exec "${DAEMON_PATH}" -- $DAEMON_OPTS
-			result=$?
-		else
-			start-stop-daemon --start --quiet --oknodo --background \
-				--nicelevel $DAEMON_NICE \
-				--chdir "${DAEMON_PWD}" \
-				--pidfile "${DAEMON_PID}" --make-pidfile \
-				--chuid "${DAEMON_USER}" \
-				--exec "${DAEMON_PATH}" -- $DAEMON_OPTS
-			result=$?
-		fi
-		log_end_msg $result
-	fi
-	return $result
+    pidofproc -p "${DAEMON_PID}" "${DAEMON_PATH}" > /dev/null
+    if [ $? -eq 0 ]; then
+        log_warning_msg "${DAEMON_NAME} is already started"
+        result=0
+    else
+        log_daemon_msg "Starting ${DAEMON_DESC}" "${DAEMON_NAME}"
+        touch "${DAEMON_LOG}"
+        chown $DAEMON_USER "${DAEMON_LOG}"
+        chmod u+rw "${DAEMON_LOG}"
+        if [ -z "${DAEMON_USER}" ]; then
+            start-stop-daemon --start --quiet --oknodo --background \
+                --nicelevel $DAEMON_NICE \
+                --chdir "${DAEMON_PWD}" \
+                --pidfile "${DAEMON_PID}" --make-pidfile \
+                --exec "${DAEMON_PATH}" -- $DAEMON_OPTS
+            result=$?
+        else
+            start-stop-daemon --start --quiet --oknodo --background \
+                --nicelevel $DAEMON_NICE \
+                --chdir "${DAEMON_PWD}" \
+                --pidfile "${DAEMON_PID}" --make-pidfile \
+                --chuid "${DAEMON_USER}" \
+                --exec "${DAEMON_PATH}" -- $DAEMON_OPTS
+            result=$?
+        fi
+        log_end_msg $result
+    fi
+    return $result
 }
 
 do_stop() {
-	local result
+    local result
 
-	pidofproc -p "${DAEMON_PID}" "${DAEMON_PATH}" > /dev/null
-	if [ $? -ne 0 ]; then
-		log_warning_msg "${DAEMON_NAME} is not started"
-		result=0
-	else
-		log_daemon_msg "Stopping ${DAEMON_DESC}" "${DAEMON_NAME}"
-		killproc -p "${DAEMON_PID}" "${DAEMON_PATH}"
-		result=$?
-		log_end_msg $result
-		rm "${DAEMON_PID}"
-	fi
-	return $result
+    pidofproc -p "${DAEMON_PID}" "${DAEMON_PATH}" > /dev/null
+    if [ $? -ne 0 ]; then
+        log_warning_msg "${DAEMON_NAME} is not started"
+        result=0
+    else
+        log_daemon_msg "Stopping ${DAEMON_DESC}" "${DAEMON_NAME}"
+        killproc -p "${DAEMON_PID}" "${DAEMON_PATH}"
+        result=$?
+        log_end_msg $result
+        rm "${DAEMON_PID}"
+    fi
+    return $result
 }
 
 do_restart() {
-	local result
-	do_stop
-	result=$?
-	if [ $result = 0 ]; then
-		do_start
-		result=$?
-	fi
-	return $result
+    local result
+    do_stop
+    result=$?
+    if [ $result = 0 ]; then
+        do_start
+        result=$?
+    fi
+    return $result
 }
 
 do_status() {
-	local result
-	status_of_proc -p "${DAEMON_PID}" "${DAEMON_PATH}" "${DAEMON_NAME}"
-	result=$?
-	return $result
+    local result
+    status_of_proc -p "${DAEMON_PID}" "${DAEMON_PATH}" "${DAEMON_NAME}"
+    result=$?
+    return $result
 }
 
 do_usage() {
-	echo $"Usage: $0 {start | stop | restart | status}"
-	exit 1
+    echo $"Usage: $0 {start | stop | restart | status}"
+    exit 1
 }
 
 case "$1" in
