@@ -1,7 +1,6 @@
 +++
 banner = "sandbox/sample.jpg"
 sample = "fake.pdf"
-mermaid = false
 +++
 
 ## Note
@@ -53,21 +52,6 @@ https://gohugo.io/content-management/shortcodes/
 ### ref
 [GoDaddy]({{< ref "post/2016-12/configurare-godaddy-per-le-github-pages.md" >}})
 
-### twitter
-
-{{< tweet 877500564405444608 >}}
-
-### instagram
-
-{{< instagram BWNjjyYFxVx >}}
-
-### figure
-
-{{< figure src="https://placekitten.com/g/500/300" title="The cat" >}}
-
-### gist
-
-{{< gist spf13 7896402 >}}
 
 ### notice
 
@@ -88,6 +72,10 @@ A notice disclaimer
 {{% notice warning %}}
 A notice disclaimer
 {{% /notice %}}
+
+{{< notice warning >}}
+This is a warning notice. Be warned!
+{{< /notice >}}
 
 ### categories
 

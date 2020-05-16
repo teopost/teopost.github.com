@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>opendata on stefanoteodorani.it</title>
+    <link>https://www.stefanoteodorani.it/tags/opendata/</link>
+    <description>Recent content in opendata on stefanoteodorani.it</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-419</language>
+    <lastBuildDate>Fri, 24 Mar 2017 18:42:26 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.stefanoteodorani.it/tags/opendata/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Recuperare i dati sull&#39;inquinamento della mia città da CKAN</title>
+      <link>https://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/</link>
+      <pubDate>Fri, 24 Mar 2017 18:42:26 +0100</pubDate>
+      
+      <guid>https://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/</guid>
+      <description>&lt;p&gt;Ho intenzione di scrivere un piccolo bot di telegram che mi dia indicazioni sulla qualità dell&amp;rsquo;aria che ogni giorno respiro nella mia città.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

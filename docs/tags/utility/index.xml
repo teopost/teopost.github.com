@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>utility on stefanoteodorani.it</title>
+    <link>https://www.stefanoteodorani.it/tags/utility/</link>
+    <description>Recent content in utility on stefanoteodorani.it</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-419</language>
+    <lastBuildDate>Fri, 01 May 2020 18:42:26 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.stefanoteodorani.it/tags/utility/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Schedulare nmon nel crontab</title>
+      <link>https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/</link>
+      <pubDate>Fri, 01 May 2020 18:42:26 +0100</pubDate>
+      
+      <guid>https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/</guid>
+      <description>&lt;p&gt;Per monitorare lo stato dei server in un infrastruttura Linux, esistono oggi molti strumenti (zabbix, netdata, zenoss, ecc.).
+In alcuni casi, dove non si ha la possibilità di installare questi validissimi tools, può essere utile fare un salto indietro nel tempo e utilizzare il buon &amp;ldquo;vecchio&amp;rdquo; nmon.&lt;/p&gt;
+&lt;p&gt;In questo articolo vi mostro come installarlo come servizio su Red Hat.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Liquibase vs Flyway</title>
+      <link>https://www.stefanoteodorani.it/2018/11/22/liquibase-vs-flyway/</link>
+      <pubDate>Thu, 22 Nov 2018 18:00:00 +0100</pubDate>
+      
+      <guid>https://www.stefanoteodorani.it/2018/11/22/liquibase-vs-flyway/</guid>
+      <description>&lt;p&gt;Liquibase e Flyway sono &amp;ldquo;database migration tool&amp;rdquo;, ovvero strumenti per l&amp;rsquo;applicazione di modifiche al database.
+Questo articolo descrive le principali funzionalità e le  differenze che li caratterizzano.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Sincronizzare cartelle in SSH con UNISON</title>
+      <link>https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/</link>
+      <pubDate>Sun, 05 Aug 2018 18:00:00 +0100</pubDate>
+      
+      <guid>https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/</guid>
+      <description>&lt;p&gt;Recentemente, mi è capitato di dover risolvere questo problema.
+Su un server ftp, vengono copiati files in 3 separate cartelle.
+Tali file devono essere sincronizzati con 3 cartelle situate su 3 diverse macchine.
+Tale sincronizzazione deve essere bidirezionale e i files creati sul server ftp devono scomparire quanto sulle cartelle remote qualcuno li cancella.&lt;/p&gt;
+&lt;p&gt;Per risolvere questo problema ho utilizzato unison, un tool che consente di sincronizzare in maniera bidirezionale due cartelle anche via ssh.&lt;/p&gt;
+&lt;p&gt;Ecco quindi quello che ho fatto:&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Usare mkvextract</title>
+      <link>https://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/</link>
+      <pubDate>Fri, 17 Feb 2017 21:46:48 +0100</pubDate>
+      
+      <guid>https://www.stefanoteodorani.it/2017/02/17/usare-mkvextract/</guid>
+      <description>&lt;p&gt;mkvextract è un tool per manipolare file mkv da linea di comando.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

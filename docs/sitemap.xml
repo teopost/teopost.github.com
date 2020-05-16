@@ -13,11 +13,6 @@
   </url>
   
   <url>
-    <loc>https://www.stefanoteodorani.it/categories/linux/</loc>
-    <lastmod>2020-05-01T18:42:26+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.stefanoteodorani.it/post/</loc>
     <lastmod>2020-05-01T18:42:26+01:00</lastmod>
   </url>
@@ -38,6 +33,16 @@
   </url>
   
   <url>
+    <loc>https://www.stefanoteodorani.it/tags/utility/</loc>
+    <lastmod>2020-05-01T18:42:26+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.stefanoteodorani.it/categories/work/</loc>
+    <lastmod>2020-05-01T18:42:26+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.stefanoteodorani.it/tags/apache/</loc>
     <lastmod>2019-04-24T18:42:26+01:00</lastmod>
   </url>
@@ -48,7 +53,7 @@
   </url>
   
   <url>
-    <loc>https://www.stefanoteodorani.it/categories/database/</loc>
+    <loc>https://www.stefanoteodorani.it/tags/database/</loc>
     <lastmod>2019-01-20T18:42:26+01:00</lastmod>
   </url>
   
@@ -60,11 +65,6 @@
   <url>
     <loc>https://www.stefanoteodorani.it/2019/01/20/lock-wait-e-timeout-in-db2/</loc>
     <lastmod>2019-01-20T18:42:26+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.stefanoteodorani.it/tags/db-tools/</loc>
-    <lastmod>2018-11-22T18:00:00+01:00</lastmod>
   </url>
   
   <url>
@@ -84,11 +84,6 @@
   
   <url>
     <loc>https://www.stefanoteodorani.it/2018/08/05/sincronizzare-cartelle-in-ssh-con-unison/</loc>
-    <lastmod>2018-08-05T18:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.stefanoteodorani.it/categories/system/</loc>
     <lastmod>2018-08-05T18:00:00+01:00</lastmod>
   </url>
   
@@ -118,7 +113,12 @@
   </url>
   
   <url>
-    <loc>https://www.stefanoteodorani.it/tags/osx/</loc>
+    <loc>https://www.stefanoteodorani.it/tags/mac/</loc>
+    <lastmod>2018-01-02T22:45:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.stefanoteodorani.it/tags/ssh/</loc>
     <lastmod>2018-01-02T22:45:00+01:00</lastmod>
   </url>
   
@@ -133,16 +133,6 @@
   </url>
   
   <url>
-    <loc>https://www.stefanoteodorani.it/tags/virtual-machines/</loc>
-    <lastmod>2017-12-28T21:36:13+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.stefanoteodorani.it/categories/developer/</loc>
-    <lastmod>2017-09-17T12:52:00+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.stefanoteodorani.it/tags/git/</loc>
     <lastmod>2017-09-17T12:52:00+01:00</lastmod>
   </url>
@@ -150,6 +140,11 @@
   <url>
     <loc>https://www.stefanoteodorani.it/2017/09/17/git-checkout-di-una-specifica-sottocartella/</loc>
     <lastmod>2017-09-17T12:52:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.stefanoteodorani.it/categories/fun/</loc>
+    <lastmod>2017-06-20T22:11:56+02:00</lastmod>
   </url>
   
   <url>
@@ -198,11 +193,6 @@
   </url>
   
   <url>
-    <loc>https://www.stefanoteodorani.it/tags/bash/</loc>
-    <lastmod>2017-05-17T21:39:51+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/</loc>
     <lastmod>2017-05-17T21:39:51+02:00</lastmod>
   </url>
@@ -213,18 +203,13 @@
   </url>
   
   <url>
-    <loc>https://www.stefanoteodorani.it/categories/opendata/</loc>
+    <loc>https://www.stefanoteodorani.it/tags/opendata/</loc>
     <lastmod>2017-03-24T18:42:26+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/</loc>
     <lastmod>2017-03-24T18:42:26+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.stefanoteodorani.it/tags/ubuntu/</loc>
-    <lastmod>2017-02-17T21:46:48+01:00</lastmod>
   </url>
   
   <url>
@@ -243,7 +228,7 @@
   </url>
   
   <url>
-    <loc>https://www.stefanoteodorani.it/categories/mobile/</loc>
+    <loc>https://www.stefanoteodorani.it/tags/mobile/</loc>
     <lastmod>2017-01-20T21:46:00+01:00</lastmod>
   </url>
   
@@ -255,6 +240,11 @@
   <url>
     <loc>https://www.stefanoteodorani.it/2017/01/09/ip-statico-su-raspberry/</loc>
     <lastmod>2017-01-09T16:02:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.stefanoteodorani.it/tags/wordpress/</loc>
+    <lastmod>2017-01-08T16:15:00+01:00</lastmod>
   </url>
   
   <url>
@@ -273,22 +263,17 @@
   </url>
   
   <url>
-    <loc>https://www.stefanoteodorani.it/tags/due/</loc>
-    <lastmod>2016-12-28T22:45:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.stefanoteodorani.it/categories/fun/</loc>
-    <lastmod>2016-12-28T22:45:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.stefanoteodorani.it/tags/uno/</loc>
+    <loc>https://www.stefanoteodorani.it/tags/github/</loc>
     <lastmod>2016-12-28T22:45:00+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.stefanoteodorani.it/2016/12/27/disabilitare-lautenticazione-in-ubuntu-software-center/</loc>
+    <lastmod>2016-12-27T18:45:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.stefanoteodorani.it/tags/ubuntu/</loc>
     <lastmod>2016-12-27T18:45:00+01:00</lastmod>
   </url>
   
@@ -299,6 +284,10 @@
   
   <url>
     <loc>https://www.stefanoteodorani.it/sandbox/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.stefanoteodorani.it/sandbox0/</loc>
   </url>
   
 </urlset>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mobile on stefanoteodorani.it</title>
+    <link>https://www.stefanoteodorani.it/tags/mobile/</link>
+    <description>Recent content in mobile on stefanoteodorani.it</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-419</language>
+    <lastBuildDate>Fri, 20 Jan 2017 21:46:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.stefanoteodorani.it/tags/mobile/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Testare applicazioni Android</title>
+      <link>https://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/</link>
+      <pubDate>Fri, 20 Jan 2017 21:46:00 +0100</pubDate>
+      
+      <guid>https://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/</guid>
+      <description>&lt;p&gt;Per poter testare le app mobile su piattaforma Android, Google mette a disposizione un servizio di aggiornamento automatico basato sul Play Store.
+Iscriversi a questo servizio è un po macchinoso, ma garantisce gli aggiornamenti automatici delle app quando lo sviluppatore pubblica una nuova versione.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

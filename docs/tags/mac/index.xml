@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mac on stefanoteodorani.it</title>
+    <link>https://www.stefanoteodorani.it/tags/mac/</link>
+    <description>Recent content in mac on stefanoteodorani.it</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-419</language>
+    <lastBuildDate>Tue, 02 Jan 2018 22:45:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.stefanoteodorani.it/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Usare file ppk con ssh sul Mac</title>
+      <link>https://www.stefanoteodorani.it/2018/01/02/usare-file-ppk-con-ssh-sul-mac/</link>
+      <pubDate>Tue, 02 Jan 2018 22:45:00 +0100</pubDate>
+      
+      <guid>https://www.stefanoteodorani.it/2018/01/02/usare-file-ppk-con-ssh-sul-mac/</guid>
+      <description>&lt;p&gt;Amo Linux.
+Sembra una contraddizione ma è proprio per questo che amo anche i Mac, e ne possiedo uno.
+Recentemente mi è capitato di dovermi collegare ad un server remoto via ssh utilizzando una chiave privata diversa dalla mia.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Client Oracle sul Mac</title>
+      <link>https://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/</link>
+      <pubDate>Thu, 16 Feb 2017 21:36:13 +0100</pubDate>
+      
+      <guid>https://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/</guid>
+      <description>&lt;p&gt;Per installare il client Oracle sul Mac, utilizzare questa procedura:&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

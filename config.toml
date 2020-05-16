@@ -10,7 +10,7 @@ googleAnalytics = ""
 # Define the number of posts per page
 paginate = 5
 footnotereturnlinkcontents = "↩"
-theme = "hugo-icarus-theme"
+theme = [ "hugo-notice", "hugo-icarus-theme" ]
 publishDir = "docs"
 
 [markup]
