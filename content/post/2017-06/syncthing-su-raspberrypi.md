@@ -1,11 +1,11 @@
 +++
-banner = "banner/syncthing-su-raspberrypi.png"
-categories = ["linux"]
+banner = "syncthing-su-raspberrypi/syncthing-su-raspberrypi.png"
+categories = ["fun"]
 date = "2017-06-20T22:11:56+02:00"
 description = ""
 images = []
 menu = ""
-tags = ["raspberry"]
+tags = ["raspberry","linux"]
 title = "Syncthing su Raspberrypi"
 
 +++

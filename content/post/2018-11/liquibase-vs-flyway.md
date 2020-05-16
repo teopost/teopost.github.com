@@ -1,11 +1,11 @@
 +++
-banner = "banner/liquibase-vs-flyway.png"
-categories = ["database"]
+banner = "liquibase-vs-flyway/liquibase-vs-flyway.png"
+categories = ["work"]
 date = "2018-11-22T18:00:00+01:00"
 description = ""
 images = []
 menu = ""
-tags = ["db-tools"]
+tags = ["database","utility"]
 title = "Liquibase vs Flyway"
 
 +++

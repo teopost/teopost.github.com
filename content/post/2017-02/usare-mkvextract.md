@@ -1,11 +1,11 @@
 +++
-banner = "banner/usare-mkvextract.png"
-categories = ["linux"]
+banner = "usare-mkvextract/usare-mkvextract.png"
+categories = ["fun"]
 date = "2017-02-17T21:46:48+01:00"
 description = ""
 images = ["http://riparazione-pc.it/wp-content/uploads/2016/11/multimediaaudio.jpg"]
 menu = ""
-tags = ["ubuntu"]
+tags = ["linux","utility"]
 title = "Usare mkvextract"
 
 +++
@@ -53,7 +53,7 @@ Mettere il default flag a 1 (non devono essercene altri pero)
 Mostra l'elenco delle tracce
 
     mkvmerge -i Che_bella_giornata.mkv
-    
+
     Track ID 1: video (V_MPEG4/ISO/AVC)
     Track ID 2: audio (A_DTS)
     Track ID 3: audio (A_AC3)

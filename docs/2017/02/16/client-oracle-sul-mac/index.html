@@ -26,15 +26,9 @@
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
 
 
-    <meta property="og:image" content="https://www.stefanoteodorani.it/banner/client-oracle-sul-mac.jpg" />
+    <meta property="og:image" content="https://www.stefanoteodorani.it/oracle-client-sul-mac/oracle-client-sul-mac.jpg" />
     <meta property="og:title" content="Client Oracle sul Mac" />
-<meta property="og:description" content="Per installare il client Oracle sul Mac, utilizzare questa procedura:
-Creare la cartella /Users/[utente]/oracle e metterci dentro:
-instantclient-basic-macos.x64-11.2.0.4.0.zip instantclient-sdk-macos.x64-11.2.0.4.0.zip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip scompattarli
-unzip instantclient-basic-macos.x64-11.2.0.4.0.zip unzip instantclient-sdk-macos.x64-11.2.0.4.0.zip unzip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip Andare nella cartella che lo scompattamento crea
-cd /Users/[utente]/instantclient11_2 Creare i 2 seguenti link simbolici (controllare la versione delle dll)
-ln -s libclntsh.dylib.11.1 libclntsh.dylib ln -s libocci.dylib.11.1 libocci.dylib Eseguire la seguente fix
-curl -O https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fix_oralib.rb ruby fix_oralib.rb --absolute-path Aggiungere nel .bash_profile se seguenti righe" />
+<meta property="og:description" content="Per installare il client Oracle sul Mac, utilizzare questa procedura:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/" />
 <meta property="article:published_time" content="2017-02-16T21:36:13+01:00" />
@@ -42,13 +36,7 @@ curl -O https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fix_oralib.
 
     
     <meta itemprop="name" content="Client Oracle sul Mac">
-<meta itemprop="description" content="Per installare il client Oracle sul Mac, utilizzare questa procedura:
-Creare la cartella /Users/[utente]/oracle e metterci dentro:
-instantclient-basic-macos.x64-11.2.0.4.0.zip instantclient-sdk-macos.x64-11.2.0.4.0.zip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip scompattarli
-unzip instantclient-basic-macos.x64-11.2.0.4.0.zip unzip instantclient-sdk-macos.x64-11.2.0.4.0.zip unzip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip Andare nella cartella che lo scompattamento crea
-cd /Users/[utente]/instantclient11_2 Creare i 2 seguenti link simbolici (controllare la versione delle dll)
-ln -s libclntsh.dylib.11.1 libclntsh.dylib ln -s libocci.dylib.11.1 libocci.dylib Eseguire la seguente fix
-curl -O https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fix_oralib.rb ruby fix_oralib.rb --absolute-path Aggiungere nel .bash_profile se seguenti righe">
+<meta itemprop="description" content="Per installare il client Oracle sul Mac, utilizzare questa procedura:">
 <meta itemprop="datePublished" content="2017-02-16T21:36:13&#43;01:00" />
 <meta itemprop="dateModified" content="2017-02-16T21:36:13&#43;01:00" />
 <meta itemprop="wordCount" content="86">
@@ -58,13 +46,7 @@ curl -O https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fix_oralib.
 <meta itemprop="keywords" content="oracle," />
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Client Oracle sul Mac"/>
-<meta name="twitter:description" content="Per installare il client Oracle sul Mac, utilizzare questa procedura:
-Creare la cartella /Users/[utente]/oracle e metterci dentro:
-instantclient-basic-macos.x64-11.2.0.4.0.zip instantclient-sdk-macos.x64-11.2.0.4.0.zip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip scompattarli
-unzip instantclient-basic-macos.x64-11.2.0.4.0.zip unzip instantclient-sdk-macos.x64-11.2.0.4.0.zip unzip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip Andare nella cartella che lo scompattamento crea
-cd /Users/[utente]/instantclient11_2 Creare i 2 seguenti link simbolici (controllare la versione delle dll)
-ln -s libclntsh.dylib.11.1 libclntsh.dylib ln -s libocci.dylib.11.1 libocci.dylib Eseguire la seguente fix
-curl -O https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fix_oralib.rb ruby fix_oralib.rb --absolute-path Aggiungere nel .bash_profile se seguenti righe"/>
+<meta name="twitter:description" content="Per installare il client Oracle sul Mac, utilizzare questa procedura:"/>
 <meta name="twitter:site" content="@teopost"/>
 
 
@@ -205,7 +187,7 @@ curl -O https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fix_oralib.
       </div>
       <div class="article-info-block">
         
-          14
+          15
         
         <span>
             Tags
@@ -292,7 +274,7 @@ curl -O https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fix_oralib.
     <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
         <div class="article-inner">
             
-                <img src="https://www.stefanoteodorani.it/banner/client-oracle-sul-mac.jpg" class="article-banner">
+                <img src="https://www.stefanoteodorani.it/oracle-client-sul-mac/oracle-client-sul-mac.jpg" class="article-banner">
             
 
             <header class="article-header">
@@ -375,10 +357,9 @@ export PATH<span style="color:#f92672">=</span>$PATH:$ORACLE_HOME
 <ul>
 <li><a href="https://github.com/kubo/fix_oralib_osx">https://github.com/kubo/fix_oralib_osx</a></li>
 </ul>
-
             </div>
             <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/" data-id="bf91ff447b256f9e37287e40ae5e2321" class="article-share-link">
+    <a data-url="https://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/" data-id="4cab6a105f04c26d92f582ec0043ab1e" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -530,7 +511,7 @@ export PATH<span style="color:#f92672">=</span>$PATH:$ORACLE_HOME
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2019/04/24/pagina-di-cortesia-su-apache/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/apache-pagina-cortesia.png)" alt="Client Oracle sul Mac" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/apache-pagina-cortesia/apache-pagina-cortesia.png)" alt="Client Oracle sul Mac" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -556,7 +537,7 @@ export PATH<span style="color:#f92672">=</span>$PATH:$ORACLE_HOME
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2019/01/20/lock-wait-e-timeout-in-db2/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/lock-wait-e-timeout-in-db2.jpg)" alt="Client Oracle sul Mac" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/db2-lock-wait-e-timeout/db2-lock-wait-e-timeout.jpg)" alt="Client Oracle sul Mac" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -582,7 +563,7 @@ export PATH<span style="color:#f92672">=</span>$PATH:$ORACLE_HOME
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2018/11/22/liquibase-vs-flyway/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/liquibase-vs-flyway.png)" alt="Client Oracle sul Mac" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/liquibase-vs-flyway/liquibase-vs-flyway.png)" alt="Client Oracle sul Mac" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -608,7 +589,7 @@ export PATH<span style="color:#f92672">=</span>$PATH:$ORACLE_HOME
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2018/11/05/sql-tuning-advisor-per-uno-specifico-sql_id/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/sql-tuning-advisor-with-sqlid.png)" alt="Client Oracle sul Mac" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/oracle-sql-tuning-advisor-with-sqlid/oracle-sql-tuning-advisor-with-sqlid.png)" alt="Client Oracle sul Mac" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -661,6 +642,14 @@ export PATH<span style="color:#f92672">=</span>$PATH:$ORACLE_HOME
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/fun">
+                    fun
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/linux">
                     linux
                 </a>
@@ -688,7 +677,7 @@ export PATH<span style="color:#f92672">=</span>$PATH:$ORACLE_HOME
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/system">
                     system
                 </a>
-                <span class="category-list-count">3</span>
+                <span class="category-list-count">2</span>
             </li>
             
         </ul>
@@ -758,16 +747,16 @@ export PATH<span style="color:#f92672">=</span>$PATH:$ORACLE_HOME
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/git">
-                    git
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/due">
+                    due
                 </a>
                 <span class="category-list-count">1</span>
             </li>
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/github-pages">
-                    github-pages
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/git">
+                    git
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -810,6 +799,14 @@ export PATH<span style="color:#f92672">=</span>$PATH:$ORACLE_HOME
                     ubuntu
                 </a>
                 <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/uno">
+                    uno
+                </a>
+                <span class="category-list-count">1</span>
             </li>
             
             <li class="category-list-item">

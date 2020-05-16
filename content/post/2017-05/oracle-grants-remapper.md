@@ -1,11 +1,11 @@
 +++
-banner = "banner/oracle-grants-remapper.jpg"
-categories = ["database"]
+banner = "oracle-grants-remapper/oracle-grants-remapper.jpg"
+categories = ["work"]
 date = "2017-05-17T22:17:06+02:00"
 description = ""
 images = []
 menu = ""
-tags = ["oracle"]
+tags = ["oracle","database"]
 title = "Oracle grants remapper"
 
 +++

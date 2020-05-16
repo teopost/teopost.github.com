@@ -17,7 +17,7 @@
       <pubDate>Fri, 01 May 2020 18:42:26 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/</guid>
-      <description>&lt;p&gt;Per monitorare lo stato dei server in un infrastruttura Linux, esistono oggi molti strumenti (zabbix, netdata, zenoss, ecc).
+      <description>&lt;p&gt;Per monitorare lo stato dei server in un infrastruttura Linux, esistono oggi molti strumenti (zabbix, netdata, zenoss, ecc.).
 In alcuni casi, dove non si ha la possibilità di installare questi validissimi tools, può essere utile fare un salto indietro nel tempo e utilizzare il buon &amp;ldquo;vecchio&amp;rdquo; nmon.&lt;/p&gt;
 &lt;p&gt;In questo articolo vi mostro come installarlo come servizio su Red Hat.&lt;/p&gt;</description>
     </item>
@@ -86,8 +86,8 @@ Tale sincronizzazione deve essere bidirezionale e i files creati sul server ftp 
       
       <guid>https://www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/</guid>
       <description>&lt;h2 id=&#34;introduzione&#34;&gt;Introduzione&lt;/h2&gt;
-&lt;p&gt;Un utente Oracle può essere creato in modo che la password scada dopo un certo periodo di tempo definito nel profilo assegnato. Per riattivare l&amp;rsquo;utente esistente è necessario reimpostare la password.
-In alcuni casi questo può essere un problema.
+&lt;p&gt;Un utente Oracle può essere creato in modo che la password scada dopo un certo periodo di tempo definito nel profilo assegnato. Per riattivare l&amp;rsquo;utente esistente è necessario reimpostare la password.&lt;/p&gt;
+&lt;p&gt;In alcuni casi questo può essere un problema.
 In questo articolo viene descritta una procedura un pò inconsueta per ripristinare un utente senza conoscere la sua password.&lt;/p&gt;</description>
     </item>
     
@@ -138,8 +138,9 @@ Ecco come ho fatto&lt;/p&gt;</description>
       <pubDate>Tue, 02 Jan 2018 22:45:00 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2018/01/02/usare-file-ppk-con-ssh-sul-mac/</guid>
-      <description>Amo Linux. Sembra una contraddizione ma è proprio per questo che amo anche i Mac, e ne possiedo uno. Recentemente mi è capitato di dovermi collegare ad un server remoto via ssh utilizzando una chiave privata diversa dalla mia. Mi è stata fornita una chiave privata ma, ahimè, in un formato proprietario di putty (con estensione .ppk). Ecco quello che ho fatto:
-Conversione dile .ppk in .pem Per prima cosa ho convertito il file.</description>
+      <description>&lt;p&gt;Amo Linux.
+Sembra una contraddizione ma è proprio per questo che amo anche i Mac, e ne possiedo uno.
+Recentemente mi è capitato di dovermi collegare ad un server remoto via ssh utilizzando una chiave privata diversa dalla mia.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -148,8 +149,7 @@ Conversione dile .ppk in .pem Per prima cosa ho convertito il file.</description
       <pubDate>Thu, 28 Dec 2017 21:36:13 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/</guid>
-      <description>Ho scaricato da osboxes.org una VM con dentro CentoOS (sono pigro e se posso uso cose già fatte). Ho avviato la macchina virtuale e ho provato a navigare su internet. Non funzionava. Eseguendo il comando ifconfig non appariva la scheda di rete. Eppure sembrava tutto configurato bene. Ecco come ho soluzionato, come direbbe il mio amico coniglio.
-[teopost@localhost ~]$ ifconfig ens32: flags=4163&amp;lt;UP,BROADCAST,RUNNING,MULTICAST&amp;gt; mtu 1500 ether 00:0c:29:68:22:e2 txqueuelen 1000 (Ethernet) RX packets 0 bytes 0 (0.</description>
+      <description>&lt;p&gt;Ho scaricato da &lt;a href=&#34;http://www.osboxes.org/&#34;&gt;osboxes.org&lt;/a&gt; una VM con dentro CentoOS (sono pigro e se posso uso cose già fatte), ho avviato la macchina virtuale e ho provato a navigare su internet. Non funzionava.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -222,8 +222,7 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.&lt;
       <pubDate>Sat, 20 May 2017 20:50:06 +0200</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/</guid>
-      <description>&lt;p&gt;Conosco Luca. Ha una agenzia di viaggi a Rimini, e un&amp;rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.&lt;/p&gt;
-&lt;p&gt;E&amp;rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico &lt;a href=&#34;https://www.sergiogridelli.it/&#34;&gt;Sergio&lt;/a&gt; gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Conosco Luca. Ha una agenzia di viaggi a Rimini, e un&amp;rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -252,10 +251,8 @@ In base al file di configurazione passato come argomento, Oracle Grants Remmaper
       <pubDate>Wed, 17 May 2017 21:39:51 +0200</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/</guid>
-      <description>Uso spesso ssh per collegarmi sui server linux dei clienti. Per evitare di dover digitare sempre la password del server, è possibile configurare il vostro client per effettuare un collegamento senza dover digitare la password.
-Creare sul vostro computer la chiave pubblica e privata La prima cosa da fare è creare, sul client che deve collegarsi al server, le chiavi
-Digitare quindi il comando ssh-keygen
-teopost@local-host$ ssh-keygen Generating public/private rsa key pair.</description>
+      <description>&lt;p&gt;Uso spesso ssh per collegarmi sui server linux dei clienti.
+Per evitare di dover digitare sempre la password del server, è possibile configurare il vostro client per effettuare un collegamento senza dover digitare la password.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -264,10 +261,7 @@ teopost@local-host$ ssh-keygen Generating public/private rsa key pair.</descript
       <pubDate>Fri, 24 Mar 2017 18:42:26 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2017/03/24/recuperare-i-dati-sullinquinamento-della-mia-citt%C3%A0-da-ckan/</guid>
-      <description>Ho intenzione di scrivere un piccolo bot di telegram che mi dia indicazioni sulla qualità dell&amp;rsquo;aria che ogni giorno respiro nella mia città.
-Sono partito, nella mia indagine, da qui:
-https://www.arpae.it/liberiamo/statistiche_riepilogative.asp?idlivello=822  Questo sito è pieno zeppo di dati utili e fra questi ci sono anche quelli che servono a me; ma come recuperarli ?
-Per fortuna la regione Emilia Romagna espone tutte queste informazioni sotto forma di Open Data utilizzando un software open source chiamato CKAN.</description>
+      <description>&lt;p&gt;Ho intenzione di scrivere un piccolo bot di telegram che mi dia indicazioni sulla qualità dell&amp;rsquo;aria che ogni giorno respiro nella mia città.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -285,13 +279,7 @@ Per fortuna la regione Emilia Romagna espone tutte queste informazioni sotto for
       <pubDate>Thu, 16 Feb 2017 21:36:13 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/</guid>
-      <description>Per installare il client Oracle sul Mac, utilizzare questa procedura:
-Creare la cartella /Users/[utente]/oracle e metterci dentro:
-instantclient-basic-macos.x64-11.2.0.4.0.zip instantclient-sdk-macos.x64-11.2.0.4.0.zip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip scompattarli
-unzip instantclient-basic-macos.x64-11.2.0.4.0.zip unzip instantclient-sdk-macos.x64-11.2.0.4.0.zip unzip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip Andare nella cartella che lo scompattamento crea
-cd /Users/[utente]/instantclient11_2 Creare i 2 seguenti link simbolici (controllare la versione delle dll)
-ln -s libclntsh.dylib.11.1 libclntsh.dylib ln -s libocci.dylib.11.1 libocci.dylib Eseguire la seguente fix
-curl -O https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fix_oralib.rb ruby fix_oralib.rb --absolute-path Aggiungere nel .bash_profile se seguenti righe</description>
+      <description>&lt;p&gt;Per installare il client Oracle sul Mac, utilizzare questa procedura:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -300,9 +288,8 @@ curl -O https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fix_oralib.
       <pubDate>Fri, 20 Jan 2017 21:46:00 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2017/01/20/testare-applicazioni-android/</guid>
-      <description>Per poter testare le app mobile su piattaforma Android, Google mette a disposizione un servizio di aggiornamento automatico basato sul Play Store. Istriversi a questo servizio è un po macchinoso, ma garantisce gli aggiornamenti automatici delle app quando lo sviluppatore pubblica una nuova versione.
-Il servizio di cui parliamo è basato sulle Community di Google e funziona in questo modo:
- Lo sviluppatore crea una Community specifica per l&amp;rsquo;app (es: app-unixx-test) Lo sviluppatore invia una mail di invito al tester per consentirgli di entrare nella Community Nella mail ricevuta, il tester clicca il pulsante Anteprima community   Si viene reindirizzati nella pagina della community di google, in cui il tester deve cliccare il pulsante Accetta invito Ora sulla parte destra della pagina cliccare sul link App di test   Nella pagina successiva cliccare sul pulsante DIVENTA UN TESTER Nella pagina successiva, in basso cliccare nel link Scarica UniXX dal Play Store   A questo punto si e&amp;rsquo; indirizzati nella pagina del play store.</description>
+      <description>&lt;p&gt;Per poter testare le app mobile su piattaforma Android, Google mette a disposizione un servizio di aggiornamento automatico basato sul Play Store.
+Iscriversi a questo servizio è un po macchinoso, ma garantisce gli aggiornamenti automatici delle app quando lo sviluppatore pubblica una nuova versione.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -321,9 +308,8 @@ Per farlo agire come segue:&lt;/p&gt;</description>
       <pubDate>Sun, 08 Jan 2017 16:15:00 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/</guid>
-      <description>Voglio installare un blog sulla raspberry. Per farlo, dopo aver installato un LAMP server, procedo come segue:
-Ecco cosa ho fatto:
-Preparare lo schema di DATABASE mysql -uroot -p&amp;lt;password&amp;gt; CREATE DATABASE wordpress; CREATE USER wordpressuser@localhost IDENTIFIED BY &amp;#39;wppassword&amp;#39; GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost; dove  è la password di mysql che ho impostato durante l&amp;rsquo;installazione del LAMP server e wppassword è un esempio di password per l&amp;rsquo;utente wordpress che ho appenta creato su mysql</description>
+      <description>&lt;p&gt;Voglio installare un blog sulla raspberry.
+Per farlo, dopo aver &lt;a href=&#34;https://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/&#34;&gt;installato un LAMP server&lt;/a&gt;, procedo come segue:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -332,11 +318,9 @@ Preparare lo schema di DATABASE mysql -uroot -p&amp;lt;password&amp;gt; CREATE D
       <pubDate>Sat, 07 Jan 2017 16:10:00 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/</guid>
-      <description>Voglio installare un blog sulla raspberry. Per farlo, dopo aver [configurato un ip statico]({% post_url 2017-01-09-ip-statico-raspberry %}), devo installare i pacchetti software necessari per far girare il sito.
-Ecco cosa ho fatto:
-Installazione di Apache sudo apt-get update sudo apt-get install apache2 Se tutto ha funzionato vai su http://your_server_IP_address e vedi il web server attivo
-Installazione di MySql sudo apt-get install mysql-server php5-mysql Inserire una password
-Configurazione di MySql # Creare la struttura di directory del database dove sarà memorizzare le informazioni sudo mysql_install_db # Rimuoviamo alcuni valori di default pericolosi e limitiamo l&amp;#39;accesso al db sudo mysql_secure_installation Installazione di PHP sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt Riferimenti Questa documentazione è l&amp;rsquo;estratto di questo articolo molto più completo</description>
+      <description>&lt;p&gt;Voglio installare un blog sulla raspberry.
+Per farlo, dopo aver [configurato un ip statico]({% post_url 2017-01-09-ip-statico-raspberry %}), devo installare i pacchetti software necessari per far girare il &lt;a href=&#34;http://www.wedoit.io&#34;&gt;sito&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Ecco cosa ho fatto:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -345,8 +329,7 @@ Configurazione di MySql # Creare la struttura di directory del database dove sar
       <pubDate>Wed, 28 Dec 2016 22:45:00 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2016/12/28/configurare-godaddy-per-le-github-pages/</guid>
-      <description>Possiedo il dominio www.stefanoteodorani.it su GoDaddy.com. Per far funzionare tale dominio con questo blog ho seguito i seguenti passi:
-Creazione sito teopost.github.io Ho creato sul mio profilo github un repository chiamato teopost.github.com. Ho committato il sorgente del mio sito sul master di tale repository. Github è così gentile da accorgersi che il sorgente committato sul master è un sorgente di jekyll, quindi provvede ad eseguirne la build e a pubblicarne il risultato.</description>
+      <description>&lt;p&gt;Possiedo il dominio &lt;a href=&#34;http://www.stefanoteodorani.it&#34;&gt;www.stefanoteodorani.it&lt;/a&gt; su GoDaddy.com. Per far funzionare tale dominio con questo blog ho seguito i seguenti passi:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -355,11 +338,8 @@ Creazione sito teopost.github.io Ho creato sul mio profilo github un repository 
       <pubDate>Tue, 27 Dec 2016 18:45:00 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2016/12/27/disabilitare-lautenticazione-in-ubuntu-software-center/</guid>
-      <description>E&amp;rsquo; una rottura di scatole dover digitare sempre la password per installare gli aggiornamenti su Ubuntu. Quindi, ecco cosa si può fare:
-  Aprire una finestra terminale
-  Incollare questo comando
-# (do not put .xml at the end...) sudo gedit /usr/share/polkit-1/actions/org.debian.apt.policy   Si aprirà gedit già posizionato per la modifica dell&amp;rsquo;impostazione desiderata (che è di proprietà di root)
-  Tenere premuto CTRL e premere F, quindi nel box di ricerca incollare il seguente testo:</description>
+      <description>&lt;p&gt;E&amp;rsquo; una rottura di scatole dover digitare sempre la password per installare gli aggiornamenti su Ubuntu.
+Quindi, ecco cosa si può fare:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -379,18 +359,7 @@ Creazione sito teopost.github.io Ho creato sul mio profilo github un repository 
       <guid>https://www.stefanoteodorani.it/sandbox/</guid>
       <description>Note This is a footnote.1
 Tabelle    Name Age     Bob 27   Alice 23    Task list  a task list item list syntax required incomplete completed  Esempi di link:  Link a una pagina esterna: Sergio Link a un articolo del blog: LAMP server  Esempio di quote  Nota quotata
- Esempi di shortcodes notice A notice disclaimer  A notice disclaimer  A notice disclaimer  A notice disclaimer  gallery      Buttons</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.stefanoteodorani.it/test/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.stefanoteodorani.it/test/</guid>
-      <description>Note This is a footnote.1
-Tabelle    Name Age     Bob 27   Alice 23    Task list  a task list item list syntax required incomplete completed  Esempi di link:  Link a una pagina esterna: Sergio Link a un articolo del blog: LAMP server  Esempio di quote  Nota quotata
- Esempi di shortcodes notice A notice disclaimer  A notice disclaimer  A notice disclaimer  A notice disclaimer  gallery      Buttons</description>
+ Esempi di shortcodes notice A notice disclaimer  A notice disclaimer  A notice disclaimer  A notice disclaimer  categories gallery      Buttons</description>
     </item>
     
   </channel>

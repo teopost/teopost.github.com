@@ -26,11 +26,8 @@
       <pubDate>Tue, 27 Dec 2016 18:45:00 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2016/12/27/disabilitare-lautenticazione-in-ubuntu-software-center/</guid>
-      <description>E&amp;rsquo; una rottura di scatole dover digitare sempre la password per installare gli aggiornamenti su Ubuntu. Quindi, ecco cosa si può fare:
-  Aprire una finestra terminale
-  Incollare questo comando
-# (do not put .xml at the end...) sudo gedit /usr/share/polkit-1/actions/org.debian.apt.policy   Si aprirà gedit già posizionato per la modifica dell&amp;rsquo;impostazione desiderata (che è di proprietà di root)
-  Tenere premuto CTRL e premere F, quindi nel box di ricerca incollare il seguente testo:</description>
+      <description>&lt;p&gt;E&amp;rsquo; una rottura di scatole dover digitare sempre la password per installare gli aggiornamenti su Ubuntu.
+Quindi, ecco cosa si può fare:&lt;/p&gt;</description>
     </item>
     
   </channel>

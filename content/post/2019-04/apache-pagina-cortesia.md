@@ -1,11 +1,11 @@
 +++
-banner = "banner/apache-pagina-cortesia.png"
-categories = ["linux"]
+banner = "apache-pagina-cortesia/apache-pagina-cortesia.png"
+categories = ["work"]
 date = "2019-04-24T18:42:26+01:00"
 description = ""
 images = []
 menu = ""
-tags = ["apache"]
+tags = ["linux","apache"]
 title = "Pagina di cortesia su Apache"
 +++
 

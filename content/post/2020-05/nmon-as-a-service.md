@@ -1,15 +1,15 @@
 +++
 banner = "nmon-as-a-service/nmon-as-a-service.jpg"
-categories = ["linux"]
+categories = ["work"]
 date = "2020-05-01T18:42:26+01:00"
 description = ""
 images = []
 menu = ""
-tags = ["linux"]
+tags = ["linux","utility"]
 title = "Schedulare nmon nel crontab"
 +++
 
-Per monitorare lo stato dei server in un infrastruttura Linux, esistono oggi molti strumenti (zabbix, netdata, zenoss, ecc).
+Per monitorare lo stato dei server in un infrastruttura Linux, esistono oggi molti strumenti (zabbix, netdata, zenoss, ecc.).
 In alcuni casi, dove non si ha la possibilità di installare questi validissimi tools, può essere utile fare un salto indietro nel tempo e utilizzare il buon "vecchio" nmon.
 
 In questo articolo vi mostro come installarlo come servizio su Red Hat.

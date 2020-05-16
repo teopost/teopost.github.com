@@ -17,7 +17,7 @@
       <pubDate>Fri, 01 May 2020 18:42:26 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/</guid>
-      <description>&lt;p&gt;Per monitorare lo stato dei server in un infrastruttura Linux, esistono oggi molti strumenti (zabbix, netdata, zenoss, ecc).
+      <description>&lt;p&gt;Per monitorare lo stato dei server in un infrastruttura Linux, esistono oggi molti strumenti (zabbix, netdata, zenoss, ecc.).
 In alcuni casi, dove non si ha la possibilità di installare questi validissimi tools, può essere utile fare un salto indietro nel tempo e utilizzare il buon &amp;ldquo;vecchio&amp;rdquo; nmon.&lt;/p&gt;
 &lt;p&gt;In questo articolo vi mostro come installarlo come servizio su Red Hat.&lt;/p&gt;</description>
     </item>

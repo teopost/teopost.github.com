@@ -1,17 +1,19 @@
 +++
-banner = "banner/disabilitare-autenticazione-ubuntu-software-center.png"
-categories = []
+banner = "disabilitare-autenticazione-ubuntu-software-center/disabilitare-autenticazione-ubuntu-software-center.png"
+categories = ["fun"]
 date = "2016-12-27T18:45:00+01:00"
 description = ""
 images = ["http://core0.staticworld.net/images/article/2015/08/ubuntu-software-center-whats-new-100609202-orig.png"]
 menu = ""
-tags = ["ubuntu"]
+tags = ["linux","ubuntu"]
 title = "Disabilitare l'autenticazione in Ubuntu Software Center"
 
 +++
 
 E' una rottura di scatole dover digitare sempre la password per installare gli aggiornamenti su Ubuntu.
 Quindi, ecco cosa si può fare:
+
+<!--more-->
 
 * Aprire una finestra terminale
 

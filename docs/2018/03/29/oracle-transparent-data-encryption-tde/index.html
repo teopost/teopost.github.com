@@ -26,7 +26,7 @@
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
 
 
-    <meta property="og:image" content="https://www.stefanoteodorani.it/banner/oracle-tde-transparent-data-encryption.jpg" />
+    <meta property="og:image" content="https://www.stefanoteodorani.it/oracle-tde-transparent-data-encryption/oracle-tde-transparent-data-encryption.jpg" />
     <meta property="og:title" content="Oracle Transparent Data Encryption (TDE)" />
 <meta property="og:description" content="Ultimamente sono tutti molto preoccupati per una cosa chiamata GDPR, una legge europea che riguarda la protezione dei dati degli utenti (era ora dico io) che descrive una serie di adempimenti, non esclusivamente tecnici, da adottare per la salvaguardia dei dati." />
 <meta property="og:type" content="article" />
@@ -187,7 +187,7 @@
       </div>
       <div class="article-info-block">
         
-          14
+          15
         
         <span>
             Tags
@@ -274,7 +274,7 @@
     <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
         <div class="article-inner">
             
-                <img src="https://www.stefanoteodorani.it/banner/oracle-tde-transparent-data-encryption.jpg" class="article-banner">
+                <img src="https://www.stefanoteodorani.it/oracle-tde-transparent-data-encryption/oracle-tde-transparent-data-encryption.jpg" class="article-banner">
             
 
             <header class="article-header">
@@ -396,16 +396,16 @@ Se si sputtana questo file sono <a href="https://www.youtube.com/watch?v=KeCwQjh
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SQL</span><span style="color:#f92672">&gt;</span> ADMINISTER <span style="color:#66d9ef">KEY</span> MANAGEMENT <span style="color:#66d9ef">SET</span> <span style="color:#66d9ef">KEY</span> IDENTIFIED <span style="color:#66d9ef">BY</span> walletpwd <span style="color:#66d9ef">WITH</span> BACKUP <span style="color:#66d9ef">USING</span> <span style="color:#e6db74">&#39;key_backup&#39;</span>;
 </code></pre></div><h2 id="creare-la-tablespace-encrypted">Creare la Tablespace Encrypted</h2>
 <p>Per creare la tablespace encripted usare questa sintassi</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> TABLESPACE USERS_CRYPT 
-    DATAFILE 
-        <span style="color:#e6db74">&#39;/u01/app/oracle/oradata/DB01/users01_crypt.dbf&#39;</span> 
-        <span style="color:#66d9ef">SIZE</span> <span style="color:#ae81ff">5242880</span> AUTOEXTEND <span style="color:#66d9ef">ON</span> <span style="color:#66d9ef">NEXT</span> <span style="color:#ae81ff">1310720</span> MAXSIZE <span style="color:#ae81ff">34358689792</span> 
-        BLOCKSIZE <span style="color:#ae81ff">8192</span> 
-    <span style="color:#66d9ef">DEFAULT</span> 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> TABLESPACE USERS_CRYPT
+    DATAFILE
+        <span style="color:#e6db74">&#39;/u01/app/oracle/oradata/DB01/users01_crypt.dbf&#39;</span>
+        <span style="color:#66d9ef">SIZE</span> <span style="color:#ae81ff">5242880</span> AUTOEXTEND <span style="color:#66d9ef">ON</span> <span style="color:#66d9ef">NEXT</span> <span style="color:#ae81ff">1310720</span> MAXSIZE <span style="color:#ae81ff">34358689792</span>
+        BLOCKSIZE <span style="color:#ae81ff">8192</span>
+    <span style="color:#66d9ef">DEFAULT</span>
       <span style="color:#66d9ef">NO</span> INMEMORY   
       <span style="color:#66d9ef">STORAGE</span> (ENCRYPT)
-    ONLINE 
-    SEGMENT <span style="color:#66d9ef">SPACE</span> MANAGEMENT AUTO 
+    ONLINE
+    SEGMENT <span style="color:#66d9ef">SPACE</span> MANAGEMENT AUTO
     EXTENT MANAGEMENT <span style="color:#66d9ef">LOCAL</span> AUTOALLOCATE
         ENCRYPTION <span style="color:#66d9ef">USING</span> <span style="color:#e6db74">&#39;AES256&#39;</span>;
 </code></pre></div><p>Et voilà. Da adesso in poi, tutti gli oggetti creati su questa tablespace verranno scritti sul filesystem in modo criptato.
@@ -424,9 +424,9 @@ Se volete disabilitare l&rsquo;AUTO_LOGIN potete sempre farlo in questo modo:</p
 <p>Andare nella cartella del wallet. Noterete un file chiamato cwallet.sso.
 Questo file viene creato solo quando il wallet viene generato di tipo auto_login.
 Per prima cosa rinominate il file:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mv cwallet.sso cwallet.sso.bkp 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mv cwallet.sso cwallet.sso.bkp
 </code></pre></div><p>Poi entrate come <code>sqlplus / as sysdba</code> e chiudete il wallet aperto.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SQL</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">SYSTEM</span> <span style="color:#66d9ef">SET</span> WALLET <span style="color:#66d9ef">CLOSE</span>; 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SQL</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">SYSTEM</span> <span style="color:#66d9ef">SET</span> WALLET <span style="color:#66d9ef">CLOSE</span>;
 </code></pre></div><p>Fatto. Per riaprire il wallet potete sempre eseguire il seguente comando:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SQL</span><span style="color:#f92672">&gt;</span> ADMINISTER <span style="color:#66d9ef">KEY</span> MANAGEMENT <span style="color:#66d9ef">SET</span> KEYSTORE <span style="color:#66d9ef">OPEN</span> IDENTIFIED <span style="color:#66d9ef">BY</span> walletpwd;
 </code></pre></div><h2 id="conclusioni">Conclusioni</h2>
@@ -592,7 +592,7 @@ Per prima cosa rinominate il file:</p>
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2019/04/24/pagina-di-cortesia-su-apache/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/apache-pagina-cortesia.png)" alt="Oracle Transparent Data Encryption (TDE)" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/apache-pagina-cortesia/apache-pagina-cortesia.png)" alt="Oracle Transparent Data Encryption (TDE)" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -618,7 +618,7 @@ Per prima cosa rinominate il file:</p>
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2019/01/20/lock-wait-e-timeout-in-db2/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/lock-wait-e-timeout-in-db2.jpg)" alt="Oracle Transparent Data Encryption (TDE)" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/db2-lock-wait-e-timeout/db2-lock-wait-e-timeout.jpg)" alt="Oracle Transparent Data Encryption (TDE)" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -644,7 +644,7 @@ Per prima cosa rinominate il file:</p>
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2018/11/22/liquibase-vs-flyway/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/liquibase-vs-flyway.png)" alt="Oracle Transparent Data Encryption (TDE)" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/liquibase-vs-flyway/liquibase-vs-flyway.png)" alt="Oracle Transparent Data Encryption (TDE)" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -670,7 +670,7 @@ Per prima cosa rinominate il file:</p>
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2018/11/05/sql-tuning-advisor-per-uno-specifico-sql_id/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/sql-tuning-advisor-with-sqlid.png)" alt="Oracle Transparent Data Encryption (TDE)" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/oracle-sql-tuning-advisor-with-sqlid/oracle-sql-tuning-advisor-with-sqlid.png)" alt="Oracle Transparent Data Encryption (TDE)" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -723,6 +723,14 @@ Per prima cosa rinominate il file:</p>
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/fun">
+                    fun
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/linux">
                     linux
                 </a>
@@ -750,7 +758,7 @@ Per prima cosa rinominate il file:</p>
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/system">
                     system
                 </a>
-                <span class="category-list-count">3</span>
+                <span class="category-list-count">2</span>
             </li>
             
         </ul>
@@ -820,16 +828,16 @@ Per prima cosa rinominate il file:</p>
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/git">
-                    git
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/due">
+                    due
                 </a>
                 <span class="category-list-count">1</span>
             </li>
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/github-pages">
-                    github-pages
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/git">
+                    git
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -872,6 +880,14 @@ Per prima cosa rinominate il file:</p>
                     ubuntu
                 </a>
                 <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/uno">
+                    uno
+                </a>
+                <span class="category-list-count">1</span>
             </li>
             
             <li class="category-list-item">

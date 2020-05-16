@@ -29,8 +29,8 @@
       
       <guid>https://www.stefanoteodorani.it/2018/04/17/riattivare-un-utente-oracle-expired/</guid>
       <description>&lt;h2 id=&#34;introduzione&#34;&gt;Introduzione&lt;/h2&gt;
-&lt;p&gt;Un utente Oracle può essere creato in modo che la password scada dopo un certo periodo di tempo definito nel profilo assegnato. Per riattivare l&amp;rsquo;utente esistente è necessario reimpostare la password.
-In alcuni casi questo può essere un problema.
+&lt;p&gt;Un utente Oracle può essere creato in modo che la password scada dopo un certo periodo di tempo definito nel profilo assegnato. Per riattivare l&amp;rsquo;utente esistente è necessario reimpostare la password.&lt;/p&gt;
+&lt;p&gt;In alcuni casi questo può essere un problema.
 In questo articolo viene descritta una procedura un pò inconsueta per ripristinare un utente senza conoscere la sua password.&lt;/p&gt;</description>
     </item>
     
@@ -116,13 +116,7 @@ In base al file di configurazione passato come argomento, Oracle Grants Remmaper
       <pubDate>Thu, 16 Feb 2017 21:36:13 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2017/02/16/client-oracle-sul-mac/</guid>
-      <description>Per installare il client Oracle sul Mac, utilizzare questa procedura:
-Creare la cartella /Users/[utente]/oracle e metterci dentro:
-instantclient-basic-macos.x64-11.2.0.4.0.zip instantclient-sdk-macos.x64-11.2.0.4.0.zip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip scompattarli
-unzip instantclient-basic-macos.x64-11.2.0.4.0.zip unzip instantclient-sdk-macos.x64-11.2.0.4.0.zip unzip instantclient-sqlplus-macos.x64-11.2.0.4.0.zip Andare nella cartella che lo scompattamento crea
-cd /Users/[utente]/instantclient11_2 Creare i 2 seguenti link simbolici (controllare la versione delle dll)
-ln -s libclntsh.dylib.11.1 libclntsh.dylib ln -s libocci.dylib.11.1 libocci.dylib Eseguire la seguente fix
-curl -O https://raw.githubusercontent.com/kubo/fix_oralib_osx/master/fix_oralib.rb ruby fix_oralib.rb --absolute-path Aggiungere nel .bash_profile se seguenti righe</description>
+      <description>&lt;p&gt;Per installare il client Oracle sul Mac, utilizzare questa procedura:&lt;/p&gt;</description>
     </item>
     
   </channel>

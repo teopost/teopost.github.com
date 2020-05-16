@@ -273,7 +273,17 @@
   </url>
   
   <url>
-    <loc>https://www.stefanoteodorani.it/tags/github-pages/</loc>
+    <loc>https://www.stefanoteodorani.it/tags/due/</loc>
+    <lastmod>2016-12-28T22:45:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.stefanoteodorani.it/categories/fun/</loc>
+    <lastmod>2016-12-28T22:45:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.stefanoteodorani.it/tags/uno/</loc>
     <lastmod>2016-12-28T22:45:00+01:00</lastmod>
   </url>
   
@@ -289,10 +299,6 @@
   
   <url>
     <loc>https://www.stefanoteodorani.it/sandbox/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.stefanoteodorani.it/test/</loc>
   </url>
   
 </urlset>

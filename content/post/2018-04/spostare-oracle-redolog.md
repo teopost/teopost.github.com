@@ -1,18 +1,18 @@
 +++
-banner = "banner/spostare-oracle-redolog.jpg"
-categories = ["database"]
+banner = "spostare-oracle-redolog/spostare-oracle-redolog.jpg"
+categories = ["work"]
 date = "2018-04-05T11:18:00+01:00"
 description = ""
 images = []
 menu = ""
-tags = ["oracle"]
+tags = ["oracle","database"]
 title = "Spostare i redolog su Oracle 12.x"
 
 +++
 
 ## Introduzione
 
-Oggi mi è capitato di dover spostare alcuni redolog che erano stati creati in una cartella sbagliata. 
+Oggi mi è capitato di dover spostare alcuni redolog che erano stati creati in una cartella sbagliata.
 Ecco come ho fatto
 
 <!--more-->
@@ -58,7 +58,7 @@ Ora rimetto il DB in mount e aggiorno il dizionario dati di Oracle con la nuova 
 ```bash
 SQL> startup mount
 ORACLE instance started.
- 
+
 Total System Global Area 1849530880 bytes
 Fixed Size                 31339824 bytes
 Variable Size            5528485968 bytes
@@ -66,11 +66,11 @@ Database Buffers         5314572800 bytes
 Redo Buffers               55132288 bytes
 Database mounted.
 SQL> alter database rename file '/u04/oradate/INTDB01/controlfile/o1_mf_f3h3nxol_.ctl' to '/u04/oradata/INTDB01/controlfile/o1_mf_f3h3nxol_.ctl';
- 
+
 Database altered.
- 
+
 SQL> alter database open;
- 
+
 Database altered.
 ```
 
@@ -126,7 +126,7 @@ ORACLE instance shut down.
 
 SQL> startup
 ORACLE instance started.
- 
+
 Total System Global Area 1849530880 bytes
 Fixed Size                 31339824 bytes
 Variable Size            5528485968 bytes

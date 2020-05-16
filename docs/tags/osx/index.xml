@@ -17,8 +17,9 @@
       <pubDate>Tue, 02 Jan 2018 22:45:00 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2018/01/02/usare-file-ppk-con-ssh-sul-mac/</guid>
-      <description>Amo Linux. Sembra una contraddizione ma è proprio per questo che amo anche i Mac, e ne possiedo uno. Recentemente mi è capitato di dovermi collegare ad un server remoto via ssh utilizzando una chiave privata diversa dalla mia. Mi è stata fornita una chiave privata ma, ahimè, in un formato proprietario di putty (con estensione .ppk). Ecco quello che ho fatto:
-Conversione dile .ppk in .pem Per prima cosa ho convertito il file.</description>
+      <description>&lt;p&gt;Amo Linux.
+Sembra una contraddizione ma è proprio per questo che amo anche i Mac, e ne possiedo uno.
+Recentemente mi è capitato di dovermi collegare ad un server remoto via ssh utilizzando una chiave privata diversa dalla mia.&lt;/p&gt;</description>
     </item>
     
   </channel>

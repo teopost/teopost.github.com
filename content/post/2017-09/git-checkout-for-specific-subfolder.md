@@ -1,6 +1,6 @@
 +++
-banner = "banner/git-checkout-for-specific-subfolder.png"
-categories = ["developer"]
+banner = "git-checkout-for-specific-subfolder/git-checkout-for-specific-subfolder.png"
+categories = ["work"]
 date = "2017-09-17T12:52:00+01:00"
 description = ""
 images = []

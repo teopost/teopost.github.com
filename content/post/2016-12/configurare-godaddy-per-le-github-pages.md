@@ -1,16 +1,18 @@
 +++
-banner = "banner/configurare-godaddy-per-le-github-pages.jpg"
-categories = ["system"]
+banner = "configurare-godaddy-per-le-github-pages/configurare-godaddy-per-le-github-pages.jpg"
+categories = ["fun"]
 date = "2016-12-28T22:45:00+01:00"
 description = ""
 images = []
 menu = ""
-tags = ["github pages"]
+tags = ["github"]
 title = "Configurare GoDaddy per le Github Pages"
 
 +++
 
 Possiedo il dominio [www.stefanoteodorani.it][sito] su GoDaddy.com. Per far funzionare tale dominio con questo blog ho seguito i seguenti passi:
+
+<!--more-->
 
 Creazione sito teopost.github.io
 ---
@@ -25,7 +27,7 @@ Aggiunta file CNAME
 Nella root del repository ho aggiunto un file chiamato CNAME con una sola riga al suo interno. L'indirizzo del mio dominio personalizzato ovvero www.stefanoteodorani.it
 Questo file serve a github per riuscire a collegare il sito al dominio.
 
-![](/post_images/godaddy-setting-for-github-pages.png)
+![](/configurare-godaddy-per-le-github-pages/godaddy-setting-for-github-pages.png)
 
 Attesa aggiornamento DNS
 ---

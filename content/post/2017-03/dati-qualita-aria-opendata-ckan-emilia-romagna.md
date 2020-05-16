@@ -1,16 +1,18 @@
 +++
-banner = "banner/dati-qualita-aria-opendata-ckan-emilia-romagna.jpg"
-categories = ["opendata"]
+banner = "dati-qualita-aria-opendata-ckan-emilia-romagna/dati-qualita-aria-opendata-ckan-emilia-romagna.jpg"
+categories = ["fun"]
 date = "2017-03-24T18:42:26+01:00"
 description = ""
 images = []
 menu = ""
-tags = ["ckan"]
+tags = ["ckan","opendata"]
 title = "Recuperare i dati sull'inquinamento della mia città da CKAN"
 
 +++
 
 Ho intenzione di scrivere un piccolo bot di telegram che mi dia indicazioni sulla qualità dell'aria che ogni giorno respiro nella mia città.
+
+<!--more-->
 
 Sono partito, nella mia indagine, da qui:
 

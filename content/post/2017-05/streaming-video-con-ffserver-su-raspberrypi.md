@@ -1,11 +1,11 @@
 +++
-banner = "banner/streaming-video-con-ffserver-su-raspberrypi.jpg"
-categories = ["linux"]
+banner = "streaming-video-con-ffserver-su-raspberrypi/streaming-video-con-ffserver-su-raspberrypi.jpg"
+categories = ["fun"]
 date = "2017-05-27T16:50:58+02:00"
 description = ""
 images = []
 menu = ""
-tags = ["raspberry"]
+tags = ["raspberry","linux"]
 title = "Streaming video con ffserver su raspberrypi"
 +++
 

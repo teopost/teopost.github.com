@@ -26,7 +26,7 @@
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
 
 
-    <meta property="og:image" content="https://www.stefanoteodorani.it/banner/spostare-oracle-redolog.jpg" />
+    <meta property="og:image" content="https://www.stefanoteodorani.it/spostare-oracle-redolog/spostare-oracle-redolog.jpg" />
     <meta property="og:title" content="Spostare i redolog su Oracle 12.x" />
 <meta property="og:description" content="Introduzione
 Oggi mi è capitato di dover spostare alcuni redolog che erano stati creati in una cartella sbagliata.
@@ -193,7 +193,7 @@ Ecco come ho fatto"/>
       </div>
       <div class="article-info-block">
         
-          14
+          15
         
         <span>
             Tags
@@ -280,7 +280,7 @@ Ecco come ho fatto"/>
     <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
         <div class="article-inner">
             
-                <img src="https://www.stefanoteodorani.it/banner/spostare-oracle-redolog.jpg" class="article-banner">
+                <img src="https://www.stefanoteodorani.it/spostare-oracle-redolog/spostare-oracle-redolog.jpg" class="article-banner">
             
 
             <header class="article-header">
@@ -362,7 +362,7 @@ ORACLE instance shut down.
 </code></pre></div><p>Ora rimetto il DB in mount e aggiorno il dizionario dati di Oracle con la nuova posizione dei files.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">SQL&gt; startup mount
 ORACLE instance started.
- 
+
 Total System Global Area <span style="color:#ae81ff">1849530880</span> bytes
 Fixed Size                 <span style="color:#ae81ff">31339824</span> bytes
 Variable Size            <span style="color:#ae81ff">5528485968</span> bytes
@@ -370,11 +370,11 @@ Database Buffers         <span style="color:#ae81ff">5314572800</span> bytes
 Redo Buffers               <span style="color:#ae81ff">55132288</span> bytes
 Database mounted.
 SQL&gt; alter database rename file <span style="color:#e6db74">&#39;/u04/oradate/INTDB01/controlfile/o1_mf_f3h3nxol_.ctl&#39;</span> to <span style="color:#e6db74">&#39;/u04/oradata/INTDB01/controlfile/o1_mf_f3h3nxol_.ctl&#39;</span>;
- 
+
 Database altered.
- 
+
 SQL&gt; alter database open;
- 
+
 Database altered.
 </code></pre></div><p>Controlliamo che tutto sia andato ben</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># sqlplus &#34;/ as sysdba&#34;</span>
@@ -417,7 +417,7 @@ ORACLE instance shut down.
 
 SQL&gt; startup
 ORACLE instance started.
- 
+
 Total System Global Area <span style="color:#ae81ff">1849530880</span> bytes
 Fixed Size                 <span style="color:#ae81ff">31339824</span> bytes
 Variable Size            <span style="color:#ae81ff">5528485968</span> bytes
@@ -579,7 +579,7 @@ Database mounted.
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2019/04/24/pagina-di-cortesia-su-apache/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/apache-pagina-cortesia.png)" alt="Spostare i redolog su Oracle 12.x" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/apache-pagina-cortesia/apache-pagina-cortesia.png)" alt="Spostare i redolog su Oracle 12.x" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -605,7 +605,7 @@ Database mounted.
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2019/01/20/lock-wait-e-timeout-in-db2/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/lock-wait-e-timeout-in-db2.jpg)" alt="Spostare i redolog su Oracle 12.x" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/db2-lock-wait-e-timeout/db2-lock-wait-e-timeout.jpg)" alt="Spostare i redolog su Oracle 12.x" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -631,7 +631,7 @@ Database mounted.
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2018/11/22/liquibase-vs-flyway/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/liquibase-vs-flyway.png)" alt="Spostare i redolog su Oracle 12.x" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/liquibase-vs-flyway/liquibase-vs-flyway.png)" alt="Spostare i redolog su Oracle 12.x" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -657,7 +657,7 @@ Database mounted.
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2018/11/05/sql-tuning-advisor-per-uno-specifico-sql_id/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/sql-tuning-advisor-with-sqlid.png)" alt="Spostare i redolog su Oracle 12.x" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/oracle-sql-tuning-advisor-with-sqlid/oracle-sql-tuning-advisor-with-sqlid.png)" alt="Spostare i redolog su Oracle 12.x" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -710,6 +710,14 @@ Database mounted.
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/fun">
+                    fun
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/linux">
                     linux
                 </a>
@@ -737,7 +745,7 @@ Database mounted.
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/system">
                     system
                 </a>
-                <span class="category-list-count">3</span>
+                <span class="category-list-count">2</span>
             </li>
             
         </ul>
@@ -807,16 +815,16 @@ Database mounted.
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/git">
-                    git
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/due">
+                    due
                 </a>
                 <span class="category-list-count">1</span>
             </li>
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/github-pages">
-                    github-pages
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/git">
+                    git
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -859,6 +867,14 @@ Database mounted.
                     ubuntu
                 </a>
                 <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/uno">
+                    uno
+                </a>
+                <span class="category-list-count">1</span>
             </li>
             
             <li class="category-list-item">

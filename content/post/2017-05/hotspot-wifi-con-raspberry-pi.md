@@ -1,17 +1,18 @@
 +++
-banner = "banner/hotspot-wifi-con-raspberry-pi.jpg"
-categories = ["linux"]
+banner = "hotspot-wifi-con-raspberry-pi/hotspot-wifi-con-raspberry-pi.jpg"
+categories = ["fun"]
 date = "2017-05-20T18:03:03+02:00"
 description = ""
 images = []
 menu = ""
-tags = ["raspberry"]
+tags = ["raspberry","linux"]
 title = "Hotspot wifi con Raspberry PI 3"
 
 +++
 
 La Raspberry PI 3 è stata finalmente dotata di una scheda wifi incorporata. Il chipset della scheda (Broadcom BCM2837) consente di configurare la scheda anche come access point. Non male !
 Vediamo come:
+
 <!--more-->
 
 ##  Installazione pacchetti

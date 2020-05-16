@@ -1,17 +1,19 @@
 +++
-banner = "banner/ssh-senza-password.jpg"
-categories = ["linux"]
+banner = "ssh-senza-password/ssh-senza-password.jpg"
+categories = ["work"]
 date = "2017-05-17T21:39:51+02:00"
 description = ""
 images = []
 menu = ""
-tags = ["bash"]
+tags = ["linux"]
 title = "SSH senza password"
 
 +++
 
 Uso spesso ssh per collegarmi sui server linux dei clienti.
 Per evitare di dover digitare sempre la password del server, è possibile configurare il vostro client per effettuare un collegamento senza dover digitare la password.
+
+<!--more-->
 
 Creare sul vostro computer la chiave pubblica e privata
 ---

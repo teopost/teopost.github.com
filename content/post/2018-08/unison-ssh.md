@@ -1,11 +1,11 @@
 +++
-banner = "banner/unison-ssh.jpg"
-categories = ["system"]
+banner = "unison-ssh/unison-ssh.jpg"
+categories = ["work"]
 date = "2018-08-05T18:00:00+01:00"
 description = ""
 images = []
 menu = ""
-tags = ["linux"]
+tags = ["linux","utility"]
 title = "Sincronizzare cartelle in SSH con UNISON"
 
 +++
@@ -28,7 +28,7 @@ Per prima cosa bisogna installare unison.
 Nel mio caso sto lavorando su Red-Hat (versioni 6.9 e 7.4).
 Unison non è nei repo standard e non posso attivare i repo epel su questi server di produzione, quindi decido di scaricare i pacchetti rpm e installarli a mano.
 
-Li scarico da qui: 
+Li scarico da qui:
 
 * Per Red-Hat 6.9: http://mirror.onet.pl/pub/mirrors/fedora/linux/epel/6/x86_64/Packages/u/
 * Per Red-Hat 7.4: http://mirror.onet.pl/pub/mirrors/fedora/linux/epel/7/x86_64/Packages/u/
@@ -113,7 +113,7 @@ Bene. Ora possiamo innanzitutto provare la sincronizzazione.
 Per farlo basta eseguire:
 
 ```bash
-unison serverA 
+unison serverA
 ```
 
 Se tutto è andato bene vedremo questo:

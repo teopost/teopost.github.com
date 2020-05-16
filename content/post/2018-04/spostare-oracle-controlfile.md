@@ -1,11 +1,11 @@
 +++
-banner = "banner/spostare-oracle-controlfile.jpg"
-categories = ["database"]
+banner = "spostare-oracle-controlfile/spostare-oracle-controlfile.jpg"
+categories = ["work"]
 date = "2018-04-05T11:18:00+01:00"
 description = ""
 images = []
 menu = ""
-tags = ["oracle"]
+tags = ["oracle","database"]
 title = "Spostare i controlfiles su Oracle 12.x"
 
 +++
@@ -30,7 +30,7 @@ SQL> show parameter control_files
 NAME                 TYPE     VALUE
 -------------------- -------- ------------------------------
 control_files        string   /u02/oradata/TEST/control01.ctl,
-                              /u02/oradata/TEST/control02.ctl, 
+                              /u02/oradata/TEST/control02.ctl,
                               /u02/oradate/TEST/control03.ctl
 
 ```
@@ -101,7 +101,7 @@ SQL> show parameter control_files
 NAME                 TYPE     VALUE
 -------------------- -------- ------------------------------
 control_files        string   /u02/oradata/TEST/control01.ctl,
-                              /u02/oradata/TEST/control02.ctl, 
+                              /u02/oradata/TEST/control02.ctl,
                               /u02/oradata/TEST/control03.ctl
 ```
 
@@ -118,15 +118,3 @@ Database altered.
 ```
 
 Finito
-
-
-
-
-
-
-
-
-
-
-
-

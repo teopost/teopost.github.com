@@ -1,11 +1,11 @@
 +++
-banner = "banner/oracle-mail-spooler.png"
-categories = ["database"]
+banner = "oracle-mail-spooler/oracle-mail-spooler.png"
+categories = ["work"]
 date = "2017-05-27T23:35:16+02:00"
 description = ""
 images = []
 menu = ""
-tags = ["oracle"]
+tags = ["oracle","database"]
 title = "Oracle mail spooler"
 
 +++

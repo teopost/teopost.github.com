@@ -26,7 +26,7 @@
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
 
 
-    <meta property="og:image" content="https://www.stefanoteodorani.it/banner/spostare-oracle-controlfile.jpg" />
+    <meta property="og:image" content="https://www.stefanoteodorani.it/spostare-oracle-controlfile/spostare-oracle-controlfile.jpg" />
     <meta property="og:title" content="Spostare i controlfiles su Oracle 12.x" />
 <meta property="og:description" content="Introduzione
 Oggi mi è capitato di dover spostare alcuni controlfile Oracle che erano stati creati in una cartella sbagliata. Spostare i controlfile non è difficile, ma essendo files molto critici per la sopravvivenza del DB, questa attività va fatta senza troppo casino nelle orecchie.
@@ -193,7 +193,7 @@ Vi avviso però. Per spostare i controlfiles bisogna spegnere l&rsquo;istanza. V
       </div>
       <div class="article-info-block">
         
-          14
+          15
         
         <span>
             Tags
@@ -280,7 +280,7 @@ Vi avviso però. Per spostare i controlfiles bisogna spegnere l&rsquo;istanza. V
     <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
         <div class="article-inner">
             
-                <img src="https://www.stefanoteodorani.it/banner/spostare-oracle-controlfile.jpg" class="article-banner">
+                <img src="https://www.stefanoteodorani.it/spostare-oracle-controlfile/spostare-oracle-controlfile.jpg" class="article-banner">
             
 
             <header class="article-header">
@@ -346,7 +346,7 @@ SQL&gt; show parameter control_files
 NAME                 TYPE     VALUE
 -------------------- -------- ------------------------------
 control_files        string   /u02/oradata/TEST/control01.ctl,
-                              /u02/oradata/TEST/control02.ctl, 
+                              /u02/oradata/TEST/control02.ctl,
                               /u02/oradate/TEST/control03.ctl
 
 </code></pre></div><p>In questo caso i control files sono posizionati in:</p>
@@ -395,7 +395,7 @@ SQL&gt; startup nomount
 NAME                 TYPE     VALUE
 -------------------- -------- ------------------------------
 control_files        string   /u02/oradata/TEST/control01.ctl,
-                              /u02/oradata/TEST/control02.ctl, 
+                              /u02/oradata/TEST/control02.ctl,
                               /u02/oradata/TEST/control03.ctl
 </code></pre></div><p>Visto che tutto è OK faccio partire l&rsquo;istanza</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">SQL&gt; alter database mount;
@@ -560,7 +560,7 @@ Database altered.
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2019/04/24/pagina-di-cortesia-su-apache/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/apache-pagina-cortesia.png)" alt="Spostare i controlfiles su Oracle 12.x" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/apache-pagina-cortesia/apache-pagina-cortesia.png)" alt="Spostare i controlfiles su Oracle 12.x" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -586,7 +586,7 @@ Database altered.
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2019/01/20/lock-wait-e-timeout-in-db2/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/lock-wait-e-timeout-in-db2.jpg)" alt="Spostare i controlfiles su Oracle 12.x" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/db2-lock-wait-e-timeout/db2-lock-wait-e-timeout.jpg)" alt="Spostare i controlfiles su Oracle 12.x" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -612,7 +612,7 @@ Database altered.
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2018/11/22/liquibase-vs-flyway/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/liquibase-vs-flyway.png)" alt="Spostare i controlfiles su Oracle 12.x" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/liquibase-vs-flyway/liquibase-vs-flyway.png)" alt="Spostare i controlfiles su Oracle 12.x" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -638,7 +638,7 @@ Database altered.
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2018/11/05/sql-tuning-advisor-per-uno-specifico-sql_id/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/sql-tuning-advisor-with-sqlid.png)" alt="Spostare i controlfiles su Oracle 12.x" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/oracle-sql-tuning-advisor-with-sqlid/oracle-sql-tuning-advisor-with-sqlid.png)" alt="Spostare i controlfiles su Oracle 12.x" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -691,6 +691,14 @@ Database altered.
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/fun">
+                    fun
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/linux">
                     linux
                 </a>
@@ -718,7 +726,7 @@ Database altered.
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/system">
                     system
                 </a>
-                <span class="category-list-count">3</span>
+                <span class="category-list-count">2</span>
             </li>
             
         </ul>
@@ -788,16 +796,16 @@ Database altered.
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/git">
-                    git
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/due">
+                    due
                 </a>
                 <span class="category-list-count">1</span>
             </li>
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/github-pages">
-                    github-pages
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/git">
+                    git
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -840,6 +848,14 @@ Database altered.
                     ubuntu
                 </a>
                 <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/uno">
+                    uno
+                </a>
+                <span class="category-list-count">1</span>
             </li>
             
             <li class="category-list-item">

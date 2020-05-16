@@ -1,11 +1,11 @@
 +++
-banner = "banner/oracle-char-vs-bytes.jpg"
-categories = ["database"]
+banner = "oracle-char-vs-bytes/oracle-char-vs-bytes.jpg"
+categories = ["work"]
 date = "2017-05-24T22:23:55+02:00"
 description = ""
 images = []
 menu = ""
-tags = ["oracle"]
+tags = ["oracle","database"]
 title = "Oracle Char vs Bytes"
 
 +++

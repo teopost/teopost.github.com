@@ -17,8 +17,7 @@
       <pubDate>Thu, 28 Dec 2017 21:36:13 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/</guid>
-      <description>Ho scaricato da osboxes.org una VM con dentro CentoOS (sono pigro e se posso uso cose già fatte). Ho avviato la macchina virtuale e ho provato a navigare su internet. Non funzionava. Eseguendo il comando ifconfig non appariva la scheda di rete. Eppure sembrava tutto configurato bene. Ecco come ho soluzionato, come direbbe il mio amico coniglio.
-[teopost@localhost ~]$ ifconfig ens32: flags=4163&amp;lt;UP,BROADCAST,RUNNING,MULTICAST&amp;gt; mtu 1500 ether 00:0c:29:68:22:e2 txqueuelen 1000 (Ethernet) RX packets 0 bytes 0 (0.</description>
+      <description>&lt;p&gt;Ho scaricato da &lt;a href=&#34;http://www.osboxes.org/&#34;&gt;osboxes.org&lt;/a&gt; una VM con dentro CentoOS (sono pigro e se posso uso cose già fatte), ho avviato la macchina virtuale e ho provato a navigare su internet. Non funzionava.&lt;/p&gt;</description>
     </item>
     
   </channel>

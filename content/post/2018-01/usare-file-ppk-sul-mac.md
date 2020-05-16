@@ -1,11 +1,11 @@
 +++
-banner = "banner/usare-file-ppk-con-ssh-sul-mac.png"
-categories = ["system"]
+banner = "usare-file-ppk-con-ssh-sul-mac/usare-file-ppk-con-ssh-sul-mac.png"
+categories = ["work"]
 date = "2018-01-02T22:45:00+01:00"
 description = ""
 images = []
 menu = ""
-tags = ["osx"]
+tags = ["mac","ssh"]
 title = "Usare file ppk con ssh sul Mac"
 
 +++
@@ -13,6 +13,9 @@ title = "Usare file ppk con ssh sul Mac"
 Amo Linux.
 Sembra una contraddizione ma è proprio per questo che amo anche i Mac, e ne possiedo uno.
 Recentemente mi è capitato di dovermi collegare ad un server remoto via ssh utilizzando una chiave privata diversa dalla mia.
+
+<!--more-->
+
 Mi è stata fornita una chiave privata ma, ahimè, in un formato proprietario di putty (con estensione .ppk).
 Ecco quello che ho fatto:
 

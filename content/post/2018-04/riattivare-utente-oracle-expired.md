@@ -1,11 +1,11 @@
 +++
-banner = "banner/riattivare-utente-oracle-expired.jpg"
-categories = ["database"]
+banner = "riattivare-utente-oracle-expired/riattivare-utente-oracle-expired.jpg"
+categories = ["work"]
 date = "2018-04-17T12:00:00+01:00"
 description = ""
 images = []
 menu = ""
-tags = ["oracle"]
+tags = ["oracle","database"]
 title = "Riattivare un utente Oracle Expired"
 
 +++
@@ -13,6 +13,7 @@ title = "Riattivare un utente Oracle Expired"
 ## Introduzione
 
 Un utente Oracle può essere creato in modo che la password scada dopo un certo periodo di tempo definito nel profilo assegnato. Per riattivare l'utente esistente è necessario reimpostare la password.
+
 In alcuni casi questo può essere un problema.
 In questo articolo viene descritta una procedura un pò inconsueta per ripristinare un utente senza conoscere la sua password.
 

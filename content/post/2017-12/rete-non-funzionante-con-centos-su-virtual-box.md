@@ -1,16 +1,19 @@
 +++
-banner = "banner/rete-non-funzionante-con-centos-su-virtual-box.png"
-categories = ["linux"]
+banner = "rete-non-funzionante-con-centos-su-virtual-box/rete-non-funzionante-con-centos-su-virtual-box.png"
+categories = ["work"]
 date = "2017-12-28T21:36:13+01:00"
 description = ""
 images = []
 menu = ""
-tags = ["virtual-machines"]
+tags = ["linux"]
 title = "Rete non funzionante con CentOS su VirtualBox"
 
 +++
 
-Ho scaricato da [osboxes.org](http://www.osboxes.org/) una VM con dentro CentoOS (sono pigro e se posso uso cose già fatte). Ho avviato la macchina virtuale e ho provato a navigare su internet. Non funzionava.
+Ho scaricato da [osboxes.org](http://www.osboxes.org/) una VM con dentro CentoOS (sono pigro e se posso uso cose già fatte), ho avviato la macchina virtuale e ho provato a navigare su internet. Non funzionava.
+
+<!--more-->
+
 Eseguendo il comando ifconfig non appariva la scheda di rete. Eppure sembrava tutto configurato bene.
 Ecco come ho [soluzionato](http://anonimoconiglio.blogspot.it/), come direbbe il mio amico coniglio.
 

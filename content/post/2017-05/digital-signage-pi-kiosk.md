@@ -1,20 +1,20 @@
 +++
-banner = "banner/digital-signage-con-pi-kiosk.jpg"
-categories = ["linux"]
+banner = "digital-signage-con-pi-kiosk/digital-signage-con-pi-kiosk.jpg"
+categories = ["fun"]
 date = "2017-05-20T20:50:06+02:00"
 description = ""
 images = []
 menu = ""
-tags = ["raspberry"]
+tags = ["raspberry","linux"]
 title = "Digital signage con Pi-Kiosk"
 
 +++
 
 Conosco Luca. Ha una agenzia di viaggi a Rimini, e un'anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.
 
-E' fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico [Sergio](https://www.sergiogridelli.it/) gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.
-
 <!--more-->
+
+E' fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico [Sergio](https://www.sergiogridelli.it/) gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.
 
 Purtroppo però, dopo aver provato per un po questa soluzione, sono venuti fuori alcuni problemi.
 

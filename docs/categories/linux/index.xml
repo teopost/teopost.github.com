@@ -17,7 +17,7 @@
       <pubDate>Fri, 01 May 2020 18:42:26 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2020/05/01/schedulare-nmon-nel-crontab/</guid>
-      <description>&lt;p&gt;Per monitorare lo stato dei server in un infrastruttura Linux, esistono oggi molti strumenti (zabbix, netdata, zenoss, ecc).
+      <description>&lt;p&gt;Per monitorare lo stato dei server in un infrastruttura Linux, esistono oggi molti strumenti (zabbix, netdata, zenoss, ecc.).
 In alcuni casi, dove non si ha la possibilità di installare questi validissimi tools, può essere utile fare un salto indietro nel tempo e utilizzare il buon &amp;ldquo;vecchio&amp;rdquo; nmon.&lt;/p&gt;
 &lt;p&gt;In questo articolo vi mostro come installarlo come servizio su Red Hat.&lt;/p&gt;</description>
     </item>
@@ -39,8 +39,7 @@ In questo articolo vi mostro un modo più elegante per farlo.&lt;/p&gt;</descrip
       <pubDate>Thu, 28 Dec 2017 21:36:13 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2017/12/28/rete-non-funzionante-con-centos-su-virtualbox/</guid>
-      <description>Ho scaricato da osboxes.org una VM con dentro CentoOS (sono pigro e se posso uso cose già fatte). Ho avviato la macchina virtuale e ho provato a navigare su internet. Non funzionava. Eseguendo il comando ifconfig non appariva la scheda di rete. Eppure sembrava tutto configurato bene. Ecco come ho soluzionato, come direbbe il mio amico coniglio.
-[teopost@localhost ~]$ ifconfig ens32: flags=4163&amp;lt;UP,BROADCAST,RUNNING,MULTICAST&amp;gt; mtu 1500 ether 00:0c:29:68:22:e2 txqueuelen 1000 (Ethernet) RX packets 0 bytes 0 (0.</description>
+      <description>&lt;p&gt;Ho scaricato da &lt;a href=&#34;http://www.osboxes.org/&#34;&gt;osboxes.org&lt;/a&gt; una VM con dentro CentoOS (sono pigro e se posso uso cose già fatte), ho avviato la macchina virtuale e ho provato a navigare su internet. Non funzionava.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -79,8 +78,7 @@ Ad ogni modo riporto qui i miei appunti su come farlo partendo dai sorgenti.&lt;
       <pubDate>Sat, 20 May 2017 20:50:06 +0200</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2017/05/20/digital-signage-con-pi-kiosk/</guid>
-      <description>&lt;p&gt;Conosco Luca. Ha una agenzia di viaggi a Rimini, e un&amp;rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.&lt;/p&gt;
-&lt;p&gt;E&amp;rsquo; fortunato. Il televisore che ha comprato, dispone di una funzione di slideshow. Gli basta copiare le immagini (che il mio amico &lt;a href=&#34;https://www.sergiogridelli.it/&#34;&gt;Sergio&lt;/a&gt; gli prepara) su una chiavetta USB e infilare la chiavetta nel televisore.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Conosco Luca. Ha una agenzia di viaggi a Rimini, e un&amp;rsquo;anno fa ha pensato di mettere, nella vetrina del suo negozio, un bel televisore per convincere i passanti che i viaggi della sua agenzia sono grandiosi.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -99,10 +97,8 @@ Vediamo come:&lt;/p&gt;</description>
       <pubDate>Wed, 17 May 2017 21:39:51 +0200</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2017/05/17/ssh-senza-password/</guid>
-      <description>Uso spesso ssh per collegarmi sui server linux dei clienti. Per evitare di dover digitare sempre la password del server, è possibile configurare il vostro client per effettuare un collegamento senza dover digitare la password.
-Creare sul vostro computer la chiave pubblica e privata La prima cosa da fare è creare, sul client che deve collegarsi al server, le chiavi
-Digitare quindi il comando ssh-keygen
-teopost@local-host$ ssh-keygen Generating public/private rsa key pair.</description>
+      <description>&lt;p&gt;Uso spesso ssh per collegarmi sui server linux dei clienti.
+Per evitare di dover digitare sempre la password del server, è possibile configurare il vostro client per effettuare un collegamento senza dover digitare la password.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -130,9 +126,8 @@ Per farlo agire come segue:&lt;/p&gt;</description>
       <pubDate>Sun, 08 Jan 2017 16:15:00 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2017/01/08/wordpress-su-raspberry/</guid>
-      <description>Voglio installare un blog sulla raspberry. Per farlo, dopo aver installato un LAMP server, procedo come segue:
-Ecco cosa ho fatto:
-Preparare lo schema di DATABASE mysql -uroot -p&amp;lt;password&amp;gt; CREATE DATABASE wordpress; CREATE USER wordpressuser@localhost IDENTIFIED BY &amp;#39;wppassword&amp;#39; GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost; dove  è la password di mysql che ho impostato durante l&amp;rsquo;installazione del LAMP server e wppassword è un esempio di password per l&amp;rsquo;utente wordpress che ho appenta creato su mysql</description>
+      <description>&lt;p&gt;Voglio installare un blog sulla raspberry.
+Per farlo, dopo aver &lt;a href=&#34;https://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/&#34;&gt;installato un LAMP server&lt;/a&gt;, procedo come segue:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -141,11 +136,9 @@ Preparare lo schema di DATABASE mysql -uroot -p&amp;lt;password&amp;gt; CREATE D
       <pubDate>Sat, 07 Jan 2017 16:10:00 +0100</pubDate>
       
       <guid>https://www.stefanoteodorani.it/2017/01/07/lamp-sulla-raspberry/</guid>
-      <description>Voglio installare un blog sulla raspberry. Per farlo, dopo aver [configurato un ip statico]({% post_url 2017-01-09-ip-statico-raspberry %}), devo installare i pacchetti software necessari per far girare il sito.
-Ecco cosa ho fatto:
-Installazione di Apache sudo apt-get update sudo apt-get install apache2 Se tutto ha funzionato vai su http://your_server_IP_address e vedi il web server attivo
-Installazione di MySql sudo apt-get install mysql-server php5-mysql Inserire una password
-Configurazione di MySql # Creare la struttura di directory del database dove sarà memorizzare le informazioni sudo mysql_install_db # Rimuoviamo alcuni valori di default pericolosi e limitiamo l&amp;#39;accesso al db sudo mysql_secure_installation Installazione di PHP sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt Riferimenti Questa documentazione è l&amp;rsquo;estratto di questo articolo molto più completo</description>
+      <description>&lt;p&gt;Voglio installare un blog sulla raspberry.
+Per farlo, dopo aver [configurato un ip statico]({% post_url 2017-01-09-ip-statico-raspberry %}), devo installare i pacchetti software necessari per far girare il &lt;a href=&#34;http://www.wedoit.io&#34;&gt;sito&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Ecco cosa ho fatto:&lt;/p&gt;</description>
     </item>
     
   </channel>

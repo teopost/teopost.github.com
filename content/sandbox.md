@@ -1,6 +1,7 @@
 +++
-banner = "banner/sample.jpg"
+banner = "sandbox/sample.jpg"
 sample = "fake.pdf"
+mermaid = false
 +++
 
 ## Note
@@ -33,8 +34,44 @@ Alice   | 23
 > Nota quotata
 
 ## Esempi di shortcodes
+https://gohugo.io/content-management/shortcodes/
+
+
+{{< highlight html >}}
+<section id="main">
+  <div>
+   <h1 id="title">{{ .Title }}</h1>
+    {{ range .Pages }}
+        {{ .Render "summary"}}
+    {{ end }}
+  </div>
+</section>
+{{< /highlight >}}
+
+---
+
+### ref
+[GoDaddy]({{< ref "post/2016-12/configurare-godaddy-per-le-github-pages.md" >}})
+
+### twitter
+
+{{< tweet 877500564405444608 >}}
+
+### instagram
+
+{{< instagram BWNjjyYFxVx >}}
+
+### figure
+
+{{< figure src="https://placekitten.com/g/500/300" title="The cat" >}}
+
+### gist
+
+{{< gist spf13 7896402 >}}
 
 ### notice
+
+{{< highlight sql >}} A bunch of code here {{< /highlight >}}
 
 {{% notice note %}}
 A notice disclaimer
@@ -52,12 +89,37 @@ A notice disclaimer
 A notice disclaimer
 {{% /notice %}}
 
+### categories
+
+- fun
+- work
+
+### mermaid
+
+{{<mermaid>}}
+graph LR;
+  A-->B;
+  A-->C;
+  B-->D;
+  C-->D;
+{{</mermaid>}}
+
+due
+
+{{<mermaid>}}
+graph LR;
+  A-->B;
+  A-->C;
+{{</mermaid>}}
+
+
+
 ### gallery
 
 {{< gallery
-    "/banner/apache-pagina-cortesia.png"
-    "/banner/disabilitare-autenticazione-ubuntu-software-center.png"
-    "/banner/hotspot-wifi-con-raspberry-pi.jpg"
+    "/apache-pagina-cortesia/apache-pagina-cortesia.png"
+    "/disabilitare-autenticazione-ubuntu-software-center/disabilitare-autenticazione-ubuntu-software-center.png"
+    "/hotspot-wifi-con-raspberry-pi/hotspot-wifi-con-raspberry-pi.jpg"
 >}}
 
 ### Buttons

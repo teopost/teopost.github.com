@@ -1,11 +1,11 @@
 +++
-banner = "banner/oracle-tde-transparent-data-encryption.jpg"
-categories = ["database"]
+banner = "oracle-tde-transparent-data-encryption/oracle-tde-transparent-data-encryption.jpg"
+categories = ["work"]
 date = "2018-03-29T09:18:00+01:00"
 description = ""
 images = []
 menu = ""
-tags = ["oracle"]
+tags = ["oracle","database"]
 title = "Oracle Transparent Data Encryption (TDE)"
 
 +++
@@ -61,7 +61,7 @@ A questo punto occorre dire ad Oracle si trova la cartella. Questa informazione 
 # vi $ORACLE_HOME/network/admin/sqlnet.ora
 ```
 
-e aggiungiamo queste righe: 
+e aggiungiamo queste righe:
 
 ```
 ENCRYPTION_WALLET_LOCATION =
@@ -131,16 +131,16 @@ SQL> ADMINISTER KEY MANAGEMENT SET KEY IDENTIFIED BY walletpwd WITH BACKUP USING
 Per creare la tablespace encripted usare questa sintassi
 
 ```sql
-CREATE TABLESPACE USERS_CRYPT 
-    DATAFILE 
-        '/u01/app/oracle/oradata/DB01/users01_crypt.dbf' 
-        SIZE 5242880 AUTOEXTEND ON NEXT 1310720 MAXSIZE 34358689792 
-        BLOCKSIZE 8192 
-    DEFAULT 
+CREATE TABLESPACE USERS_CRYPT
+    DATAFILE
+        '/u01/app/oracle/oradata/DB01/users01_crypt.dbf'
+        SIZE 5242880 AUTOEXTEND ON NEXT 1310720 MAXSIZE 34358689792
+        BLOCKSIZE 8192
+    DEFAULT
       NO INMEMORY   
       STORAGE (ENCRYPT)
-    ONLINE 
-    SEGMENT SPACE MANAGEMENT AUTO 
+    ONLINE
+    SEGMENT SPACE MANAGEMENT AUTO
     EXTENT MANAGEMENT LOCAL AUTOALLOCATE
         ENCRYPTION USING 'AES256';
 ```
@@ -172,20 +172,20 @@ Questo file viene creato solo quando il wallet viene generato di tipo auto_login
 Per prima cosa rinominate il file:
 
 ```bash
-mv cwallet.sso cwallet.sso.bkp 
+mv cwallet.sso cwallet.sso.bkp
 ```
 
 Poi entrate come ```sqlplus / as sysdba``` e chiudete il wallet aperto.
 
 ```sql
-SQL> ALTER SYSTEM SET WALLET CLOSE; 
+SQL> ALTER SYSTEM SET WALLET CLOSE;
 ```
 
 Fatto. Per riaprire il wallet potete sempre eseguire il seguente comando:
 
 ```sql
 SQL> ADMINISTER KEY MANAGEMENT SET KEYSTORE OPEN IDENTIFIED BY walletpwd;
-``` 
+```
 
 ## Conclusioni
 
@@ -197,8 +197,3 @@ Indubbiamente Oracle TDE è una funzionalità molto interessante, fate molta att
 3. Gli ambienti di produzione non mai il posto ideale per imparare queste cose.
 4. Criptare e decriptare i dati ha un costo in termini di CPU, anche se minimo.
 5. Oracle è progettato per funzionare sempre. La sua architettura consente una alta disponibilità come nessun altro database. Pensare che la perdita di un singolo piccolo e insignificante file .p12 possa impedirvi di recuperare i dati fa venire i brividi.
-
-
-
-
-

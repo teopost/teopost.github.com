@@ -26,7 +26,7 @@
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
 
 
-    <meta property="og:image" content="https://www.stefanoteodorani.it/banner/oracle-logo.png" />
+    <meta property="og:image" content="https://www.stefanoteodorani.it/oracle-client-su-red-hat/oracle-client-su-red-hat.png" />
     <meta property="og:title" content="Installazione client Oracle 12.x su Red-Hat" />
 <meta property="og:description" content="Oracle Instant client è una versione minimale del client Oracle che contiene esclusivamente le librerie indispensabili per la connessione al db.
 In questo articolo vediamo come installarlo su una macchina Red-Hat" />
@@ -190,7 +190,7 @@ In questo articolo vediamo come installarlo su una macchina Red-Hat"/>
       </div>
       <div class="article-info-block">
         
-          14
+          15
         
         <span>
             Tags
@@ -277,7 +277,7 @@ In questo articolo vediamo come installarlo su una macchina Red-Hat"/>
     <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
         <div class="article-inner">
             
-                <img src="https://www.stefanoteodorani.it/banner/oracle-logo.png" class="article-banner">
+                <img src="https://www.stefanoteodorani.it/oracle-client-su-red-hat/oracle-client-su-red-hat.png" class="article-banner">
             
 
             <header class="article-header">
@@ -369,19 +369,19 @@ In questo articolo vediamo come installarlo su una macchina Red-Hat"/>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># mkdir -p /usr/lib/oracle/12.1/client64/network/admin</span>
 </code></pre></div><p>Dentro la cartella admin si può creare il file tnsnames.ora in cui mettere i profili di connessione al DB.</p>
 <p>Esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">TEST <span style="color:#f92672">=</span> 
-  <span style="color:#f92672">(</span>DESCRIPTION <span style="color:#f92672">=</span> 
-  	 <span style="color:#f92672">(</span>ADDRESS_LIST <span style="color:#f92672">=</span> 
-  	 	<span style="color:#f92672">(</span>ADDRESS <span style="color:#f92672">=</span> 
-  	 		<span style="color:#f92672">(</span>COMMUNITY <span style="color:#f92672">=</span> tcp.world<span style="color:#f92672">)</span> 
-  	 		<span style="color:#f92672">(</span>PROTOCOL <span style="color:#f92672">=</span> TCP<span style="color:#f92672">)</span> 
-  	 		<span style="color:#f92672">(</span>Host <span style="color:#f92672">=</span> tst-dbhost<span style="color:#f92672">)</span> 
-  	 		<span style="color:#f92672">(</span>Port <span style="color:#f92672">=</span> 1521<span style="color:#f92672">)</span> 
-  	 	<span style="color:#f92672">)</span> 
-  	 <span style="color:#f92672">)</span> 
-  <span style="color:#f92672">(</span>CONNECT_DATA <span style="color:#f92672">=</span> 
-  	 <span style="color:#f92672">(</span>SID <span style="color:#f92672">=</span> ORADB<span style="color:#f92672">)</span> 
-  <span style="color:#f92672">)</span> 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">TEST <span style="color:#f92672">=</span>
+  <span style="color:#f92672">(</span>DESCRIPTION <span style="color:#f92672">=</span>
+  	 <span style="color:#f92672">(</span>ADDRESS_LIST <span style="color:#f92672">=</span>
+  	 	<span style="color:#f92672">(</span>ADDRESS <span style="color:#f92672">=</span>
+  	 		<span style="color:#f92672">(</span>COMMUNITY <span style="color:#f92672">=</span> tcp.world<span style="color:#f92672">)</span>
+  	 		<span style="color:#f92672">(</span>PROTOCOL <span style="color:#f92672">=</span> TCP<span style="color:#f92672">)</span>
+  	 		<span style="color:#f92672">(</span>Host <span style="color:#f92672">=</span> tst-dbhost<span style="color:#f92672">)</span>
+  	 		<span style="color:#f92672">(</span>Port <span style="color:#f92672">=</span> 1521<span style="color:#f92672">)</span>
+  	 	<span style="color:#f92672">)</span>
+  	 <span style="color:#f92672">)</span>
+  <span style="color:#f92672">(</span>CONNECT_DATA <span style="color:#f92672">=</span>
+  	 <span style="color:#f92672">(</span>SID <span style="color:#f92672">=</span> ORADB<span style="color:#f92672">)</span>
+  <span style="color:#f92672">)</span>
 <span style="color:#f92672">)</span>
 </code></pre></div><p>Per funzionare, il client oracle ha bisogno del settaggio di alcune variabili d&rsquo;ambiente.
 Nel .bash_profile dell&rsquo;utente oracle creato impostare le seguenti variabili:</p>
@@ -392,7 +392,7 @@ export PATH<span style="color:#f92672">=</span>/usr/lib/oracle/12.1/client64/bin
 </code></pre></div>
             </div>
             <footer class="article-footer">
-    <a data-url="https://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/" data-id="e261092c14aba3530b8d54d26c19b862" class="article-share-link">
+    <a data-url="https://www.stefanoteodorani.it/2018/03/30/installazione-client-oracle-12.x-su-red-hat/" data-id="9dad0e9083692b9be456225ead219a65" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -544,7 +544,7 @@ export PATH<span style="color:#f92672">=</span>/usr/lib/oracle/12.1/client64/bin
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2019/04/24/pagina-di-cortesia-su-apache/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/apache-pagina-cortesia.png)" alt="Installazione client Oracle 12.x su Red-Hat" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/apache-pagina-cortesia/apache-pagina-cortesia.png)" alt="Installazione client Oracle 12.x su Red-Hat" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -570,7 +570,7 @@ export PATH<span style="color:#f92672">=</span>/usr/lib/oracle/12.1/client64/bin
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2019/01/20/lock-wait-e-timeout-in-db2/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/lock-wait-e-timeout-in-db2.jpg)" alt="Installazione client Oracle 12.x su Red-Hat" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/db2-lock-wait-e-timeout/db2-lock-wait-e-timeout.jpg)" alt="Installazione client Oracle 12.x su Red-Hat" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -596,7 +596,7 @@ export PATH<span style="color:#f92672">=</span>/usr/lib/oracle/12.1/client64/bin
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2018/11/22/liquibase-vs-flyway/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/liquibase-vs-flyway.png)" alt="Installazione client Oracle 12.x su Red-Hat" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/liquibase-vs-flyway/liquibase-vs-flyway.png)" alt="Installazione client Oracle 12.x su Red-Hat" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -622,7 +622,7 @@ export PATH<span style="color:#f92672">=</span>/usr/lib/oracle/12.1/client64/bin
                 <div class="item-thumbnail">
                     <a href="https://www.stefanoteodorani.it/2018/11/05/sql-tuning-advisor-per-uno-specifico-sql_id/" class="thumbnail">
                     
-                        <span style="background-image:url(https://www.stefanoteodorani.it/banner/sql-tuning-advisor-with-sqlid.png)" alt="Installazione client Oracle 12.x su Red-Hat" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://www.stefanoteodorani.it/oracle-sql-tuning-advisor-with-sqlid/oracle-sql-tuning-advisor-with-sqlid.png)" alt="Installazione client Oracle 12.x su Red-Hat" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -675,6 +675,14 @@ export PATH<span style="color:#f92672">=</span>/usr/lib/oracle/12.1/client64/bin
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/fun">
+                    fun
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/linux">
                     linux
                 </a>
@@ -702,7 +710,7 @@ export PATH<span style="color:#f92672">=</span>/usr/lib/oracle/12.1/client64/bin
                 <a class="category-list-link" href="https://www.stefanoteodorani.it/categories/system">
                     system
                 </a>
-                <span class="category-list-count">3</span>
+                <span class="category-list-count">2</span>
             </li>
             
         </ul>
@@ -772,16 +780,16 @@ export PATH<span style="color:#f92672">=</span>/usr/lib/oracle/12.1/client64/bin
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/git">
-                    git
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/due">
+                    due
                 </a>
                 <span class="category-list-count">1</span>
             </li>
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/github-pages">
-                    github-pages
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/git">
+                    git
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -824,6 +832,14 @@ export PATH<span style="color:#f92672">=</span>/usr/lib/oracle/12.1/client64/bin
                     ubuntu
                 </a>
                 <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.stefanoteodorani.it/tags/uno">
+                    uno
+                </a>
+                <span class="category-list-count">1</span>
             </li>
             
             <li class="category-list-item">

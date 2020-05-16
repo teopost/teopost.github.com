@@ -1,11 +1,11 @@
 +++
-banner = "banner/installare-lamp-raspberry.png"
-categories = ["linux"]
+banner = "installare-lamp-raspberry/installare-lamp-raspberry.png"
+categories = ["fun"]
 date = "2017-01-07T16:10:00+01:00"
 description = ""
 images = []
 menu = ""
-tags = ["raspberry"]
+tags = ["linux","raspberry"]
 title = "LAMP sulla Raspberry"
 
 +++
@@ -14,6 +14,8 @@ Voglio installare un blog sulla raspberry.
 Per farlo, dopo aver [configurato un ip statico]({% post_url 2017-01-09-ip-statico-raspberry %}), devo installare i pacchetti software necessari per far girare il [sito](http://www.wedoit.io).
 
 Ecco cosa ho fatto:
+
+<!--more-->
 
 ### Installazione di Apache
 

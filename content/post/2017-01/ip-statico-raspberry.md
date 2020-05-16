@@ -1,11 +1,11 @@
 +++
-banner = "banner/ip-statico-su-raspberry.jpg"
-categories = ["linux"]
+banner = "ip-statico-su-raspberry/ip-statico-su-raspberry.jpg"
+categories = ["fun"]
 date = "2017-01-09T16:02:00+01:00"
 description = ""
 images = []
 menu = ""
-tags = ["raspberry"]
+tags = ["linux","raspberry"]
 title = "IP Statico su Raspberry"
 
 +++
