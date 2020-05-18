@@ -22,7 +22,7 @@ Già ora puoi lanciare da linea di comando nmon e sbirciare il tuo sistema con l
 
 Per farlo ti basta eseguire questi comandi
 
-{{< gist teopost 41d2ea849422243075dbd3f4ba791ab7 >}}
+{{< gist teopost 41d2ea849422243075dbd3f4ba791ab7 "installer-nmon-as-a-service.sh" >}}
 
 E se sei pigro come me, vai sulla macchina come root e incolla questo comando:
 
