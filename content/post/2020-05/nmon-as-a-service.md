@@ -16,25 +16,18 @@ In questo articolo vi mostro come installarlo come servizio su Red Hat.
 
 <!--more-->
 
-Per prima cosa installiamo nmon.
+Per prima cosa installiamo nmon con il comando ``yum install -y nmon``
+
+Già ora puoi lanciare da linea di comando nmon e sbirciare il tuo sistema con la sua interfaccia, ma la cosa interessante è attivarlo come vero e proprio servizio di linux per raccogliere e memorizzare tutte le metriche della giornata.
+
+Per farlo ti basta eseguire questi comandi
+
+{{< gist teopost 41d2ea849422243075dbd3f4ba791ab7 >}}
+
+E se sei pigro come me, vai sulla macchina come root e incolla questo comando:
 
 ```bash
-yum install -y nmon
-```
-
-Bene. Già ora puoi lanciare da linea di comando nmon e sbirciare il tuo sistema con la sua interfaccia, ma la cosa interessante è attivarlo come vero e proprio servizio di linux per raccogliere e memorizzare tutte le metriche della giornata.
-
-```bash
-curl  https://www.stefanoteodorani.it/nmon-as-a-service/nmon_initd_rhel  --output /etc/init.d/nmon
-chown root:root /etc/init.d/nmon
-chmod 755 /etc/init.d/nmon
-
-curl  https://www.stefanoteodorani.it/nmon-as-a-service/nmon_logrotated  --output /etc/logrotate.d/nmon
-chown root:root /etc/logrotate.d/nmon
-chmod 644 /etc/logrotate.d/nmon
-
-chkconfig --add nmon
-service nmon start
+curl https://gist.githubusercontent.com/teopost/41d2ea849422243075dbd3f4ba791ab7/raw/installer-nmon-as-a-service.sh | bash
 ```
 
 Ora troverete nella cartella ``/var/log/nmon/`` il file del giorno corrente, e nella cartella ``/var/log/nmon/old`` i files dei giorni precedenti.

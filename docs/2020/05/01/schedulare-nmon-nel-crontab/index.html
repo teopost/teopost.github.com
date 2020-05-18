@@ -43,7 +43,7 @@ In alcuni casi, dove non si ha la possibilità di installare questi validissimi 
 In questo articolo vi mostro come installarlo come servizio su Red Hat.">
 <meta itemprop="datePublished" content="2020-05-01T18:42:26&#43;01:00" />
 <meta itemprop="dateModified" content="2020-05-01T18:42:26&#43;01:00" />
-<meta itemprop="wordCount" content="156">
+<meta itemprop="wordCount" content="158">
 
 
 
@@ -296,7 +296,7 @@ In questo articolo vi mostro come installarlo come servizio su Red Hat."/>
             <i class="fa fa-calendar"></i>
             <time datetime="2020-05-01 18:42:26 &#43;0100 &#43;0100" itemprop="datePublished">01-05-2020</time>
             &middot;
-            156
+            158
             words
             &middot;
             1
@@ -341,19 +341,13 @@ In questo articolo vi mostro come installarlo come servizio su Red Hat."/>
                 <p>Per monitorare lo stato dei server in un infrastruttura Linux, esistono oggi molti strumenti (zabbix, netdata, zenoss, ecc.).
 In alcuni casi, dove non si ha la possibilità di installare questi validissimi tools, può essere utile fare un salto indietro nel tempo e utilizzare il buon &ldquo;vecchio&rdquo; nmon.</p>
 <p>In questo articolo vi mostro come installarlo come servizio su Red Hat.</p>
-<p>Per prima cosa installiamo nmon.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">yum install -y nmon
-</code></pre></div><p>Bene. Già ora puoi lanciare da linea di comando nmon e sbirciare il tuo sistema con la sua interfaccia, ma la cosa interessante è attivarlo come vero e proprio servizio di linux per raccogliere e memorizzare tutte le metriche della giornata.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl  https://www.stefanoteodorani.it/nmon-as-a-service/nmon_initd_rhel  --output /etc/init.d/nmon
-chown root:root /etc/init.d/nmon
-chmod <span style="color:#ae81ff">755</span> /etc/init.d/nmon
+<p>Per prima cosa installiamo nmon con il comando <code>yum install -y nmon</code></p>
+<p>Già ora puoi lanciare da linea di comando nmon e sbirciare il tuo sistema con la sua interfaccia, ma la cosa interessante è attivarlo come vero e proprio servizio di linux per raccogliere e memorizzare tutte le metriche della giornata.</p>
+<p>Per farlo ti basta eseguire questi comandi</p>
+<script type="application/javascript" src="https://gist.github.com/teopost/41d2ea849422243075dbd3f4ba791ab7.js"></script>
 
-curl  https://www.stefanoteodorani.it/nmon-as-a-service/nmon_logrotated  --output /etc/logrotate.d/nmon
-chown root:root /etc/logrotate.d/nmon
-chmod <span style="color:#ae81ff">644</span> /etc/logrotate.d/nmon
-
-chkconfig --add nmon
-service nmon start
+<p>E se sei pigro come me, vai sulla macchina come root e incolla questo comando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl https://gist.githubusercontent.com/teopost/41d2ea849422243075dbd3f4ba791ab7/raw/installer-nmon-as-a-service.sh | bash
 </code></pre></div><p>Ora troverete nella cartella <code>/var/log/nmon/</code> il file del giorno corrente, e nella cartella <code>/var/log/nmon/old</code> i files dei giorni precedenti.</p>
 <h2 id="riferimenti">Riferimenti</h2>
 <ul>
